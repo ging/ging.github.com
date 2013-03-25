@@ -1,21 +1,10 @@
 /*!
  * Docs for Bootstrap v2.1.1
  *
- * Web desarrollada y diseñada por Estefanía Bravo Ortega
- * agradecimientos a Crispín Avís
  */
 
 
 /******** GENERAL **********/
-
-@font-face {
-  font-family: 'futura_mediumc-webfont';
-    src: url('fonts/futura_mediumc-webfont.eot');
-    src: url('fonts/futura_mediumc-webfont.woff') format('woff'), 
-  	  	 url('fonts/futura_mediumc-webfont.ttf') format('truetype'), 
-  	  	 url('fonts/futura_mediumc-webfont.svg') format('svg');
-}
-
 
 html body {
   height: 100%
@@ -38,7 +27,9 @@ header .span12{
 p {
   margin: 0 0 2px;
 }
-
+h3 {
+  line-height: 31px;
+}
 h5 {
 	font-size:11px;;
 	margin-bottom:7px;
@@ -186,7 +177,7 @@ nav ul li a:hover{
 .ging {
   text-align: center;
   background-color: white;
-  margin-top: -43px;
+  margin-top: -41px;
   margin-left: auto;
   margin-right: auto;
   background-color:#f8f6f0;
@@ -219,6 +210,9 @@ nav ul li a:hover{
   margin-top: 45px;
   margin-left: 160px;
 }
+.projects section.row{
+  margin-left: 0px;
+}
 
 .project,
 .team,
@@ -234,7 +228,8 @@ nav ul li a:hover{
 .project:last-child{
   margin-top: 20px;
 }
-.project .description{
+.project .description,
+.ideas .description{
   padding-top: 1px;
   margin-left: 20px;
   padding-left: 20px;
@@ -260,6 +255,10 @@ nav ul li a:hover{
   text-decoration: none;
 }
 
+.team {
+  padding: 10px 20px;
+}
+
 .team img{
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -274,6 +273,7 @@ nav ul li a:hover{
   overflow: hidden;
   position: relative;
   height: 140px;
+  margin-bottom: 23px;
 
 }
 .team .name{
@@ -292,6 +292,7 @@ nav ul li a:hover{
 
 }
 .team .name:hover{
+  cursor: e-resize;
   opacity: .9;
   background-color: rgba(0,0,0,0.8);
   border-radius: 50%;
@@ -308,23 +309,45 @@ nav ul li a:hover{
   text-align: center; 
   color: #f8f6f0;
 }
-.ideas{
+#ideas{
   margin-top: 26px;
 }
-.ideas header{
+#ideas header{
   margin-left: -58px;
 }
-.ideas h2{
+#ideas h2{
   width: auto;
   display: inline-block;
 }
-.ideas img{
+#ideas img{
   width: 53px;
   display: inline;
   margin-top: -37px;
 }
-.ideas .soften{
+#ideas .soften{
   margin-top: -19px;
+}
+.ideas{
+  margin-top: -18px;
+  border-left: 1px solid #fff;
+}
+.ideas .description{
+  margin: -13px 0 29px 0;
+  border-left: none;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+
+.ideas .description:hover{
+  background: rgba(255,255,255,0.8);  
+}
+.ideas .description em{
+  font-weight: bold;
+  color:#888;
+}
+.ideas .description .objective{
+  display: block;
+  margin-top: 4px;
 }
 /******** FOOTER **********/
 
@@ -446,7 +469,7 @@ footer {
     width: 157px;
     margin-top: 157px;
   } 
-  
+
   .content{
     margin-top: 10px;
     margin-left: 0px;
@@ -470,11 +493,8 @@ footer {
     margin: 12px auto;
   }
 
-    .ideas header{
+  #ideas header{
     margin-left: -3px;
-  }
-  .ideas .description{
-    margin-left: 55px;
   }
 
   .ging {

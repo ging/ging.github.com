@@ -19,9 +19,11 @@
     <script src="assets/js/bootstrap-tab.js"></script>
   </head>
 
-  <body>
+  <body id="projects">
     <div class="container">
-      <img class="google" src="assets/img/gsc.png">
+      <a href="https://developers.google.com/open-source/soc/">
+        <img class="google" src="assets/img/gsc.png" href="https://developers.google.com/open-source/soc/">
+      </a>
       <header class="row">
         <a class="brand brand-inv" href="index.html">
           GING
@@ -30,14 +32,13 @@
 
       <section class="projects offset2 span10">
         <div class="project">
-          <img src="assets/img/lynckia.png">
+          <a href="http://lynckia.com/">
+            <img src="assets/img/lynckia.png">
+          </a>
           <hr class="soften">
           <div class="description">
             <h3>
               Open Source WebRTC Communications Platform.
-              <a href="http://lynckia.com/">
-                 ir a la web
-              </a>
             </h3>
             <p>
               bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla.
@@ -45,14 +46,13 @@
           </div>
         </div>
         <div class="project">
-          <img src="assets/img/social-stream.png">
+          <a href="http://social-stream.dit.upm.es/">
+            <img src="assets/img/social-stream.png">
+          </a> 
           <hr class="soften">
           <div class="description">
             <h3>
               Núcleo para construir webs con características de red social
-              <a href="http://social-stream.dit.upm.es/">
-              ir a la web
-            </a> 
             </h3>
             <p>
               bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla.
@@ -60,13 +60,13 @@
           </div> 
         </div>
         <section class="row">
+          <h2>Team</h2>
           <div class="team">
-            <h2>Team</h2>
             <div class="menthor span2">
               <img src="assets/img/photo.jpg">
               <div class="name">
                 Nombre Apellido
-                <h5 class="hidden-tablet"> frontend developer </h5>
+                <h5 class="hidden-tablet hidden-phone"> frontend developer </h5>
               </div> 
               <img src="assets/img/photo.jpg">  
             </div>
@@ -74,7 +74,7 @@
               <img src="assets/img/photo.jpg">
               <div class="name">
                 Nombre Apellido
-                <h5 class="hidden-tablet"> frontend developer </h5>
+                <h5 class="hidden-tablet hidden-phone"> frontend developer </h5>
               </div> 
               <img src="assets/img/photo.jpg">  
             </div>
@@ -82,7 +82,7 @@
               <img src="assets/img/photo.jpg">
               <div class="name">
                 Nombre Apellido
-                <h5 class="hidden-tablet"> frontend developer </h5>
+                <h5 class="hidden-tablet hidden-phone"> frontend developer </h5>
               </div> 
               <img src="assets/img/photo.jpg">  
             </div>
@@ -90,13 +90,13 @@
               <img src="assets/img/photo.jpg">
               <div class="name">
                 Nombre Apellido
-                <h5 class="hidden-tablet"> frontend developer </h5>
+                <h5 class="hidden-tablet hidden-phone"> frontend developer </h5>
               </div> 
               <img src="assets/img/photo.jpg">  
             </div>
           </div>
         </section>
-        <div class="row ideas">
+        <div id="ideas" class="row">
           <header>
             <img src="assets/img/idea.png">
             <h2>
@@ -104,14 +104,93 @@
             </h2>
             <hr class="soften">
           </header>
-           
-          <div class="description">
-            <h3>
-              Nombre de la idea
-            </h3>
-            <p>
-              bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla bla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blablabla bla blabla bla blabla bla blabla blabla bla bla blabla
-            </p>
+          <div class="ideas">
+            <div class="description">
+              <h3>
+                Media/Signalling Gateway to other communication systems: SIP, H.323, Flash, …
+              </h3>
+              <p>
+                <em>Requirements:</em> C++, JavaScript. Knowledge and experience on SIP, H.323 and Flash technologies.
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Design and implement a Gateway to non-WebRTC systems. This gateway will deal with signalling translation between protocols and it could use the available transcoding component to send video in different formats.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Implement a video compositing component.
+              </h3>
+              <p>
+                <em>Requirements:</em> C++, JavaScript. Previous experiences handling video frames will be considered.
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> There is a wide variety of devices that can be connected to the Internet nowadays. Lynckia supports connections from desktop, tablet and mobile phone with Android and Chrome Beta, so it will be desirable that Erizo could deal with different screen sizes and connection bandwidth. The group already implemented a similar component in Flash, but now, in Lynckia, it has to be refactored in C++ for WebRTC videos.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Implement a Multiplex Data Channel component in Erizo.
+              </h3>
+              <p>
+                <em>Requirements:</em> C++, JavaScript. Knowledge on DataChannel API and its protocols.
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Lynckia now supports multiplex for audio and video streams. Now that WebRTC also supports Data the student could implement the DataChannel API in Lynckia. It will also be used to forward data between multiple participants, in a similar way it is currently done  using WebSockets. The development will focused on the different protocols involved in this API.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Improve scalability using OpenStack and similar Cloud providers.
+              </h3>
+              <p>
+                <em>Requirements:</em> JavaScript. 
+                Knowledge on Cloud platforms and typical scalability issues.
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Lynckia is now focused on Amazon EC2 API to increase/decrease the number of Erizo Controllers, but other Cloud platforms also offer scalability opportunities to Lynckia. For example, OpenStack also allows to increase the size of the virtual machines, and start and stop similar virtual machines. The student could implement different wrappers to different Cloud providers in order to scale the number of machines in a Hybrid Cloud scenario.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Develop a pool of cool examples using Lynckia.
+              </h3>
+              <p>
+                <em>Requirements:</em> JavaScript.
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Lynckia already provides a mechanism to develop brand new web applications where many users may get involved in interactive rooms by sharing their audio, video and data. There has been a lot of examples using Lynckia that provide interactive games, 3D videoconference scenarios,  access to IP cameras, etc. During this development the student could improve Lynckia’s user API to provide advanced functionality for the web developers, such as video and audio management, video pattern recognition, etc.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Social network federation protocol.
+              </h3>
+              <p>
+                <em>Requirements:</em> Rails
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Social network federation is a promise that has gained much attention from the W3C. However, there is not a simple protocol that supports it yet. Proposals such as OStatus have several drawbacks: they repeat functionality and have not privacy support.
+                  The objective is designing and building a simple, straightforward protocol, probably based on Activity Streams that supports network federation of any kind of object between social networks.
+                </span>
+              </p>
+            </div>
+            <div class="description">
+              <h3>
+                Package Social Stream and customization interface.
+              </h3>
+              <p>
+                <em>Requirements:</em> Unix
+                <br/>
+                <span class="objective">
+                  <em>Objective:</em> Though Social Stream is a ready to use framework, its deployment is hard and requires system administration skills. Building a package for Linux distributions or Mac OS X would lower the bar for new Social Stream’s users and developers. The packaging would include a way to easily select desired modules from Social Stream components and customize them through a user-friendly interface in order to get an fully customized social network easily and quickly.
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
