@@ -6,6 +6,15 @@
 
 /******** GENERAL **********/
 
+@font-face {
+  font-family: 'futura_mediumc-webfont';
+    src: url('fonts/futura_mediumc-webfont.eot');
+    src: url('fonts/futura_mediumc-webfont.woff') format('woff'), 
+         url('fonts/futura_mediumc-webfont.ttf') format('truetype'), 
+         url('fonts/futura_mediumc-webfont.svg') format('svg');
+}
+
+
 html body {
   height: 100%
 }
@@ -15,29 +24,29 @@ html body {
   margin: 0 auto -80px;
 }
 body {
-	font-family: arial, "Helvetica", sans-serif;
-	color:#000;
+  font-family: arial, "Helvetica", sans-serif;
+  color:#000;
   background-color:#f8f6f0;
 }
 
 header .span12{
-  background-image: url("laser_teleco_pano.png");
+  background-image: url("img/laser_teleco_pano.png");
   height: 468px;
 }
 p {
   margin: 0 0 2px;
 }
-h3 {
-  line-height: 31px;
+h3{
+  line-height: 30px;
 }
 h5 {
-	font-size:11px;;
-	margin-bottom:7px;
-	font-family: Helvetica, sans-serif, Arial;
-	font-weight:800;
-	letter-spacing: 1px;
-	margin-bottom:10px;
-	line-height: 0px;
+  font-size:11px;;
+  margin-bottom:7px;
+  font-family: Helvetica, sans-serif, Arial;
+  font-weight:800;
+  letter-spacing: 1px;
+  margin-bottom:10px;
+  line-height: 0px;
 }
 
 .soften{
@@ -162,14 +171,14 @@ nav ul li a:hover{
   color:#f8f6f0;
   text-decoration: none;
 }
-}
+
 
 
 
 
 /******** INDEX **********/
 
-.content{
+section.content {
   margin-top: 10px;
   margin-left: 0px;
 }
@@ -177,7 +186,7 @@ nav ul li a:hover{
 .ging {
   text-align: center;
   background-color: white;
-  margin-top: -41px;
+  margin-top: -43px;
   margin-left: auto;
   margin-right: auto;
   background-color:#f8f6f0;
@@ -200,9 +209,27 @@ nav ul li a:hover{
 .organizations{
   margin-top: 30px;
 }
-
-
-
+.dit{
+  height: 300px;
+  background-image: url("img/dit-bn.png");
+}
+.dit:hover{
+  background-image: url("img/dit.png");
+}
+.upm{
+  height: 300px;
+  background-image: url("img/upm-bn.png");
+}
+.upm:hover{
+  background-image: url("img/upm.png");
+}
+.etsi{
+  height: 300px;
+  background-image: url("img/etsi-bn.png");
+}
+.etsi:hover{
+  background-image: url("img/etsi.png");
+}
 
 /******** PROJECTS **********/
 
@@ -319,10 +346,17 @@ nav ul li a:hover{
   width: auto;
   display: inline-block;
 }
-#ideas img{
-  width: 53px;
-  display: inline;
-  margin-top: -37px;
+#ideas header .idea{
+  width: 58px;
+  height: 58px;
+  float: left;
+  margin-top: -15px;
+  background-image: url("img/idea.png");
+  margin-right: 6px;
+  background-size: 58px;
+}
+#ideas header .idea:hover{
+  background-image: url("img/idea-on.png");
 }
 #ideas .soften{
   margin-top: -19px;
@@ -426,6 +460,24 @@ footer {
   .team .name h5{
     margin: 12px auto;
   }
+  .dit{
+    width: 300px;
+    background-image: url("img/dit-bn.png");
+  }
+  .upm{
+    width: 300px;
+    background-image: url("img/upm-bn.png");
+  }
+  .etsi{
+    width: 300px;
+    background-image: url("img/etsi-bn.png");
+  }
+  .dit,
+  .upm,
+  .etsi{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 979px){
@@ -458,7 +510,25 @@ footer {
   .team .name h5{
     margin: 12px auto;
   }
-
+  .dit{
+    width: 228px;
+    background-size: 228px;
+  }
+  .upm{
+    width: 228px;
+    background-size: 228px;
+  }
+  .etsi{
+    width: 228px;
+    background-size: 228px;
+  }
+  .dit,
+  .upm,
+  .etsi{
+    margin-left: auto;
+    margin-right: auto;
+    height: 228px;
+  }
   footer {
     margin-left: 0px !important;
   }
@@ -469,7 +539,7 @@ footer {
     width: 157px;
     margin-top: 157px;
   } 
-
+  
   .content{
     margin-top: 10px;
     margin-left: 0px;
@@ -500,6 +570,31 @@ footer {
   .ging {
     width: 90% !important;
     font-size: 19px !important;
+  }
+  .dit{
+    width: 300px;
+    background-size: 300px;
+    margin-top: -52px;
+  }
+  .upm{
+    width: 300px;
+    background-size: 300px;
+    margin-top: -63px;
+  }
+  .etsi{
+    width: 300px;
+    background-size: 300px;
+    margin-top: -56px;
+  }
+  .dit,
+  .upm,
+  .etsi{
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+  }
+  footer{
+    margin: 0px auto 10px;
   }
 }
 
