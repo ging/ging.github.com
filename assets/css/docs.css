@@ -101,7 +101,7 @@ nav .nav{
   margin-left: -7px;
   margin-top: 20px;
   font-family: "Helvetica", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
  }
  nav ul li{
   list-style: none;
@@ -284,6 +284,7 @@ section.content {
 
 .team {
   padding: 10px 20px;
+  margin-left: 2%;
 }
 
 .team img{
@@ -499,13 +500,13 @@ footer {
   }
 
   .team .menthor{
-    height: 104px;
+    height: 109px;
     margin-left: 20px;
   }
   .team .name{
     padding-top: 30px;
-    width: 103px;
-    height: 74px;
+    width: 104px;
+    height: 76px;
   }
   .team .name h5{
     margin: 12px auto;
