@@ -73,6 +73,7 @@ a:hover{
   position:fixed; 
   top:0px; 
   right:0px;
+  z-index: 20;
 }
  
 
@@ -270,14 +271,10 @@ section.content {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 .project .description a{
-  font-size: 18px;
-  margin-left: 15px;
-  color: rgb(0, 136, 204);
+  font-weight: bold;
 }
 
 .project .description a:hover{
-  font-size: 18px;
-  margin-left: 15px;
   color: rgb(0, 136, 204);
   text-decoration: none;
 }
@@ -302,6 +299,7 @@ section.content {
   position: relative;
   height: 140px;
   margin-bottom: 23px;
+  z-index: 1;
 
 }
 .team .name{
