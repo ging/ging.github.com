@@ -7,40 +7,43 @@
 /******** GENERAL **********/
 
 @font-face {
-  font-family: 'futura_mediumc-webfont';
-    src: url('fonts/futura_mediumc-webfont.eot');
-    src: url('fonts/futura_mediumc-webfont.woff') format('woff'), 
-         url('fonts/futura_mediumc-webfont.ttf') format('truetype'), 
-         url('fonts/futura_mediumc-webfont.svg') format('svg');
+  font-family: 'OpenSans';
+    src: url('fonts/OpenSans.eot');
+    src: url('fonts/OpenSans.woff') format('woff'), 
+         url('fonts/OpenSans.ttf') format('truetype'), 
+         url('fonts/OpenSans.svg') format('svg');
 }
-
 
 html body {
   height: 100%
 }
+
 .wrapper{
   min-height: 100%;
   height: 100%;
   margin: 0 auto -80px;
 }
+
 body {
-  font-family: arial, "Helvetica", sans-serif;
+  font-family: "Helvetica",OpenSans, sans-serif;
   color:#000;
   background-color:#f8f6f0;
 }
 
-header .span12{
+header .span12 {
   background-image: url("img/laser_teleco_pano.png");
   height: 468px;
 }
+
 p {
   margin: 0 0 2px;
 }
-h3{
+
+h3 {
   line-height: 30px;
 }
 
-.soften{
+.soften {
   margin: 20px 0px 20px 20px;
 }
 
@@ -49,9 +52,10 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: #000;
 }
+
 
 
 
@@ -68,7 +72,7 @@ a:hover{
 }
  
 
-.navbar{
+.navbar {
   margin-left: 0px;
   margin-top: 0px;
   color: #000;
@@ -86,34 +90,38 @@ a:hover{
   box-shadow: none;
 }
 
-nav .nav{
+nav .nav {
   margin-right: px;
- }
- nav ul {
+}
+
+nav ul {
   margin-left: -7px;
   margin-top: 20px;
-  font-family: "Helvetica", Arial, sans-serif;
-  font-size: 15px;
- }
- nav ul li{
+  font-family: "Helvetica", OpenSans, sans-serif;
+  font-size: 19px;
+}
+
+nav ul li {
   list-style: none;
- }
- nav ul li a{
+}
+
+nav ul li a {
   display: inline;
   padding-left: 15px;
   letter-spacing: 1px;
   color: #f8f6f0;
- }
-nav ul li a:hover{
+}
+
+nav ul li a:hover {
   color: #f8f6f0;
- }
+}
 
 .brand {
   letter-spacing: 1px;
   font-size: 28px;
   font-weight: 600;
   text-shadow: none;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica", OpenSans, sans-serif;
   border-radius: 50%;
   width: 73px;
   text-align: center;
@@ -128,7 +136,8 @@ nav ul li a:hover{
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
-.brand a{
+
+.brand a {
   text-decoration: none;
   display: block;
   transform: translate3d(0,0,0)rotate(360deg);
@@ -137,6 +146,7 @@ nav ul li a:hover{
   -moz-transform: translate3d(0,0,0)rotate(360deg);
   -webkit-transform: translate3d(0,0,0)rotate(360deg);
 }
+
 .brand:hover {
   box-shadow: 0px 0px 40px white;
   -moz-box-shadow: 0px 0px 40px white;
@@ -153,6 +163,7 @@ nav ul li a:hover{
   -moz-transform: translate3d(0,0,0)rotate(360deg);
   -webkit-transform: translate3d(0,0,0)rotate(360deg);
 }
+
 .brand-inv {
   color: #f8f6f0;
   background-color: #333;
@@ -198,57 +209,76 @@ section.content {
   line-height: 26px;
   color: rgb(102, 102, 102);
 }
-.organizations{
+
+.organizations {
   margin-top: 30px;
 }
-.dit{
+
+.dit {
   height: 300px;
   background-image: url("img/dit-bn.png");
 }
-.dit:hover{
+
+.dit:hover {
   background-image: url("img/dit.png");
 }
-.upm{
+
+.upm {
   height: 300px;
   background-image: url("img/upm-bn.png");
 }
-.upm:hover{
+
+.upm:hover {
   background-image: url("img/upm.png");
 }
-.etsi{
+
+.etsi {
   height: 300px;
   background-image: url("img/etsi-bn.png");
 }
-.etsi:hover{
+
+.etsi:hover {
   background-image: url("img/etsi.png");
 }
 
+
+
+
 /******** PROJECTS **********/
 
-.projects{
+.projects {
   margin-top: 45px;
   margin-left: 160px;
 }
-.projects section.row{
+
+.projects h4 {
+  margin-top: 24px;
+}
+
+.projects section.row {
   margin-left: 0px;
 }
 
 .project,
 .team,
-.ideas{
+.ideas {
   margin-bottom: 20px;
 }
-.project img{
+
+.project img {
   width: 425px;
 }
-.project hr{
+
+.project hr {
   margin: 10px 0px 0px 20px;
 }
-.project:last-child{
+
+.project:last-child {
   margin-top: 20px;
 }
+
 .project .description,
-.ideas .description{
+.ideas .description {
   padding-top: 1px;
   margin-left: 20px;
   padding-left: 20px;
@@ -261,11 +291,12 @@ section.content {
   background: linear-gradient(to bottom,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
-.project .description a{
+
+.project .description a {
   font-weight: bold;
 }
 
-.project .description a:hover{
+.project .description a:hover {
   color: rgb(0, 136, 204);
   text-decoration: none;
 }
@@ -275,7 +306,7 @@ section.content {
   margin-left: 2%;
 }
 
-.team img{
+.team img {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -286,7 +317,7 @@ section.content {
   z-index: 3;
 }
 
-.team .menthor{
+.team .menthor {
   overflow: hidden;
   position: relative;
   height: 233px;
@@ -294,7 +325,7 @@ section.content {
   z-index: 1;
 }
 
-.team .name{
+.team .name {
   padding-top: 45px;
   position: absolute;
   top: 0;
@@ -310,7 +341,7 @@ section.content {
   z-index: 5;
 }
 
-.team .name:hover{
+.team .name:hover {
   cursor: e-resize;
   opacity: .9;
   background-color: rgba(0,0,0,0.8);
@@ -322,7 +353,8 @@ section.content {
   -webkit-transition-timing-function: ease-out;
   -webkit-transition-duration: 500ms;
 }
-.team .sub-name{
+
+.team .sub-name {
   display: block;
   height: 95px;
   -webkit-transition: opacity;
@@ -331,6 +363,7 @@ section.content {
   text-align: center;
   color: #f8f6f0;
 }
+
 .team .jq h5, .team .js h5, .team .pr h5, .team .jc h5, .team .aa h5, .team .at h5, .team .cg h5, .team .ca h5 {
   color: #777;
   word-wrap: break-word;
@@ -349,17 +382,21 @@ section.content {
 .team .jq h5:hover, .team .js h5:hover, .team .pr h5:hover, .team .jc h5:hover, .team .aa h5:hover, .team .at h5:hover, .team .cg h5:hover, .team .ca h5:hover{
   opacity: 1;
 }
-#ideas{
+
+#ideas {
   margin-top: 26px;
 }
-#ideas header{
+
+#ideas header {
   margin-left: -58px;
 }
-#ideas h2{
+
+#ideas h2 {
   width: auto;
   display: inline-block;
 }
-#ideas header .idea{
+
+#ideas header .idea {
   width: 58px;
   height: 58px;
   float: left;
@@ -368,34 +405,44 @@ section.content {
   margin-right: 6px;
   background-size: 58px;
 }
-#ideas header .idea:hover{
+
+#ideas header .idea:hover {
   background-image: url("img/idea-on.png");
 }
-#ideas .soften{
+
+#ideas .soften {
   margin-top: -19px;
 }
-.ideas{
+
+.ideas {
   margin-top: -18px;
   border-left: 1px solid #fff;
 }
-.ideas .description{
+
+.ideas .description {
   margin: -13px 0 29px 0;
   border-left: none;
   padding-bottom: 10px;
   padding-right: 20px;
 }
 
-.ideas .description:hover{
+.ideas .description:hover {
   background: rgba(255,255,255,0.8);  
 }
-.ideas .description em{
+
+.ideas .description em {
   font-weight: bold;
   color:#888;
 }
-.ideas .description .objective{
+
+.ideas .description .objective {
   display: block;
   margin-top: 4px;
 }
+
+
+
+
 /******** FOOTER **********/
 
 .footer {
@@ -406,17 +453,9 @@ section.content {
 }
 
 
-footer {
-  padding-bottom: 2px;
-  margin: 20px auto 30px;
-  height: 40px;
-  margin-top: 114px;
-}
-
 
 
 /******** RESPONSIVE **********/
-
 
 @media (min-width: 1200px){
  
@@ -453,46 +492,53 @@ footer {
     font-size: 28px !important;
   }
 
-  .organizations{
+  .organizations {
     margin-top: 30px;
   }
-  .projects{
+
+  .projects {
     margin-left: 160px;
   }
-  .team .menthor{
+
+  .team .menthor {
     overflow: hidden;
     position: relative;
     height: 277px;
     margin-left: 26px;
   }
-  .team .name{
+
+  .team .name {
     padding-top: 60px;
     width: 170px;
     height: 110px;
     font-size: 19px;
     line-height: 23px;
   }
-  .team h5{
+
+  .team h5 {
     font-size: 13px !important;
     line-height: 17px !important;
     margin-top: 138px !important;
-
   }
-  .dit{
+
+  .dit {
     width: 300px;
     background-image: url("img/dit-bn.png");
   }
-  .upm{
+
+  .upm {
     width: 300px;
     background-image: url("img/upm-bn.png");
   }
-  .etsi{
+
+  .etsi {
     width: 300px;
     background-image: url("img/etsi-bn.png");
   }
+
   .dit,
   .upm,
-  .etsi{
+  .etsi {
     margin-left: auto;
     margin-right: auto;
   }
@@ -516,75 +562,87 @@ footer {
     margin-top:-42px;
   }
 
-  .team .menthor{
+  .team .menthor {
     height: 109px;
     margin-left: 20px;
   }
-  .team .name{
+
+  .team .name {
     padding-top: 30px;
     width: 104px;
     height: 76px;
   }
-  .team .name h5{
+
+  .team .name h5 {
     margin: 12px auto;
   }
-  .dit{
+
+  .dit {
     width: 228px;
     background-size: 228px;
   }
-  .upm{
+
+  .upm {
     width: 228px;
     background-size: 228px;
   }
-  .etsi{
+
+  .etsi {
     width: 228px;
     background-size: 228px;
   }
+
   .dit,
   .upm,
-  .etsi{
+  .etsi {
     margin-left: auto;
     margin-right: auto;
     height: 228px;
   }
+
   footer {
     margin-left: 0px !important;
   }
 }
 
 @media (max-width: 767px){
-  nav.nav{
+
+  nav.nav {
     width: 157px;
     margin-top: 157px;
   } 
   
-  .content{
+  .content {
     margin-top: 10px;
     margin-left: 0px;
   }
+
   .projects {
     margin-top: 140px;
     margin-left: 0px;
   }
-  .team{
+  .team {
     margin-left: 9%;
   }
-  .team .menthor{
+
+  .team .menthor {
     height: 104px;
     width: 104px;
     margin-left: 20px;
     float: left;
   }
-  .team .name{
+
+  .team .name {
     padding-top: 30px;
     width: 103px;
     height: 74px;
   }
-  .team .name h5{
+
+  .team .name h5 {
     margin: 12px auto;
   }
 
-  #ideas header{
+  #ideas header {
     margin-left: -3px;
   }
 
@@ -592,42 +650,49 @@ footer {
     width: 90% !important;
     font-size: 19px !important;
   }
-  .dit{
+
+  .dit {
     width: 300px;
     background-size: 300px;
     margin-top: -52px;
   }
-  .upm{
+
+  .upm {
     width: 300px;
     background-size: 300px;
     margin-top: -63px;
   }
-  .etsi{
+
+  .etsi {
     width: 300px;
     background-size: 300px;
     margin-top: -56px;
   }
+
   .dit,
   .upm,
-  .etsi{
+  .etsi {
     margin-left: auto;
     margin-right: auto;
     height: 300px;
   }
-  footer{
+
+  footer {
     margin: 0px auto 10px;
   }
 }
 
 @media (max-width: 480px){
-  nav.nav{
+  nav.nav {
     width: 157px;
     margin-top: 157px;
   }
-  .team{
+
+  .team {
     padding: 10px 14%;
     margin-left: 0;
   }
+  
   .ging {
     width: 90% !important;
     font-size: 15px !important;
