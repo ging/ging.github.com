@@ -71,50 +71,25 @@ a:hover {
   right:0px;
   z-index: 20;
 }
+
+.projects-link {
+  margin-left: -7px;
+  margin-top: 20px;
+}
  
-
-.navbar {
-  margin-left: 0px;
-  margin-top: 0px;
-  color: #000;
-}
-
-.navbar-inner {
-  min-height: 64px;
-  padding-right: 20px;
-  padding-left: 3px;
-  background-color: transparent;
-  background-image: none;
-  background-repeat: no-repeat;
-  border: none;
-  *zoom: 0;
-  box-shadow: none;
-}
-
-nav .nav {
-  margin-right: px;
-}
-
-nav ul {
+.projects-link a {
   margin-left: -7px;
   margin-top: 20px;
   font-family: "Helvetica", OpenSans, sans-serif;
   font-size: 19px;
-}
-
-nav ul li {
-  list-style: none;
-}
-
-nav ul li a {
   display: inline;
   padding-left: 15px;
   letter-spacing: 1px;
   color: #f8f6f0;
 }
 
-nav ul li a:hover {
-  color: #f8f6f0;
+.projects-link a:hover {
+  color: #f8f6f0 !important;
 }
 
 .brand {
@@ -217,6 +192,10 @@ section.content {
   margin-top: 30px;
 }
 
+.organizations li{
+  list-style: none;
+}
+
 .dit {
   height: 300px;
   background-image: url("img/dit-bn.png");
@@ -249,22 +228,19 @@ section.content {
 
 /******** PROJECTS **********/
 
-.projects {
-  margin-top: 45px;
-  margin-left: 160px;
+#ging-projects {
+  margin-top: 72px;
 }
 
-.projects h4 {
+#projects h4 {
   margin-top: 24px;
 }
 
-.projects section.row {
+#projects .project {
   margin-left: 0px;
 }
 
-.project,
-.team,
-.ideas {
+.project {
   margin-bottom: 20px;
 }
 
@@ -281,7 +257,7 @@ section.content {
 }
 
 .project .description,
-.ideas .description {
+#ideas ul li {
   padding-top: 1px;
   margin-left: 20px;
   padding-left: 20px;
@@ -298,13 +274,21 @@ section.content {
 .project .description a {
   font-weight: bold;
 }
+#projects p,
+#ideas p{
+  text-align: left;
+}
 
-.team {
+#team{
+  margin-top: 50px;
+}
+
+#team ul {
   padding: 10px 7%;
   margin-left: 2%;
 }
 
-.team img {
+#team ul img {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -315,15 +299,15 @@ section.content {
   z-index: 3;
 }
 
-.team .menthor {
+#team ul li {
   overflow: hidden;
   position: relative;
-  height: 250px;
+  height: 255px;
   margin-bottom: 14px;
   z-index: 1;
 }
 
-.team .name {
+#team ul li .name {
   padding-top: 45px;
   position: absolute;
   top: 0;
@@ -339,7 +323,7 @@ section.content {
   z-index: 5;
 }
 
-.team .name:hover {
+#team ul li .name:hover {
   cursor: s-resize;
   opacity: .9;
   background-color: rgba(0,0,0,0.8);
@@ -352,7 +336,7 @@ section.content {
   -webkit-transition-duration: 500ms;
 }
 
-.team .sub-name {
+#team ul li .sub-name {
   display: block;
   height: 95px;
   -webkit-transition: opacity;
@@ -362,7 +346,7 @@ section.content {
   color: #f8f6f0;
 }
 
-.team .jq h5, .team .js h5, .team .pr h5, .team .jc h5, .team .aa h5, .team .at h5, .team .cg h5, .team .ca h5 {
+#team ul li h5 {
   color: #777;
   word-wrap: break-word;
   line-height: 14px;
@@ -377,18 +361,14 @@ section.content {
   z-index: 333;
 }
 
-.team .jq h5:hover, .team .js h5:hover, .team .pr h5:hover, .team .jc h5:hover, .team .aa h5:hover, .team .at h5:hover, .team .cg h5:hover, .team .ca h5:hover{
+#team ul li h5:hover{
   opacity: 1;
   cursor: sw-resize;
 }
 
-.team h5 .link{
+#team ul h5 .link{
   display: block;
   margin-top: 3px;
-}
-
-#ideas {
-  margin-top: 26px;
 }
 
 #ideas header {
@@ -406,7 +386,6 @@ section.content {
   float: left;
   margin-top: -15px;
   background-image: url("img/idea.png");
-  margin-right: 6px;
   background-size: 58px;
 }
 
@@ -418,28 +397,32 @@ section.content {
   margin-top: -19px;
 }
 
-.ideas {
-  margin-top: -18px;
+#ideas ul {
+  margin-top: -20px;
   border-left: 1px solid #fff;
+  margin-left: 17px;
+  padding-top: 32px;
+  margin-left: 1px;
 }
 
-.ideas .description {
+#ideas ul li {
   margin: -13px 0 29px 0;
   border-left: none;
   padding-bottom: 10px;
   padding-right: 20px;
+  list-style: none;
 }
 
-.ideas .description:hover {
+#ideas ul li:hover {
   background: rgba(255,255,255,0.8);  
 }
 
-.ideas .description em {
+#ideas ul li em {
   font-weight: bold;
   color:#888;
 }
 
-.ideas .description .objective {
+#ideas ul li .objective {
   display: block;
   margin-top: 4px;
 }
@@ -482,7 +465,7 @@ section.content {
     margin-bottom:8px;
   }
 
-  nav ul {
+  .projects-link {
     margin-top: 18px;
     font-size: 13px;
   }
@@ -500,29 +483,33 @@ section.content {
     margin-top: 30px;
   }
 
-  .projects {
-    margin-left: 160px;
+  #ging-projects {
+    margin: 72px 0 0 230px;
   }
 
-  .team .menthor {
+  #team ul li {
     overflow: hidden;
     position: relative;
-    height: 277px;
+    height: 312px;
     margin-left: 26px;
   }
 
-  .team .name {
+  #team ul li .name {
     padding-top: 60px;
     width: 170px;
     height: 110px;
     font-size: 19px;
     line-height: 23px;
   }
-
-  .team h5 {
+  #team ul li h5 {
+    line-height: 18px;
+    margin: 142px 0 0 2px;
+    font-size: 13px;
+  }
+  #team header {
     font-size: 13px !important;
     line-height: 17px !important;
-    margin-top: 138px !important;
+    margin-top: 75px !important;
   }
 
   .dit {
@@ -548,15 +535,6 @@ section.content {
   }
 }
 
-@media (max-width: 979px){
-
-  .navbar .brand {
-    padding-right: 10px;
-    padding-left: 1px;
-    margin: 0px;
-    margin-top: 10px;
-  }
-}
 
 @media (min-width: 768px) and (max-width: 979px){
 
@@ -566,19 +544,28 @@ section.content {
     margin-top:-42px;
   }
 
-  .team .menthor {
+  #team{
+    margin-top: 75px;
+  }
+
+  #team ul {
     height: 109px;
     margin-left: 20px;
   }
+  
+  #team ul li{
+    height: 244px;
+  }
 
-  .team .name {
+  #team ul li .name {
     padding-top: 30px;
     width: 104px;
     height: 76px;
   }
 
-  .team .name h5 {
-    margin: 12px auto;
+  #team ul li h5 {
+    margin: 76px auto 12px;
+    padding-top: 34px;
   }
 
   .dit {
@@ -610,8 +597,20 @@ section.content {
 }
 
 @media (max-width: 767px){
+  
+  #projects header{
+    margin-bottom: 36px;
+  }
+  
+  #projects header h2 {
+    padding-left: 160px;
+  }
 
-  nav.nav {
+  #projects .project:first-child {
+    margin-top: 40px;
+  }
+
+  .projects-link {
     width: 157px;
     margin-top: 157px;
   } 
@@ -625,24 +624,24 @@ section.content {
     margin-top: 140px;
     margin-left: 0px;
   }
-  .team {
+  #team ul {
     margin-left: 9%;
   }
 
-  .team .menthor {
+  #team ul li {
     height: 104px;
     width: 104px;
     margin-left: 20px;
     float: left;
   }
 
-  .team .name {
+  #team ul li .name {
     padding-top: 30px;
     width: 103px;
     height: 74px;
   }
 
-  .team .name h5 {
+  #team ul li .name h5 {
     margin: 12px auto;
   }
 
@@ -687,20 +686,16 @@ section.content {
 }
 
 @media (max-width: 480px){
-  nav.nav {
+  .projects-link {
     width: 157px;
     margin-top: 157px;
   }
 
-  .team {
+  #team ul{
     padding: 10px 14%;
     margin-left: 0;
   }
 
-  .ging {
-    width: 90% !important;
-    font-size: 15px !important;
-  }
   .project img {
     width: 100%;
   }
