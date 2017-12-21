@@ -1,10 +1,10 @@
 CKEDITOR.plugins.setLang( 'daliplugin', 'en', {
-    title: 'Create ContainerJS',
-    toolbar: 'Create ContainerJS',
-    edit: 'Edit ContainerJS',
-	remove: 'Remove ContainerJS',
-	keyLabel: 'Plugin ContainerJS Key',
+    title: 'Create Container',
+    toolbar: 'Create Container',
+    edit: 'Edit Container',
+	remove: 'Remove Container',
+	keyLabel: 'Plugin Container Key',
 	validateKey: 'Field "Key" cannot be empty',
-    displayNameLabel: 'ContainerJS Name',
+    displayNameLabel: 'Container Name',
     defaultLabel: 'Include plugin',
 } );
