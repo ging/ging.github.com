@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ISABEL Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isabel's 25th anniversary">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <link href="assets/sass/main.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="menu_main">
+            <ul>
+                <a href="agenda.html">
+                    <li>Agenda</li>
+                </a>
+                <a href="gallery.html">
+                    <li class="selected">Gallery</li>
+                </a>
+                <a href="location.html">
+                    <li>Where is it?</li>
+                </a>
+                <a href="more.html">
+                    <li>More about this event</li>
+                </a>
+            </ul>
+        </div>
+        <div class="menu_footer">
+            <ul>
+                <a href="index.html">
+                    <li>Reset</li>
+                </a>
+                <a href="more.html">
+                    <li>?</li>
+                </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+            </ul>
+
+        </div>
+    </div><!-- menu -->
+
+    <div class="wrapper">
+        <!-- Images used to open the lightbox -->
+        <iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="900"
+  height="700">
+</iframe>
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/25-aniversario-isabel'
+     + '&showsearch=true&showpopout=true&showtabs=false'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+    </div><!-- wrapper -->
+
+    <footer>
+        <div class="event_description">
+            <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm</h1>
+        </div>
+
+        <div class="logo">
+            <img src="assets/img/logos/logo.png" alt="Isabel Logo">
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

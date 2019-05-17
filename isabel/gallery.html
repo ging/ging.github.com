@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ISABEL Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isabel's 25th anniversary">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <link href="assets/sass/main.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="menu_main">
+            <ul>
+                <a href="agenda.html">
+                    <li>Agenda</li>
+                </a>
+                <a href="gallery.html">
+                    <li class="selected">Gallery</li>
+                </a>
+                <a href="location.html">
+                    <li>Where is it?</li>
+                </a>
+                <a href="more.html">
+                    <li>More about this event</li>
+                </a>
+            </ul>
+        </div>
+        <div class="menu_footer">
+            <ul>
+                <a href="index.html">
+                    <li>Reset</li>
+                </a>
+                <a href="more.html">
+                    <li>?</li>
+                </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+            </ul>
+
+        </div>
+    </div><!-- menu -->
+
+    <div class="wrapper">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="column">
+                <img src="assets/img/images/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="column">
+                <img src="assets/img/images/img2.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img3.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img4.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/img/images/img1.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 8</div>
+                    <img src="assets/img/images/img1_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 8</div>
+                    <img src="assets/img/images/img2_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 8</div>
+                    <img src="assets/img/images/img3_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 8</div>
+                    <img src="assets/img/images/img4_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 8</div>
+                    <img src="assets/img/images/img2_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 8</div>
+                    <img src="assets/img/images/img3_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 8</div>
+                    <img src="assets/img/images/img4_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 8</div>
+                    <img src="assets/img/images/img1_wide.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+        </div>
+    </div><!-- wrapper -->
+
+    <footer>
+        <div class="event_description">
+            <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm</h1>
+        </div>
+
+        <div class="logo">
+            <img src="assets/img/logos/logo.png" alt="Isabel Logo">
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
