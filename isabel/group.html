@@ -51,7 +51,7 @@
 
     <div class="wrapper">
         <!-- Images used to open the lightbox -->
-        <iframe id="forum_embed" src="javascript:void(0)" style="background: #FFFFFF;" scrolling="no" frameborder="0" width="900" height="700"></iframe>
+        <iframe id="forum_embed" src="javascript:void(0)" scrolling="no" frameborder="0" width="900" height="700"></iframe>
     </div><!-- wrapper -->
 
     <footer>
@@ -66,8 +66,10 @@
 
     <script src="./main.js"></script>
     <script type="text/javascript">
-      document.getElementById('forum_embed').src ='https://groups.google.com/forum/embed/?place=forum/25-aniversario-isabel&showsearch=true&showpopout=true&showtabs=false&parenturl=' + encodeURIComponent(window.location.href);
-      document.getElementById('forum_embed').style = "background: #FFF;";
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('forum_embed').src ='https://groups.google.com/forum/embed/?place=forum/25-aniversario-isabel&showsearch=true&showpopout=true&showtabs=false&parenturl=http://http://ging.github.io';
+        document.getElementById('forum_embed').style = "background: #FFF;";
+      });
     </script>
 
 </body>
