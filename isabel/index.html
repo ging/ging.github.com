@@ -12,11 +12,17 @@
 
   <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 </head>
 
 <body>
+  <header>
+    <div class="menu_icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </header>
 
-  <div class="menu">
+  <div class="menu" id="menu">
+    <div class="menu_close" onclick="toggleMenu()">close</div>
     <div class="menu_main">
       <ul>
         <a href="agenda.html">
@@ -97,19 +103,20 @@
         <p id="timer"></p>
       </div>
     </div><!-- window -->
+
+    <footer>
+      <div class="event_description">
+        <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm</h1>
+      </div>
+
+      <div class="logo">
+        <img src="assets/img/logos/logo.png" alt="Isabel Logo">
+      </div>
+    </footer>
   </div><!-- wrapper -->
 
-  <footer>
-    <div class="event_description">
-      <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm</h1>
-    </div>
-
-    <div class="logo">
-      <img src="assets/img/logos/logo.png" alt="Isabel Logo">
-    </div>
-  </footer>
-
   <script src="./countdown.js"></script>
+  <script src="./main.js"></script>
 
 </body>
 
