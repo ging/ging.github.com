@@ -4,7 +4,9 @@
 
 // Open the Modal
 function openModal() {
-    document.getElementById("myModal").style.display = "block";
+    if (screen.width >= 600) {
+        document.getElementById("myModal").style.display = "block";
+    }
 }
 
 // Close the Modal
