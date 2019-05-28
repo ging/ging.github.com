@@ -341,8 +341,28 @@ footer .event_description {
 }
 
 /* ==========================================================================
+FACEBOOK GROUP
+   ========================================================================== */
+.window_fb {
+  width: 500px;
+  height: 500px;
+}
+
+.window_fb .window_content {
+  padding: 0;
+}
+
+.window_fb .window_content iframe {
+  width: 100%;
+}
+
+/* ==========================================================================
 GALLERY
    ========================================================================== */
+.gallery {
+  padding: 4rem 0 0 22%;
+}
+
 .row {
   margin: 1rem 0 0 0;
 }
@@ -517,6 +537,9 @@ p:first-child {
 RESPONSIVE
    ========================================================================== */
 @media (max-width: 1024px) {
+  .gallery {
+    padding: 4rem 0 0 0;
+  }
   header {
     display: flex;
     flex-flow: row wrap;
