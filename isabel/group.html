@@ -20,7 +20,8 @@
 <body>
 
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3">
+    </script>
 
     <header>
         <div class="menu_icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
@@ -64,6 +65,24 @@
     </div><!-- menu -->
 
     <div class="wrapper">
+        <div class="window window_address">
+            <div id="mydivheader" class="window_header">
+                <div class="icon">
+                    <img src="assets/img/ico/window_icon.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>Interact</h2>
+                </div>
+                <div class="actions">
+                    <div class="action">_</div>
+                    <div class="action">-</div>
+                    <div class="action">x</div>
+                </div>
+            </div>
+            <div class="window_content">
+                <h3>Get in touch with our participants through the event's facebook group</h3>
+            </div>
+        </div> <!-- window -->
         <div class="window window_fb">
             <div id="mydivheader" class="window_header">
                 <div class="icon">
@@ -79,7 +98,10 @@
                 </div>
             </div>
             <div class="window_content">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fisabel25anniversary&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="470" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fisabel25anniversary&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="500" height="470" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div> <!-- window -->
     </div>

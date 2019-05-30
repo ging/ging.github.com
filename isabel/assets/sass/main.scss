@@ -75,7 +75,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 4rem 0 0 0;
+    padding: 4rem 0 0 3rem;
 }
 
 footer {
@@ -188,6 +188,8 @@ footer {
     }
 }
 
+/* ---- MORE ----*/
+
 /* ---- AGENDA ----*/
 .window_agenda {
     width: 70rem;
@@ -226,6 +228,10 @@ footer {
             &:first-child {
                 margin: 0;
             }
+        }
+
+        a {
+            text-decoration: underline;
         }
     }
 }
@@ -584,9 +590,15 @@ RESPONSIVE
    ========================================================================== */
 
 @media (max-width: 1024px) {
-    .gallery {
-        padding: 4rem 0 0 0;
+
+    .wrapper {
+        padding: 14.5rem 0 0 0;
     }
+
+    .gallery {
+        padding: 12rem 0 0 0;
+    }
+
     header {
         display: flex;
         flex-flow: row wrap;
@@ -781,6 +793,13 @@ RESPONSIVE
         }
     }
 
+    .gallery {
+        padding: 0 0 0 0;
+        footer {
+            display: none;
+        }
+    }
+
     .window_agenda {
         margin: 0 .8rem .8rem 0;
 
@@ -797,6 +816,10 @@ RESPONSIVE
 
     .wrapper_index {
         margin: 15rem 0 0 0;
+    }
+
+    .wrapper {
+        margin: 40% 0 0 0;
     }
 
     .window.window_map {

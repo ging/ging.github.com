@@ -44,7 +44,7 @@ header .top_logo {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 4rem 0 0 0;
+  padding: 4rem 0 0 3rem;
 }
 
 footer {
@@ -158,6 +158,7 @@ footer .event_description {
   line-height: 2.5rem;
 }
 
+/* ---- MORE ----*/
 /* ---- AGENDA ----*/
 .window_agenda {
   width: 70rem;
@@ -198,6 +199,10 @@ footer .event_description {
 
 .window_agenda .window_content .event:first-child {
   margin: 0;
+}
+
+.window_agenda .window_content a {
+  text-decoration: underline;
 }
 
 /* ---- LOCATION ----*/
@@ -537,8 +542,11 @@ p:first-child {
 RESPONSIVE
    ========================================================================== */
 @media (max-width: 1024px) {
+  .wrapper {
+    padding: 14.5rem 0 0 0;
+  }
   .gallery {
-    padding: 4rem 0 0 0;
+    padding: 12rem 0 0 0;
   }
   header {
     display: flex;
@@ -683,6 +691,12 @@ RESPONSIVE
   .wrapper .window .actions .action:last-child {
     display: flex;
   }
+  .gallery {
+    padding: 0 0 0 0;
+  }
+  .gallery footer {
+    display: none;
+  }
   .window_agenda {
     margin: 0 .8rem .8rem 0;
   }
@@ -694,6 +708,9 @@ RESPONSIVE
   }
   .wrapper_index {
     margin: 15rem 0 0 0;
+  }
+  .wrapper {
+    margin: 40% 0 0 0;
   }
   .window.window_map {
     width: 95%;
