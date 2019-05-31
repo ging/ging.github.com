@@ -237,8 +237,25 @@ footer {
 }
 
 /* ---- LOCATION ----*/
+
+.wrapper_location {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 4rem 3rem 0 3rem;
+}
+
+.wrapper_group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2.5rem 3rem 0 3rem;
+}
+
 .window_address {
-    width: 40rem;
+    width: 25rem;
     z-index: 10;
 
     .window_content {
@@ -248,8 +265,35 @@ footer {
     }
 }
 
+.window_group {
+    width: 45rem;
+    z-index: 10;
+
+    .window_content {
+        background-color: blue;
+        color: white;
+        font-size: 1.4rem;
+    }
+}
+
+.window_remote {
+    width: 35rem;
+    z-index: 10;
+
+    .window_content {
+        padding: 0;
+        background-color: none;
+        color: white;
+        font-size: 1.4rem;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
 .window.window_map {
-    width: 48rem;
+    width: 350px;
 
     .window_content {
         padding: 0;
