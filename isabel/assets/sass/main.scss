@@ -875,3 +875,14 @@ RESPONSIVE
 .show {
     display: block;
 }
+
+/* CONFETTI*/
+
+#confetti{
+	height: 100%;
+	left: 0px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+}
