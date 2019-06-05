@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -61,106 +63,23 @@
 
     <div class="wrapper gallery">
         <!-- Images used to open the lightbox -->
-        <div class="row">
-            <div class="column">
-                <img src="assets/img/images/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img4.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
-            </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+        </div>
+    </div><!-- wrapper -->
+
+    <footer>
+        <div class="event_description">
+            <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm CEST</h1>
         </div>
 
-        <div class="row row2">
-            <div class="column">
-                <img src="assets/img/images/img5.gif" onclick="openModal();currentSlide(5)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img6.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img7.gif" onclick="openModal();currentSlide(7)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="assets/img/images/img8.jpeg" onclick="openModal();currentSlide(8)" class="hover-shadow">
-            </div>
+        <div class="logo">
+            <img src="assets/img/logos/logo.png" alt="Isabel Logo">
         </div>
+    </footer>
 
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="mySlides">
-                    <div class="numbertext">1 / 8</div>
-                    <img src="assets/img/images/img1_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">2 / 8</div>
-                    <img src="assets/img/images/img2_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">3 / 8</div>
-                    <img src="assets/img/images/img3_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">4 / 8</div>
-                    <img src="assets/img/images/img4_wide.png" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">5 / 8</div>
-                    <img src="assets/img/images/img5_wide.gif" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">6 / 8</div>
-                    <img src="assets/img/images/img6_wide.png" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">7 / 8</div>
-                    <img src="assets/img/images/img7_wide.gif" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">8 / 8</div>
-                    <img src="assets/img/images/img8_wide.jpeg" style="width:100%">
-                </div>
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Caption text -->
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-
-                <!-- Thumbnail image controls -->
-            </div>
-        </div><!-- wrapper -->
-
-        <footer>
-            <div class="event_description">
-                <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm CEST</h1>
-            </div>
-
-            <div class="logo">
-                <img src="assets/img/logos/logo.png" alt="Isabel Logo">
-            </div>
-        </footer>
-
-        <script src="./gallery.js"></script>
-        <script src="./main.js"></script>
+    <script src="./gallery.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 

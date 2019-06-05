@@ -1,6 +1,6 @@
 /* ==========================================================================
    GALLERY
-   ========================================================================== 
+   ==========================================================================
 
 // Open the Modal
 function openModal() {
@@ -51,7 +51,7 @@ function showSlides(n) {
    GALLERY 2
    ========================================================================== */
 
-// Dynamic images
+// Images
 
 let images_data = [{
         "id": 1,
@@ -67,24 +67,24 @@ let images_data = [{
     },
     {
         "id": 4,
-        "name": "img4.jpg"
+        "name": "img4.png"
     },
     {
         "id": 5,
-        "name": "img5.jpg"
+        "name": "img5.gif"
     },
     {
         "id": 6,
-        "name": "img6.jpg"
+        "name": "img6.png"
     },
     {
         "id": 7,
-        "name": "img7.jpg"
+        "name": "img7.gif"
     },
 
     {
         "id": 8,
-        "name": "img8.jpg"
+        "name": "img8.jpeg"
     },
 
 ];
@@ -96,7 +96,7 @@ let images = '';
 images_data.forEach(function (data_item) {
 
     images += `
-        <div class="window window_group mySlides">
+        <div class="window window_gallery mySlides">
             <div id="mydivheader" class="window_header">
                 <div class="icon">
                     <img src="assets/img/ico/window_icon.png" alt="">
@@ -118,8 +118,10 @@ images_data.forEach(function (data_item) {
             </div>
         </div> <!-- window -->
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="gallery_buttons">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
 	`;
 });
 
