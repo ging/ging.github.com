@@ -206,9 +206,19 @@ footer .event_description {
   width: 100%;
 }
 
-.go_top {
-  color: yellow;
-  text-align: right;
+.double_col {
+  column-count: 1;
+}
+
+.window_footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 0 0 0;
+}
+
+.window_footer button {
+  color: red;
+  padding: .5rem;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -737,6 +747,9 @@ RESPONSIVE
 }
 
 @media (max-width: 900px) {
+  .double_col {
+    column-count: 1;
+  }
   .window_gallery {
     width: 40rem;
     z-index: 10;
