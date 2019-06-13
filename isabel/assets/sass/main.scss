@@ -217,6 +217,32 @@ footer {
 
 /* ---- MORE ----*/
 
+.year {
+    margin: 2.5rem 0 0 0;
+    h2 {
+        font-weight: 600;
+        color: yellow;
+        margin: 0;
+    }
+    .event {
+        margin: .5rem 0 0 0;
+        padding: 0 0 0 1.5rem;
+
+        .item {
+            margin: .5rem 0 0 0;
+            width: 100%;
+        }
+    }
+}
+
+.go_top {
+    color: yellow;
+    text-align: right;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
 /* ---- AGENDA ----*/
 .window_agenda {
     width: 70rem;

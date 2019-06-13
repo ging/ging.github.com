@@ -48,3 +48,10 @@ function dragElement(elmnt) {
     var element = document.getElementById("menu");
     element.classList.toggle("show");
   }
+
+
+
+/* --- Top of page --- */
+function scrollWin() {
+    window.scrollTo(0, 0);
+  }
