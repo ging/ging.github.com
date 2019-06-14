@@ -418,8 +418,44 @@ footer .event_description {
 }
 
 .menu .menu_footer ul a {
-  color: #7b92a9;
-  width: 32%;
+  color: #4b5f73;
+  width: 62%;
+  /* Standard syntax */
+}
+
+.menu .menu_footer ul a span {
+  height: 11px;
+  width: 11px;
+  background-color: red;
+  display: flex;
+  align-self: center;
+  border-radius: 11px;
+  margin: .4rem 0 0 .3rem;
+  -webkit-animation-name: blink;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1.2s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: blink;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: #B9C5D1;
+  }
+}
+
+@keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: #B9C5D1;
+  }
 }
 
 .menu .menu_footer ul a li {
@@ -451,6 +487,7 @@ footer .event_description {
 
 .menu .menu_footer ul a:last-child {
   color: #030034;
+  width: 35%;
 }
 
 /* ==========================================================================

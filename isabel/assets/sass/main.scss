@@ -219,11 +219,13 @@ footer {
 
 .year {
     margin: 2.5rem 0 0 0;
+
     h2 {
         font-weight: 600;
         color: yellow;
         margin: 0;
     }
+
     .event {
         margin: .5rem 0 0 0;
         padding: 0 0 0 1.5rem;
@@ -243,6 +245,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin: 2rem 0 0 0;
+
     button {
         color: red;
         padding: .5rem;
@@ -452,8 +455,46 @@ footer {
             justify-content: space-between;
 
             a {
-                color: darken($color: #B9C5D1, $amount: 20);
-                width: 32%;
+                color: darken($color: #B9C5D1, $amount: 40);
+                width: 62%;
+
+                span {
+                    height: 11px;
+                    width: 11px;
+                    background-color: red;
+                    display: flex;
+                    align-self: center;
+                    border-radius: 11px;
+                    margin: .4rem 0 0 .3rem;
+                    -webkit-animation-name: blink;
+                    /* Safari 4.0 - 8.0 */
+                    -webkit-animation-duration: 1.2s;
+                    /* Safari 4.0 - 8.0 */
+                    animation-name: blink;
+                    animation-duration: 1.2s;
+                    animation-iteration-count: infinite;
+                }
+
+                @-webkit-keyframes blink {
+                    from {
+                        background-color: red;
+                    }
+
+                    to {
+                        background-color: #B9C5D1;
+                    }
+                }
+
+                /* Standard syntax */
+                @keyframes blink {
+                    from {
+                        background-color: red;
+                    }
+
+                    to {
+                        background-color: #B9C5D1;
+                    }
+                }
 
                 li {
                     display: flex;
@@ -471,6 +512,7 @@ footer {
                         box-shadow: inset 1.94px 2.25px 2.13px rgba(0, 0, 0, 0.36), inset -1px -1px 2px rgba(0, 0, 0, 0.25);
                         background-color: yellow;
                     }
+
                 }
 
                 li.selected {
@@ -484,6 +526,7 @@ footer {
 
                 &:last-child {
                     color: #030034;
+                    width: 35%;
                 }
             }
         }
@@ -514,6 +557,7 @@ GALLERY
 .gallery {
     display: flex;
 }
+
 .window_gallery {
     width: 46rem;
     z-index: 10;
@@ -543,6 +587,7 @@ GALLERY
 .gallery_buttons {
     display: flex;
 }
+
 .prev,
 .next {
     cursor: pointer;
@@ -842,6 +887,7 @@ RESPONSIVE
         width: 40rem;
         z-index: 10;
     }
+
     .next {
         right: 40%;
     }
