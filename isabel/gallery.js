@@ -67,7 +67,7 @@ let images_data = [{
     },
     {
         "id": 4,
-        "name": "img4.png"
+        "name": "img4.jpg"
     },
     {
         "id": 5,
@@ -89,72 +89,92 @@ let images_data = [{
 
     {
         "id": 9,
-        "name": "1994IsabelSummerschool.jpg"
+        "name": "img9.jpg"
     },
 
     {
         "id": 10,
-        "name": "audiencia1.jpg"
+        "name": "img11.png"
     },
 
     {
         "id": 11,
-        "name": "Cyberaula.png"
+        "name": "1994IsabelSummerschool.jpg"
     },
 
     {
         "id": 12,
-        "name": "dcp00493.jpg"
+        "name": "audiencia1.jpg"
     },
 
     {
         "id": 13,
-        "name": "Discapacidad.jpg"
+        "name": "Cyberaula.png"
     },
 
     {
         "id": 14,
-        "name": "Global360.gif"
+        "name": "dcp00493.jpg"
     },
 
     {
         "id": 15,
-        "name": "iba02-3.png"
+        "name": "Discapacidad.jpg"
     },
 
     {
         "id": 16,
-        "name": "Isabel10thAnniversary.png"
+        "name": "Global360.gif"
     },
 
     {
         "id": 17,
-        "name": "red13.gif"
+        "name": "iba02-3.png"
     },
 
     {
         "id": 18,
-        "name": "Screenshot 2019-06-13 at 07.06.24.png"
+        "name": "Isabel10thAnniversary.png"
     },
 
     {
         "id": 19,
-        "name": "SKM_C224e_I15082114020_0001.jpg"
+        "name": "red13.gif"
     },
 
     {
         "id": 20,
-        "name": "SKM_C224e_I15082114401_0001.jpg"
+        "name": "SKM_C224e_I15082114020_0001.jpg"
     },
 
     {
         "id": 21,
-        "name": "SKM_C224e_I15082114570_0001.jpg"
+        "name": "SKM_C224e_I15082114401_0001.jpg"
     },
 
     {
         "id": 22,
+        "name": "SKM_C224e_I15082114570_0001.jpg"
+    },
+
+    {
+        "id": 23,
         "name": "UtrialWL4.jpeg"
+    },
+
+    {
+        "id": 24,
+        "name": "Bled-VNC.jpg"
+    },
+
+    {
+        "id": 25,
+        "name": "Global_Info_Day_2007.jpg"
+    },
+
+    {
+        "id": 26,
+        "name": "Global_Info_Day_2007-2.jpg"
     },
 
 ];

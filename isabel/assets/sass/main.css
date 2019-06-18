@@ -240,7 +240,7 @@ footer .event_description {
 .window_agenda .window_content .event {
   display: flex;
   flex-flow: row wrap;
-  margin: 1.8rem 0 0 0;
+  margin: 1.9rem 0 0 0;
 }
 
 .window_agenda .window_content .event .event_time {
@@ -255,10 +255,25 @@ footer .event_description {
 
 .window_agenda .window_content .event .event_content .event_title {
   font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 0 .8rem 0;
 }
 
 .window_agenda .window_content .event .event_content .event_speakers {
   margin: .5rem 0 0 0;
+}
+
+.window_agenda .window_content .event .event_content .event_speakers .speaker {
+  margin: 0 0 .5rem 0;
+}
+
+.window_agenda .window_content .event .event_content .event_speakers .subtitle {
+  font-weight: 600;
+  margin: 1.2rem 0 .6rem 0;
+}
+
+.window_agenda .window_content .event .event_content .event_speakers .indent {
+  margin: 1rem 0 .7rem 2rem;
 }
 
 .window_agenda .window_content .event:first-child {
@@ -445,7 +460,7 @@ footer .event_description {
     background-color: red;
   }
   to {
-    background-color: #B9C5D1;
+    background-color: transparent;
   }
 }
 
@@ -454,7 +469,7 @@ footer .event_description {
     background-color: red;
   }
   to {
-    background-color: #B9C5D1;
+    background-color: transparent;
   }
 }
 
@@ -504,6 +519,22 @@ FACEBOOK GROUP
 
 .window_fb .window_content iframe {
   width: 100%;
+}
+
+/* ==========================================================================
+STREAMING
+   ========================================================================== */
+.window_stream {
+  width: 560px;
+}
+
+.window_stream .window_content {
+  padding: 0;
+}
+
+.window_stream .window_content iframe {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ==========================================================================

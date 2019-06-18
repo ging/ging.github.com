@@ -269,7 +269,7 @@ footer {
         .event {
             display: flex;
             flex-flow: row wrap;
-            margin: 1.8rem 0 0 0;
+            margin: 1.9rem 0 0 0;
 
             .event_time {
                 font-family: $timer;
@@ -282,10 +282,26 @@ footer {
 
                 .event_title {
                     font-weight: $bold;
+                    font-size: 1.5rem;
+                    margin: 0 0 .8rem 0;
                 }
 
                 .event_speakers {
                     margin: .5rem 0 0 0;
+
+                    .speaker {
+                        margin: 0 0 .5rem 0;
+                    }
+
+                    .subtitle {
+                        font-weight: 600;
+                        margin: 1.2rem 0 .6rem 0;
+                    }
+
+                    .indent {
+                        margin: 1rem 0 .7rem 2rem;
+                    }
+
                 }
             }
 
@@ -445,6 +461,7 @@ footer {
         }
     }
 
+
     .menu_footer {
         width: 100%;
         margin: .5rem 0 0 0;
@@ -473,6 +490,7 @@ footer {
                     animation-name: blink;
                     animation-duration: 1.2s;
                     animation-iteration-count: infinite;
+
                 }
 
                 @-webkit-keyframes blink {
@@ -481,7 +499,7 @@ footer {
                     }
 
                     to {
-                        background-color: #B9C5D1;
+                        background-color: transparent;
                     }
                 }
 
@@ -492,7 +510,7 @@ footer {
                     }
 
                     to {
-                        background-color: #B9C5D1;
+                        background-color: transparent;
                     }
                 }
 
@@ -546,6 +564,21 @@ FACEBOOK GROUP
 
         iframe {
             width: 100%;
+        }
+    }
+}
+
+/* ==========================================================================
+STREAMING
+   ========================================================================== */
+
+.window_stream {
+    width: 560px;
+    .window_content {
+        padding: 0;
+        iframe {
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -711,7 +744,6 @@ p {
         margin: 0;
     }
 }
-
 
 /* ==========================================================================
 RESPONSIVE
