@@ -108,6 +108,7 @@ header li a:hover {
 
 footer {
   padding: 2.5rem;
+  font-size: 1.1rem;
 }
 
 footer ul {
@@ -117,86 +118,32 @@ footer ul {
 }
 
 footer ul li {
-  margin: 0 .8rem 0 0;
-}
-
-.float_navBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #17E9E0;
-  width: 100%;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  padding: 1.5rem 0 1.5rem 0;
-  /* position: fixed;
-    top: 0;
-    left: 0;*/
-}
-
-.float_navBar .imagotype {
-  width: 100%;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.float_navBar .imagotype .isotype {
-  background-color: #282828;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  margin: 0 0 0 2rem;
-}
-
-.float_navBar .imagotype .logotype {
-  font-size: 1.7rem;
-  font-weight: 900;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #282828;
-  padding: 0 20rem 0 .7rem;
-}
-
-.float_navBar .menu {
-  width: 55%;
-  font-weight: 600;
-  margin: 0 3rem 0 0;
-}
-
-.float_navBar .menu ul {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  font-size: 1.2rem;
-}
-
-.float_navBar li .li-selected {
-  border-bottom: 7px solid #FCCD05;
-}
-
-.float_navBar li .li-selected:hover {
-  border-bottom: inherit;
-}
-
-.float_navBar li a {
-  transition: 15ms;
-}
-
-.float_navBar li a:hover {
-  border-bottom: 5px dashed #282828;
-}
-
-.hidden {
-  display: none;
+  margin: 0 1.3rem 0 0;
 }
 
 .lang_en {
   font-weight: 900;
+}
+
+/*---- Scroll Bar ----*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #282828;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* ==========================================================================
