@@ -37,6 +37,7 @@ header {
   /* position: fixed;
     top: 0;
     left: 0;*/
+  z-index: 200;
 }
 
 header .imagotype {
@@ -106,9 +107,17 @@ header li a:hover {
 }
 
 footer {
-  display: flex;
+  padding: 2.5rem;
+}
+
+footer ul {
   justify-content: center;
-  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer ul li {
+  margin: 0 .8rem 0 0;
 }
 
 .float_navBar {
@@ -193,6 +202,11 @@ footer {
 /* ==========================================================================
    HOME
    ========================================================================== */
+.home_page .border_navbar {
+  border-bottom: solid 1.5px #f4f4f4;
+  transition: none;
+}
+
 .home {
   margin: 0 8rem 0 17rem;
 }
@@ -326,6 +340,11 @@ footer {
   transition: .5s;
 }
 
+.projects .border_navbar {
+  border-bottom: solid 1.5px #3a3a3a;
+  transition: none;
+}
+
 /* ==========================================================================
    RESEARCH
    ========================================================================== */
@@ -391,6 +410,11 @@ footer {
 .research main .research .paper .paper_main a:hover h2 {
   transition: 1s ease-in-out;
   text-decoration: underline;
+}
+
+.research .border_navbar {
+  border-bottom: solid 1.5px #ffcbb3;
+  transition: none;
 }
 
 /* ==========================================================================
@@ -475,6 +499,11 @@ footer {
   text-decoration: underline;
 }
 
+.team .border_navbar {
+  border-bottom: solid 1.5px #d1fbf9;
+  transition: none;
+}
+
 /* ==========================================================================
    ABOUT
    ========================================================================== */
@@ -519,7 +548,12 @@ footer {
   font-size: 2rem;
 }
 
-/* ==========================================================================
+.about .border_navbar {
+  border-bottom: solid 1.5px #c1c1c1;
+  transition: none;
+}
+
+/* =========================================================================
 TYPOGRAPHY
    ========================================================================== */
 a {

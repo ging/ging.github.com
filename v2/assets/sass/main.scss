@@ -108,6 +108,7 @@ html {
 header {
     background-color: white;
     @include navBar;
+    z-index: 200;
 
     li {
         .li-selected {
@@ -143,9 +144,15 @@ header {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+    padding: 2.5rem;
+    ul {
+        justify-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        li {
+            margin: 0 .8rem 0 0;
+        }
+    }
 }
 
 .float_navBar {
@@ -187,6 +194,13 @@ footer {
 /* ==========================================================================
    HOME
    ========================================================================== */
+
+.home_page {
+    .border_navbar {
+        border-bottom: solid 1.5px lighten($color: $black, $amount: 80);
+        transition: none;
+    }
+}
 
 .home {
     margin: 0 8rem 0 17rem;
@@ -236,7 +250,6 @@ footer {
 }
 
 
-
 /* PARALAX */
 .parallax {
     perspective: 2px;
@@ -251,7 +264,6 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-
 }
 
 .parallax__layer--base {
@@ -348,6 +360,11 @@ footer {
 
     }
 
+    .border_navbar {
+        border-bottom: solid 1.5px lighten($color: $black, $amount: 7);
+        transition: none;
+    }
+
 }
 
 
@@ -440,6 +457,11 @@ footer {
 
         }
 
+    }
+
+    .border_navbar {
+        border-bottom: solid 1.5px lighten($color: $pink, $amount: 7);
+        transition: none;
     }
 
 }
@@ -556,6 +578,11 @@ filter:#{"grayscale(#{$value})"};
 
     }
 
+    .border_navbar {
+        border-bottom: solid 1.5px lighten($color: $blue, $amount: 40);
+        transition: none;
+    }
+
 }
 
 
@@ -595,7 +622,6 @@ filter:#{"grayscale(#{$value})"};
             }
         }
 
-
         section {
             &:last-child {
                 border-bottom: solid 1.5px lighten($color: $black, $amount: 60);
@@ -620,9 +646,14 @@ filter:#{"grayscale(#{$value})"};
 
     }
 
+    .border_navbar {
+        border-bottom: solid 1.5px lighten($color: $black, $amount: 60);
+        transition: none;
+    }
+
 }
 
-/* ==========================================================================
+/* =========================================================================
 TYPOGRAPHY
    ========================================================================== */
 
