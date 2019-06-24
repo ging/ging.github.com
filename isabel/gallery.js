@@ -61,120 +61,143 @@ let images_data = [{
         "id": 2,
         "name": "img2.jpg"
     },
+
     {
         "id": 3,
+        "name": "Santander_WideRoom_01.png"
+    },
+
+    {
+        "id": 4,
         "name": "img3.jpg"
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "img4.jpg"
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "img5.gif"
     },
     {
-        "id": 6,
-        "name": "img6.png"
-    },
-    {
         "id": 7,
-        "name": "img7.gif"
+        "name": "img6.png"
     },
 
     {
         "id": 8,
-        "name": "img8.jpeg"
+        "name": "img7.gif"
     },
 
     {
         "id": 9,
-        "name": "img9.jpg"
+        "name": "img8.jpeg"
     },
 
     {
         "id": 10,
-        "name": "img11.png"
+        "name": "img9.jpg"
     },
 
     {
         "id": 11,
-        "name": "1994IsabelSummerschool.jpg"
+        "name": "img11.png"
     },
 
     {
         "id": 12,
-        "name": "audiencia1.jpg"
+        "name": "1994IsabelSummerschool.jpg"
     },
 
     {
         "id": 13,
-        "name": "Cyberaula.png"
+        "name": "audiencia1.jpg"
     },
 
     {
         "id": 14,
-        "name": "dcp00493.jpg"
+        "name": "Cyberaula.png"
     },
 
     {
         "id": 15,
-        "name": "Discapacidad.jpg"
+        "name": "dcp00493.jpg"
     },
 
     {
         "id": 16,
-        "name": "Global360.gif"
+        "name": "Discapacidad.jpg"
     },
 
     {
         "id": 17,
-        "name": "iba02-3.png"
+        "name": "Global360.gif"
     },
 
     {
         "id": 18,
-        "name": "Isabel10thAnniversary.png"
+        "name": "iba02-3.png"
     },
 
     {
         "id": 19,
-        "name": "red13.gif"
+        "name": "Isabel10thAnniversary.png"
     },
 
     {
         "id": 20,
-        "name": "SKM_C224e_I15082114020_0001.jpg"
+        "name": "red13.gif"
     },
 
     {
         "id": 21,
-        "name": "SKM_C224e_I15082114401_0001.jpg"
+        "name": "SKM_C224e_I15082114020_0001.jpg"
     },
 
     {
         "id": 22,
-        "name": "SKM_C224e_I15082114570_0001.jpg"
+        "name": "SKM_C224e_I15082114401_0001.jpg"
     },
 
     {
         "id": 23,
-        "name": "UtrialWL4.jpeg"
+        "name": "SKM_C224e_I15082114570_0001.jpg"
     },
 
     {
         "id": 24,
-        "name": "Bled-VNC.jpg"
+        "name": "UtrialWL4.jpeg"
     },
 
     {
         "id": 25,
-        "name": "Global_Info_Day_2007.jpg"
+        "name": "Bled-VNC.jpg"
     },
 
     {
         "id": 26,
+        "name": "Global_Info_Day_2007.jpg"
+    },
+
+    {
+        "id": 27,
         "name": "Global_Info_Day_2007-2.jpg"
+    },
+    {
+        "id": 28,
+        "name": "TheValley_ ThePlace_01.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Santander_WideRoom_02.png"
+    },
+    {
+        "id": 30,
+        "name": "Oxford_The Hive.jpg"
+    },
+    {
+        "id": 31,
+        "name": "TheValley_ ThePlace_02.jpg"
     },
 
 ];
@@ -192,7 +215,7 @@ images_data.forEach(function (data_item) {
                     <img src="assets/img/ico/window_icon.png" alt="">
                 </div>
                 <div class="title">
-                    <h2>Interact</h2>
+                    <h2>Photos</h2>
                 </div>
                 <div class="actions">
                     <div class="action">_</div>
