@@ -34,9 +34,6 @@ header {
   align-items: center;
   transition: 0.5s;
   padding: 1.5rem 0 1.5rem 0;
-  /* position: fixed;
-    top: 0;
-    left: 0;*/
   z-index: 200;
 }
 
@@ -138,7 +135,7 @@ footer ul li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #282828;
+  background: #424242;
 }
 
 /* Handle on hover */
@@ -229,6 +226,11 @@ footer ul li {
 .projects {
   color: white;
   background-color: #282828;
+  padding: 5rem 0 0 0;
+  /*---- Scroll Bar ----*/
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 
 .projects .navBar {
@@ -292,12 +294,25 @@ footer ul li {
   transition: none;
 }
 
+.projects ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.projects ::-webkit-scrollbar-thumb {
+  background: #FFB38F;
+}
+
+.projects ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* ==========================================================================
    RESEARCH
    ========================================================================== */
 .research {
   color: #282828;
   background-color: #FFB38F;
+  padding: 5rem 0 0 0;
 }
 
 .research .navBar {
@@ -383,6 +398,7 @@ footer ul li {
 .team {
   color: #282828;
   background-color: #a3f6f3;
+  padding: 5rem 0 0 0;
 }
 
 .team .navBar {
@@ -456,7 +472,7 @@ footer ul li {
    ========================================================================== */
 .about main .about_description {
   border-bottom: solid 1.5px #c1c1c1;
-  padding: 4rem 3rem 6rem 7rem;
+  padding: 9rem 3rem 6rem 7rem;
 }
 
 .about main .location {
@@ -471,7 +487,8 @@ footer ul li {
 }
 
 .about main .location .col1 .location_map {
-  height: 35rem;
+  height: 500px;
+  width: 700px;
   background-color: #17E9E0;
 }
 
@@ -551,3 +568,7 @@ h4 {
 ul {
   list-style: none;
 }
+
+/* =========================================================================
+RESPONSIVE
+   ========================================================================== */

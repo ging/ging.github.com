@@ -35,10 +35,6 @@ $extra-bold: 900;
     align-items: center;
     transition: 0.5s;
     padding: 1.5rem 0 1.5rem 0;
-    /* position: fixed;
-    top: 0;
-    left: 0;*/
-    //<------ menu de navegación fijo, problema en TEAM con las fotos y los filters
 
     .imagotype {
         width: 100%;
@@ -168,20 +164,21 @@ footer {
 ::-webkit-scrollbar {
     width: 10px;
 }
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: $black;
-    }
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lighten($color: $black, $amount: 10);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 
 /* ==========================================================================
@@ -277,6 +274,7 @@ footer {
 .projects {
     color: white;
     background-color: $black;
+    padding: 5rem 0 0 0;
 
     .navBar {
         background-color: inherit;
@@ -359,6 +357,22 @@ footer {
         transition: none;
     }
 
+    /*---- Scroll Bar ----*/
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $pink;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
 }
 
 
@@ -369,6 +383,7 @@ footer {
 .research {
     color: $black;
     background-color: $pink;
+    padding: 5rem 0 0 0;
 
     .navBar {
         background-color: $pink;
@@ -488,6 +503,7 @@ filter:#{"grayscale(#{$value})"};
 .team {
     color: $black;
     background-color: lighten($color: $blue, $amount: 30);
+    padding: 5rem 0 0 0;
 
 
     .navBar {
@@ -589,7 +605,7 @@ filter:#{"grayscale(#{$value})"};
     main {
         .about_description {
             border-bottom: solid 1.5px lighten($color: $black, $amount: 60);
-            padding: 4rem 3rem 6rem 7rem;
+            padding: 9rem 3rem 6rem 7rem;
         }
 
         .location {
@@ -603,7 +619,8 @@ filter:#{"grayscale(#{$value})"};
                 width: 50%;
 
                 .location_map {
-                    height: 35rem;
+                    height: 500px;
+                    width: 700px;
                     background-color: $blue;
 
                 }
@@ -701,3 +718,10 @@ h4 {
 ul {
     list-style: none;
 }
+
+
+/* =========================================================================
+RESPONSIVE
+   ========================================================================== */
+
+@media(max-width: 600px) {}
