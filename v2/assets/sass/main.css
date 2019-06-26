@@ -489,7 +489,23 @@ footer ul li {
 .about main .location .col1 .location_map {
   height: 500px;
   width: 700px;
-  background-color: #17E9E0;
+  background-color: #FCCD05;
+}
+
+.about main .location .col1 .map-responsive {
+  overflow: hidden;
+  padding: 36.25%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.about main .location .col1 .map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .about main section:last-child {
