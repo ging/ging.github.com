@@ -60,6 +60,19 @@ $extra-bold: 900;
         }
     }
 
+    .menu_icon {
+        .close {
+            display: none;
+        }
+
+        .show {
+            padding: 2% 0 0 0;
+            display: none;
+            position: absolute;
+            top: 26.5%;
+            right: 6.5%;
+        }
+    }
 
     .menu {
         width: 55%;
@@ -212,30 +225,30 @@ footer {
         height: 20rem;
         border-radius: 50%;
         background-color: $pink;
-        position: relative;
-        top: 5rem;
-        left: 80rem;
+        position: absolute;
+        top: 35%;
+        left: 70%;
     }
 
     .triangle {
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 0 98.5px 166.9px 98.5px;
+        border-width: 0 120.5px 188.9px 98.5px;
         border-color: transparent transparent #FCCD05 transparent;
-        position: relative;
-        top: -15rem;
-        left: -8rem;
-        transform: rotate(90deg);
+        position: absolute;
+        top: -18%;
+        left: -4%;
+        transform: rotate(85deg);
     }
 
     .rectangle {
         width: 20rem;
         height: 6rem;
         background-color: #17E9E0;
-        position: relative;
-        top: 28rem;
-        left: 18rem;
+        position: absolute;
+        top: 120%;
+        left: 20%;
         transform: rotate(-40deg);
     }
 }
@@ -625,19 +638,20 @@ filter:#{"grayscale(#{$value})"};
 
                 }
 
-                .map-responsive{
-                    overflow:hidden;
-                    padding:36.25%;
-                    position:relative;
-                    height:100%;
+                .map-responsive {
+                    overflow: hidden;
+                    padding: 36.25%;
+                    position: relative;
+                    height: 100%;
                     width: 100%;
                 }
-                .map-responsive iframe{
-                    left:0;
-                    top:0;
-                    height:100%;
-                    width:100%;
-                    position:absolute;
+
+                .map-responsive iframe {
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
                 }
             }
 
@@ -664,12 +678,16 @@ filter:#{"grayscale(#{$value})"};
         color: $black;
         font-size: 2rem;
         width: 100%;
+        padding: 1rem 0 .5rem 0;
     }
 
     h3 {
         color: $black;
         font-size: 2rem;
 
+    }
+    p {
+        font-size: 1.5rem;
     }
 
     .border_navbar {
@@ -739,6 +757,281 @@ ul {
 RESPONSIVE
    ========================================================================== */
 
+@media(max-width: 940px) {
+
+    header {
+        padding: 1.5rem 0 1.6rem 0;
+
+        .menu {
+            width: 100%;
+            font-weight: $semi-bold;
+            margin: 0;
+            padding: 2rem 3rem 0 3rem;
+
+            ul {
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: space-between;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 800px) {
+    .home {
+        margin: 0 4rem 0 7rem;
+
+        p {
+            font-size: 3.5rem;
+        }
+
+        h1 {
+            font-size: 6rem;
+        }
+    }
+
+    .projects {
+        main {
+            .our_projects {
+                padding: 3.5rem 0 0 0;
+                .project {
+                    padding: 3rem 1rem 3rem 3rem;
+
+                    h2 {
+                        font-size: 3rem;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
 @media(max-width: 600px) {
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+        padding: 1rem 0 .7rem 0;
+
+        .imagotype {
+            width: 100%;
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: space-between;
+            align-items: center;
+
+            .isotype {
+                background-color: $black;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                margin: 0 0 0 2rem;
+            }
+
+            .logotype {
+                font-size: 1.7rem;
+                font-weight: $extra-bold;
+                font-family: $helvetica;
+                color: $black;
+                padding: 0 0 0 .7rem;
+            }
+        }
+
+        .menu_icon {
+            padding: 0;
+
+            .close {
+                position: absolute;
+                display: none;
+                top: 5%;
+                right: 6.5%;
+            }
+
+            .show {
+                padding: 0;
+                display: unset;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            font-weight: $semi-bold;
+            margin: 0;
+            padding: 2rem 3rem 0 3rem;
+            display: none;
+
+
+            ul {
+                display: flex;
+                flex-flow: wrap column;
+                align-items: center;
+                font-size: 1.5rem;
+
+                li {
+                    padding: .8rem 0 0 0;
+                }
+            }
+        }
+    }
+
+    .home {
+        margin: 0 1.6rem 0 2.5rem;
+        padding: 1rem 0 0 0;
+
+        p {
+            font-size: 2.5rem;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+        }
+    }
+
+    .projects {
+        main {
+            .our_projects {
+                padding: 3.5rem 0 0 0;
+
+                .project {
+                    padding: 2rem 1rem 2rem 2rem;
+
+                    h2 {
+                        font-size: 1.6rem;
+                    }
+
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .research {
+        main {
+            .research {
+                .paper {
+                    flex-flow: column wrap;
+                    padding: 2rem 1rem 2rem 4rem;
+                    width:100%;
+
+                    .paper_date {
+                        width:100%;
+                        margin: 0 0 .5rem 0;
+                        color: lighten($color: $pink, $amount: 25);
+                    }
+
+                    .paper_title {
+                        width: 100%;
+                    }
+
+                    h2 {
+                        font-size: 2rem;
+                    }
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .team {
+        main {
+            .teammates {
+                .teammate {
+                    padding: 3rem 2rem 3rem 2rem;
+
+                    h2 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .about {
+        main {
+            .about_description {
+                padding: 9rem 2rem 3rem 2rem;
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+
+            .location {
+                padding: 4rem 1rem 3rem 3rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 2.5rem 0 2.5rem 0;
+        font-size: .9rem;
+        width: 100%;
+        text-align: center;
+
+        ul {
+            justify-content: center;
+            display: flex;
+            flex-flow: row wrap;
+
+            li {
+                margin: 0 1.3rem 0 0;
+            }
+        }
+    }
+
+    .background {
+
+        .circle {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            background-color: $pink;
+            position: absolute;
+            top: 35%;
+            left: 60%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 120.5px 188.9px 98.5px;
+            border-color: transparent transparent #FCCD05 transparent;
+            position: absolute;
+            top: -18%;
+            left: -4%;
+            transform: rotate(85deg);
+        }
+
+        .rectangle {
+            width: 20rem;
+            height: 6rem;
+            background-color: #17E9E0;
+            position: absolute;
+            top: 140%;
+            left: 20%;
+            transform: rotate(-40deg);
+        }
+    }
 
 }
