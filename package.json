@@ -14,8 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build:docs": "npm run publications && react-scripts build && rm -rf ging && mv build ging && cp build/index.html index.html",
-    "build": "npm run publications && react-scripts build && cp build/index.html index.html",
+    "build": "npm run publications && react-scripts build && cp build/index.html index.html && cp build/index.html 404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publications": "node transformPublications.js",
