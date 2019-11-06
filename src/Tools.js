@@ -25,7 +25,7 @@ export default class Tools extends React.Component {
                                     </div>
 
                                     <div className="tool_main">
-                                        <a target="_blank" href={route} rel="noopener noreferrer">
+                                        <a target="_blank" href={process.env.PUBLIC_URL + route} rel="noopener noreferrer">
                                             <div className="tool_content">
                                                 <div className="tool_description description">
                                                     <h3>{description}</h3>
