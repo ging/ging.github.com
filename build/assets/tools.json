@@ -1,0 +1,22 @@
+[
+  {
+    "title": "QUIZ converter",
+    "description":"This quiz converter facilitates the conversion between different formats: Moodle XML, Aiken and JSON.",
+    "route": "https://sonsoleslp.github.io/quiz-converter/"
+  },
+  {
+    "title": "RESCORM Quiz generator",
+    "description":"This website allows users to customize their very own quiz application and generate a SCORM package ready to upload to their preferred LMS. This project was developed using RESCORM.",
+    "route": "https://sonsoleslp.github.io/rescorm-generator/"
+  },
+  {
+    "title": "CODEditor",
+    "description":"Web-based editor to create self-graded HTML and JavaScript exercises.",
+    "route": "https://github.com/agordillo/CODEditor"
+  },
+  {
+    "title": "EuropeanaRS",
+    "description":"A Hybrid Learning Object Recommender System based on Europeana.",
+    "route": "https://github.com/agordillo/EuropeanaRS"
+  }
+]
