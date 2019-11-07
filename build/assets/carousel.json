@@ -12,7 +12,13 @@
     "url": "https://www.etsit.upm.es/otros-elementos/noticias.html?tx_news_pi1%5Bnews%5D=696&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=4c592d8df53070d3e17090b296443b76"
   },
   {
-    "label": "Checkout our YouTube channel",
+    "label": "Visit our GitHub",
+    "description":  " ",
+    "image": "/assets/img/carousel/github.png",
+    "url": "https://github.com/ging"
+  },
+  {
+    "label": "YouTube channel",
     "description":  " ",
     "image": "/assets/img/carousel/youtube-channel.png",
     "url": "https://www.youtube.com/user/FirefoxOSHTML5/featured"
@@ -22,5 +28,11 @@
     "description":  "Discover the final theses offered by the GING",
     "image": "/assets/img/carousel/tft.png",
     "url": "https://www.dit.upm.es/index.php/tfts/325-ofertas-de-tft-para-el-curso-2019-20-en-el-grupo-ging "
+  },
+  {
+    "label": "ResearchGate lab profile",
+    "description":  "",
+    "image": "/assets/img/carousel/researchgate.png",
+    "url": "https://www.researchgate.net/lab/Next-Generation-Internet-Group-Juan-Quemada"
   }
 ]

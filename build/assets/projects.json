@@ -1,6 +1,34 @@
 [
 	{
+<<<<<<< HEAD
 		"logo": "/assets/img/logos/fiware.svg",
+=======
+		"logo": "/assets/img/logos/educaInternet.png",
+		"route": "http://educainternet.es/",
+		"title": "EducaInternet",
+		"description": "EducaInternet is a collaborative platform whose main objective is to facilitate the teaching community to learn and teach the safe and responsible use of technologies. The EducaInternet platform offers an authoring tool to create content, a contest for the best resources created and training courses. EducaInternet has more than 15,000 resources on the Secure Use of ICT and more than 4000 registered users to date."
+	},
+	{
+		"logo": "/assets/img/logos/mooc.svg",
+		"route": "https://innovacioneducativa.upm.es/mooc",
+		"title": "MOOCs",
+		"description": "This project consists of a set of Massive Open Online Courses developed by UPM in cooperation with the Telefónica Chair at UPM. These MOOCs are prepared primarily by teachers, published in open and universally accessible via the Internet. Allow, among other things, create learning communities, access knowledge and specialization to millions of people, asynchronously and free of charge, with predictive and adaptive learning models. \nThe MOOCs focus on Software Engineering and in Fullstack Web programming using JavaScript."
+	},
+	{
+		"logo": "/assets/img/logos/loep.png",
+		"route": "https://github.com/agordillo/LOEP",
+		"title": "LOEP",
+		"description": "LOEP (Learning Object Evaluation Platform) is an open source web-based platform developed using Ruby on Rails that aims to facilitate the evaluation of small and self-contained web educational resources, known as Learning Objects, in different scenarios and educational contexts. It has been designed to provide systematic evaluation of Learning Objects and generation of quality scores to e-Learning systems according to multiple evaluation models and quality metrics. LOEP provides several features including user and Learning Object management, Learning Object evaluations tools, review assignments, interoperability with e-Learning systems, and statistics."
+	},
+	{
+		"logo": "/assets/img/logos/cefTelecom.png",
+		"route": "https://ec.europa.eu/inea/en/connecting-europe-facility/cef-telecom",
+		"title": "CEF Telecom",
+		"description": "In this project, there were two sub-projects that address cross-border electronic identification in Europe for several services: CEF-eID-FIWARE and  CEF-eID4U."
+	},
+	{
+		"logo": "/assets/img/logos/fiware.png",
+>>>>>>> aa769fdbf8b2acf4a5698985305830afa9a954f2
 		"route": "https://www.fiware.org/",
 		"title": "FIWARE",
 		"description": "FIWARE brings a curated framework of open source platform components which can be assembled together and with other third-party platform components to build Smart Solutions faster, easier and cheaper. "
@@ -13,10 +41,10 @@
 		"description" : "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!"
 	},
 	{
-		"logo": "/assets/img/logos/ediphy.svg",
+		"logo": "/assets/img/logos/ediphy.png",
 		"route": "http://ging.github.io/ediphy/",
 		"title": "Ediphy",
-		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server"
+		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server."
 	},
 	{
 		"logo": "/assets/img/logos/vish.svg",
@@ -31,10 +59,17 @@
 		"description": "EducaInternet is a collaborative platform whose main objective is to facilitate the teaching community to learn and teach the safe and responsible use of technologies. The EducaInternet platform offers an authoring tool to create content, a contest for the best resources created and training courses. EducaInternet has more than 15,000 resources on the Secure Use of ICT and more than 4000 registered users to date."
 	},
 	{
+<<<<<<< HEAD
 		"logo": "/assets/img/logos/eid-fiware.svg",
 		"route": "https://ec.europa.eu/inea/en/connecting-europe-facility/cef-telecom",
 		"title": "CEF eID-FIWARE",
 		"description": "This project integrates the eID DSI in the FIWARE platform, which provides a set of APIs (Application Programming Interfaces) for the development of Smart Applications in sectors oriented to the Future Internet. It will develop FIWARE Identity Manager – eIDAS authentication gateway joining both eIDAS and FIWARE Identity Manager. After the integration of eID DSI with FIWARE Identity Management and Access Control General Enabler, it is possible to access FIWARE ecosystem services with eIDAS eIDs of EU citizens."
+=======
+		"logo": "/assets/img/logos/lynkia.svg",
+		"route": "http://lynckia.com/",
+		"title": "Lynckia",
+		"description" : "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!"
+>>>>>>> aa769fdbf8b2acf4a5698985305830afa9a954f2
 	},
 	{
 		"logo": "/assets/img/logos/eid4u.svg",
@@ -43,10 +78,18 @@
 		"description": "This project integrates the eIDAS-compliant national eIDs in services offered by the European academic world. We created a virtual student card based on the standard eIDAS attributes for physical persons, extended with those new attributes required for the academic environment. We integrated the solution in several services of the universities taking part in the consortium (UPM, POLITO, ULISBOA, JSI and University of Graz)."
 	},
 	{
+<<<<<<< HEAD
 		"logo": "/assets/img/logos/mooc.svg",
 		"route": "https://innovacioneducativa.upm.es/mooc",
 		"title": "MOOCs",
 		"description": "This project consists of a set of Massive Open Online Courses developed by UPM in cooperation with the Telefónica Chair at UPM. These MOOCs are prepared primarily by teachers, published in open and universally accessible via the Internet. Allow, among other things, create learning communities, access knowledge and specialization to millions of people, asynchronously and free of charge, with predictive and adaptive learning models. \nThe MOOCs focus on Software Engineering and in Fullstack Web programming using JavaScript."
+=======
+		"logo": "/assets/img/logos/tools.svg",
+		"route": "/tools",
+		"title": "Tools",
+		"noBlank": true,
+		"description": "Discover the different educational tools this team has developed."
+>>>>>>> aa769fdbf8b2acf4a5698985305830afa9a954f2
 	},
 	{
 		"logo": "/assets/img/logos/isabel.svg",

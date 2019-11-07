@@ -1,6 +1,6 @@
 [
 	{
-		"logo": "/assets/img/logos/fiware.svg",
+		"logo": "/assets/img/logos/fiware.png",
 		"route": "https://www.fiware.org/",
 		"title": "FIWARE",
 		"description": "FIWARE brings a curated framework of open source platform components which can be assembled together and with other third-party platform components to build Smart Solutions faster, easier and cheaper. "
@@ -9,14 +9,14 @@
 	{
 		"logo": "/assets/img/logos/lynkia.svg",
 		"route": "http://lynckia.com/",
-		"title": "Lynkia",
+		"title": "Lynckia",
 		"description" : "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!"
 	},
 	{
-		"logo": "/assets/img/logos/ediphy.svg",
+		"logo": "/assets/img/logos/ediphy.png",
 		"route": "http://ging.github.io/ediphy/",
 		"title": "Ediphy",
-		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server"
+		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server."
 	},
 	{
 		"logo": "/assets/img/logos/vish.svg",
@@ -25,7 +25,7 @@
 		"description": "ViSH is a social and collaborative platform focused on the creation and sharing of open educational resources. ViSH provides a collection of tools and services to facilitate the creation, distribution and use of high quality educational materials and to foster technology enhanced learning both in the classroom as well as in Virtual Learning Environments (VLEs) and Learning Management Systems (LMSs). "
 	},
 	{
-		"logo": "/assets/img/logos/educainternet.svg",
+		"logo": "/assets/img/logos/educaInternet.png",
 		"route": "http://educainternet.es/",
 		"title": "EducaInternet",
 		"description": "EducaInternet is a collaborative platform whose main objective is to facilitate the teaching community to learn and teach the safe and responsible use of technologies. The EducaInternet platform offers an authoring tool to create content, a contest for the best resources created and training courses. EducaInternet has more than 15,000 resources on the Secure Use of ICT and more than 4000 registered users to date."
@@ -78,6 +78,6 @@
 		"route": "/tools",
 		"title": "Tools and demonstrators",
 		"noBlank": true,
-		"description": "Discover the different tools and research demonstrators this team has developed"
+		"description": "Discover the different tools and research demonstrators this team has developed."
 	}
 ]
