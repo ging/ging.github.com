@@ -38,7 +38,7 @@
       ]
    },
    "assistant":{ 
-      "title":"Assistant Professors (Profesores Ayudantes)",
+      "title":"Assistant Professors (Profesores Ayudantes Doctores)",
       "members":[ 
          { 
             "name":"Enrique Barra",
@@ -48,18 +48,18 @@
             "email": "enrique.barra@upm.es"
          },
          { 
-            "name":"Aldo Gordillo",
-            "description":"Professor at Universidad Politécnica de Madrid (UPM). Currently teaching in the Informatic Systems Department, School of Informatic Systems Engineering. He received the degree in Telecommunications Engineering and the Ph.D. degree in telematic engineering from the UPM, in 2012 and 2017, respectively. Since 2012, he has been a Research and Development Engineer with the Telematic Engineering Department, UPM. His research interests include the field of technology enhanced learning, with a special focus on creation, evaluation, and dissemination of e-learning resources, computer science education, game-based learning, and e-learning systems.",
-            "photo":"/assets/img/team/aldo-gordillo.jpg",
-            "github":"https://github.com/agordillo",
-            "email": "a.gordillo@upm.es"
-         },
-         { 
             "name":"Álvaro Alonso",
             "description":"Álvaro Alonso, Ph.D. in Telecommunications Engineering, Professor at the Telematic Systems Engineering Department, School of Telecommunications Engineering, is a WebHTML5 Videoconference and Cloud Computing expert.He is the author of several articles and participates in a lot of Spanish and European research projects. His research interests include multi-conferencing systems in cloud computing, security, and the IoT in the future Internet.",
             "photo":"/assets/img/team/alvaro-alonso.jpg",
             "github":"https://github.com/aalonsog",
             "email": "alvaro.alonso@upm.es"
+         },
+         { 
+            "name":"Aldo Gordillo",
+            "description":"Professor at Universidad Politécnica de Madrid (UPM). Currently teaching in the Informatic Systems Department, School of Informatic Systems Engineering. He received the degree in Telecommunications Engineering and the Ph.D. degree in telematic engineering from the UPM, in 2012 and 2017, respectively. Since 2012, he has been a Research and Development Engineer with the Telematic Engineering Department, UPM. His research interests include the field of technology enhanced learning, with a special focus on creation, evaluation, and dissemination of e-learning resources, computer science education, game-based learning, and e-learning systems.",
+            "photo":"/assets/img/team/aldo-gordillo.jpg",
+            "github":"https://github.com/agordillo",
+            "email": "a.gordillo@upm.es"
          }
       ]
    },
@@ -95,11 +95,18 @@
             "email": "abel.carril@upm.es"
          },
          { 
-            "name":"Pedro Verdugo",
-            "description":"Reseacher in the New Generation Internet Group. Pedro is a systems technician with 11 years of experience in management and development of infrastructures and continuous hardware and software projects for external clients.",
-            "photo":"/assets/img/team/pedro-verdugo.jpg",
-            "github":"https://github.com/pmverdugo",
-            "email": "pm.verdugo@upm.es"
+            "name":"Pedro Luis Chas Alonso",
+            "description":"graduated in Telecommunications Engineering (Escuela Técnica Superior de Ingenieros de Telecomunicación - Universidad Politécnica de Madrid, 1978). His professional career has taken place mainly within the Telefónica Group, mainly in R&D related activities. From 1978 he has held several senior positions in Telefonica R&D, Telef?nica Corporation, Telefónica de España, Telefónica Móviles and Telefónica Soluciones. From 2008 he is working as contract researcher in the Internet NG group of DIT - ETSIT - UPM. He has participated (and managed) many R&D projects both at the national and the European level.",
+            "photo":"/assets/img/team/pedro-chas.jpeg",
+            "email": "pedro.chas@upm.es",
+            "github":""
+         },
+         { 
+            "name":"Lourdes Marco",
+            "description":"Researcher and Ph.D. student in Telecommunications Engineering, with a minor in Human-Computer Interaction. She received the M.Sc. degree in UX Design at Universidad Internacional de la Rioja (UNIR). Lourdes is currently teaching at Escuela superior de diseño de Madrid (ESDMadrid).",
+            "photo":"/assets/img/team/pedro-chas.jpg",
+            "email": "lourdes.marcosp@alumnos.upm.es",
+            "github":"https://github.com/Lourdesmarco"
          }
       ]
    },
@@ -133,31 +140,6 @@
             "photo":"/assets/img/team/carlos-arriaga.jpg",
             "github":"https://github.com/Arri98",
             "email": " carlos.arriaga.prietoj@alumnos.upm.es"
-         }
-      ]
-   },
-   "exMembers":{ 
-      "title":"Former members (Antiguos miembros)",
-      "members":[ 
-         { 
-            "name":"Lourdes Marco",
-            "description":"Researcher and Ph.D. student in Telecommunications Engineering, with a minor in Human-Computer Interaction. She received the M.Sc. degree in UX Design at Universidad Internacional de la Rioja (UNIR). Lourdes is currently teaching at Escuela superior de diseño de Madrid (ESDMadrid).",
-            "photo":"/assets/img/team/lourdes-marco.jpg",
-            "email": "",
-            "github":"https://github.com/Lourdesmarco"
-         },
-         {
-            "name":"Ana Estrada",
-            "description":"Fullstack Developer. B.S. and M.S. Graduate in Graphic and Interactive Design from ESD Madrid. Former UX/UI designer and Frontend developer at GING, working mainly in EducaInternet, escapp, and Ediphy. Now, Backend Developer at Bnext. ",
-            "photo":"/assets/img/team/ana-estrada.jpg",
-            "linkedin": "https://es.linkedin.com/in/aemartos",
-            "github":"https://github.com/aemartos" 
-         },
-         { 
-            "name":"Alberto Benito",
-            "description":"Alberto graduated from UPM in 2016 with a B.S. in Telecommunications Engineering. Now he is working as a Developer in BridgeU, doing functional programming and Elm.",
-            "photo":"/assets/img/team/alberto-benito.jpg",
-            "github":"https://github.com/abenitoc"
          }
       ]
    }

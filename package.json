@@ -17,7 +17,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publications": "node transformPublications.js"
-
   },
   "homepage": "http://ging.github.com/build/",
   "eslintConfig": {
