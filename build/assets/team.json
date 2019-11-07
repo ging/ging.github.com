@@ -126,6 +126,13 @@
             "photo":"/assets/img/team/javier-lopez.jpg",
             "github":"https://github.com/Javierlj",
             "email": "javier.lopezj@alumnos.upm.es"
+         },
+         {
+            "name":"Carlos Arriaga",
+            "description":" Carlos collaborates with the GING as an EDiphy developer. He is a B.S. candidate in Telecommunications Engineering.",
+            "photo":"/assets/img/team/carlos-arriaga.jpg",
+            "github":"https://github.com/Arri98",
+            "email": " carlos.arriaga.prietoj@alumnos.upm.es"
          }
       ]
    },
