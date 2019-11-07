@@ -45,6 +45,6 @@ export default class Tools extends React.Component {
     }
     componentDidMount(){
         window.scrollTo(0,0);
-        fetch("/assets/tools.json").then(res=>res.json()).then(tools=>this.setState({tools, loading: false}))
+        fetch(process.env.PUBLIC_URL+"/assets/tools.json").then(res=>res.json()).then(tools=>this.setState({tools, loading: false}))
     }
 }
