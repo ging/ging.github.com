@@ -16,14 +16,14 @@
       "members":[ 
          { 
             "name":"Joaquín Salvachúa",
-            "description":"Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals.His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
+            "description":"Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
             "photo":"/assets/img/team/joaquin-salvachua.jpg",
             "github":"https://github.com/jsalvachua",
             "email": "joaquin.salvachua@upm.es"
          },
          { 
             "name":"Santiago Pavón",
-            "description":"Santiago Pavón Gómez was born in Madrid, Spain, in 1963. He obtained the B.S. and Ph.D. in Telecommunication Engineer from the UPM in 1987 and 1990 respectively. Since 1987 he has worked as an engineer at the Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT), obtaining a position of Assistant Professor in 1991 and the position of Associate Professor in 1992. He is currently a member of the UPM's New Generation Internet research group. He has directed several doctoral thesis, has published several articles and participated in national and international research projects related to Formal Description Techniques (Alice, Lotosphere, Gaucho, Sigma, Medas, Forces, Sde, Format); with CSCW (Computer Supported Cooperative Work), Tele-Education, collaboration services, IPv6 and the so-called next generation Internet (Isabel, Sim, Binet, Iber, Disc, Sten, Bonaparte, Tecodis, Nice, MHCT, Saba, Expert, Universal, Elena, Saba-2, Euro6ix, E-Next, Prolearn, iCamp, Global Excursion); with the design of advanced collaboration services on UMTS and IMS (Samurai); with virtualization and the new internet (FI-Ware, FI-Xifi, FI-Content, FI-Core, FI-Next); with identity services (CEF eID FIWARE, CEF eID4U); safely (Cyspa); with Blockchain (BAPI).",
+            "description":"Santiago Pavón Gómez obtained the B.S. and Ph.D. in Telecommunication Engineer from the Universidad Politécnica de Madrid (UPM) in 1987 and 1990 respectively. Santiago obtained the position of Assistant Professor in 1991 and the position of Associate Professor in 1992. He has published several articles and participated in national and international research projects related to Formal Description Techniques, CSCW, Tele-Education, collaboration services, IPv6, virtualization, identity services, safely (Cyspa) and Blockchain (BAPI).",
             "photo":"/assets/img/team/santiago-pavon.jpg",
             "github":"https://github.com/sanpago",
             "email": "santiago.pavon@upm.es"
