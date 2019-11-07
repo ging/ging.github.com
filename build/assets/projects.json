@@ -81,7 +81,8 @@
 	},
 	{
 		"logo": "/assets/img/logos/isabel.svg",
-		"route": "https://es.wikipedia.org/wiki/Usuario:SonsolesLP/Isabel",
+		"route": "https://ging.github.com/isabel",
+		"route2": "https://es.wikipedia.org/wiki/Usuario:SonsolesLP/Isabel",
 		"title": "ISABEL",
 		"description": " Isabel supported collaborative video-conferencing with a floor control coordinating the proper configuration of audio, video, slides, pointers and other multimedia components. ISABEL workstations were connected with TCP/IP over the ATM and satellite broadband infrastructures."
 	},

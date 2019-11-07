@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Cite = require('citation-js')
 
-fs.readFile("publications.bib", function(err, buf) {
+fs.readFile("public/assets/publications.bib", function(err, buf) {
   	let bib = buf.toString();//.replace(/@\w*{(\w*)/,(a)=>a+Math.floor(10000*Math.random()))
   	let output = new Cite(bib).format('bibliography', {
 	  format: 'html',
