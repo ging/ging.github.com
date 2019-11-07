@@ -19,7 +19,7 @@ export default class Tools extends React.Component {
                         {this.state.loading ? <Spinner/> : this.state.tools.map(({title, description, route, author})=>{
                             return (<div className="tool">
                                     <div className="tool_title">
-                                        <a href={route}>
+                                        <a href={route} target="_blank" rel="noopener noreferrer">
                                             <h2>{title}</h2>
                                         </a>
                                     </div>

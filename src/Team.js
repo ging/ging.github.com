@@ -26,7 +26,7 @@ export default class Team extends React.Component {
 				        			return (
 				        				<div className="teammate">
 				        				    <div className="mate_img">
-				        				        <a href={github}>
+				        				        <a href={github} target="_blank" rel="noopener noreferrer">
 				        				            <img alt={"Team member"} src={process.env.PUBLIC_URL + photo} className="grayscale"/>
 				        				        </a>
 				        				    </div>
@@ -38,7 +38,7 @@ export default class Team extends React.Component {
 				        				        <div className="mate_description">
 				        				            <p>{description}</p>
 													<p><b>{emailAddress ? 
-														(<span>{emailAddress[0]}  <img alt="at" className="at" src={process.env.PUBLIC_URL+"/assets/img/arroba-symbol.svg"}/>
+														(<span>{emailAddress[0]}  <img alt="at" className="at" src={process.env.PUBLIC_URL + "/assets/img/arroba-symbol.svg"}/>
 														 {emailAddress[1]}</span>
 														):""}</b></p>
 				        				        </div>

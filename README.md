@@ -22,6 +22,7 @@ Para actualizar la información de la página hay que seguir los siguientes paso
   ```
   * Commitea tus cambios y súbelos al repositorio
   ```bash
+  git add .
   git commit -am "Update info"
   git push origin master
   ```
