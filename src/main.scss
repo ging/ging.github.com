@@ -1356,6 +1356,13 @@ RESPONSIVE
     .team {
         main {
             .teammates {
+                .teamgrouptitle {
+                    padding: 6rem 5rem -1rem 10rem;
+                    h2 {
+                        margin-left: 20px;
+                        font-size: 3rem;
+                    }
+                }
                 .teammate {
                     padding: 3rem 2rem 3rem 2rem;
 
