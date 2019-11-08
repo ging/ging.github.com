@@ -140,6 +140,13 @@
             "photo":"/assets/img/team/carlos-arriaga.jpg",
             "github":"https://github.com/Arri98",
             "email": " carlos.arriaga.prietoj@alumnos.upm.es"
+         },
+         {
+            "name":"Iciar Villamayor",
+            "description":" Iciar is a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
+            "photo":"/assets/img/team/iciar-villamayor.png",
+            "github":"https://github.com/IciarVillamayor",
+            "email": "iciarvillamayor@hotmail.com"
          }
       ]
    }

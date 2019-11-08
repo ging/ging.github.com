@@ -870,7 +870,7 @@ filter:#{"grayscale(#{$value})"};
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: left;
-                padding: 6rem 5rem 6rem 10rem;
+                padding: 6rem 5rem -1rem 10rem;
                 h2 {
                     margin-left: 80px;
                 }
@@ -1261,7 +1261,13 @@ RESPONSIVE
             }
         }
     }
-
+    .parallax__layer {
+        position: absolute;
+        top:75px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
     .home {
         margin: 0 1.6rem 0 2.5rem;
         padding: 1rem 0 0 0;
@@ -1273,9 +1279,7 @@ RESPONSIVE
         h1 {
             font-size: 2.5rem;
         }
-
     }
-
     .projects {
         main {
             .our_projects {
