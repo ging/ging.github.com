@@ -37,7 +37,7 @@
 		"description": "This project integrates the eID DSI in the FIWARE platform, which provides a set of APIs (Application Programming Interfaces) for the development of Smart Applications in sectors oriented to the Future Internet. It will develop FIWARE Identity Manager – eIDAS authentication gateway joining both eIDAS and FIWARE Identity Manager. After the integration of eID DSI with FIWARE Identity Management and Access Control General Enabler, it is possible to access FIWARE ecosystem services with eIDAS eIDs of EU citizens."
 	},
 	{
-		"logo": "/assets/img/logos/eid4u.svg",
+		"logo": "/assets/img/logos/eid4u.png",
 		"route": "https://ec.europa.eu/inea/en/connecting-europe-facility/cef-telecom",
 		"title": "eID4U",
 		"description": "This project integrates the eIDAS-compliant national eIDs in services offered by the European academic world. We created a virtual student card based on the standard eIDAS attributes for physical persons, extended with those new attributes required for the academic environment. We integrated the solution in several services of the universities taking part in the consortium (UPM, POLITO, ULISBOA, JSI and University of Graz)."
