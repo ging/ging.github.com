@@ -541,7 +541,6 @@ footer {
     .nav_bar {
         background-color: inherit;
         color: inherit;
-
         .imagotype {
 
             .isotype {
@@ -551,25 +550,28 @@ footer {
             .logotype {
                 color: white;
                 font-weight: $bold;
+                text-decoration: none;
+
             }
         }
 
         li {
             &.li-selected {
                 a {
-                     border-bottom: $border1 $pink;
-
+                    border-bottom: $border1 $pink;
                     &:hover {
                         border-bottom: $border1 $pink;
                     }
                 }
-               
+
+
             }
 
             a {
                 &:hover {
-                    color: inherit;
+                    border-bottom: $border2 white;
                     text-decoration: none;
+                    color: inherit;
                 }
             }
         }
@@ -584,29 +586,36 @@ footer {
                 border-bottom: solid 1.5px lighten($color: $black, $amount: 7);
                 padding: 6rem 2rem 6rem 5rem;
 
-                .tool_title {
-                    width: 20%;
+                .tool_logo {
+                    width: 10%;
                     margin: .8rem 0 0 0;
-
-                    h2{
-                        color: white;
-                        font-size: 3rem;
+                    filter: brightness(0) invert(1);
+                    -webkit-filter: brightness(0) invert(1);
+                    img {
+                        object-fit: contain;
+                        object-position: top;
+                        width: 100%;
+                        height: 100%;
                     }
                 }
+
                 .tool_main {
                     width: 70%;
-
-                    a:hover {
+                    h2{
+                        font-weight: bold;
+                    }
+                    a{
                         color: inherit;
-                        h2,
-                        h3 {
-                            color: $blue;
-                            transition: .5s;
+                        &:hover {
+
+                            h2,
+                            h3 {
+                                color: $blue;
+                                transition: .5s;
+                            }
                         }
                     }
-                    a:visited {
-                        color: white;
-                    }
+
                 }
 
                 &:last-child {

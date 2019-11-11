@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Spinner from './Spinner';
+import {Link} from "react-router-dom";
+
 export default class Tools extends React.Component {
     constructor(props) {
         super(props);
@@ -16,8 +18,28 @@ export default class Tools extends React.Component {
                 <Header route="/projects"/>
                 <main>
                     <section className="our_tools">
-                        {this.state.loading ? <Spinner/> : this.state.tools.map(({title, description, route, author})=>{
+                        {this.state.loading ? <Spinner/> : this.state.tools.map(({title, description, route, logo})=>{
                             return (<div className="tool">
+                                    <div className="tool_logo">
+                                        <CreateLink route={route}><img alt={"Project Logo"} src={process.env.PUBLIC_URL+logo} /></CreateLink>
+                                    </div>
+
+                                    <div className="tool_main">
+                                        <CreateLink route={route}>
+                                            <div className="tool_content">
+                                                <div className="tool_title">
+                                                    <h2>{title}</h2>
+                                                </div>
+                                                <div className="tool_description">
+                                                    <h3>{description}</h3>
+                                                </div>
+                                            </div>
+                                        </CreateLink>
+                                    </div>
+                                </div>
+
+                            );
+                            {/* return (<div className="tool">
                                     <div className="tool_title">
                                         <a href={route} target="_blank" rel="noopener noreferrer">
                                             <h2>{title}</h2>
@@ -35,7 +57,7 @@ export default class Tools extends React.Component {
                                     </div>
                                 </div>
 
-                            );
+                            );*/}
                         })}
                     </section>
                 </main>
@@ -47,4 +69,15 @@ export default class Tools extends React.Component {
         window.scrollTo(0,0);
         fetch(process.env.PUBLIC_URL+"/assets/tools.json").then(res=>res.json()).then(tools=>this.setState({tools, loading: false}))
     }
+}
+const CreateLink = (props) => {
+    return props.route.match("http") ? (
+        <a target="_blank" href={props.route} rel="noopener noreferrer">
+            {props.children}
+        </a>
+    ):(
+        <Link to={props.route}>
+            {props.children}
+        </Link>
+    );
 }

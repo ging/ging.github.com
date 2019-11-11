@@ -80,7 +80,7 @@
 		"description": "Arqueopterix is a project aimed at improving the user experience in interactive video applications on fixed and mobile networks, with special applicability in the entertainment industry (virtualized games, online multiplayer games) but also in applications of any type virtualized, where a smooth user experience is expected."
 	},
 	{
-		"logo": "/assets/img/logos/tools.svg",
+		"logo": "/assets/img/logos/gear.png",
 		"route": "/tools",
 		"title": "Tools and demonstrators",
 		"noBlank": true,
