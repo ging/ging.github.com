@@ -6,7 +6,7 @@ Para actualizar la información de la página hay que seguir los siguientes paso
    ```bash
    git clone https://github.com/ging/ging.github.com
    ```
-  * Instala las dependencias:
+  * Instala las dependencias (se necesita node.js v10+):
    ```bash
    npm install # o yarn 
    ```
