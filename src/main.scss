@@ -1308,16 +1308,24 @@ RESPONSIVE
         main {
             .our_projects {
                 padding: 3.5rem 0 0 0;
-
                 .project {
+                    flex-flow: column;
                     padding: 2rem 1rem 2rem 2rem;
-
                     h2 {
                         font-size: 1.6rem;
                     }
 
                     h3 {
                         font-size: 1rem;
+                    }
+                    .project_logo {
+                        width: 20%;
+                        padding-bottom: 2rem;
+                    }
+                    .project_main {
+                        width: 100%;
+                        display: flex;
+                        flex-flow: column;
                     }
                 }
             }
@@ -1327,15 +1335,20 @@ RESPONSIVE
         main {
             .our_tools {
                 padding: 3.5rem 0 0 0;
-
                 .tool {
+                    flex-flow: column;
                     padding: 2rem 1rem 2rem 2rem;
                     .tool_title {
                         h2 {
                             font-size: 1.2rem;
                         }
                     }
-                    .tool_content {
+                    .tool_logo {
+                        width: 20%;
+                        padding-bottom: 2rem;
+                    }
+                    .tool_description {
+                        width: 140%;
                         h3 {
                             font-size: 1rem;
                         }
