@@ -2,11 +2,14 @@
 Para actualizar la información de la página hay que seguir los siguientes pasos:
 
 ## Puesta a punto
+  * Requisitos:
+    * node.js
+    * git
   * Clona el repositorio:
    ```bash
    git clone https://github.com/ging/ging.github.com
    ```
-  * Instala las dependencias (se necesita node.js v10+):
+  * Instala las dependencias:
    ```bash
    npm install # o yarn 
    ```
