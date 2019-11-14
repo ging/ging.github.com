@@ -1316,10 +1316,10 @@ RESPONSIVE
                     }
 
                     h3 {
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                     }
                     .project_logo {
-                        width: 20%;
+                        width: 40%;
                         padding-bottom: 2rem;
                         align-self: center;
                     }
@@ -1327,6 +1327,9 @@ RESPONSIVE
                         width: 100%;
                         display: flex;
                         flex-flow: column;
+                        .project_title {
+                           padding: 1rem 0rem 1rem 0rem ;
+                        }
                     }
                 }
             }
@@ -1361,6 +1364,15 @@ RESPONSIVE
     }
 
     .research {
+        h4 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+        i {
+            font-size: 1.2rem;
+        }
         main {
             .research {
                 .filters{
@@ -1368,7 +1380,7 @@ RESPONSIVE
                 }
                 .paper {
                     flex-flow: column wrap;
-                    padding: 2rem 1rem 2rem 4rem;
+                    padding: 2rem 2rem 2rem 2rem;
                     width:100%;
 
                     .paper_date {
@@ -1376,20 +1388,17 @@ RESPONSIVE
                         margin: 0 0 .5rem 0;
                         color: lighten($color: $pink, $amount: 25);
                     }
-
-                    .paper_title {
+                    .paper_main {
                         width: 100%;
-                        h2 {
-                            font-size: 2rem;
+                        .paper_title {
+                            width: 100%;
+                            h2 {
+                                font-size: 1.2rem;
+                            }
                         }
                     }
 
-                    h2 {
-                        font-size: 2rem;
-                    }
-                    h3 {
-                        font-size: 1.5rem;
-                    }
+
                 }
             }
         }
@@ -1402,18 +1411,24 @@ RESPONSIVE
                     padding: 6rem 5rem -1rem 10rem;
                     h2 {
                         margin-left: 20px;
-                        font-size: 3rem;
+                        font-size: 2rem;
                     }
                 }
                 .teammate {
                     padding: 3rem 2rem 3rem 2rem;
-
-                    h2 {
-                        font-size: 2rem;
+                    .mate_info {
+                        width: 95%;
                     }
 
+                    h2 {
+                        font-size: 1.6rem;
+                    }
+                    h3 {
+                        padding: 2rem 0rem 1rem 0rem;
+                        font-size: 1.6rem;
+                    }
                     p {
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -1426,7 +1441,20 @@ RESPONSIVE
                 padding: 9rem 2rem 3rem 2rem;
 
                 h1 {
-                    font-size: 2rem;
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+
+            }
+            .location {
+                flex-flow: column;
+                h2 {
+                    font-size: 1.6rem;
+                }
+                h3 {
+                    font-size: 1.2rem;
                 }
             }
 
