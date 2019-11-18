@@ -74,7 +74,7 @@
             "email": "sonsoles.lopez.pernas@upm.es"
          },
          { 
-            "name":"Jose Andrés Muñoz",
+            "name":"Jose Andres Muñoz",
             "description":"Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
             "photo":"/assets/img/team/jose-andres-munoz.jpg",
             "github":"https://github.com/anmunoz",
@@ -88,10 +88,10 @@
             "email": "alejandro.pozo@upm.es"
          },
          { 
-            "name":"Abel Carríl",
+            "name":"Abel Carril",
             "description":"Videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
             "photo":"/assets/img/team/abel-carril.jpg",
-            "github":"",
+            "github":"https://github.com/eibol",
             "email": "abel.carril@upm.es"
          },
          { 
@@ -122,7 +122,7 @@
          },
          {
             "name":"Ana Marín",
-            "description":"Ana is participating as Research Intern in several projects for education innovation. She is a candidate for B.S. in Biomedical Engineering, Minor in Biomedical Imaging.",
+            "description":"Ana is participating as Research Intern in several projects for education innovation. She is a candidate for B.S. in Biomedical Engineering, Itinerary in Biomedical Imaging.",
             "photo":"/assets/img/team/ana-marin.jpg",
             "github":"https://github.com/anamarine",
             "email": "ana.marine@alumnos.upm.es"

@@ -49,6 +49,12 @@
 		"description": "This project consists of a set of Massive Open Online Courses developed by UPM in cooperation with the Telefónica Chair at UPM. These MOOCs are prepared primarily by teachers, published in open and universally accessible via the Internet. Allow, among other things, create learning communities, access knowledge and specialization to millions of people, asynchronously and free of charge, with predictive and adaptive learning models. \nThe MOOCs focus on Software Engineering and in Fullstack Web programming using JavaScript."
 	},
 	{
+		"logo": "/assets/img/logos/mooc.svg",
+		"route": "https://innovacioneducativa.upm.es/saga/plato-saga",
+		"title": "MOOCs",
+		"description": "'SAGA' (Advanced recording automated system) allows teachers to record high quality videos for MOOCs, video tutorials, flipped classroom, etc. The teacher can record videos autonomously with no support personnel, once the audiovisual staff configures a custom preset for him. The video at the bottom shows how this process is done. Recorded videos require no post-production and are ready to be uploaded to YouTube, Moodle, etc."
+	},
+	{
 		"logo": "/assets/img/logos/isabel.svg",
 		"route": "https://ging.github.com/isabel",
 		"route2": "https://es.wikipedia.org/wiki/Usuario:SonsolesLP/Isabel",
