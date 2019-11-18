@@ -224,7 +224,6 @@ footer {
 
 .home {
     margin: 0 8rem 0 17rem;
-
     a {
         &:hover {
             color: inherit;
@@ -383,7 +382,7 @@ footer {
 
 .parallax__layer {
     position: absolute;
-    top: 200px;
+    top: 100px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -875,11 +874,12 @@ filter:#{"grayscale(#{$value})"};
 
     main {
         .teammates {
+            padding-top: 4rem;
             .teamgrouptitle {
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: left;
-                padding: 6rem 5rem -1rem 10rem;
+                padding: 3rem 5rem 1rem 5rem;
                 h2 {
                     margin-left: 80px;
                 }
@@ -889,7 +889,7 @@ filter:#{"grayscale(#{$value})"};
                 flex-flow: row wrap;
                 justify-content: space-evenly;
                 border-bottom: solid 1.5px lighten($color: $blue, $amount: 40);
-                padding: 6rem 5rem 6rem 10rem;
+                padding: 5rem 1rem 5rem 1rem;
                 width: 100%;
 
                 h3{
@@ -956,7 +956,8 @@ filter:#{"grayscale(#{$value})"};
 .about {
     main {
         max-width: 1000px;
-            margin: auto;
+        margin: auto;
+        margin-top: 100px;
         .about_description {
             border-bottom: solid 1.5px lighten($color: $black, $amount: 60);
             padding: 9rem 3rem 6rem 7rem;
@@ -1000,9 +1001,17 @@ filter:#{"grayscale(#{$value})"};
             .col2 {
                 flex: 1;
 
-                .location_info {}
+                .location_info {
+                    h2 {
+                        padding: 1rem 0 .5rem 0;
+                    }
+                }
 
-                .contact {}
+                .contact {
+                    h2 {
+                        padding: 1rem 0 .5rem 0;
+                    }
+                }
             }
         }
 
@@ -1022,7 +1031,7 @@ filter:#{"grayscale(#{$value})"};
         color: $black;
         font-size: 2rem;
         width: 100%;
-        padding: 1rem 0 .5rem 0;
+        padding: 1rem 0 .5rem 2rem;
     }
 
     h3 {
@@ -1120,6 +1129,22 @@ RESPONSIVE
             }
         }
     }
+    .home {
+        margin: 0 4rem 0 4rem;
+        .body {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .carousel{
+                align-self: center;
+                margin-left: 13px;
+            }
+            .latest_publications{
+                width: 90.2%;
+                align-self: center;
+            }
+        }
+    }
 
 }
 
@@ -1143,7 +1168,8 @@ RESPONSIVE
         display: block;
         width: 100%;
         .carousel {
-          width: 100%;
+            width: 100%;
+            margin-left: 0px;
         }
         .latest_publications {
           width: 100%;
@@ -1187,6 +1213,34 @@ RESPONSIVE
                     }
                 }
             }
+        }
+    }
+    .team {
+
+        .teammates {
+            padding-top: 5rem;
+            .teamgrouptitle {
+                padding: 2rem 2rem 2rem 2rem !important;
+                h2 {
+                    font-size: 3rem;
+                }
+                .teammate {
+                    display: flex;
+                    flex-flow: column;
+                    .mate_img {
+                        align-self: center;
+                    }
+                    .mate_info {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+    .about {
+        .about_description {
+            padding: 6rem 3rem 6rem 3rem !important;
         }
     }
 }
@@ -1290,6 +1344,12 @@ RESPONSIVE
         }
         .head {
             padding: 0rem 0rem 2rem 0rem;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .group_description {
+                width: 100%;
+            }
         }
         .body {
             .carousel {
@@ -1407,8 +1467,9 @@ RESPONSIVE
     .team {
         main {
             .teammates {
+                padding-top: 2rem;
                 .teamgrouptitle {
-                    padding: 6rem 5rem -1rem 10rem;
+                    padding: 1.5rem 1.5rem 1.5rem 1.5rem !important;
                     h2 {
                         margin-left: 20px;
                         font-size: 2rem;
@@ -1437,6 +1498,7 @@ RESPONSIVE
 
     .about {
         main {
+            margin-top: 20px;
             .about_description {
                 padding: 9rem 2rem 3rem 2rem;
 
@@ -1448,10 +1510,14 @@ RESPONSIVE
                 }
 
             }
+            h2 {
+                padding: 1rem 1rem 1rem 2rem;
+            }
             .location {
                 flex-flow: column;
                 h2 {
                     font-size: 1.6rem;
+                    padding: 1rem 1rem 1rem 0rem;
                 }
                 h3 {
                     font-size: 1.2rem;
