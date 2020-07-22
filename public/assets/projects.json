@@ -13,16 +13,23 @@
 		"description" : "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!"
 	},
 	{
+		"logo": "/assets/img/logos/vish.svg",
+		"route": "http://vishub.org",
+		"title": "ViSH: Open source e-Learning platform",
+		"description": "ViSH is a social and collaborative platform focused on the creation and sharing of open educational resources. ViSH provides a collection of tools and services to facilitate the creation, distribution and use of high quality educational materials and to foster technology enhanced learning both in the classroom as well as in Virtual Learning Environments. "
+	},
+	{
 		"logo": "/assets/img/logos/ediphy.png",
 		"route": "http://ging.github.io/ediphy/",
 		"title": "Ediphy",
 		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server."
 	},
 	{
-		"logo": "/assets/img/logos/vish.svg",
-		"route": "http://vishub.org",
-		"title": "ViSH: Open source e-Learning platform",
-		"description": "ViSH is a social and collaborative platform focused on the creation and sharing of open educational resources. ViSH provides a collection of tools and services to facilitate the creation, distribution and use of high quality educational materials and to foster technology enhanced learning both in the classroom as well as in Virtual Learning Environments (VLEs) and Learning Management Systems (LMSs). "
+		"logo": "/assets/img/logos/sgame.png",
+		"route": "https://sgame.dit.upm.es",
+		"title": "SGAME",
+		"description": "SGAME is a free web platform aimed at the educational community that allows to easily create web educational games by integrating educational resources into existing games."
+
 	},
 	{
 		"logo": "/assets/img/logos/educaInternet.png",
