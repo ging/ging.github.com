@@ -27,15 +27,16 @@ class Header extends React.Component {
     </a>
     <div className="menu_icon" >
     <i className={"material-icons show " + (this.state.open ? "responsive-hidden":"responsive-shown")}  
-    onClick={()=>{this.setState({open: !this.state.open})}}>
+    onClick={() => {this.setState({open: !this.state.open})}}>
       menu
-      </i><i className={"material-icons close " + (this.state.open ? "responsive-shown":"responsive-hidden")} onClick={()=>{this.setState({open: !this.state.open})}}>
+      </i><i className={"material-icons close " + (this.state.open ? "responsive-shown":"responsive-hidden")} 
+      onClick={() => {this.setState({open: !this.state.open})}}>
         close
         </i></div>
 
     <div className={"menu "+ (this.state.open ? "responsive-shown":"responsive-hidden")}>
       <ul>
-        {routes.map(route=><li className={route.route === this.props.route ? "li-selected":""}>
+        {routes.map((route,index) => <li key={index} className={route.route === this.props.route ? "li-selected":""}>
         <Link to={route.route}>{route.title}</Link></li>)}
       </ul>
     </div>

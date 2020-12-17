@@ -39,25 +39,6 @@ export default class Tools extends React.Component {
                                 </div>
 
                             );
-                            {/* return (<div className="tool">
-                                    <div className="tool_title">
-                                        <a href={route} target="_blank" rel="noopener noreferrer">
-                                            <h2>{title}</h2>
-                                        </a>
-                                    </div>
-
-                                    <div className="tool_main">
-                                        <a target="_blank" href={process.env.PUBLIC_URL + route} rel="noopener noreferrer">
-                                            <div className="tool_content">
-                                                <div className="tool_description description">
-                                                    <h3>{description}</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            );*/}
                         })}
                     </section>
                 </main>

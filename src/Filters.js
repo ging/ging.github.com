@@ -22,7 +22,7 @@ export default class Filters extends React.Component {
 				/>
 			</div>
 			<div className="filter">
-				<label for="publication">Filter by publication type</label>
+				<label htmlFor="publication">Publication type</label>
 				<select id="publication" name="publication" onChange={(e)=>this.props.changeType(e.target.value === "all" ? undefined: e.target.value)}>
 					<option key={"all"} value={"all"}>All</option>
 					<option key={"journal"} value={"article-journal"}>Journal article</option>
@@ -30,7 +30,7 @@ export default class Filters extends React.Component {
 				</select>
 			</div>
 			<div className="filter">
-				<label for="year">Filter by year</label>
+				<label htmlFor="year">Year</label>
 				<select id="year" name="year" onChange={(e)=>this.props.changeYear(e.target.value === "all" ? undefined: e.target.value)}>
 					<option key={"all"} value={"all"}>All</option>
 					{years.map(y=><option key={y} value={y}>{y}</option>)}

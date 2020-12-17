@@ -56,9 +56,9 @@ export default class Research extends React.Component {
 											.includes(item)))
 									&& (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year))
 									&& (!type || (paper.type && paper.type === type));
-			        		}).map(({date,doi,content})=>{
+			        		}).map(({date,doi,content},ind)=>{
 			        			return (
-			        				<div className="paper">
+			        				<div key={ind} className="paper">
 			        				    <div className="paper_date">
 			        				        <h4>{date ? date[0] : ""}</h4>
 			        				    </div>

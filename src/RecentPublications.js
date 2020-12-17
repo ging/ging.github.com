@@ -12,7 +12,7 @@ export default class RecentPublications extends React.Component {
         };
     }
     render(){
-        return <div className="_pubications">
+        return <div className="_pubications _recent_publications">
             {this.state.loading ? <Spinner/> : this.state.papers
                 .filter(paper => {
                     return (
@@ -23,7 +23,7 @@ export default class RecentPublications extends React.Component {
                 .map(({doi, content}) => {
                     return (
                         <a href={doi} target="_blank" rel="noopener noreferrer">
-                            <p dangerouslySetInnerHTML={{__html: content}}></p>
+                            <p style={{ color: "black" }}dangerouslySetInnerHTML={{__html: content}}></p>
                         </a>
                      );
                  })}

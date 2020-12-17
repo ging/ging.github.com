@@ -306,8 +306,6 @@ footer {
         .latest_publications{
             width: 30%;
             object-fit: cover;
-            background-color: rgba(38, 38, 38, .7);
-            color: white;
             padding: 10px;
             h3 {
                 padding-top: 4%;
@@ -316,7 +314,7 @@ footer {
                 font-weight: bold;
                 font-size: 2.1rem;
                 text-align: center;
-                color: $yellow;
+                color: black;
             }
             p{
                 font-size: 1.2rem;
