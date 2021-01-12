@@ -25,6 +25,30 @@
 		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server."
 	},
 	{
+		"logo": "/assets/img/logos/",
+		"route": "http://yoda.dit.upm.es",
+		"title": "YODA (Your Open DAta)",
+		"description": "YODA (Your Open DAta) provides a service for European citizens that allows them to create personalised dashboards binding several sources of data (including the European Data Portal) through a single application. In addition, the Action deploys a data processing infrastructure that, on the basis of real time and machine learning processing, will provide additional processed results and predictions to the developed personalised service."
+	},
+	{
+		"logo": "/assets/img/logos/arportwin.jpg",
+		"route": "https://www.eitdigital.eu/fileadmin/files/2020/factsheets/digital-tech/EIT-Digital-Factsheet-AR4portTwin.pdf",
+		"title": "A/RporTWIN",
+		"description": "A/RporTWIN is a new generation management platform focused on Airport Management and Airport’s operations. It acts a single-source of truth for different airport related operators. Some of its features are VR/AR and Mixed technologies compatibility, third party data integration and rich information representation. The data management core is based on FIWARE."
+	},
+	{
+		"logo": "/assets/img/logos/smarterp.png",
+		"route": "https://kunveno.digital",
+		"title": "SmarTerp",
+		"description": "SmarTerp addresses inefficiencies in interpreting by developing AI-powered tools embedded in a Remote Simultaneous Interpreting system that automates the human human task of extracting information in real-time to prevent the mistakes and loss of quality derived from the adoption of remote technologies. The Remote Simultaneous Interpreting system is based on Licode."
+	},
+	{
+		"logo": "/assets/img/logos/boost.png",
+		"route": "https://boost40.eu/",
+		"title": "Boost 4.0",
+		"description": "Boost 4.0 is the biggest European initiative in Big Data for Industry 4.0. With a 20M€ budget and leveraging 100M€ of private investment, Boost 4.0 will lead the construction of the European Industrial Data Space to improve the competitiveness of Industry 4.0 and will guide the European manufacturing industry in the introduction of Big Data in the factory, providing the industrial sector with the necessary tools to obtain the maximum benefit of Big Data."
+	},
+	{
 		"logo": "/assets/img/logos/sgame.png",
 		"route": "https://sgame.dit.upm.es",
 		"title": "SGAME",
