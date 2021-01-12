@@ -25,7 +25,7 @@
 		"description": "Ediphy is an online e-Learning authoring tool that allows you to create online educational resources with a wide variety of content. Since it is a web platform, you will not have to install additional software on your computer and you will be able to gain access from any of your devices. It is developed in Javascript (ES6), along with tools such as Rect & Redux. Ediphy uses yarn as package manager and webpack as development server."
 	},
 	{
-		"logo": "/assets/img/logos/",
+		"logo": "/assets/img/logos/yoda.png",
 		"route": "http://yoda.dit.upm.es",
 		"title": "YODA (Your Open DAta)",
 		"description": "YODA (Your Open DAta) provides a service for European citizens that allows them to create personalised dashboards binding several sources of data (including the European Data Portal) through a single application. In addition, the Action deploys a data processing infrastructure that, on the basis of real time and machine learning processing, will provide additional processed results and predictions to the developed personalised service."
