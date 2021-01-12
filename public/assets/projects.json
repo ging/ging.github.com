@@ -31,7 +31,7 @@
 		"description": "YODA (Your Open DAta) provides a service for European citizens that allows them to create personalised dashboards binding several sources of data (including the European Data Portal) through a single application. In addition, the Action deploys a data processing infrastructure that, on the basis of real time and machine learning processing, will provide additional processed results and predictions to the developed personalised service."
 	},
 	{
-		"logo": "/assets/img/logos/arportwin.jpg",
+		"logo": "/assets/img/logos/arportwin.png",
 		"route": "https://www.eitdigital.eu/fileadmin/files/2020/factsheets/digital-tech/EIT-Digital-Factsheet-AR4portTwin.pdf",
 		"title": "A/RporTWIN",
 		"description": "A/RporTWIN is a new generation management platform focused on Airport Management and Airport’s operations. It acts a single-source of truth for different airport related operators. Some of its features are VR/AR and Mixed technologies compatibility, third party data integration and rich information representation. The data management core is based on FIWARE."
