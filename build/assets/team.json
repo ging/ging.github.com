@@ -1,6 +1,6 @@
 { 
    "professor":{ 
-      "title":"Professors (Catedráticos)",
+      "title":"Professors",
       "members":[ 
          { 
             "name":"Juan Quemada",
@@ -12,7 +12,7 @@
       ]
    },
    "associate":{ 
-      "title":"Associate Professors (Profesores Titulares)",
+      "title":"Associate Professors",
       "members":[ 
          { 
             "name":"Joaquín Salvachúa",
@@ -38,7 +38,7 @@
       ]
    },
    "assistant":{ 
-      "title":"Assistant Professors (Profesores Ayudantes Doctores)",
+      "title":"Assistant Professors",
       "members":[ 
          { 
             "name":"Enrique Barra",
@@ -60,6 +60,13 @@
             "photo":"/assets/img/team/aldo-gordillo.jpg",
             "github":"https://github.com/agordillo",
             "email": "a.gordillo@upm.es"
+         },
+         { 
+            "name":"Sonsoles López-Pernas",
+            "description":"Sonsoles received the PhD in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
+            "photo":"/assets/img/team/sonsoles-lopez.jpg",
+            "github":"https://github.com/sonsoleslp",
+            "email": "sonsoles.lopez.pernas@upm.es"
          }
       ]
    },
@@ -67,18 +74,11 @@
       "title":"Researchers (Investigadores)",
       "members":[ 
          { 
-            "name":"Sonsoles López-Pernas",
-            "description":"Sonsoles received the B.S and M.Sc in Telecommunications Engineering from Universidad Politécnica de Madrid (UPM), in 2016 and 2018, respectively, where she is currently pursuing the Ph.D. in Telematic Engineering. Since 2015, she has been a Researcher with the Department of Telematic Engineering, UPM, participating in different projects such as FIWARE and eid4U. Her research interests include technology-enhanced learning and real-time analytics, with a focus on authoring tools, educational data mining, and data usage control. She is also involved in teaching tasks in the last degree courses, in subjects such as Web Engineering and Network Computing, and Master's, in the Big Data subject.",
-            "photo":"/assets/img/team/sonsoles-lopez.jpg",
-            "github":"https://github.com/sonsoleslp",
-            "email": "sonsoles.lopez.pernas@upm.es"
-         },
-         { 
             "name":"Jose Andres Muñoz",
             "description":"Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
             "photo":"/assets/img/team/jose-andres-munoz.jpg",
             "github":"https://github.com/anmunoz",
-            "email": "andres.munoza@alumnos.upm.es"
+            "email": "joseandres.munoz@upm.es"
          },
          { 
             "name":"Alejandro Pozo",
