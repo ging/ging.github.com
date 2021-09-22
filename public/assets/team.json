@@ -126,6 +126,13 @@
             "photo":"/assets/img/team/iciar-villamayor.png",
             "github":"https://github.com/IciarVillamayor",
             "email": "iciarvillamayor@hotmail.com"
+         },
+         {
+            "name":"Andrea Cascallana",
+            "description":"Andrea is CertHE in Illustration and also a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
+            "photo":"/assets/img/team/andrea-cascallana.jpeg",
+            "github":"https://github.com/AndreaCascallana",
+            "email": "andreacascallanarodriguez@gmail.com"
          }
       ]
    }
