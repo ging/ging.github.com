@@ -115,10 +115,10 @@
       "members":[
          {
             "name":"Carlos Arriaga",
-            "description":" Carlos collaborates with the GING as an EDiphy developer. He is a B.S. candidate in Telecommunications Engineering.",
+            "description":" Carlos is a M.S. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM). He collaborates with the GING developing videoconferencing applications using WebRTC and Licode.",
             "photo":"/assets/img/team/carlos-arriaga.jpg",
             "github":"https://github.com/Arri98",
-            "email": " carlos.arriaga.prietoj@alumnos.upm.es"
+            "email": " carlos.arriaga.prieto@alumnos.upm.es"
          },
          {
             "name":"Iciar Villamayor",
