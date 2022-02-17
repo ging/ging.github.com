@@ -30,4 +30,4 @@ Para actualizar la información de la página hay que seguir los siguientes paso
   git commit -am "Update info"
   git push origin master
   ```
-  * Ya tienes tu página actualizada en [http://ging.github.com](http://ging.github.com)
+  * Ya tienes tu página actualizada en [https://ging.github.io](https://ging.github.io)
