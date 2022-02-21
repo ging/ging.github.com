@@ -18,45 +18,49 @@ export default class Research extends React.Component {
 
 	render(){
 		const {papers, search, year, type, loading } = this.state;
+
+		let papersFiltered = null;
+		if (!loading) {
+			papersFiltered=papers.filter(paper => {
+    				return (!search || search.toLowerCase()
+							.replace(new RegExp(/\s/g),"")
+							.replace(new RegExp(/[àáâãäå]/g),"a")
+							.replace(new RegExp(/æ/g),"ae")
+							.replace(new RegExp(/ç/g),"c")
+							.replace(new RegExp(/[èéêë]/g),"e")
+						    .replace(new RegExp(/[ìíîï]/g),"i")
+							.replace(new RegExp(/ñ/g),"n")
+							.replace(new RegExp(/[òóôõö]/g),"o")
+							.replace(new RegExp(/œ/g),"oe")
+							.replace(new RegExp(/[ùúûü]/g),"u")
+							.replace(new RegExp(/[ýÿ]/g),"y")
+							.replace(new RegExp(/\W/g),"")
+							.split(" ").every(item => paper.content.toLowerCase()
+							.replace(new RegExp(/\s/g),"")
+							.replace(new RegExp(/[àáâãäå]/g),"a")
+							.replace(new RegExp(/æ/g),"ae")
+							.replace(new RegExp(/ç/g),"c")
+							.replace(new RegExp(/[èéêë]/g),"e")
+						    .replace(new RegExp(/[ìíîï]/g),"i")
+							.replace(new RegExp(/ñ/g),"n")
+							.replace(new RegExp(/[òóôõö]/g),"o")
+							.replace(new RegExp(/œ/g),"oe")
+							.replace(new RegExp(/[ùúûü]/g),"u")
+							.replace(new RegExp(/[ýÿ]/g),"y")
+							.replace(new RegExp(/\W/g),"")
+							.includes(item)))
+					&& (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year))
+					&& (!type || (paper.type && paper.type === type));
+			});
+		}
 		return (
 			<div className="research">
 				<Header route={this.props.match.path}/>
 			    <main>
 			        <section className="research">
-					<Filters search = {search} year={year} type={type} papers={papers} changeSearch={search=>this.setState({search})} changeYear={year=>this.setState({year})} changeType={type=>this.setState({type})}/>
-			        	{
-			        		loading ? <Spinner/>: papers.filter(
-			        			paper => {
-			        				return (!search || search.toLowerCase()
-											.replace(new RegExp(/\s/g),"")
-											.replace(new RegExp(/[àáâãäå]/g),"a")
-											.replace(new RegExp(/æ/g),"ae")
-											.replace(new RegExp(/ç/g),"c")
-											.replace(new RegExp(/[èéêë]/g),"e")
-										    .replace(new RegExp(/[ìíîï]/g),"i")
-											.replace(new RegExp(/ñ/g),"n")
-											.replace(new RegExp(/[òóôõö]/g),"o")
-											.replace(new RegExp(/œ/g),"oe")
-											.replace(new RegExp(/[ùúûü]/g),"u")
-											.replace(new RegExp(/[ýÿ]/g),"y")
-											.replace(new RegExp(/\W/g),"")
-											.split(" ").every(item => paper.content.toLowerCase()
-											.replace(new RegExp(/\s/g),"")
-											.replace(new RegExp(/[àáâãäå]/g),"a")
-											.replace(new RegExp(/æ/g),"ae")
-											.replace(new RegExp(/ç/g),"c")
-											.replace(new RegExp(/[èéêë]/g),"e")
-										    .replace(new RegExp(/[ìíîï]/g),"i")
-											.replace(new RegExp(/ñ/g),"n")
-											.replace(new RegExp(/[òóôõö]/g),"o")
-											.replace(new RegExp(/œ/g),"oe")
-											.replace(new RegExp(/[ùúûü]/g),"u")
-											.replace(new RegExp(/[ýÿ]/g),"y")
-											.replace(new RegExp(/\W/g),"")
-											.includes(item)))
-									&& (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year))
-									&& (!type || (paper.type && paper.type === type));
-			        		}).map(({date,doi,content},ind)=>{
+					<Filters search = {search} year={year} type={type} papers={papers} changeSearch={search=>this.setState({search})} changeYear={year=>this.setState({year})} changeType={type=>this.setState({type})} results={papersFiltered instanceof Array ? papersFiltered.length : 0}/>
+			        	{	
+			        		loading ? <Spinner/>: papersFiltered.map(({date,doi,content},ind)=>{
 			        			return (
 			        				<div key={ind} className="paper">
 			        				    <div className="paper_date">
@@ -79,8 +83,7 @@ export default class Research extends React.Component {
 			        </section>
 			    </main>
 				<Footer/>
-			    </div>
-
+			</div>
 		)
 	}
 	componentDidMount(){

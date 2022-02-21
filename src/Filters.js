@@ -36,6 +36,7 @@ export default class Filters extends React.Component {
 					{years.map(y=><option key={y} value={y}>{y}</option>)}
 				</select>
 			</div>
+			{this.props.results === undefined ? null:<div><label>Results: {this.props.results} </label></div>}
 
 		</div>
 	}
