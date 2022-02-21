@@ -7,7 +7,7 @@ Para actualizar la información de la página hay que seguir los siguientes paso
     * git
   * Clona el repositorio:
    ```bash
-   git clone https://github.com/ging/ging.github.com
+   git clone git@github.com:ging/ging.github.com.git
    ```
   * Instala las dependencias:
    ```bash
