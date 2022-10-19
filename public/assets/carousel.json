@@ -1,9 +1,9 @@
 [
   {
-    "label": "Isabel's 25th anniversary",
-    "description":  "Commemoration of the first event performed with the Isabel application.",
-    "image": "/assets/img/carousel/isabel.jpg",
-    "url": "https://www.flickr.com/photos/etsit-upm/albums/72157709405557782"
+    "label": "New Edition of the FullStack course",
+    "description":  "Open enrollment until march 2023",
+    "image": "/assets/img/carousel/fullstack.png",
+    "url": "https://www.upm.es/Estudiantes/Estudios_Titulaciones/EstudiosPosgrado/form_esp?id=1226&fmt=detail"
   },
   {
     "label": "Cyberaula",
@@ -22,6 +22,12 @@
     "description":  " ",
     "image": "/assets/img/carousel/youtube-channel.png",
     "url": "https://www.youtube.com/user/FirefoxOSHTML5/featured"
+  },
+  {
+    "label": "Isabel's 25th anniversary",
+    "description":  "Commemoration of the first event performed with the Isabel application.",
+    "image": "/assets/img/carousel/isabel.jpg",
+    "url": "https://www.flickr.com/photos/etsit-upm/albums/72157709405557782"
   },
   {
     "label": "Final thesis offer",
