@@ -34,12 +34,7 @@
             "photo":"/assets/img/team/gabriel-huecas.jpg",
             "github":"https://github.com/ghuecas",
             "email": "gabriel.huecas@upm.es"
-         }
-      ]
-   },
-   "assistant":{
-      "title":"Assistant Professors",
-      "members":[
+         },
          {
             "name":"Enrique Barra",
             "description":"Enrique Barra is a professor at Telematic Engineering Department, School of Telecommunications Engineering. He received the Ph.D. degree in Telematic Engineering with minoring in Multimedia and Technology Enhanced Learning from  Universidad Politécnica de Madrid (UPM).He has participated in many European projects, such as GLOBAL, FIWARE, and C@R. He is currently involved in several projects contributing to the generation and distribution of educational content in TEL environments. His research interests include videoconferencing, games in education, and social networks in education.",
@@ -62,16 +57,15 @@
             "email": "a.gordillo@upm.es"
          },
          {
-            "name":"Sonsoles López-Pernas",
-            "description":"Sonsoles has a PhD in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
-            "photo":"/assets/img/team/sonsoles-lopez.jpg",
-            "github":"https://github.com/sonsoleslp",
-            "email": "sonsoles.lopez.pernas@upm.es"
-         }
+            "name":"Pedro Reviriego",
+            "description":"Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working on probabilistic data structures, high speed packet processing and machine learning.",
+            "photo":"/assets/img/team/PR.jpg",
+            "email": "pedro.reviriego@upm.es"
+         },
       ]
    },
-   "researchers":{
-      "title":"Researchers (Investigadores)",
+   "assistant":{
+      "title":"Assistant Professors",
       "members":[
          {
             "name":"Jose Andres Muñoz",
@@ -95,31 +89,24 @@
             "email": "javier.conde.diaz@upm.es"
          },
          {
-            "name":"Abel Carril",
-            "description":"Videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
-            "photo":"/assets/img/team/abel-carril.jpg",
-            "github":"https://github.com/eibol",
-            "email": "abel.carril@upm.es"
-         },
-         {
-            "name":"Lourdes Marco",
-            "description":"Researcher and Ph.D. student in Telecommunications Engineering, with a minor in Human-Computer Interaction. She received the M.Sc. degree in UX Design at Universidad Internacional de la Rioja (UNIR). Lourdes is currently teaching at Escuela superior de diseño de Madrid (ESDMadrid).",
-            "photo":"/assets/img/team/lourdes-marco.jpg",
-            "email": "lourdes.marcosp@alumnos.upm.es",
-            "github":"https://github.com/Lourdesmarco"
-         },
+            "name":"Sonsoles López-Pernas",
+            "description":"Sonsoles has a PhD in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
+            "photo":"/assets/img/team/sonsoles-lopez.jpg",
+            "github":"https://github.com/sonsoleslp",
+            "email": "sonsoles.lopez.pernas@upm.es"
+         }
+      ]
+   },
+   "researchers":{
+      "title":"Researchers (Investigadores)",
+      "members":[
          {
             "name":"Carlos Arriaga",
             "description":" Carlos is a Ph.D. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM).  He received the B.S. and M.Sc. in Telecommunications Engineering from UPM in 2020 and 2022. His research interests lie in primarily in the field of video-conference scalability and WebRTC.",
             "photo":"/assets/img/team/carlos-arriaga.jpg",
             "github":"https://github.com/Arri98",
             "email": "carlos.arriaga.prieto@upm.es"
-         }
-      ]
-   },
-   "interns":{
-      "title":"Interns (Becarios)",
-      "members":[
+         },
          {
             "name":"Iciar Villamayor",
             "description":" Iciar is a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
@@ -127,6 +114,25 @@
             "github":"https://github.com/IciarVillamayor",
             "email": "iciarvillamayor@hotmail.com"
          },
+         {
+            "name":"Carlos Aparicio",
+            "description":"",
+            "photo":"/assets/img/team/.jpg",
+            "github":"https://github.com/",
+            "email": "caparicio@esdmadrid.es"
+         },
+         {
+            "name":"Abel Carril",
+            "description":"Videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
+            "photo":"/assets/img/team/abel-carril.jpg",
+            "github":"https://github.com/eibol",
+            "email": "abel.carril@upm.es"
+         }
+      ]
+   },
+   "interns":{
+      "title":"Interns (Becarios)",
+      "members":[
          {
             "name":"Andrea Cascallana",
             "description":"Andrea is CertHE in Illustration and also a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
@@ -140,7 +146,34 @@
             "photo":"/assets/img/team/ana-serrano.jpeg",
             "github":"https://github.com/anaserranol",
             "email": "ana.serranol@alumnos.upm.es"
-
+         },
+         {
+            "name":"Cristina Vera",
+            "description":"",
+            "photo":"/assets/img/team/.jpeg",
+            "github":"https://github.com/",
+            "email": "cristina.veraz@alumnos.upm.es"
+         },
+         {
+            "name":"Pablo Uxó",
+            "description":"",
+            "photo":"/assets/img/team/.jpeg",
+            "github":"https://github.com/",
+            "email": "p.uxo@alumnos.upm.es"
+         },
+         {
+            "name":"Samuel García",
+            "description":"",
+            "photo":"/assets/img/team/.jpeg",
+            "github":"https://github.com/",
+            "email": "samuel.garcia.sanchez@alumnos.upm.es"
+         },
+         {
+            "name":"Blanca Querol",
+            "description":"",
+            "photo":"/assets/img/team/.jpeg",
+            "github":"https://github.com/",
+            "email": "blancaquerol@gmail.com"
          }
       ]
    }
