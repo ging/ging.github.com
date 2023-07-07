@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
 	render() {
 		return <footer>
 		  <ul>
-		    <li>2019 &copy;</li>
+		    <li>2023 &copy;</li>
 		    <li>
 		      <a rel="noopener noreferrer"  href="http://www.dit.upm.es/" target="_blank">
 		        Department of Telematic Systems Engineering
