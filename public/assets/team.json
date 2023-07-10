@@ -117,7 +117,7 @@
          {
             "name":"Carlos Aparicio",
             "description":"",
-            "photo":"/assets/img/team/.jpg",
+            "photo":"/assets/img/team/carlos-aparicio.jpg",
             "github":"https://github.com/",
             "email": "caparicio@esdmadrid.es"
          },
@@ -150,28 +150,28 @@
          {
             "name":"Cristina Vera",
             "description":"",
-            "photo":"/assets/img/team/.jpeg",
+            "photo":"/assets/img/team/cristina-vera.jpeg",
             "github":"https://github.com/",
             "email": "cristina.veraz@alumnos.upm.es"
          },
          {
             "name":"Pablo Uxó",
             "description":"",
-            "photo":"/assets/img/team/.jpeg",
+            "photo":"/assets/img/team/pablo-uxo.jpeg",
             "github":"https://github.com/",
             "email": "p.uxo@alumnos.upm.es"
          },
          {
             "name":"Samuel García",
             "description":"",
-            "photo":"/assets/img/team/.jpeg",
+            "photo":"/assets/img/team/samuel-garcia.jpeg",
             "github":"https://github.com/",
             "email": "samuel.garcia.sanchez@alumnos.upm.es"
          },
          {
             "name":"Blanca Querol",
             "description":"Blanca is a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
-            "photo":"/assets/img/team/.jpeg",
+            "photo":"/assets/img/team/blanca-querol.jpeg",
             "github":"https://github.com/",
             "email": "blancaquerol@gmail.com"
          }
