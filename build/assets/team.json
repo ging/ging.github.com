@@ -115,13 +115,6 @@
             "email": "iciarvillamayor@hotmail.com"
          },
          {
-            "name":"Carlos Aparicio",
-            "description":"",
-            "photo":"/assets/img/team/carlos-aparicio.jpg",
-            "github":"https://github.com/",
-            "email": "caparicio@esdmadrid.es"
-         },
-         {
             "name":"Abel Carril",
             "description":"Videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
             "photo":"/assets/img/team/abel-carril.jpg",
@@ -163,9 +156,9 @@
          },
          {
             "name":"Samuel García",
-            "description":"",
-            "photo":"/assets/img/team/samuel-garcia.jpeg",
-            "github":"https://github.com/",
+            "description":"Samuel is a M.S. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM). He collaborates with the GING research group as a Software Developer.",
+            "photo":"/assets/img/team/samuel-garcia.jpg",
+            "github":"https://github.com/samugs13",
             "email": "samuel.garcia.sanchez@alumnos.upm.es"
          },
          {
