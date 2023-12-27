@@ -125,28 +125,7 @@
    },
    "interns":{
       "title":"Interns (Becarios)",
-      "members":[
-         {
-            "name":"Andrea Cascallana",
-            "description":"Andrea is CertHE in Illustration and also a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
-            "photo":"/assets/img/team/andrea-cascallana.jpeg",
-            "github":"https://github.com/AndreaCascallana",
-            "email": "andreacascallanarodriguez@gmail.com"
-         },
-         {
-            "name":"Ana Serrano",
-            "description":"Ana is a M.S. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM). She collaborates with the GING research group as a Software Developer.",
-            "photo":"/assets/img/team/ana-serrano.jpeg",
-            "github":"https://github.com/anaserranol",
-            "email": "ana.serranol@alumnos.upm.es"
-         },
-         {
-            "name":"Cristina Vera",
-            "description":"",
-            "photo":"/assets/img/team/cristina-vera.jpeg",
-            "github":"https://github.com/",
-            "email": "cristina.veraz@alumnos.upm.es"
-         },
+      "members":[                 
          {
             "name":"Pablo Uxó",
             "description":"",

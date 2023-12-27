@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "publications": "node transformPublications.js"
   },
-  "homepage": "http://ging.github.com/build/",
+  "homepage": "https://ging.github.com/build",
   "eslintConfig": {
     "extends": "react-app"
   },
