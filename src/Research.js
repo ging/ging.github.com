@@ -3,21 +3,35 @@ import Header from './Header';
 import Footer from './Footer';
 import Filters from './Filters';
 import Spinner from './Spinner';
+import {useState, useEffect} from 'react';
+import {useLocation } from "react-router-dom";
 
-export default class Research extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			papers: [],
-			search: "",
-			year: undefined,
-			type: undefined,
-			loading: true
-		};
-	}
+export default function Research() {
+	const location = useLocation();
+	const [state, setState] = useState({papers: [], search: "", year: undefined, type: undefined, loading: true});
+	
 
-	render(){
-		const {papers, search, year, type, loading } = this.state;
+	useEffect(() => {
+		window.scrollTo(0,0);
+		async function fetchData() {
+		  	try {
+				const response = await fetch(process.env.PUBLIC_URL+"/assets/publications.json");
+				if (response.ok) {
+				const papers = await response.json();   
+				console.log("PAPERS", papers.length);     
+				setState({...state, papers: papers, loading: false});
+				} else {
+				console.log('Respuesta de red OK pero respuesta de HTTP no OK');
+				}        				
+			} catch(e) {
+				console.log("ERROR", e);
+			}    
+		}
+	
+		fetchData();
+	}, []);
+
+		const {papers, search, year, type, loading } = state;
 
 		let papersFiltered = null;
 		if (!loading) {
@@ -53,12 +67,14 @@ export default class Research extends React.Component {
 					&& (!type || (paper.type && paper.type === type));
 			});
 		}
+
+
 		return (
 			<div className="research">
-				<Header route={this.props.match.path}/>
+        		<Header route={location.pathname}/>
 			    <main>
 			        <section className="research">
-					<Filters search = {search} year={year} type={type} papers={papers} changeSearch={search=>this.setState({search})} changeYear={year=>this.setState({year})} changeType={type=>this.setState({type})} results={papersFiltered instanceof Array ? papersFiltered.length : 0}/>
+					<Filters search = {search} year={year} type={type} papers={papers} changeSearch={search=>setState({...state, search: search})} changeYear={year=>setState({...state, year: year})} changeType={type=>setState({...state, type: type})} results={papersFiltered instanceof Array ? papersFiltered.length : 0}/>
 			        	{	
 			        		loading ? <Spinner/>: papersFiltered.map(({date,doi,content},ind)=>{
 			        			return (
@@ -85,9 +101,5 @@ export default class Research extends React.Component {
 				<Footer/>
 			</div>
 		)
-	}
-	componentDidMount(){
-		window.scrollTo(0,0);
-		fetch(process.env.PUBLIC_URL+"/assets/publications.json").then(res=>res.json()).then(papers=>this.setState({papers, loading: false}))
-	}
+
 }

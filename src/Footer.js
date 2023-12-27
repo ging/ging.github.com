@@ -1,11 +1,10 @@
 import React from 'react';
 
-export default class Footer extends React.Component {
+export default function Footer (props) {
 
-	render() {
 		return <footer>
 		  <ul>
-		    <li>2023 &copy;</li>
+		    <li>2024 &copy;</li>
 		    <li>
 		      <a rel="noopener noreferrer"  href="http://www.dit.upm.es/" target="_blank">
 		        Department of Telematic Systems Engineering
@@ -22,7 +21,6 @@ export default class Footer extends React.Component {
 		      </a>
 		    </li>
 		  </ul>
-
 		</footer>
-	}
+
 }

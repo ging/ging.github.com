@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import {useLocation } from "react-router-dom";
 
-export default class About extends React.Component {
-	
-	render() {
+export default function About (props) {
+    const location = useLocation();
+
 		return (
 			<div className="about">
-			<Header route={this.props.match.path}/>
+			<Header route={location.pathname}/>
     <main>
         <section className="about_description">
 
@@ -54,14 +55,7 @@ export default class About extends React.Component {
 
     </main>
     <Footer/>
-
-
 </div>
-		);
-	}
-    componentDidMount(){
-        window.scrollTo(0,0);
-        
-    }
+		);    
 
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react';
+
 
 const routes = [
   {route: "/", title: "Home"},
@@ -8,13 +10,10 @@ const routes = [
   {route: "/team", title: "Team"},
   {route: "/about", title: "About"}
 ]
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {open: false};
-  }
-  render() {
-    return (
+export default function Header (props) {
+  const [state, setState] = useState({open: false});
+
+  return (
     <header className="nav_bar" id="header_home">
     <a href="/">
       <div className="imagotype">
@@ -26,17 +25,17 @@ class Header extends React.Component {
       </div>
     </a>
     <div className="menu_icon" >
-    <i className={"material-icons show " + (this.state.open ? "responsive-hidden":"responsive-shown")}  
-    onClick={() => {this.setState({open: !this.state.open})}}>
+    <i className={"material-icons show " + (state.open ? "responsive-hidden":"responsive-shown")}  
+    onClick={() => {setState({open: !state.open})}}>
       menu
-      </i><i className={"material-icons close " + (this.state.open ? "responsive-shown":"responsive-hidden")} 
-      onClick={() => {this.setState({open: !this.state.open})}}>
+      </i><i className={"material-icons close " + (state.open ? "responsive-shown":"responsive-hidden")} 
+      onClick={() => {setState({open: !state.open})}}>
         close
         </i></div>
 
-    <div className={"menu "+ (this.state.open ? "responsive-shown":"responsive-hidden")}>
+    <div className={"menu "+ (state.open ? "responsive-shown":"responsive-hidden")}>
       <ul>
-        {routes.map((route,index) => <li key={index} className={route.route === this.props.route ? "li-selected":""}>
+        {routes.map((route,index) => <li key={index} className={route.route === props.route ? "li-selected":""}>
         <Link to={route.route}>{route.title}</Link></li>)}
       </ul>
     </div>
@@ -44,6 +43,5 @@ class Header extends React.Component {
   </header>
 
   );
+
 }
-}
-export default Header;

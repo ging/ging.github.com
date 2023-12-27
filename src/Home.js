@@ -1,24 +1,40 @@
-import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Carousel from 'react-bootstrap/Carousel'
 import Spinner from "./Spinner";
 import RecentPublications from "./RecentPublications";
+import {useState, useEffect} from 'react';
+import {useLocation } from "react-router-dom";
 
 
-export default class Home extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			team: [],
-			loading: true
-		};
-	}
-	render(){
+export default function Home () {
+	const [state, setState] = useState({carousel: [], loading: true});
+	const location = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0,0);
+		async function fetchData() {
+		  	try {
+				const response = await fetch(process.env.PUBLIC_URL+"/assets/carousel.json");
+				if (response.ok) {
+				const carousel = await response.json();   
+				console.log("PAPERS", carousel.length);     
+				setState({carousel: carousel, loading: false});
+				} else {
+				console.log('Respuesta de red OK pero respuesta de HTTP no OK');
+				}        				
+			} catch(e) {
+				console.log("ERROR", e);
+			}    
+		}
+	
+		fetchData();
+	}, []);
+
 		return (
 			<div className="home_page">
 			  <div className="parallax" id="parallax">
-        		<Header route={this.props.match.path}/>
+        		<Header route={location.pathname}/>
 			    <div className="parallax__layer parallax__layer--base">
 			      <main>
 			        <section className="home">
@@ -37,21 +53,23 @@ export default class Home extends React.Component {
 						</div>
 						<div className="body">
 							<div className="carousel">
-								<Carousel>
-								{this.state.loading ? <Spinner/> : this.state.carousel.map(({label, description, image, url})=>{
-								return (
-									<Carousel.Item>
-										<a href={url} target="_blank" rel="noopener noreferrer">
-											<img className="image" src={process.env.PUBLIC_URL+image} alt={label}/>
-											<Carousel.Caption>
-												<h3>{label}</h3>
-												<p>{description}</p>
-											</Carousel.Caption>
-										</a>
-									</Carousel.Item>
-								);
-								})}
-								</Carousel>
+								{state.loading ? <Spinner/>:<Carousel>
+									{state.carousel.map(({label, description, image, url})=>{
+										return (
+											<Carousel.Item key={label}>
+												<a href={url} target="_blank" rel="noopener noreferrer">
+													<img className="image" src={process.env.PUBLIC_URL+image} alt={label}/>
+													<Carousel.Caption>
+														<h3>{label}</h3>
+														<p>{description}</p>
+													</Carousel.Caption>
+												</a>
+											</Carousel.Item>
+										);
+									})
+									}
+									</Carousel>
+								}
 							</div>
 							<div className="latest_publications">
 								<h3>Latest publications</h3>
@@ -79,9 +97,6 @@ export default class Home extends React.Component {
 			</div>
 
 		)
-	}
-	componentDidMount(){
-		window.scrollTo(0,0);
-		fetch(process.env.PUBLIC_URL+"/assets/carousel.json").then(res=>res.json()).then(carousel=>this.setState({carousel, loading: false}))
-	}
+	
+	
 }

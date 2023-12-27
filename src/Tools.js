@@ -4,21 +4,40 @@ import Footer from './Footer';
 import Spinner from './Spinner';
 import {Link} from "react-router-dom";
 
-export default class Tools extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            tools: [],
-            loading: true
-        };
-    }
-    render(){
+import {useState, useEffect} from 'react';
+import {useLocation } from "react-router-dom";
+
+export default function Tools(props) {
+
+    const location = useLocation();
+	const [state, setState] = useState({tools: [], loading: true});
+
+	useEffect(() => {
+		window.scrollTo(0,0);
+		async function fetchData() {
+		  	try {
+				const response = await fetch(process.env.PUBLIC_URL+"/assets/tools.json");
+				if (response.ok) {
+				const tools = await response.json();   
+				console.log("tools", tools.length);     
+				setState({tools: tools, loading: false});
+				} else {
+				console.log('Respuesta de red OK pero respuesta de HTTP no OK');
+				}        				
+			} catch(e) {
+				console.log("ERROR", e);
+			}    
+		}
+	
+		fetchData();
+	}, []);
+
         return (
             <div className="tools">
                 <Header route="/projects"/>
                 <main>
                     <section className="our_tools">
-                        {this.state.loading ? <Spinner/> : this.state.tools.map(({title, description, route, logo})=>{
+                        {state.loading ? <Spinner/> : state.tools.map(({title, description, route, logo})=>{
                             return (<div className="tool">
                                     <div className="tool_logo">
                                         <CreateLink route={route}><img alt={"Project Logo"} src={process.env.PUBLIC_URL+logo} /></CreateLink>
@@ -45,11 +64,8 @@ export default class Tools extends React.Component {
                 <Footer/>
             </div>
         )
-    }
-    componentDidMount(){
-        window.scrollTo(0,0);
-        fetch(process.env.PUBLIC_URL+"/assets/tools.json").then(res=>res.json()).then(tools=>this.setState({tools, loading: false}))
-    }
+    
+    
 }
 const CreateLink = (props) => {
     return props.route.match("http") ? (
