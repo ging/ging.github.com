@@ -57,7 +57,7 @@ export default function Home () {
 							<div className="latest_publications">
 								<h3>Latest publications</h3>
 								<RecentPublications/>
-								<a href="/research" rel="noopener noreferrer">
+								<a href="/#/research" rel="noopener noreferrer">
 									<div className="more">
 										more...
 									</div>
