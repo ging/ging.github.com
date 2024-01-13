@@ -1,4 +1,4 @@
-[
+export const myprojects = [
 	{
 		"logo": "/assets/img/logos/fiware.png",
 		"route": "https://www.fiware.org/",
@@ -123,4 +123,4 @@
 		"noBlank": true,
 		"description": "Discover the different tools and research demonstrators this team has developed."
 	}
-]
+];
