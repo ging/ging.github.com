@@ -10,6 +10,10 @@ export default function Team (props){
 	const location = useLocation();
 	const [team, setTeam] = useState(myteam);
 
+	useEffect(() => {
+		window.scrollTo(0,0);		
+	}, []);
+
 	return (
 		<div className="team">
 			<Header route={location.pathname}/>

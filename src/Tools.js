@@ -13,6 +13,10 @@ export default function Tools(props) {
     const location = useLocation();
 	const [tools, setTools] = useState(mytools);
 
+    useEffect(() => {
+		window.scrollTo(0,0);		
+	}, []);
+    
 	    return (
             <div className="tools">
                 <Header route="/projects"/>

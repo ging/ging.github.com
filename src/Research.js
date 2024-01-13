@@ -11,6 +11,9 @@ export default function Research() {
 	const location = useLocation();
 	const [state, setState] = useState({papers: mypublications, search: "", year: undefined, type: undefined});
 	
+	useEffect(() => {
+		window.scrollTo(0,0);		
+	}, []);
 
 		const {papers, search, year, type } = state;
 

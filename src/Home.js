@@ -11,6 +11,10 @@ export default function Home () {
 	const [carousel, setCarousel] = useState(mycarousel);
 	const location = useLocation();
 
+	useEffect(() => {
+		window.scrollTo(0,0);		
+	}, []);
+
 		return (
 			<div className="home_page">
 			  <div className="parallax" id="parallax">
