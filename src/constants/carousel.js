@@ -1,11 +1,5 @@
 export const mycarousel = [
         {
-          "label": "New Edition of the FullStack course",
-          "description":  "Open enrollment until march 2023",
-          "image": "/assets/img/carousel/fullstack.png",
-          "url": "https://www.upm.es/Estudiantes/Estudios_Titulaciones/EstudiosPosgrado/form_esp?id=1226&fmt=detail"
-        },
-        {
           "label": "Cyberaula",
           "description":  "Awarded by the UPM as the best group of Educational Innovation of 2018",
           "image": "/assets/img/carousel/cyberaula.png",
