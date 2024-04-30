@@ -108,6 +108,13 @@ export const myteam = {
              "email": "carlos.arriaga.prieto@upm.es"
           },
           {
+            "name":"Carlos Aparicio",
+            "description":"Carlos is a Ph.D student in Telecommunication Engineering and M.Sc in Telematic Services and Network Engineering at Universidad Politécnica de Madrid (UPM). He received the B.S and M.Sc. in arts and design from UCM in 2009 and 2010, the M.Sc. in arts and design pedagogy in 2011, and the M.Sc. in Big Data analysis and visualization from UNIR in 2020. Carlos has been involved in several professional projects as designer and developer from more than a decade, and has been teaching at Escuela Superior de Diseño de Madrid for 8 years. His research interests lie in the field of data spaces, access and usage control and big data architecture and analytics.",
+            "photo":"/assets/img/team/carlos-aparicio.jpeg",
+            "github":"https://github.com/caparicio-esd",
+            "email": "ce.aparicio@upm.es"
+          },
+          {
              "name":"Iciar Villamayor",
              "description":"Iciar is a UX/UI designer. She received the B.S and M.Sc in graphic design and interactive graphic design from Escuela Superior de Diseño de Madrid in 2020 and 2021. She's currently teaching at Escuela Superior de Diseño de Madrid. She collaborates with the GING as a Graphic Designer.",
              "photo":"/assets/img/team/iciar-villamayor.jpg",
