@@ -8,14 +8,40 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 	  template: 'apa',
 	  lang: 'en-US',
 	  prepend (entry) {
-	  	let {id, issued, DOI, type} = entry;
+	  	let {id, issued, DOI, type, title, volume, page} = entry;
 	  	if (DOI && !DOI.match(/http/)) {
 	  		DOI = "https://doi.org/" + DOI;
 	  	}
+		//get container-title from entry (journal name)
+		let journal = entry['container-title'];
+		//get year from issued
+		let year;
+		let month;
+		if (issued && issued['date-parts']) {
+			year = issued['date-parts'][0][0];
+			if (issued['date-parts'][0][1]) {
+				month = issued['date-parts'][0][1];
+			}
+		}
+		//get author names from entry, separated by comma and adding "and" before the last one
+		let author = entry.author.map((a, i) => {
+			if (i === entry.author.length - 1) {
+				return "and " + a.given + " " + a.family;
+			}
+			return a.given + " " + a.family;
+		}).join(", ");		
+
 	    return `{  
 	    		${(issued && issued['date-parts']) ? ('"date": ' + '[' + issued['date-parts'] + "]," ): "" }
 	    		${ DOI ? ('"doi": "' + DOI + '",'): "" }
 	    		${ type ? ('"type": "' + type + '",'): "" }
+				${ type ? ('"author": "' + author + '",'): "" }
+				${ type ? ('"title": "' + title + '",'): "" }
+				${ type ? ('"journal": "' + journal + '",'): "" }
+				${ type ? ('"year": "' + year + '",'): "" }
+				${ type ? ('"month": "' + month + '",'): "" }
+				${ type ? ('"volume": "' + volume + '",'): "" }
+				${ type ? ('"pages": "' + page + '",'): "" }
 	    		"content": "`
 	  },
 	  append: () => '"},'

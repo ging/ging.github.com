@@ -13,7 +13,7 @@ export const mytools = [
     },
     {
       "logo": "/assets/img/logos/school.svg",
-      "route": "https://ging.github.io/quiz-converter/",
+      "route": "https://cyberaula.github.io/quiz-converter/",
       "title": "QUIZ converter",
       "description":"This quiz converter facilitates the conversion between different formats: Moodle XML, Aiken and JSON."
     },
