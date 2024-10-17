@@ -1,5 +1,5 @@
 # Instrucciones para actualizar la página del GING 
-Para actualizar la información de la página hay que seguir los siguientes pasos:
+Para actualizar la información de la página hay que seguir los siguientes pasos 2:
 
 ## Puesta a punto
   * Requisitos:
