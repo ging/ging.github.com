@@ -8,7 +8,7 @@ export const myprojects = [
 	{
 		"logo": "/assets/img/logos/SMARTY.png",
 		"route": "https://www.smarty-project.eu/",
-		"title": "EUNOMIA",
+		"title": "SMARTY",
 		"description": "SMARTY is a project that creates a secure cloud-edge continuum from heterogeneous systems to safeguard data during transit and processing, providing a reliable foundation for AI processes. It achieves security through quantum-resistant communication, confidential computing, software-defined perimeters, and swarm formation, ensuring multiple layers of protection. The project introduces semantic programmability and graph management for easy, drag-and-drop service deployment. SMARTY is focused on key European sectors such as automotive, fintech, telecommunications, and industrial environments, with technologies tested in five use cases. Supported by large industry players, SMEs, and academic partners, SMARTY aims to mature innovative technologies, fostering collaboration and enhancing Europe's edge computing and AI capabilities across various vertical sectors."
 	},
 	{
