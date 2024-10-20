@@ -20,6 +20,8 @@ export default function About (props) {
             <p><b>General E-mail:</b> gi.internetng@upm.es and alvaro.alonso@upm.es</p>
             <p><b>DataSpaces:</b> joaquin.salvachua@upm.es</p>
             <p><b>GenerativeAI:</b> pedro.reviriego@upm.es</p>
+            <p><b>Videoconferencing and WebRTC:</b> alvaro.alonso@upm.es </p>
+            <p><b>E-learning:</b> enrique.barra@upm.es</p>
 
         </section>
 
