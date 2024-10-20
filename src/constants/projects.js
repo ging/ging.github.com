@@ -1,5 +1,11 @@
 export const myprojects = [
 	{
+		"logo": "/assets/img/logos/eunomia_logo_light.svg",
+		"route": "https://eunomia.dit.upm.es/",
+		"title": "EUNOMIA",
+		"description": "Eunomia drives a secure data economy in Europe, supporting Gaia-X ISBL and DSBA. We develop open solutions and standards for secure and trusted data sharing. For the Eunomia project, open technical solutions, standards and tools will be developed to enable secure data sharing, guaranteeing the sovereignty and trust of users. The project includes the implementation of FIWARE technologies and other standards to facilitate interoperability and data governance. Tutorials and support will also be provided so that any user can experiment with these technologies."
+	},
+	{
 		"logo": "/assets/img/logos/fiware.png",
 		"route": "https://www.fiware.org/",
 		"title": "FIWARE",

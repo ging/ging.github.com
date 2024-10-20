@@ -11,11 +11,15 @@ export default function About (props) {
 			<Header route={location.pathname}/>
     <main>
         <section className="about_description">
-
-            <p>We have gathered a long teaching experience at the University. Our main research interests are focused
-                on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in
-                video-conferencing systems, social networks websites and e-Learning. Our latest participation in
-                research projects include ongoing EU-founded projects such as Global Excursions and FI-WARE</p>
+            <h2>About us</h2>
+            <p>Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. 
+                We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. 
+                Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FI-WARE</p>
+            <h2>Contact us</h2>
+            <p>For further information, please contact us at the following addresses:</p>
+            <p><b>General E-mail:</b> gi.internetng@upm.es and alvaro.alonso@upm.es</p>
+            <p><b>DataSpaces:</b> joaquin.salvachua@upm.es</p>
+            <p><b>GenerativeAI:</b> pedro.reviriego@upm.es</p>
 
         </section>
 

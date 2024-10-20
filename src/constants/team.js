@@ -129,32 +129,7 @@ export const myteam = {
              "email": "abel.carril@upm.es"
           }
        ]
-    },
-    "interns":{
-       "title":"Interns (Becarios)",
-       "members":[                 
-          {
-             "name":"Pablo Uxó",
-             "description":"",
-             "photo":"/assets/img/team/pablo-uxo.jpeg",
-             "github":"https://github.com/",
-             "email": "p.uxo@alumnos.upm.es"
-          },
-          {
-             "name":"Samuel García",
-             "description":"Samuel is a M.S. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM). He collaborates with the GING research group as a Software Developer.",
-             "photo":"/assets/img/team/samuel-garcia.jpg",
-             "github":"https://github.com/samugs13",
-             "email": "samuel.garcia.sanchez@alumnos.upm.es"
-          },
-          {
-             "name":"Blanca Querol",
-             "description":"Blanca is a B.A. candidate in Graphic Design at the Superior School of Design in Madrid. She collaborates with the GING as a Graphic Designer.",
-             "photo":"/assets/img/team/blanca-querol.jpg",
-             "github":"https://github.com/",
-             "email": "blancaquerol@gmail.com"
-          }
-       ]
     }
+    
  }
  
