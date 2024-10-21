@@ -12,6 +12,12 @@ export const myprojects = [
 		"description": "SMARTY is a project that creates a secure cloud-edge continuum from heterogeneous systems to safeguard data during transit and processing, providing a reliable foundation for AI processes. It achieves security through quantum-resistant communication, confidential computing, software-defined perimeters, and swarm formation, ensuring multiple layers of protection. The project introduces semantic programmability and graph management for easy, drag-and-drop service deployment. SMARTY is focused on key European sectors such as automotive, fintech, telecommunications, and industrial environments, with technologies tested in five use cases. Supported by large industry players, SMEs, and academic partners, SMARTY aims to mature innovative technologies, fostering collaboration and enhancing Europe's edge computing and AI capabilities across various vertical sectors."
 	},
 	{
+		"logo": "/assets/img/logos/fun4date.png",
+		"route": "https://fun4date.github.io/",
+		"title": "FuN4DaTe",
+		"description": "FuN4DaTe, stands for 'Future Networks for Datacenters and Telcos', it is FECYT funded project. FuN4DaTe aims at designing a cost-effective energy-efficient network architecture that approaches the envisioned by the ITU FG-NET2030 network and the Hyperscale cloud providers to upgrade telco networks by boosting bandwidth, latency, security, manynets while incorporating AI/ML into the network operations, on attempts to deal with forthcoming challenging services like holographic-type communications, tactile Internet for remote operations, intelligent operations networks, network and computing convergence, digital twins, space-terrestrial integrated network and industrial IoT with cloudification."
+	},
+	{
 		"logo": "/assets/img/logos/fiware.png",
 		"route": "https://www.fiware.org/",
 		"title": "FIWARE",
