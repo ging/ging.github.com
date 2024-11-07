@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Cite = require('citation-js')
 
-fs.readFile("src/constants/publications.bib", function(err, buf) {
+fs.readFile("constants/publications.bib", function(err, buf) {
   	let bib = buf.toString();//.replace(/@\w*{(\w*)/,(a)=>a+Math.floor(10000*Math.random()))
   	let output = new Cite(bib).format('bibliography', {
 	  format: 'html',
@@ -26,15 +26,20 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 		//get author names from entry, separated by comma and adding "and" before the last one
 		let author = entry.author.map((a, i) => {
 			if (i === entry.author.length - 1) {
+				if (entry.author.length === 1) {
+					return a.given + " " + a.family
+				} 
 				return "and " + a.given + " " + a.family;
-			}
+			} 
 			return a.given + " " + a.family;
+			
 		}).join(", ");		
+	
 
 	    return `{  
 	    		${(issued && issued['date-parts']) ? ('"date": ' + '[' + issued['date-parts'] + "]," ): "" }
 	    		${ DOI ? ('"doi": "' + DOI + '",'): "" }
-	    		${ type ? ('"type": "' + type + '",'): "" }
+	    		${ type ? ('"category": "' + type + '",'): "" }
 				${ type ? ('"author": "' + author + '",'): "" }
 				${ type ? ('"title": "' + title + '",'): "" }
 				${ type ? ('"journal": "' + journal + '",'): "" }
@@ -64,9 +69,9 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 		}
 	});
 
-	let final_str = "export const mypublications = " + JSON.stringify(str) + ";";
+	let final_str = "export const publications = " + JSON.stringify(str) + ";";
 
-	fs.writeFile('src/constants/publications.js', final_str, (err) => {
+	fs.writeFile('constants/publications.js', final_str, (err) => {
 		if (err) throw err;
 	});
 });
