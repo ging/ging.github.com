@@ -15,6 +15,7 @@ export const routes = [
     { route: "/contact", key: "nav.item5", page:<Contact/>, active: true },
     { route: "/design-system", key: "nav.item6", page:<DesignSystem/>, active: false },
     { route: "/documentation", key: "nav.item7", page:<Documentation/>, active: false },
+    { route: "/projects", key: "nav.item8", page:<DesignSystem/>, active: true },
   ];
 
 export const activeRoutes = routes

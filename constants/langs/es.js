@@ -8,7 +8,8 @@ export const es = {
         "item4":"Publicaciones",
         "item5":"Contacto",
         "item6":"Sistema de diseño",
-        "item7":"Documentación"
+        "item7":"Documentación",
+        "item8":"Projects"
     },
     "header": {
         "publicationstab": "Publicaciones",

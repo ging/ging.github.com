@@ -11,15 +11,12 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import {Divider, DividerVariants} from "@/components/ui/divider";
+import TabsCategoryFilter from "@/components/TabsCategoryFilter";
 
 export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  // if (currentLang == "es") {
-  //   console.log("true, language true")
-  // } else {
-  //   console.log("false, language false")
-  // }
+
   const [state, setState] = useState({
     items: publications,
     search: "",
@@ -27,6 +24,9 @@ export default function Research() {
     category: undefined,
     papersToShow: 6, // Number of papers to show initially
   });
+
+   //  Funcion y array de categorias de Tabs
+   const [filteredCards, setFilteredCards] = useState(publications);
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -98,6 +98,31 @@ export default function Research() {
         </Text>
       </div>
       <main className="research">
+        <TabsCategoryFilter     
+          cards={publications}
+          onFilter={setFilteredCards}
+        />
+        <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
+           {filteredCards.map(
+             (
+               { date, title, author, doi, center, description, category },
+               index
+             ) => (
+               <Card
+                 key={index}
+                 cardType={"publication"}
+                 date={date}
+                 author={author}
+                 category={category}
+                 title={title}
+                 subtitle={center}
+                 description={description}
+                //  tags={tags}
+                 doi={doi}
+               ></Card>
+             )
+           )}
+         </div> 
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
