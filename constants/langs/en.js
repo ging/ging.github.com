@@ -123,6 +123,14 @@ export const en = {
         "filterTitle3":"Educational Research Group (GIE/ERG)",
         "filterTitle4":"Other",
         "button":"Details",
+        "researchLines": {
+            "data-spaces":"Data Spaces",
+            "generative-ai":"Generative AI",
+            "e-learning":"E-learning",
+            "video-conference":"Video Conference",
+            "other":"Other",
+            "all":"All"
+        }
         //traducir tags?  cuando estén
     },
     "team": {

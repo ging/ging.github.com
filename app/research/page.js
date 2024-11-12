@@ -17,6 +17,8 @@ export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
+
+  // estado de filtro
   const [state, setState] = useState({
     items: publications,
     search: "",

@@ -125,7 +125,14 @@ export const es = {
         "filterTitle3":"Grupo de investigación educativa (GIE)",
         "filterTitle4":"Otros",
         "button":"Detalles", 
-
+        "researchLines": {
+            "data-spaces":"Espacios de Datos",
+            "generative-ai":"IA Generativa ",
+            "e-learning":"E-learning",
+            "video-conference":"Videoconferencia",
+            "other":"Otros",
+            "all":"Todo"
+        }
     },
     "team": {
         "title": "Equipo",

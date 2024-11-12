@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 
-export default function TabsResearchLine({ cards, onFilter }) {
+export default function TabsResearchLine({ cards, onFilter, allResearchLines }) {
   const [selectedResearchLine, setSelectedResearchLine] = useState("all");
   const { t } = useTranslation();
 
@@ -16,12 +16,12 @@ export default function TabsResearchLine({ cards, onFilter }) {
       // Filtrar las tarjetas que coincidan con la categoría seleccionada
       const filteredCards = cards.filter((card) => card.researchLine === researchLine);
       onFilter(filteredCards);
+        
+  console.log(researchLine[2])
     }
   };
 
-  // Extraer categorías únicas de las tarjetas
-  const researchLines = ["all", ...new Set(cards.map((card) => card.researchLine))];
-
+console.log(allResearchLines)
   // Al montar el componente, cargar todas las tarjetas
   useEffect(() => {
     // Cargar todas las tarjetas cuando se monta el componente
@@ -35,19 +35,19 @@ export default function TabsResearchLine({ cards, onFilter }) {
       ? "bg-primary-700" // Estilos para la categoría seleccionada
       : "bg-primary-400 hover:bg-primary-600/75", // Estilos para las categorías no seleccionadas
   ]);
-
   return (
     <div className="bg-primary-300/60 inline-flex items-center justify-center rounded-lg p-1 text-muted-foreground gap-1.5">
-      {researchLines.map((researchLine, index) => (
+      {allResearchLines.map((researchLine, index) => (
         <button
           key={index}
           className={classes(researchLine)}
-          onClick={() => handleResearchLineChange(researchLine)}
+          onClick={() => handleResearchLineChange(researchLine.name)}
         >
           {/* Renderizar el nombre de la categoría */}
-          {researchLine === "all" ? t("All") : researchLine}
+          {researchLine.name === "all" ? t("projects.researchLines.all") : t(researchLine.translationKey)}
+          {/* {console.log(researchLineTranslationKey)} */}
         </button>
       ))}
     </div>
   );
-}
+ }

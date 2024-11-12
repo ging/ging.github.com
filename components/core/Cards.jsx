@@ -69,27 +69,23 @@ const renderCategory = (category) => {
     .split("-") // cadena en un array de palabras
     .map((palabra) => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
     .join(" "); // unir las palabras con espacio
-  return (
-    <Badge variant="outline" size="lg">
-      {categoryFormat}
-    </Badge>
-  );
+  return categoryFormat
 };
 
 const translateCategory = (category, currentLang) => {
   if (currentLang == "es") {
     if (category == "article-journal") {
       category = "artículo-revista";
-      console.log(category);
+      // console.log(category);
     } else if (category == "paper-conference") {
       category = "acta-congreso";
-      console.log(category);
+      // console.log(category);
     } else if (category == "book") {
       category = "libro";
-      console.log(category);
+      // console.log(category);
     } else if (category == "chapter") {
       category = "capítulo";
-      console.log(category);
+      // console.log(category);
     }
   } else if (currentLang == "en") {
     // transformar "artículo-revista" en article journal
@@ -124,20 +120,26 @@ const Card = React.forwardRef(
       role,
       currentLang,
       basePath,
+      researchLine, 
     },
     ref
   ) => {
     const { t } = useTranslation();
 
+
     // PROJECT
     const projectCard = (
       <CustomCard className={cn(CardVariants({ direction, className }))}>
         <CardHeader>
-          <Badge variant="outline" size="lg">
+          {/* <Badge variant="outline" size="lg">
             {date}
-          </Badge>
+          </Badge> */}
           <Badge variant="outline" size="lg">
-            {category}
+
+          {t(`projects.researchLines.${researchLine}`)}
+
+    
+ 
           </Badge>
         </CardHeader>
         <CardBody>
@@ -207,9 +209,10 @@ const Card = React.forwardRef(
         <CardHeader>
           <Badge variant="outline" size="lg">
             {date && date[0]}
-            
           </Badge>
+          <Badge variant="outline" size="lg">
           {translateCategory(category, currentLang)}
+          </Badge>
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
@@ -230,8 +233,8 @@ const Card = React.forwardRef(
             </Button>
           ) : null}
         </CardFooter>
-
-          {console.log(date && date[0])}
+{/* 
+          {console.log(date && date[0])} */}
 
       </CustomCard>
       
