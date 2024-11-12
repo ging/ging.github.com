@@ -79,7 +79,7 @@ module.exports = {
           // 100: "#FFE685",
         },
         background: {
-          DEFAULT:"#f7f7ef",
+          DEFAULT:"#2F3343",
           400: "#EFF7FB",
           300: "#EFF7FB"
         },
@@ -93,7 +93,7 @@ module.exports = {
           DEFAULT:"#323232"
         },
         text: {
-          DEFAULT:"#323232"
+          DEFAULT:"#f8f8f8"
         }
       },
     },

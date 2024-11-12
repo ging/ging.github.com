@@ -16,7 +16,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
     className={cn(
       "padding_home md:min-h-[90dvh]",
       "text-snow",
-      "bg-main bg-cover bg-center",
+     // "bg-main bg-cover bg-center",
       "flex gap-8 justify-around items-center",
       className
     )}
@@ -71,7 +71,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("hidden md:block relative w-full h-full overflow-hidden", className)}>
     <img
       className="w-full h-full flex items-center justify-center object-contain"
-      src="placeholder.jpg"
+     // src="placeholder.jpg"
       alt="icon"
     />
   </div>

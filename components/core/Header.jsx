@@ -24,7 +24,7 @@ export default function Header(props) {
     "h-fit",
     "px-8 py-4 sticky -top-[1px] w-full",
     "flex justify-between items-center md:items-start",
-    "bg-background text-gray-800 shadow-md",
+    "bg-background text-text shadow-md",
     
     `header_${currentLang} z-50`,
     {
@@ -72,7 +72,7 @@ export default function Header(props) {
           />
           <img
             className="object-contain"
-            src="logo_boiler.svg"
+            src="ging_logo.png"
             alt="logo"
           />
         </div>

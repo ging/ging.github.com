@@ -33,6 +33,7 @@ import {
   BannerContent,
   BannerImg,
 } from "@/components/core/Banner";
+import PruebaRectangulos from "@/components/pruebasBanners/pruebaRectangulos";
 
 const iconCardClasses = clsx(
   "!h-20 fill-primary"
@@ -53,6 +54,14 @@ export default function Page() {
   return (
     <main>
       <Banner>
+        {/* <PruebaRectangulos></PruebaRectangulos> */}
+      <Image className={"hidden md:flex"}
+          src="ging_logo.png"
+          alt="Descripción de la imagen"
+          fit="cover"
+          hasBadge={false}
+        />
+        
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance flex flex-col gap-2">
@@ -75,12 +84,7 @@ export default function Page() {
             {t("front.action-button")} <ArrowForwardIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-        <Image className={"hidden md:flex"}
-          src="placeholder.jpg"
-          alt="Descripción de la imagen"
-          fit="cover"
-          hasBadge={false}
-        />
+       
       </Banner> 
       {/* <BannerPum></BannerPum> */}
 
