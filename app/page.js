@@ -10,12 +10,13 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import Text from "@/components/ui/Text";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "@/components/ui/image";
-import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import CategoryIcon from '@mui/icons-material/Category';
-import HubIcon from '@mui/icons-material/Hub';
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import CategoryIcon from "@mui/icons-material/Category";
+import HubIcon from "@mui/icons-material/Hub";
+import { Card, CardVariants } from "@/components/core/Cards";
 
 import {
   CustomCard,
@@ -33,17 +34,15 @@ import {
   BannerContent,
   BannerImg,
 } from "@/components/core/Banner";
-import PruebaRectangulos from "@/components/pruebasBanners/pruebaRectangulos";
+import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
+import CardResearchline from "@/components/cardResearchline";
 
-const iconCardClasses = clsx(
-  "!h-20 fill-primary"
-);
+const iconCardClasses = clsx("!h-20 fill-primary");
 
 // UI
 export default function Page() {
   //const [projects, setProjects] = useState(myprojectCards);
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
+
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   // useEffect(() => {
@@ -55,21 +54,26 @@ export default function Page() {
     <main>
       <Banner>
         {/* <PruebaRectangulos></PruebaRectangulos> */}
-      <Image className={"hidden md:flex"}
+        <Image
+          className={"hidden md:flex"}
           src="ging_logo.png"
           alt="Descripción de la imagen"
           fit="cover"
           hasBadge={false}
         />
-        
+
         <BannerContent className={"w-full"}>
           <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance flex flex-col gap-2">
             {t("front.description")}
-              <Button asChild variant="link" className={"w-fit text-white"}>
-                <Link rel="noopener noreferrer" target="_blank" href={"https://ging.github.io/boiler/documentation/"}>
-                  {t("front.doc-button")}
-                </Link>
+            <Button asChild variant="link" className={"w-fit text-white"}>
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href={"https://ging.github.io/boiler/documentation/"}
+              >
+                {t("front.doc-button")}
+              </Link>
             </Button>
           </BannerDescription>
           <Divider />
@@ -84,11 +88,17 @@ export default function Page() {
             {t("front.action-button")} <ArrowForwardIcon className=" h-4 w-4" />
           </Button>
         </BannerContent>
-       
-      </Banner> 
+      </Banner>
       {/* <BannerPum></BannerPum> */}
-
+    
       <section className="standard_padding">
+        <div className="section-researchlines grid grid-cols-4 gap-4 pb-12">
+          <Card cardType={"researchline"} researchLine="data-spaces"/>
+          <Card cardType={"researchline"} researchLine="video-conference"/>
+          <Card cardType={"researchline"} researchLine="data-spaces"/>
+          <Card cardType={"researchline"} researchLine="video-conference"/>
+        </div>
+
         <Heading level="h3">{t("front.section1Title")}</Heading>
         <Text type="p"> {t("front.section1Description")}</Text>
         <Divider size="lg" />
@@ -98,7 +108,7 @@ export default function Page() {
         {/* Cards con iconos */}
         <div className="h-fit flex flex-col sm:grid md:grid-cols-3 gap-6 mb-16">
           <div>
-           <RocketLaunchIcon className="text-40 text-primary-500 mb-2" />
+            <RocketLaunchIcon className="text-40 text-primary-500 mb-2" />
             <CardContent>
               <Heading level="h5" className="text-primary-500">
                 {t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
@@ -110,23 +120,23 @@ export default function Page() {
           </div>
 
           <div>
-          <CategoryIcon className="text-40 text-primary-500 mb-2" />
-          <Heading level="h5" className="text-primary-500">
-                {t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
-              </Heading>
-              <CardDescription>
+            <CategoryIcon className="text-40 text-primary-500 mb-2" />
+            <Heading level="h5" className="text-primary-500">
+              {t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
+            </Heading>
+            <CardDescription>
               {t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
-              </CardDescription>
+            </CardDescription>
           </div>
 
-         <div>
-         <HubIcon className="text-40 text-primary-500 mb-2" />
-         <Heading level="h5" className="text-primary-500">
-                {t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
-              </Heading>
-              <CardDescription>
+          <div>
+            <HubIcon className="text-40 text-primary-500 mb-2" />
+            <Heading level="h5" className="text-primary-500">
+              {t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
+            </Heading>
+            <CardDescription>
               {t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
-              </CardDescription>
+            </CardDescription>
           </div>
         </div>
       </section>

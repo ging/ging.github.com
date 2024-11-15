@@ -94,6 +94,18 @@ module.exports = {
         },
         text: {
           DEFAULT:"#f8f8f8"
+        },
+        dataSpaces: {
+          500: "#236B5E",
+
+          "transparent300": "#9FD18CBD"
+          // eLearning: ,
+          // generativeAI: ,
+          // videoConference: ,
+        },
+        videoConference: {
+          500: "#93244d",
+          300: "#F4517F"
         }
       },
     },

@@ -2,14 +2,14 @@
 
 export const es = {
     "nav":{
-        "item1":"Home",
-        "item2":"Sobre [proyecto]",
-        "item3":"Equipo",
-        "item4":"Publicaciones",
-        "item5":"Contacto",
-        "item6":"Sistema de diseño",
-        "item7":"Documentación",
-        "item8":"Projects"
+        "home":"Home",
+        "about":"Sobre [proyecto]",
+        "team":"Equipo",
+        "research":"Publicaciones",
+        "contact":"Contacto",
+        "designSystem":"Sistema de diseño",
+        "documentation":"Documentación",
+        "projects":"Proyectos"
     },
     "header": {
         "publicationstab": "Publicaciones",

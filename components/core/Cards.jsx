@@ -12,6 +12,7 @@ import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import Image from "../ui/image";
+import ResearchlineIllust from "../illustrations/ResearchlineIllust";
 import {
   CustomCard,
   CardBody,
@@ -315,6 +316,25 @@ const Card = React.forwardRef(
       </CustomCard>
     );
 
+    const researchLineCard = (
+      <div>
+     <div
+      className={`card-researchline`}
+    >
+      {console.log(researchLine)}
+            <ResearchlineIllust researchLine={researchLine}/>
+        
+            <Heading level="h4" className="pt-4"> Researchline 1 </Heading>
+            <Text>
+              Lorem Ipsum duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.{" "}
+            </Text>
+          </div>
+      </div>
+    );
+
     // Usar el prop cardType para determinar qué tipo de tarjeta renderizar
     switch (cardType) {
       default:
@@ -329,6 +349,8 @@ const Card = React.forwardRef(
         return teamCard;
       case "tool":
         return toolCard;
+      case "researchline":
+        return researchLineCard;
     }
   }
 );

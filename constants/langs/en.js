@@ -1,13 +1,13 @@
 export const en = {
     "nav":{
-        "item1":"Home",
-        "item2":"About",
-        "item3":"Team",
-        "item4":"Research",
-        "item5":"Contact",
-        "item6":"Design system",
-        "item7":"Documentation",
-        "item8":"Projects"
+        "home":"Home",
+        "about":"About",
+        "team":"Team",
+        "research":"Research",
+        "contact":"Contact",
+        "designSystem":"Design system",
+        "documentation":"Documentation",
+        "projects":"Projects"
     },
     "header": {
         "publicationstab": "Publications",
