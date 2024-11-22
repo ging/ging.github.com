@@ -83,7 +83,7 @@ export const myteam = {
           },
           {
              "name":"Javier Conde",
-             "description":"Javier Conde, received an Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
+             "description":"Javier Conde, received a Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
              "photo":"/assets/img/team/javier-conde.jpg",
              "github":"https://github.com/javicond3",
              "email": "javier.conde.diaz@upm.es"
