@@ -310,7 +310,7 @@ main {
   .generative-ai-item {
     width: 54px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    opacity: 0.5;
+    opacity: 0.4;
     border-radius: 100px;
     position: absolute;
    

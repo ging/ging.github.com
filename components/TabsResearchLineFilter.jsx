@@ -4,30 +4,36 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 
+import { useSearchParams } from 'next/navigation';
+
 import { useRouter } from "next/navigation";
 
 export default function TabsResearchLine({ cards, onFilter, allResearchLines }) {
   const [selectedResearchLine, setSelectedResearchLine] = useState("all");
   const { t } = useTranslation();
 
+  let searchParams = useSearchParams()
+  let researchLineURL = searchParams.get('researchline')
+  console.log(researchLineURL)
+
   const router = useRouter();  // Hook para manipular la URL
   // Función para manejar el cambio de categoría
 
 // Al cargar el componente, se revisa la URL para obtener la researchLine actual
 useEffect(() => {
-  if (router?.query) { // Verificar si router.query está disponible
-    const categoryFromUrl = router.query.researchLine || "all"; // Si no existe, por defecto 'all'
-    setSelectedResearchLine(categoryFromUrl);
-    console.log(categoryFromUrl)
+ 
+    const researchLineFromURL = researchLineURL || "all"; // Si no hay researchline, por defecto 'all'
+    setSelectedResearchLine(researchLineFromURL);
+    console.log(researchLineFromURL)
+
   // 2. Filtrar las tarjetas según la researchLine de la URL
-  if (categoryFromUrl === "all") {
+  if (researchLineFromURL === "all") {
     onFilter(cards);  // Mostrar todas las tarjetas
   } else {
-    const filteredCards = cards.filter((card) => card.researchLine === categoryFromUrl);
+    const filteredCards = cards.filter((card) => card.researchLine === researchLineFromURL);
     onFilter(filteredCards);  // Mostrar tarjetas filtradas
   }
-} else {
-return console.log("nada por aquii")}
+
 }, [router?.query, cards, onFilter]); // Se ejecuta cada vez que cambia 'router.query' o 'cards'
 
 // Función para manejar el cambio de categoría

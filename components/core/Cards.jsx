@@ -324,8 +324,8 @@ const Card = React.forwardRef(
     
             <ResearchlineIllust researchLine={researchLine}/>
         
-            <Heading level="h4" className="pt-4"> {title} </Heading>
-            <Text>
+            <Heading level="h4" className="pt-4 font-normal "> {title} </Heading>
+            <Text className="font-light">
               {description}
             </Text>
           </div>
