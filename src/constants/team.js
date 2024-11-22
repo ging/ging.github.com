@@ -16,7 +16,7 @@ export const myteam = {
        "members":[
           {
              "name":"Joaquín Salvachúa",
-             "description":"Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
+             "description":"Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data spaces,++ data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
              "photo":"/assets/img/team/joaquin-salvachua.jpg",
              "github":"https://github.com/jsalvachua",
              "email": "joaquin.salvachua@upm.es"
@@ -69,28 +69,28 @@ export const myteam = {
        "members":[
           {
              "name":"Jose Andres Muñoz",
-             "description":"Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
+             "description":"Andrés Muñoz received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés has a Ph.D. in Telecommunications Engineering at UPM where currently is an assistant professor. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL. Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
              "photo":"/assets/img/team/jose-andres-munoz.jpg",
              "github":"https://github.com/anmunoz",
              "email": "joseandres.munoz@upm.es"
           },
           {
              "name":"Alejandro Pozo",
-             "description":"Researcher and Ph.D. student at Politécnica of Madrid (UPM). He received the M.Sc. in Telecommunications Engineering from the UPM, Spain, in 2017, where he is currently pursuing the Ph.D. in Telecommunications Engineering and is a Research Assistant with the Next Generation Internet Research Group. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
+             "description":"Alejandro Pozo received a Ph.D. and  M.Sc. in Telecommunications Engineering from the UPM, Spain, where he is currently an assistant professor. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
              "photo":"/assets/img/team/alejandro-pozo.jpg",
              "github":"https://github.com/apozohue10",
              "email": "alejandro.pozo@upm.es"
           },
           {
              "name":"Javier Conde",
-             "description":"PhD student in Telematics Engineering at UPM and researcher in the Department of Telematics Engineering. He received the B.S. and M.Sc. in Telecommunications Engineering from UPM in 2018 and 2020. His research interests lie in the fields of Open Linked Data, Digital Twins, Big Data and Machine Learning.",
+             "description":"Javier Conde, received an Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
              "photo":"/assets/img/team/javier-conde.jpg",
              "github":"https://github.com/javicond3",
              "email": "javier.conde.diaz@upm.es"
           },
           {
              "name":"Sonsoles López-Pernas",
-             "description":"Sonsoles has a PhD in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
+             "description":"Sonsoles has a Ph.D. in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
              "photo":"/assets/img/team/sonsoles-lopez.jpg",
              "github":"https://github.com/sonsoleslp",
              "email": "sonsoles.lopez.pernas@upm.es"
@@ -102,14 +102,14 @@ export const myteam = {
        "members":[
           {
              "name":"Carlos Arriaga",
-             "description":" Carlos is a Ph.D. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM).  He received the B.S. and M.Sc. in Telecommunications Engineering from UPM in 2020 and 2022. His research interests lie in primarily in the field of video-conference scalability and WebRTC.",
+             "description":" Carlos is a Ph.D. candidate in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM).  He received the B.S. and M.Sc. in Telecommunications Engineering from UPM in 2020 and 2022. His research interests lie in primarily in the field of video-conference scalability and WebRTC.",
              "photo":"/assets/img/team/carlos-arriaga.jpg",
              "github":"https://github.com/Arri98",
              "email": "carlos.arriaga.prieto@upm.es"
           },
           {
             "name":"Carlos Aparicio",
-            "description":"Carlos is a Ph.D student in Telecommunication Engineering and M.Sc in Telematic Services and Network Engineering at Universidad Politécnica de Madrid (UPM). He received the B.S and M.Sc. in arts and design from UCM in 2009 and 2010, the M.Sc. in arts and design pedagogy in 2011, and the M.Sc. in Big Data analysis and visualization from UNIR in 2020. Carlos has been involved in several professional projects as designer and developer from more than a decade, and has been teaching at Escuela Superior de Diseño de Madrid for 8 years. His research interests lie in the field of data spaces, access and usage control and big data architecture and analytics.",
+            "description":"Carlos is a Ph.D candidate in Telecommunication Engineering and M.Sc in Telematic Services and Network Engineering at Universidad Politécnica de Madrid (UPM). He received the B.S and M.Sc. in arts and design from UCM in 2009 and 2010, the M.Sc. in arts and design pedagogy in 2011, and the M.Sc. in Big Data analysis and visualization from UNIR in 2020. Carlos has been involved in several professional projects as designer and developer from more than a decade, and has been teaching at Escuela Superior de Diseño de Madrid for 8 years. His research interests lie in the field of data spaces, access and usage control and big data architecture and analytics.",
             "photo":"/assets/img/team/carlos-aparicio.jpeg",
             "github":"https://github.com/caparicio-esd",
             "email": "ce.aparicio@upm.es"
