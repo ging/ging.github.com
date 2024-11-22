@@ -321,15 +321,12 @@ const Card = React.forwardRef(
      <div
       className={`card-researchline`}
     >
-      {console.log(researchLine)}
+    
             <ResearchlineIllust researchLine={researchLine}/>
         
-            <Heading level="h4" className="pt-4"> Researchline 1 </Heading>
+            <Heading level="h4" className="pt-4"> {title} </Heading>
             <Text>
-              Lorem Ipsum duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.{" "}
+              {description}
             </Text>
           </div>
       </div>

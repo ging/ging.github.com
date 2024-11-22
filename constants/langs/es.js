@@ -30,15 +30,19 @@ export const es = {
         "ResearchLines": {
             "sectionTitle": "Líneas de investigación",
             "ResearchLine1": {
-                "ResearchLineTitle": "Línea de investigación 1",
+                "ResearchLineTitle": "Espacios de datos",
                 "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
             },
             "ResearchLine2": {
-                "ResearchLineTitle": "Línea de investigación 2",
+                "ResearchLineTitle": "E-Learning",
                 "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
             },
             "ResearchLine3": {
-                "ResearchLineTitle": "Línea de investigación 3",
+                "ResearchLineTitle": "IA Generativa",
+                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+            },
+            "ResearchLine4": {
+                "ResearchLineTitle": "Video conferencia",
                 "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
         },

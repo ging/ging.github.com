@@ -1,32 +1,55 @@
+"use client"
+
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+
+import { useRouter } from "next/navigation";
 
 export default function TabsResearchLine({ cards, onFilter, allResearchLines }) {
   const [selectedResearchLine, setSelectedResearchLine] = useState("all");
   const { t } = useTranslation();
 
+  const router = useRouter();  // Hook para manipular la URL
   // Función para manejar el cambio de categoría
+
+// Al cargar el componente, se revisa la URL para obtener la researchLine actual
+useEffect(() => {
+  if (router?.query) { // Verificar si router.query está disponible
+    const categoryFromUrl = router.query.researchLine || "all"; // Si no existe, por defecto 'all'
+    setSelectedResearchLine(categoryFromUrl);
+    console.log(categoryFromUrl)
+  // 2. Filtrar las tarjetas según la researchLine de la URL
+  if (categoryFromUrl === "all") {
+    onFilter(cards);  // Mostrar todas las tarjetas
+  } else {
+    const filteredCards = cards.filter((card) => card.researchLine === categoryFromUrl);
+    onFilter(filteredCards);  // Mostrar tarjetas filtradas
+  }
+} else {
+return console.log("nada por aquii")}
+}, [router?.query, cards, onFilter]); // Se ejecuta cada vez que cambia 'router.query' o 'cards'
+
+// Función para manejar el cambio de categoría
   const handleResearchLineChange = (researchLine) => {
     setSelectedResearchLine(researchLine);
-    if (researchLine === "all") {
+
+    // 1. Cambiar la URL según la researchLine escogida sin recargar la página
+    router.push(`/projects/?researchline=${researchLine}`, undefined, { shallow: true });
+    console.log(router.asPath)
+    if (researchLine === "all"  ) {
       // Si la categoría es "all", devolvemos todas las tarjetas
       onFilter(cards);
     } else {
-      // Filtrar las tarjetas que coincidan con la categoría seleccionada
+      // Filtrar las tarjetas que coincidan con la researchLine seleccionada
       const filteredCards = cards.filter((card) => card.researchLine === researchLine);
       onFilter(filteredCards);
         
-  console.log(researchLine[2])
+  // console.log(researchLine[2])
     }
   };
 
-console.log(allResearchLines)
   // Al montar el componente, cargar todas las tarjetas
-  useEffect(() => {
-    // Cargar todas las tarjetas cuando se monta el componente
-    onFilter(cards); 
-  }, [cards, onFilter]);
 
   // Función para aplicar las clases a los botones de las categorías
   const classes = (researchLine) => clsx([

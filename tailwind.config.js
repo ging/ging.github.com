@@ -79,9 +79,8 @@ module.exports = {
           // 100: "#FFE685",
         },
         background: {
-          DEFAULT:"#2F3343",
-          400: "#EFF7FB",
-          300: "#EFF7FB"
+          DEFAULT:"#2c2e33",
+      
         },
         ring: {
           DEFAULT: "#cbe0ed",
@@ -97,7 +96,6 @@ module.exports = {
         },
         dataSpaces: {
           500: "#236B5E",
-
           "transparent300": "#9FD18CBD"
           // eLearning: ,
           // generativeAI: ,
@@ -105,7 +103,21 @@ module.exports = {
         },
         videoConference: {
           500: "#93244d",
-          300: "#F4517F"
+          300: "#F4517F",
+          200: "#FF6B95"
+        },
+        generativeAI: {
+          600: "#CE7903",
+          500: "#EC9010",
+          200: "#F2E4B6",
+          "transparent600": "#EC9010dd"
+          
+        },
+        eLearning: {
+          500: "#2D63D0",
+          400: "#5689F3",
+          300: "#73B2FA",
+
         }
       },
     },

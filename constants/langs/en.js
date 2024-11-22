@@ -28,15 +28,19 @@ export const en = {
         "ResearchLines": {
             "sectionTitle": "Research lines",
             "ResearchLine1": {
-                "ResearchLineTitle": "Research line 1",
+                "ResearchLineTitle": "Data Spaces",
                 "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
             },
             "ResearchLine2": {
-                "ResearchLineTitle": "Research line 2",
+                "ResearchLineTitle": "E-Learning",
                 "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
             },
             "ResearchLine3": {
-                "ResearchLineTitle": "Research line 3",
+                "ResearchLineTitle": "Generative AI",
+                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+            },
+            "ResearchLine4": {
+                "ResearchLineTitle": "Videoconference",
                 "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
         },

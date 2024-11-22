@@ -24,10 +24,33 @@ const ResearchlineIllust = ({researchLine}) => {
     <div className="data-spaces-item" id="data-spaces-item-2"></div>
     <div className="data-spaces-item" id="data-spaces-item-3"></div>
     <div className="data-spaces-item" id="data-spaces-item-4"></div>
-
-          <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+       
     </div>
+    <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
     </div>)
+  const GenerativeAIIllust = (       
+    <div className="generative-ai-illust">    
+    <div className="generative-ai-illust-container">
+    <div className="generative-ai-item" id="generative-ai-item-1"></div>
+    <div className="generative-ai-item" id="generative-ai-item-2"></div>
+    <div className="generative-ai-item" id="generative-ai-item-3"></div>
+    {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
+       
+    </div>
+    <ArrowOutwardIcon className="text-background text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+    </div>)
+
+const ELearningIllust = (       
+  <div className="e-learning-illust">    
+  <div className="e-learning-illust-container">
+  <div className="e-learning-item" id="e-learning-item-1"></div>
+  <div className="e-learning-item" id="e-learning-item-2"></div>
+  <div className="e-learning-item" id="e-learning-item-3"></div>
+  {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
+     
+  </div>
+  <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+  </div>)
 
 
  switch (researchLine){
@@ -35,7 +58,10 @@ const ResearchlineIllust = ({researchLine}) => {
     return DataSpacesIllust;
   case "video-conference":
     return VideoConferenceIllust;
-
+  case "generative-ai":
+    return GenerativeAIIllust;
+  case "e-learning":
+    return ELearningIllust;
 }
 }
 

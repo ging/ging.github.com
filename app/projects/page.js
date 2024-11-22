@@ -5,6 +5,7 @@ import TabsResearchLineFilter from "@/components/TabsResearchLineFilter";
 import { projects } from "@/constants/projects";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/core/Cards";
+
 export default function Projects() {
   // const [projects, setProjects] = useState(myprojectCards);
   const { t, i18n } = useTranslation();
@@ -12,6 +13,7 @@ export default function Projects() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
 
   // estado de filtro (REVISAR SI HACE FALTA CONSERVAR ESTO)
   const [state, setState] = useState({
@@ -53,7 +55,7 @@ export default function Projects() {
     )
   );
 
-  console.log(uncutResearchLines)
+  // console.log(uncutResearchLines)
 
   // 2. Agregar objeto "all", que sería "todas las líneas de inv."
   let researchLines = [ "all"
@@ -69,16 +71,16 @@ export default function Projects() {
   let orderedResearchLines = researchLines.filter(
     (line) => line !== "other"
   );
-  console.log(orderedResearchLines)
+  // console.log(orderedResearchLines)
   // 3.2. Agregar "other" al final
   orderedResearchLines.push("other");
 
   let allResearchLines = orderedResearchLines.map((line) => ({
     name: line,
     translationKey: `projects.researchLines.${line}`,
-  }))
+  })) 
 
-  console.log(allResearchLines)
+  // console.log(allResearchLines)
   return (
     <div>
       <TabsResearchLineFilter

@@ -93,10 +93,30 @@ export default function Page() {
     
       <section className="standard_padding">
         <div className="section-researchlines grid grid-cols-4 gap-4 pb-12">
-          <Card cardType={"researchline"} researchLine="data-spaces"/>
-          <Card cardType={"researchline"} researchLine="video-conference"/>
-          <Card cardType={"researchline"} researchLine="data-spaces"/>
-          <Card cardType={"researchline"} researchLine="video-conference"/>
+          <Card 
+          cardType={"researchline"} 
+          researchLine="data-spaces"
+          title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
+          />
+          <Card 
+          cardType={"researchline"} 
+          researchLine="e-learning"
+          title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
+          />
+          <Card 
+          cardType={"researchline"} 
+          researchLine="generative-ai"
+          title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
+          />
+          <Card 
+          cardType={"researchline"} 
+          researchLine="video-conference"
+          title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine4.ResearchLineBody")}
+          />
         </div>
 
         <Heading level="h3">{t("front.section1Title")}</Heading>
@@ -106,39 +126,7 @@ export default function Page() {
           {t("front.ResearchLines.sectionTitle")}
         </Heading>
         {/* Cards con iconos */}
-        <div className="h-fit flex flex-col sm:grid md:grid-cols-3 gap-6 mb-16">
-          <div>
-            <RocketLaunchIcon className="text-40 text-primary-500 mb-2" />
-            <CardContent>
-              <Heading level="h5" className="text-primary-500">
-                {t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
-              </Heading>
-              <CardDescription>
-                {t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
-              </CardDescription>
-            </CardContent>
-          </div>
-
-          <div>
-            <CategoryIcon className="text-40 text-primary-500 mb-2" />
-            <Heading level="h5" className="text-primary-500">
-              {t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
-            </Heading>
-            <CardDescription>
-              {t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
-            </CardDescription>
-          </div>
-
-          <div>
-            <HubIcon className="text-40 text-primary-500 mb-2" />
-            <Heading level="h5" className="text-primary-500">
-              {t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
-            </Heading>
-            <CardDescription>
-              {t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
-            </CardDescription>
-          </div>
-        </div>
+  
       </section>
     </main>
   );
