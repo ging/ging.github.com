@@ -8,7 +8,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const ButtonVariants = cva(
-  "min-w-20 h-fit min-w-fit inline-flex gap-2 items-center justify-center font-medium whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "min-w-fit min-w-20 h-fit inline-flex gap-2 items-center justify-center font-medium whitespace-nowrap rounded-md transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -28,10 +28,11 @@ const ButtonVariants = cva(
           "bg-transparent text-primary-foreground underline-offset-4 underline hover:bg-secondary-100/60 shadow-none", 
         },
       size: {
-        default: "px-4 py-2 text-base",
-        sm: "px-4 py-2 text-sm font-semibold",
+        default: "px-4 py-2 text-base ",
+        sm: "px-3 py-1.5 text-sm font-semibold",
         lg: "px-5 py-2.5 text-lg",
         icon: "px-5 w-8 py-2.5",
+        icon_sm:"w-6 h-6 min-w-6 min-h-6 p-0" 
       },
       radius: {
         rounded_sm: "rounded-sm",

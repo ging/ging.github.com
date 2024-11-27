@@ -11,7 +11,7 @@ import Text from "@/components/ui/Text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
-import TabsCategoryFilter from "@/components/TabsCategoryFilter";
+import TabsCategoryFilter from "@/components/filters/TabsCategoryFilter";
 
 // Array de datos (cards)
 import { projects } from "@/constants/projects";

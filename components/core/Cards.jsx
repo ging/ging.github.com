@@ -121,7 +121,8 @@ const Card = React.forwardRef(
       role,
       currentLang,
       basePath,
-      researchLine, 
+      researchLine,
+
     },
     ref
   ) => {
@@ -135,13 +136,13 @@ const Card = React.forwardRef(
           {/* <Badge variant="outline" size="lg">
             {date}
           </Badge> */}
-          <Badge variant="outline" size="lg">
+           {/* {researchLine.map(item => {
+            return (<Badge key={item} variant="outline" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+          })} */}
+         
 
-          {t(`projects.researchLines.${researchLine}`)}
-
-    
- 
-          </Badge>
+          {/* <div>  {researchLine[0]} {researchLine[1]}
+ </div> */}
         </CardHeader>
         <CardBody>
           <CardContent>
@@ -212,7 +213,7 @@ const Card = React.forwardRef(
             {date && date[0]}
           </Badge>
           <Badge variant="outline" size="lg">
-          {translateCategory(category, currentLang)}
+            {translateCategory(category, currentLang)}
           </Badge>
         </CardHeader>
         <CardBody>
@@ -234,13 +235,13 @@ const Card = React.forwardRef(
             </Button>
           ) : null}
         </CardFooter>
-{/* 
+        {/* 
           {console.log(date && date[0])} */}
 
       </CustomCard>
-      
+
     );
-  
+
     // TEAM - ok
     const teamCard = (
       <CustomCard
@@ -318,17 +319,15 @@ const Card = React.forwardRef(
 
     const researchLineCard = (
       <div>
-     <div
-      className={`card-researchline`}
-    >
-    
-            <ResearchlineIllust researchLine={researchLine}/>
-        
-            <Heading level="h4" className="pt-4 font-normal "> {title} </Heading>
-            <Text className="font-light">
-              {description}
-            </Text>
-          </div>
+        <div
+          className={`card-researchline`}
+        >
+          <ResearchlineIllust researchLine={researchLine} />
+          <Heading level="h4" className="pt-4 font-normal "> {title} </Heading>
+          <Text className="font-light">
+            {description}
+          </Text>
+        </div>
       </div>
     );
 

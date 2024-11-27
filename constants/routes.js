@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 
 export const routes = [
     { route: "/", key: "nav.home", page:<Page/>, active: true },
-    { route: "/about", key: "nav.about", page:<About/>, active: true },
+    { route: "/about", key: "nav.about", page:<About/>, active: false },
     { route: "/team", key: "nav.team", page:<Team/>, active: true },
     { route: "/research", key: "nav.research", page:<Research/>, active: true },
     { route: "/projects", key: "nav.projects", page:<Projects/>, active: true },

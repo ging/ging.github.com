@@ -21,8 +21,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "title": ['var(--font-inter)', 'sans-serif'],
-        "main": ['var(--font-sourceSans)', 'sans-serif'],
+        "title": ['var(--font-arimo)', 'sans-serif'],
+        "main": ['var(--font-dmSans)', 'sans-serif'],
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '1.4' }],  /* 10px */
@@ -80,6 +80,8 @@ module.exports = {
         },
         background: {
           DEFAULT:"#2c2e33",
+          300: "#17181c", 
+          200:  "#1e1f23"
       
         },
         ring: {
@@ -135,17 +137,17 @@ module.exports = {
   },
   plugins: [
     plugin(function({ addBase, theme }) {
-      addBase({
-        'h1': { fontFamily: theme('fontFamily.inter') },
-        'h2': { fontFamily: theme('fontFamily.inter') },
-        'h3': { fontFamily: theme('fontFamily.inter') },
-        'h4': { fontFamily: theme('fontFamily.inter') },
-        'h5': { fontFamily: theme('fontFamily.inter') },
-        'h6': { fontFamily: theme('fontFamily.inter') },
-        'p': { fontFamily: theme('fontFamily.sourceSans') },
-        'a': { fontFamily: theme('fontFamily.sourceSans') },
-        'button': { fontFamily: theme('fontFamily.sourceSans') },
-      })
+      // addBase({
+      //   'h1': { fontFamily: theme('fontFamily.inter') },
+      //   'h2': { fontFamily: theme('fontFamily.inter') },
+      //   'h3': { fontFamily: theme('fontFamily.inter') },
+      //   'h4': { fontFamily: theme('fontFamily.inter') },
+      //   'h5': { fontFamily: theme('fontFamily.inter') },
+      //   'h6': { fontFamily: theme('fontFamily.inter') },
+      //   'p': { fontFamily: theme('fontFamily.arimo') },
+      //   'a': { fontFamily: theme('fontFamily.sourceSans') },
+      //   'button': { fontFamily: theme('fontFamily.sourceSans') },
+      // })
     })
   ],
   // corePlugins: {

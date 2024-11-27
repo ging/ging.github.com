@@ -22,6 +22,7 @@ export default function TabsCategoryFilter({ cards, onFilter }) {
   // Extraer categorías únicas de las tarjetas
   const categories = ["all", ...new Set(cards.map((card) => card.category))];
 
+  console.log(categories)
   // Al montar el componente, cargar todas las tarjetas
   useEffect(() => {
     // Cargar todas las tarjetas cuando se monta el componente

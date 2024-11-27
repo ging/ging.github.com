@@ -35,7 +35,7 @@ import {
   BannerImg,
 } from "@/components/core/Banner";
 import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
-import CardResearchline from "@/components/cardResearchline";
+
 
 const iconCardClasses = clsx("!h-20 fill-primary");
 

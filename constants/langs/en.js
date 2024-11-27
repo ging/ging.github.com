@@ -128,10 +128,11 @@ export const en = {
         "filterTitle4":"Other",
         "button":"Details",
         "researchLines": {
-            "data-spaces":"Data Spaces",
-            "generative-ai":"Generative AI",
+            "data":"Data",
+            "ai":"AI",
             "e-learning":"E-learning",
-            "video-conference":"Video Conference",
+            "videoconference":"Video Conference",
+            "networks": "Networks",
             "other":"Other",
             "all":"All"
         }
@@ -168,15 +169,7 @@ export const en = {
         "direction2": "Direction",
         "direction3": "Zip Code, city"
     },
-    "footer": {
-        "title1":"Sections",
-        "title2": "Project funded by:",
-        "title3": "Partners",
-        "logoSub": "Future Networks for Datacenters and Telcos",
-        "titleRight": "Future Networks for Datacenters and Telcos (FuN4DaTe)  © 2024. All rights reserved.",
-        "titleRight2": "",
-        "email":"Contact Email:"
-    },
+
     "tools":{
         "title":"Tools",
         "desc":"These are some of the tools we have developed.",
@@ -199,5 +192,14 @@ export const en = {
             
             
         },
+    },
+    "footer": {
+        "title1":"Sections",
+        "title2": "Follow us!",
+        "title3": "Partners",
+        "logoSub": "Future Networks for Datacenters and Telcos",
+        "titleRight": "Future Networks for Datacenters and Telcos (FuN4DaTe)  © 2024. All rights reserved.",
+        "titleRight2": "",
+        "email":"Contact Email:"
     },
 }

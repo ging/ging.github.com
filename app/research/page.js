@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Filters from "@/components/ResearchFilter";
+import Filters from "@/components/filters/ResearchFilter";
 import Link from "next/link";
 import { publications } from "@/constants/publications";
 
@@ -11,7 +11,7 @@ import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import {Divider, DividerVariants} from "@/components/ui/divider";
-import TabsCategoryFilter from "@/components/TabsCategoryFilter";
+import TabsCategoryFilter from "@/components/filters/TabsCategoryFilter";
 
 export default function Research() {
   const { t, i18n } = useTranslation();

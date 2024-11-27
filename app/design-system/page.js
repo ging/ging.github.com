@@ -11,7 +11,7 @@ import Text from "@/components/ui/Text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Label } from "@radix-ui/react-label";
 import { Badge, badgeVariants } from "@/components/ui/badge";
-import TabsCategoryFilter from "@/components/TabsCategoryFilter";
+import TabsCategoryFilter from "@/components/filters/TabsCategoryFilter";
 import { FaceIcon } from "@radix-ui/react-icons";
 
  //Array de datos (cards)
@@ -113,34 +113,41 @@ export default function DesignSystem(props) {
        <div className="flex flex-wrap gap-4 pb-8">
          <Button
            href="#"
-             variant= "default"
-             size= "default"
-             radius= "rounded_sm"
-        
+           className={ButtonVariants({
+            variant: "default",
+            size: "lg",
+            radius: "rounded_sm",
+          })}
          >
            Radius sm
          </Button>
          <Button
            href="#"
-             variant= "default"
-             size= "default"
-             radius= "rounded_md"   
+           className={ButtonVariants({
+            variant: "default",
+            size: "lg",
+            radius: "rounded_md",
+          })}  
          >
            Radius md
          </Button>
          <Button
            href="#"
-             variant= "default"
-             size= "default"
-             radius= "rounded_lg"
+           className={ButtonVariants({
+            variant: "default",
+            size: "lg",
+            radius: "rounded_lg",
+          })}
          >
            Radius lg
          </Button>
          <Button
            href="#"
-             variant= "default"
-             size= "default"
-             radius= "rounded_full"
+           className={ButtonVariants({
+            variant: "default",
+            size: "lg",
+            radius: "rounded_full",
+          })}
          >
            Radius full
          </Button>

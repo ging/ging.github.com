@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import TabsResearchLineFilter from "@/components/TabsResearchLineFilter";
+import TabsResearchLineFilter from "@/components/filters/TabsResearchLineFilter";
 import { projects } from "@/constants/projects";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/core/Cards";
+import { researchlines } from "@/constants/researchlines"
+
 
 export default function Projects() {
   // const [projects, setProjects] = useState(myprojectCards);
@@ -14,8 +16,9 @@ export default function Projects() {
     window.scrollTo(0, 0);
   }, []);
 
+  
 
-  // estado de filtro (REVISAR SI HACE FALTA CONSERVAR ESTO)
+  // estado de filtro 
   const [state, setState] = useState({
     items: projects,
     search: "",
@@ -58,9 +61,8 @@ export default function Projects() {
   // console.log(uncutResearchLines)
 
   // 2. Agregar objeto "all", que sería "todas las líneas de inv."
-  let researchLines = [ "all"
-  ,
-    ...uncutResearchLines,
+  let researchLines = [ "all",
+    ...researchlines,
   ];
 
   // 3. Cambiar línea "other" de lugar para que siempre se encuentre
@@ -75,6 +77,8 @@ export default function Projects() {
   // 3.2. Agregar "other" al final
   orderedResearchLines.push("other");
 
+  // console.log(filteredCards)
+
   let allResearchLines = orderedResearchLines.map((line) => ({
     name: line,
     translationKey: `projects.researchLines.${line}`,
@@ -85,7 +89,7 @@ export default function Projects() {
     <div>
       <TabsResearchLineFilter
         cards={projects}
-        allResearchLines={allResearchLines}
+        researchLines={researchLines}
         onFilter={setFilteredCards}
       />
       <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
@@ -109,7 +113,9 @@ export default function Projects() {
               researchLine={researchLine}
               title={title}
               description={description}
-            ></Card>
+            >
+              
+            </Card>
           )
         )}
       </div>

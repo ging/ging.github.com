@@ -67,7 +67,7 @@ export default function Header(props) {
         <div className="h-6 py-0.5 flex gap-4">
         <img
             className="object-contain"
-            src="logo_sm_boiler.svg"
+            src="logo_sm_boiler_light.svg"
             alt="logo"
           />
           <img
