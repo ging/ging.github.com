@@ -122,6 +122,7 @@ export const en = {
     },
     "projects": {
         "title": "Projects",
+        "description" :"Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
         "filterTitle1":"All",
         "filterTitle2":"Projects - individual",
         "filterTitle3":"Educational Research Group (GIE/ERG)",

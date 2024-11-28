@@ -7,6 +7,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
+
 import Heading from "../ui/Heading";
 import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
@@ -29,8 +30,9 @@ import { useTranslation } from "react-i18next";
 import {
   FaceIcon,
   ArrowRightIcon,
-  ExternalLinkIcon,
 } from "@radix-ui/react-icons";
+
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const CardVariants = cva(
@@ -122,7 +124,7 @@ const Card = React.forwardRef(
       currentLang,
       basePath,
       researchLine,
-
+      logo
     },
     ref
   ) => {
@@ -131,33 +133,29 @@ const Card = React.forwardRef(
 
     // PROJECT
     const projectCard = (
-      <CustomCard className={cn(CardVariants({ direction, className }))}>
-        <CardHeader>
-          {/* <Badge variant="outline" size="lg">
-            {date}
-          </Badge> */}
-           {/* {researchLine.map(item => {
-            return (<Badge key={item} variant="outline" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
-          })} */}
-         
-
-          {/* <div>  {researchLine[0]} {researchLine[1]}
- </div> */}
-        </CardHeader>
+      <CustomCard className={cn(CardVariants({ direction, className })) + "  border-transparent shadow-none border-b-gray-300 border-b-2 bg-transparent rounded-none flex-row gap-6"}>
+        <div className=" h-max w-2/5 flex min-h-[200px] justify-center items-center bg-videoConference-200 rounded-md">
+          <div className="h-full flex items-center "><img className="h-max object cover" src={logo}/>
+          </div>
+        </div>
+        
         <CardBody>
-          <CardContent>
-            <CardTitle level="h3">{title}</CardTitle>
-            <CardSubtitle level="h6">{subtitle}</CardSubtitle>
+          <CardContent className="gap-4">
+            <CardTitle level="h3" className="mb-0">
+            <button href={route} className="flex flex-row items-center gap-2">{title} <ExternalLinkIcon className="font-bold h-10 text-xl" /> </button>
+            </CardTitle>
+
             {description && <CardDescription>{description}</CardDescription>}
+            <div className="flex gap-2">
+          {Array.isArray(researchLine) ? researchLine.map(item => {
+            return (<Badge key={item} variant="outline" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+          })
+          : null}
+          </div>
           </CardContent>
-          <CardContent>
-            <div className={tagContainerClasses}>{renderTags(tags)}</div>
-          </CardContent>
+          
         </CardBody>
-        <CardFooter className="justify-center">
-          <Button href={route}>Ver proyecto</Button>{" "}
-          {/**revisar el href que no funciona el link */}
-        </CardFooter>
+       
       </CustomCard>
     );
 

@@ -7,10 +7,13 @@ export const usePageFilter = (items) => {
   const router = useRouter(); // Hook para manipular la URL
   let searchParams = useSearchParams()
   const [filteredItems, setFilteredItems] = useState(items);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [selectedResearchLine, setSelectedResearchLine] = useState("all")
 
+  console.log(selectedResearchLine)
   // Función para manejar el cambio de categoría
   const handleResearchLineChange = (researchLine) => {
+          setSelectedResearchLine(researchLine)
     if (researchLine == "all") {
       setFilteredItems(items);
       router.push(`/projects`, undefined);
@@ -23,9 +26,11 @@ export const usePageFilter = (items) => {
     }
     setLoading(false)
   };
+  
 
   useEffect(() => {
     let researchLineURL = searchParams.get('researchline')
+    setSelectedResearchLine(researchLineURL)
     if (researchLineURL) {
       handleResearchLineChange(researchLineURL)
     } else {
@@ -36,6 +41,7 @@ export const usePageFilter = (items) => {
   return {
     filteredItems,
     handleResearchLineChange,
-    loading
+    loading,
+    selectedResearchLine
   };
 };

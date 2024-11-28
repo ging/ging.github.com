@@ -138,6 +138,7 @@ export const es = {
   },
   projects: {
     title: "Proyectos",
+    description :"Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
     filterTitle1: "Todos",
     filterTitle2: "Proyectos - individual",
     filterTitle3: "Grupo de investigación educativa (GIE)",
