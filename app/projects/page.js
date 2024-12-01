@@ -70,6 +70,7 @@ export default function Projects() {
               researchLine={researchLine}
               title={title}
               logo={logo}
+              route={route}
               description={description}
             ></Card>
           )

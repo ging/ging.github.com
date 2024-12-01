@@ -149,7 +149,7 @@ main {
   aspect-ratio: 1 / 1;
   max-height: 300px;
   position: relative;
-  @apply bg-dataSpaces-500;
+  @apply bg-data-500;
   border-radius: 0.25rem;
   align-items: center;
   display: flex;
@@ -168,7 +168,7 @@ main {
   opacity: 0.3;
   position: absolute;
   transition: 0.2s ease-in-out;
-  @apply bg-dataSpaces-transparent300;
+  @apply bg-data-transparent300;
 }
 /* items*/
 #data-spaces-item-1 {
@@ -207,7 +207,7 @@ main {
   aspect-ratio: 1 / 1;
   max-height: 300px;
   position: relative;
-  @apply bg-videoConference-500;
+  @apply bg-videoconference-500;
   border-radius: 0.25rem;
   align-items: center;
   display: flex;
@@ -231,7 +231,7 @@ main {
   border-radius: 4px;
   position: relative;
   transition: all 1s ease-in-out;
-  @apply bg-videoConference-200;
+  @apply bg-videoconference-200;
 }
 /* items*/
 #video-conference-item-1 {
@@ -290,7 +290,7 @@ main {
   aspect-ratio: 1 / 1;
   max-height: 300px;
   position: relative;
-  @apply bg-generativeAI-200;
+  @apply bg-ai-200;
   border-radius: 0.25rem;
   align-items: center;
   display: flex;
@@ -314,7 +314,7 @@ main {
     border-radius: 100px;
     position: absolute;
    
-    @apply bg-generativeAI-transparent600;
+    @apply bg-ai-transparent600;
   }
   /* items*/
   #generative-ai-item-1 {
@@ -340,7 +340,7 @@ main {
     width: 53px;
     margin: auto;
     transition: all 0.7s ease-in-out;
-    @apply bg-generativeAI-600
+    @apply bg-ai-600
   }
 
 }

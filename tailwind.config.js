@@ -96,21 +96,25 @@ module.exports = {
         text: {
           DEFAULT:"#f8f8f8"
         },
-        dataSpaces: {
+        data: {
+          DEFAULT: "#236B5E",
           500: "#236B5E",
+          400: "#45ad9a",
           "transparent300": "#9FD18CBD"
           // eLearning: ,
           // generativeAI: ,
           // videoConference: ,
         },
-        videoConference: {
+        videoconference: {
           500: "#93244d",
+          400: "#bf4c76",
           300: "#F4517F",
           200: "#FF6B95"
         },
-        generativeAI: {
+        ai: {
           600: "#CE7903",
           500: "#EC9010",
+          400: "#f9af48",
           200: "#F2E4B6",
           "transparent600": "#EC9010dd"
           
@@ -119,8 +123,10 @@ module.exports = {
           500: "#2D63D0",
           400: "#5689F3",
           300: "#73B2FA",
-
-        }
+        },
+        networks: {
+          400: "#9b48f9",
+        },
       },
     },
     screens: {

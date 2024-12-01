@@ -133,16 +133,17 @@ const Card = React.forwardRef(
 
     // PROJECT
     const projectCard = (
-      <CustomCard className={cn(CardVariants({ direction, className })) + "  border-transparent shadow-none border-b-gray-300 border-b-2 bg-transparent rounded-none flex-row gap-6"}>
-        <div className=" h-max w-2/5 flex min-h-[200px] justify-center items-center bg-videoConference-200 rounded-md">
-          <div className="h-full flex items-center "><img className="h-max object cover" src={logo}/>
+      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-300 border-b-2 bg-transparent rounded-none flex-row gap-6"}>
+        <div className=" self-stretch w-1/2 flex min-h-[200px] justify-center items-center bg-videoConference-200 rounded-md ">
+          <div className="h-full flex items-center "><img className="h-max max-h-[200px] p-4 object cover" src={logo}/>
           </div>
         </div>
         
         <CardBody>
           <CardContent className="gap-4">
-            <CardTitle level="h3" className="mb-0">
-            <button href={route} className="flex flex-row items-center gap-2">{title} <ExternalLinkIcon className="font-bold h-10 text-xl" /> </button>
+            <CardTitle level="h3" className="mb-0 hover:text-blue-400 transition-all">
+            <Link href={route}     rel="noopener noreferrer"
+                target="_blank" className="flex flex-row items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
             </CardTitle>
 
             {description && <CardDescription>{description}</CardDescription>}
