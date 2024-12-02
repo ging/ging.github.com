@@ -54,11 +54,11 @@ const ELearningIllust = (
 
 
  switch (researchLine){
-  case "data-spaces":
+  case "data":
     return DataSpacesIllust;
-  case "video-conference":
+  case "videoconference":
     return VideoConferenceIllust;
-  case "generative-ai":
+  case "ai":
     return GenerativeAIIllust;
   case "e-learning":
     return ELearningIllust;

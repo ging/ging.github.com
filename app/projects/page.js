@@ -14,8 +14,9 @@ export default function Projects() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const {filteredItems, handleResearchLineChange, loading, selectedResearchLine} = usePageFilter(projects)
+  const {filteredItems, handleResearchLineChange = "all", loading, selectedResearchLine  = "all"} = usePageFilter(projects)
 
+  console.log(selectedResearchLine)
   // 2. Agregar objeto "all", que sería "todas las líneas de inv."
   let researchLines = ["all", ...researchlines];
 
@@ -25,6 +26,7 @@ export default function Projects() {
       researchLines={researchLines}
       handleResearchLineChange={handleResearchLineChange}
       selectedResearchLine={selectedResearchLine}
+      
       />
     <p className="min-h-screen">loading...</p>
     </div>)
@@ -40,7 +42,9 @@ export default function Projects() {
         </div>
 
     <div>
+    <p className="text-red-500 standard_margin">filtro de tipos de proyecto</p>
       <div className="flex justify-center">
+
       <TabsResearchLineFilter
       className="flex justify-center"
         researchLines={researchLines}
@@ -57,9 +61,9 @@ export default function Projects() {
               title,
               description,
               researchLine,
-              researchLineTranslationKey,
               logo,
               route,
+              projectType
             },
             index
           ) => (
@@ -72,6 +76,7 @@ export default function Projects() {
               logo={logo}
               route={route}
               description={description}
+              projectType={projectType}
             ></Card>
           )
         )}

@@ -136,8 +136,18 @@ export const en = {
             "networks": "Networks",
             "other":"Other",
             "all":"All"
+        },
+        "card": {
+            "toggleMore": "See more",
+            "toggleLess": "See less",
+            "button": "Related papers"
+        },
+        "type": {
+            "european-project": "European Project",
+            "national-project": "National Project",
+            "private-project": "Private Project"
         }
-        //traducir tags?  cuando estén
+
     },
     "team": {
         "title": "Team",

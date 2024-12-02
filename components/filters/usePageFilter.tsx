@@ -10,13 +10,16 @@ export const usePageFilter = (items) => {
   const [loading, setLoading] = useState(true);
   const [selectedResearchLine, setSelectedResearchLine] = useState("all")
 
-  console.log(selectedResearchLine)
   // Función para manejar el cambio de categoría
   const handleResearchLineChange = (researchLine) => {
+    
+  console.log(selectedResearchLine)
           setSelectedResearchLine(researchLine)
-    if (researchLine == "all") {
+          //esto no se activa hasta que alguien no le da click
+    if (researchLine === "all") {
       setFilteredItems(items);
       router.push(`/projects`, undefined);
+
     } else {
       const newFilteredCards = items.filter((proj) =>
         proj.researchLine.some((l) => l === researchLine)
@@ -30,7 +33,9 @@ export const usePageFilter = (items) => {
 
   useEffect(() => {
     let researchLineURL = searchParams.get('researchline')
-    setSelectedResearchLine(researchLineURL)
+    // este operador sirve para que setSelectedResearchLine no pase a ser "null", cuando estén
+    // todas las líneas seleccionadas
+    setSelectedResearchLine(researchLineURL === null ? (researchLineURL = "all") : (researchLineURL))
     if (researchLineURL) {
       handleResearchLineChange(researchLineURL)
     } else {
@@ -42,6 +47,6 @@ export const usePageFilter = (items) => {
     filteredItems,
     handleResearchLineChange,
     loading,
-    selectedResearchLine
+    selectedResearchLine,
   };
 };

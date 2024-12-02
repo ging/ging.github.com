@@ -153,6 +153,16 @@ export const es = {
       other: "Otros",
       all: "Todo",
     },
+    "card": {
+      "toggleMore": "Ver más",
+      "toggleLess": "Ver menos",
+      "button": "Publicaciones relacionadas"
+  },
+  "type": {
+    "european-project": "Proyecto europeo",
+    "national-project": "Proyecto nacional",
+    "private-project": "Proyecto privado"
+}
   },
   team: {
     title: "Equipo",

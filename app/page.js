@@ -95,7 +95,7 @@ export default function Page() {
         <div className="section-researchlines grid grid-cols-4 gap-4 pb-12">
           <Card 
           cardType={"researchline"} 
-          researchLine="data-spaces"
+          researchLine="data"
           title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
           />
@@ -107,13 +107,13 @@ export default function Page() {
           />
           <Card 
           cardType={"researchline"} 
-          researchLine="generative-ai"
+          researchLine="ai"
           title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
           />
           <Card 
           cardType={"researchline"} 
-          researchLine="video-conference"
+          researchLine="videoconference"
           title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine4.ResearchLineBody")}
           />

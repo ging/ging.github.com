@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/customCard";
 
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 import {
   FaceIcon,
@@ -36,7 +37,7 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const CardVariants = cva(
-  "border border-primary min-w-20 p-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-0 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       direction: {
@@ -64,6 +65,8 @@ const renderTags = (tags) => {
     </Badge> // Añade una key a cada Label
   ));
 };
+
+
 
 // quitarle guión, añadir espaciado, mayúscula (Formateo)
 const renderCategory = (category) => {
@@ -124,39 +127,115 @@ const Card = React.forwardRef(
       currentLang,
       basePath,
       researchLine,
-      logo
+      logo,
+      projectType
     },
     ref
   ) => {
     const { t } = useTranslation();
 
+    // PARA PROJECTCARD
+    // Manejo de estado para ver si se ha expandido el "ver más" del texto
+    const [isExpanded, setIsExpanded] = useState(false);
+    const toggleDescription = () => {
+      setIsExpanded((prevState) => !prevState); // Alterna entre true y false,
+      // cogiendo de base el estado. Si es false lo convierte a true, y viceversa
+    };
+
+    // fondo researchline cards - project cards
+    let backgroundColor;
+
+    // coge solo la primera researchline para ponerle el fondo
+    switch (researchLine && researchLine[0]) {
+      case 'data':
+        backgroundColor = 'bg-data_bg';  // Para la categoría 'data'
+        break;
+      case 'videoconference':
+        backgroundColor = 'bg-videoconference_bg';  // Para la categoría 'videoconference'
+        break;
+      case 'ai':
+        backgroundColor = 'bg-ai-600/30';  // Para la categoría 'ai'
+        break;
+      case 'networks':
+        backgroundColor = 'bg-networks-600/50';  // Para la categoría 'ai'
+        break;
+      case 'e-learning':
+        backgroundColor = 'bg-eLearning-600/50';  // Para la categoría 'ai'
+        break;
+      default:
+        backgroundColor = 'bg-gray-600/50';  // Valor por defecto si no hay coincidencia
+        break;
+    }
 
     // PROJECT
     const projectCard = (
-      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-300 border-b-2 bg-transparent rounded-none flex-row gap-6"}>
-        <div className=" self-stretch w-1/2 flex min-h-[200px] justify-center items-center bg-videoConference-200 rounded-md ">
-          <div className="h-full flex items-center "><img className="h-max max-h-[200px] p-4 object cover" src={logo}/>
-          </div>
-        </div>
-        
-        <CardBody>
-          <CardContent className="gap-4">
-            <CardTitle level="h3" className="mb-0 hover:text-blue-400 transition-all">
-            <Link href={route}     rel="noopener noreferrer"
-                target="_blank" className="flex flex-row items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
-            </CardTitle>
 
-            {description && <CardDescription>{description}</CardDescription>}
-            <div className="flex gap-2">
-          {Array.isArray(researchLine) ? researchLine.map(item => {
-            return (<Badge key={item} variant="outline" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
-          })
-          : null}
+      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-400 border-b-1 bg-transparent rounded-none flex-col sm:flex-row gap-3 sm:gap-6 py-6 items-start"}>
+        <div className={`w-full max-h-[120px] relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
+          <div className=" flex items-center  "><img className="brightness-0 invert  h-max max-h-[200px] p-12 sm:p-4 object cover" src={logo} />
+        
           </div>
+          <Badge className="BADGE-PROJECTTYPE absolute bottom-2 right-2 bg-gray-900/30 text-gray-300 border-none" size="md">
+                {t(`projects.type.${projectType}`)} 
+                </Badge>
+        </div>
+
+        <CardBody>
+          <CardContent className="gap-5 mt-0.5 lg:mt-0 lg:gap-2">
+            <div>
+              <CardTitle level="h3"className=" w-fit hover:text-blue-400 transition-all mb-0">
+                <Link href={route} rel="noopener noreferrer"
+                  target="_blank" className="flex flex-row w-fit items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
+              </CardTitle>
+
+              <div className="flex flex-col gap-1">{description && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description}</CardDescription>}  <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>
+              </div>
+            </div>
+            <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
+              <div className="flex gap-2 flex-wrap">
+                <div className="BADGES-RESEARCHLINE flex gap-2 ">
+              {Array.isArray(researchLine) ? researchLine.map(item => {
+
+                // fondo researchline cards
+                let backgroundColorResearchLine;
+                let textColorResearchLine;
+
+                // coge solo la primera researchline para ponerle el fondo
+                switch (item) {
+                  case 'data':
+                    backgroundColorResearchLine = 'bg-data-500';  // Para la categoría 'data'
+                    break;
+                  case 'videoconference':
+                    backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
+                    break;
+                  case 'ai':
+                    backgroundColorResearchLine = 'bg-ai-500';  // Para la categoría 'ai'
+                    textColorResearchLine = "text-gray-900"
+                    break;
+                  case 'networks':
+                    backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
+                    break;
+                  case 'e-learning':
+                    backgroundColorResearchLine = 'bg-eLearning-500';  // Para la categoría 'ai'
+                    break;
+                  default:
+                    backgroundColorResearchLine = 'bg-gray-500';  // Valor por defecto si no hay coincidencia
+                    break;
+                }
+
+
+                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none`} key={item} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+              })
+                : null}
+                </div>
+            
+                </div>
+                <Button size="default" radius="rounded_sm" variant="outline">  {t(`projects.card.button`)} </Button>
+            </div>
           </CardContent>
-          
+
         </CardBody>
-       
+
       </CustomCard>
     );
 

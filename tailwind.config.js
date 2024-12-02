@@ -80,8 +80,9 @@ module.exports = {
         },
         background: {
           DEFAULT:"#2c2e33",
+          400:"#1d1e23",
           300: "#17181c", 
-          200:  "#1e1f23"
+          200:  "#0a0b0c"
       
         },
         ring: {
@@ -98,6 +99,7 @@ module.exports = {
         },
         data: {
           DEFAULT: "#236B5E",
+          600: "#165146",
           500: "#236B5E",
           400: "#45ad9a",
           "transparent300": "#9FD18CBD"
@@ -106,6 +108,7 @@ module.exports = {
           // videoConference: ,
         },
         videoconference: {
+          600:"#66102f",
           500: "#93244d",
           400: "#bf4c76",
           300: "#F4517F",
@@ -120,12 +123,15 @@ module.exports = {
           
         },
         eLearning: {
+          600: "#174193",
           500: "#2D63D0",
           400: "#5689F3",
           300: "#73B2FA",
         },
         networks: {
           400: "#9b48f9",
+          500: "#681ebc",
+          600: "#534068",
         },
       },
     },
@@ -139,7 +145,8 @@ module.exports = {
       '3xl': '1700px'   
     },
     backgroundImage: {
-      'main': `url('${basePathTailwind}/assets/fondos/background_banner.png')`,
+      'videoconference_bg': `url('${basePathTailwind}/assets/img/backgrounds/videoconference_bg.svg')`,
+      'data_bg': `url('${basePathTailwind}/assets/img/backgrounds/data_bg.svg')`,
     }
   },
   plugins: [
