@@ -79,6 +79,7 @@ module.exports = {
           // 100: "#FFE685",
         },
         background: {
+          600: "#3a3e47",
           DEFAULT:"#2c2e33",
           400:"#1d1e23",
           300: "#17181c", 
@@ -115,6 +116,7 @@ module.exports = {
           200: "#FF6B95"
         },
         ai: {
+          700: "#9b6a26",
           600: "#CE7903",
           500: "#EC9010",
           400: "#f9af48",
@@ -147,6 +149,7 @@ module.exports = {
     backgroundImage: {
       'videoconference_bg': `url('${basePathTailwind}/assets/img/backgrounds/videoconference_bg.svg')`,
       'data_bg': `url('${basePathTailwind}/assets/img/backgrounds/data_bg.svg')`,
+
     }
   },
   plugins: [

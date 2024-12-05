@@ -6,11 +6,9 @@ import clsx from "clsx";
 
 
 
-export default function TabsResearchLine({ handleResearchLineChange, researchLines, selectedResearchLine = "all" }) {
+export default function TabsResearchLineFilter({ handleBasePath, handleResearchLineChange, researchLines, pathname, selectedResearchLine = "all" }) {
   const { t } = useTranslation();
-console.log(selectedResearchLine)
-
-  // el botón de all. Está activo, pero no deja de estarlo en ningún momento
+// console.log(selectedResearchLine)
 
   // transformar researchlines a formato tailwind para que puedan coger 
   // las clases del color de fondo de cada línea (NO FUNCIONO ASI QUE LO ELIMINÉ,
@@ -22,25 +20,25 @@ console.log(selectedResearchLine)
   
     switch (researchLine) {
       case 'data':
-        backgroundColor = 'bg-data-400';  // Para la categoría 'data'
+        backgroundColor = 'bg-data-500';  // Para la categoría 'data'
         break;
       case 'videoconference':
-        backgroundColor = 'bg-videoconference-400';  // Para la categoría 'videoconference'
+        backgroundColor = 'bg-videoconference-500';  // Para la categoría 'videoconference'
         break;
       case 'ai':
-        backgroundColor = 'bg-ai-400';  // Para la categoría 'ai'
+        backgroundColor = 'bg-ai-700';  // Para la categoría 'ai'
         break;
         case 'networks':
-        backgroundColor = 'bg-networks-400';  // Para la categoría 'ai'
+        backgroundColor = 'bg-networks-500';  // Para la categoría 'ai'
         break;
         case 'e-learning':
-          backgroundColor = 'bg-eLearning-400';  // Para la categoría 'ai'
+          backgroundColor = 'bg-eLearning-600';  // Para la categoría 'ai'
           break;
               case 'all': 
-          backgroundColor = 'bg-gray-400';
+          backgroundColor = 'bg-gray-700';
           break;
       default:
-        backgroundColor = 'bg-gray-400';  // Valor por defecto si no hay coincidencia
+        backgroundColor = 'bg-gray-700';  // Valor por defecto si no hay coincidencia
         break;
     }
   
@@ -49,8 +47,8 @@ console.log(selectedResearchLine)
 
       "font-medium inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-3 text-base ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
       selectedResearchLine === researchLine
-        ? `${backgroundColor} text-gray-900` // Si está seleccionado, aplicamos el color dinámico
-        : "bg-background-300 text-gray-400 hover:bg-background hover:text-white", // Si no está seleccionado
+        ? `${backgroundColor} text-white` // Si está seleccionado, aplicamos el color dinámico
+        : "bg-background-300 text-gray-400 hover:bg-background-600 md:hover:bg-background hover:text-white", // Si no está seleccionado
     ]);
   };
 
@@ -63,7 +61,7 @@ console.log(selectedResearchLine)
         <button
           key={index}
           className={classes(researchLine)}
-          onClick={() => handleResearchLineChange(researchLine)}
+          onClick={() => { handleBasePath(pathname, researchLine); handleResearchLineChange(researchLine);}}
         >
           {/* Renderizar el nombre de la categoría */}
           {researchLine.name === "all" ? t("projects.researchLines.all") : t(`projects.researchLines.${researchLine}`)}

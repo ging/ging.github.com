@@ -13,11 +13,12 @@ const badgeVariants = cva(
         outline:
           "border-primary bg-tranparent text-primary",
         secondary:
-          "border-transparent bg-secondary-300 text-secondary-foreground",
+          
+          "bg-gray-900/20 text-gray-300 border-none mix-blend-multiply",
       },
       size: {
         default:
-          "px-3 py-1 text-xs",
+          "px-1.5 py-0.5 text-xs rounded-sm",
         lg:
           "px-3 py-1 border-2 text-[14px] font-bold uppercase",
           md:

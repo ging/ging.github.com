@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Filters from "@/components/filters/ResearchFilter";
 import Link from "next/link";
 import { publications } from "@/constants/publications";
+import { researchlines } from "@/constants/researchlines";
 
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
@@ -12,12 +14,14 @@ import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import {Divider, DividerVariants} from "@/components/ui/divider";
 import TabsCategoryFilter from "@/components/filters/TabsCategoryFilter";
+import { usePageFilter } from "@/components/filters/usePageFilter.tsx";
+import TabsResearchLineFilter from "@/components/filters/TabsResearchLineFilter";
 
 export default function Research() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-
+  const {filteredItems, handleResearchLineChange,  handleBasePath,  loading, selectedResearchLine  = "all"} = usePageFilter(publications)
   // estado de filtro
   const [state, setState] = useState({
     items: publications,
@@ -27,8 +31,13 @@ export default function Research() {
     papersToShow: 6, // Number of papers to show initially
   });
 
-   //  Funcion y array de categorias de Tabs
-   const [filteredCards, setFilteredCards] = useState(publications);
+  // nombre de ruta que se pasa al hook para que resetee la URL
+  // cuando todos los papers son seleccionados
+  const pathname = "/research"
+
+  
+    // 2. Agregar objeto "all", que sería "todas las líneas de inv."
+    let researchLines = ["all", ...researchlines];
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -100,31 +109,16 @@ export default function Research() {
         </Text>
       </div>
       <main className="research">
-        <TabsCategoryFilter     
-          cards={publications}
-          onFilter={setFilteredCards}
-        />
-        <div className="project_cards my-4 sm:my-6 lg:my-10 sm:grid sm:grid-cols-2 sm:gap-4">
-           {filteredCards.map(
-             (
-               { date, title, author, doi, center, description, category },
-               index
-             ) => (
-               <Card
-                 key={index}
-                 cardType={"publication"}
-                 date={date}
-                 author={author}
-                 category={category}
-                 title={title}
-                 subtitle={center}
-                 description={description}
-                //  tags={tags}
-                 doi={doi}
-               ></Card>
-             )
-           )}
-         </div> 
+      <div className="flex justify-center">
+
+      <TabsResearchLineFilter
+      researchLines={researchLines}
+      handleResearchLineChange={handleResearchLineChange}
+      selectedResearchLine={selectedResearchLine}
+      pathname={pathname}
+      handleBasePath={handleBasePath}
+      />
+      </div>
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
@@ -139,10 +133,10 @@ export default function Research() {
             papersFiltered instanceof Array ? papersFiltered.length : 0
           }
         />
-        <section className="flex flex-col gap-4 standard_margin">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
           {papersFiltered
             .slice(0, papersToShow)
-            .map(({ date, category, doi, author, title, journal }, key) => {
+            .map(({ date, category, doi, author, title, journal, series, keywords }, key) => {
               return (
                 <Card 
                 key={key}
@@ -156,6 +150,8 @@ export default function Research() {
                   title={title}
                   author={author}
                   doi={doi}
+                  series={series}
+                  keywords={keywords}
                 ></Card>
               );
             })}
@@ -167,7 +163,7 @@ export default function Research() {
               onClick={handleLoadMore}
               className={
                 ButtonVariants({
-                  variant: "default",
+                  variant: "secondary",
                   size: "lg",
                   radius: "rounded_sm",
                 }) + " w-fit mt-4 my-auto"

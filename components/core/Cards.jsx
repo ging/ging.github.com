@@ -37,7 +37,7 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const CardVariants = cva(
-  "border border-primary min-w-20 p-0 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "border border-primary min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       direction: {
@@ -128,7 +128,9 @@ const Card = React.forwardRef(
       basePath,
       researchLine,
       logo,
-      projectType
+      projectType,
+      series,
+      keywords
     },
     ref
   ) => {
@@ -170,14 +172,17 @@ const Card = React.forwardRef(
     // PROJECT
     const projectCard = (
 
-      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-400 border-b-1 bg-transparent rounded-none flex-col sm:flex-row gap-3 sm:gap-6 py-6 items-start"}>
-        <div className={`w-full max-h-[120px] relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
-          <div className=" flex items-center  "><img className="brightness-0 invert  h-max max-h-[200px] p-12 sm:p-4 object cover" src={logo} />
-        
-          </div>
-          <Badge className="BADGE-PROJECTTYPE absolute bottom-2 right-2 bg-gray-900/30 text-gray-300 border-none" size="md">
-                {t(`projects.type.${projectType}`)} 
-                </Badge>
+      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-400 border-b-1 bg-transparent rounded-none flex-col sm:flex-row gap-3 sm:gap-6 px-0 py-6 items-start"}>
+        <div className={`w-full h-fit relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
+
+            <Image className="brightness-0 invert min-h-[160px] !p-8 sm:!p-12 " src={logo} fit="contain" 
+              layout = {"bottom-right"}
+              hasBadge = {true}
+              badgeVariant = {"secondary"}           
+              badgeSize = {"md"}     
+              badgeContent = {t(`projects.type.${projectType}`)}
+              />
+ 
         </div>
 
         <CardBody>
@@ -209,8 +214,8 @@ const Card = React.forwardRef(
                     backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
                     break;
                   case 'ai':
-                    backgroundColorResearchLine = 'bg-ai-500';  // Para la categoría 'ai'
-                    textColorResearchLine = "text-gray-900"
+                    backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
+                    // textColorResearchLine = "text-gray-900"
                     break;
                   case 'networks':
                     backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
@@ -224,7 +229,7 @@ const Card = React.forwardRef(
                 }
 
 
-                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none`} key={item} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={item} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
               })
                 : null}
                 </div>
@@ -283,28 +288,69 @@ const Card = React.forwardRef(
     const publicationCard = (
       <CustomCard
         className={cn(
-          CardVariants({ direction, className }) + " bg-background"
+          CardVariants({ direction, className }) + "  bg-background-300 border-none shadow-md"
         )}
       >
         <CardHeader>
-          <Badge variant="outline" size="lg">
-            {date && date[0]}
-          </Badge>
-          <Badge variant="outline" size="lg">
-            {translateCategory(category, currentLang)}
-          </Badge>
+          
+            {Array.isArray(series) ? series.map(researchline => {
+              let backgroundColorResearchLine;
+              let textColorResearchLine;
+              let backgroundIcon;
+              // coge solo la primera researchline para ponerle el fondo
+              switch (researchline) {
+                case 'data':
+                  backgroundColorResearchLine = 'bg-data-500/40';  // Para la categoría 'data'
+                  backgroundIcon = "assets/img/icons/data_icon.svg";
+                  textColorResearchLine = "text-data-400";
+                  break;
+                case 'videoconference':
+                  backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
+                  break;
+                case 'ai':
+                  backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
+                  // textColorResearchLine = "text-gray-900"
+                  break;
+                case 'networks':
+                  backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
+                  break;
+                case 'e-learning':
+                  backgroundColorResearchLine = 'bg-eLearning-500';  // Para la categoría 'ai'
+                  break;
+                default:
+                  backgroundColorResearchLine = 'bg-gray-500';  // Valor por defecto si no hay coincidencia
+                  break;
+              }
+
+              return (
+              <Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
+              <img className="h-4 pr-1.5" src={backgroundIcon}></img>
+              {researchline} </Badge>
+              )})  : null
+            }
+  
+        
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
-            <CardTitle level="h5">
-              <i>{title}</i>
+            <CardTitle level="title-sm">
+              {title}
             </CardTitle>
-            <Text level="p">{author}</Text>
+           <div className="flex"> <Text type="small" className="font-bold">   {translateCategory(category, currentLang)}</Text>
+           <div className="mx-2 mb-2">·</div> <Text type="small">    {date && date[0]} </Text> </div>
+            <Text className="text-gray-300/90 mb-4" type="small">{author}</Text>
+     <div className="flex flex-wrap gap-1.5">
+            {Array.isArray(keywords) ? keywords.map(keyword => {
+              return (
+              <Badge size="default" className="bg-[#000000] border-none text-gray-300"> {keyword} </Badge>
+              )})  : null}
+  </div>
+   
           </CardContent>
         </CardBody>
         <CardFooter>
           {doi ? (
-            <Button asChild variant="" radius="rounded_md">
+            <Button asChild variant="outline" size="sm" radius="rounded_sm">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
                 {t("publications.action-button")}
 

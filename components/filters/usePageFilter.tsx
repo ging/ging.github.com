@@ -10,27 +10,37 @@ export const usePageFilter = (items) => {
   const [loading, setLoading] = useState(true);
   const [selectedResearchLine, setSelectedResearchLine] = useState("all")
 
+  const handleBasePath = (pathname, researchLine) => {
+    console.error("pathname" + pathname)
+    router.push(`${pathname}`, undefined);
+    console.error("researchline " + researchLine);
+    if (researchLine === "all" || "") {
+       router.push(`${pathname}/`, undefined);
+    } else {
+       router.push(`${pathname}/?researchline=${researchLine}`, undefined);
+    }
+    setLoading(false)
+  }
+// OKAY AHORA LA IDEA ES PODER PASARLE A HANDLERESEARCHLINE EL 
+// PARÁMETRO DE PATHNAME
   // Función para manejar el cambio de categoría
   const handleResearchLineChange = (researchLine) => {
-    
-  console.log(selectedResearchLine)
-          setSelectedResearchLine(researchLine)
-          //esto no se activa hasta que alguien no le da click
-    if (researchLine === "all") {
+    setSelectedResearchLine(researchLine);
+    if (researchLine === "all" || "") {
       setFilteredItems(items);
-      router.push(`/projects`, undefined);
-
+    // handleBasePath
     } else {
       const newFilteredCards = items.filter((proj) =>
         proj.researchLine.some((l) => l === researchLine)
       );
       setFilteredItems(newFilteredCards);
-      router.push(`/projects/?researchline=${researchLine}`, undefined);
     }
-    setLoading(false)
+          //esto no se activa hasta que alguien no le da click
+   
+          setLoading(false)
   };
   
-
+// función para obtener las researchlines de la URL
   useEffect(() => {
     let researchLineURL = searchParams.get('researchline')
     // este operador sirve para que setSelectedResearchLine no pase a ser "null", cuando estén
@@ -48,5 +58,6 @@ export const usePageFilter = (items) => {
     handleResearchLineChange,
     loading,
     selectedResearchLine,
+    handleBasePath
   };
 };

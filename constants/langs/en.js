@@ -130,7 +130,7 @@ export const en = {
         "button":"Details",
         "researchLines": {
             "data":"Data",
-            "ai":"AI",
+            "ai":"Artificial Intelligence ",
             "e-learning":"E-learning",
             "videoconference":"Video Conference",
             "networks": "Networks",

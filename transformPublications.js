@@ -8,7 +8,7 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 	  template: 'apa',
 	  lang: 'en-US',
 	  prepend (entry) {
-	  	let {id, issued, DOI, type, title, volume, page} = entry;
+	  	let {id, issued, DOI, type, title, volume, page, keywords} = entry;
 	  	if (DOI && !DOI.match(/http/)) {
 	  		DOI = "https://doi.org/" + DOI;
 	  	}
@@ -34,7 +34,6 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 			return a.given + " " + a.family;
 			
 		}).join(", ");		
-	
 
 	    return `{  
 	    		${(issued && issued['date-parts']) ? ('"date": ' + '[' + issued['date-parts'] + "]," ): "" }
@@ -47,6 +46,7 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 				${ type ? ('"month": "' + month + '",'): "" }
 				${ type ? ('"volume": "' + volume + '",'): "" }
 				${ type ? ('"pages": "' + page + '",'): "" }
+			    ${ keywords ? ('"keywords": "' + keywords + '",'): "" }
 	    		"content": "`
 	  },
 	  append: () => '"},'

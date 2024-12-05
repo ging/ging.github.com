@@ -34,6 +34,9 @@ const Heading = ({ level = "h1", children, className }) => {
       case "highlight":
         Component = "h4";
         break;
+        case "title-sm":
+          Component = "h6";
+          break;
     default:
       Component = "h1"; // Por defecto, usar h1 si no se especifica nivel válido
       break;
@@ -43,12 +46,13 @@ const Heading = ({ level = "h1", children, className }) => {
   const classes = clsx([
     "text-text font-title font-medium text-pretty",
     {
-      "text-40 mb-6": level === "h1", // Aplicar "adasd" si el nivel es h1
+      "text-40 mb-6": level === "h1", 
       "text-36 mb-4": level === "h2",
       "text-32 mb-4": level === "h3",
       "text-28 mb-2": level === "h4",
       "text-24 mb-2": level === "h5",
       "text-base font-medium uppercase mb-2": level === "h6",
+      "text-20 font-normal mb-2 leading-snug": level === "title-sm",
 
     },
     className
