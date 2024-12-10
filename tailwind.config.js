@@ -103,7 +103,8 @@ module.exports = {
           600: "#165146",
           500: "#236B5E",
           400: "#45ad9a",
-          "transparent300": "#9FD18CBD"
+          "transparent300": "#9FD18CBD",
+          300: "#9FD18C"
           // eLearning: ,
           // generativeAI: ,
           // videoConference: ,
@@ -113,15 +114,16 @@ module.exports = {
           500: "#93244d",
           400: "#bf4c76",
           300: "#F4517F",
-          200: "#FF6B95"
+          200: "#f990ae"
         },
         ai: {
           700: "#9b6a26",
-          600: "#CE7903",
+          600: "#FD7A1E",
           500: "#EC9010",
           400: "#f9af48",
+          300: "#FFE57D",
           200: "#F2E4B6",
-          "transparent600": "#EC9010dd"
+          "transparent600": "#FD7A1Edd"
           
         },
         eLearning: {
@@ -129,10 +131,13 @@ module.exports = {
           500: "#2D63D0",
           400: "#5689F3",
           300: "#73B2FA",
+          200: "#a6cefc",
         },
         networks: {
+          200: "#ceaaf7",
+          300: "#b57af9",
           400: "#9b48f9",
-          500: "#681ebc",
+          500: "#7F3BCD",
           600: "#534068",
         },
       },
@@ -149,6 +154,7 @@ module.exports = {
     backgroundImage: {
       'videoconference_bg': `url('${basePathTailwind}/assets/img/backgrounds/videoconference_bg.svg')`,
       'data_bg': `url('${basePathTailwind}/assets/img/backgrounds/data_bg.svg')`,
+      
 
     }
   },

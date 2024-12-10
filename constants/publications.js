@@ -62,7 +62,7 @@ export const publications = [
       "Ecosystems", "Computer", "architecture", 
     ],
     series: [
-      "data", "video-conference", "e-learning"
+      "data", "videoconference", "e-learning"
     ],
     content:
       "Conde, J., González, M., Melero, N., Ferrando, R., Martínez, G., Merino-Gómez, E., Hernández, J. A., &#38; Reviriego, P. (2024). Open Conversational LLMs do not know most Spanish words. <i>Procesamiento Del Lenguaje Natural</i>, <i>73</i>, 95–108.",

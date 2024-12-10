@@ -38,7 +38,7 @@ BannerContent.displayName = "BannerContent";
 const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
     ref={ref}
-    level="h1"
+    level="h2"
     className={cn("text-snow", className)}
     {...props}
   />
@@ -46,9 +46,9 @@ const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
 BannerTitle.displayName = "BannerTitle";
 
 const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
-    <Text
+    <Heading
     ref={ref}
-    level="short-p"
+    level="h5"
     className= {cn("text-snow mb-4", className)}
     {...props} />
     ))

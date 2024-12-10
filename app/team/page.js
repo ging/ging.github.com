@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import team from "@/constants/placeholder-constants/team.json";
+import { myteam } from "@/constants/team";
 import { useTranslation } from "react-i18next";
 
 // Components
@@ -12,14 +12,15 @@ import { Card, CardVariants } from "@/components/core/Cards";
 import dynamic from "next/dynamic";
 
 const Team = (props) => {
+  console.log(myteam)
   // Puedes usar directamente el array 'team' en lugar de 'teamData', pero si prefieres manejar el estado:
-  const [members, setMembers] = useState(team || []); // Inicializa el estado con los datos de 'team'
+  const [team, setMembers] = useState(myteam); // Inicializa el estado con los datos de 'team'
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  
+  console.log(team);
 
-  const renderMembers = (members) => {
-    return members.map(
+  const renderMembers = (member) => {
+    return team.map(
       (
         {
           name,
@@ -60,9 +61,9 @@ const Team = (props) => {
         <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
           {t("team.title")}
         </Heading>
-        <section className="flex flex-wrap justify-center xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12">
-          {Array.isArray(members) && members.length > 0 ? (
-            renderMembers(members)
+        <section className="justify-center flex flex-wrap xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12">
+          {Array.isArray(team) && team.length > 0 ? (
+            renderMembers(team)
           ) : (
             <p>No members found.</p>
           )}

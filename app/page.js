@@ -36,9 +36,6 @@ import {
 } from "@/components/core/Banner";
 import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
 
-
-const iconCardClasses = clsx("!h-20 fill-primary");
-
 // UI
 export default function Page() {
   //const [projects, setProjects] = useState(myprojectCards);
@@ -63,18 +60,10 @@ export default function Page() {
         />
 
         <BannerContent className={"w-full"}>
-          <BannerTitle className={"text-white"}>{t("front.title")}</BannerTitle>
-          <BannerDescription className="h-full text-balance flex flex-col gap-2">
+          <BannerTitle className={"text-white "}>{t("front.title")}</BannerTitle>
+          <BannerDescription className="h-full text-balance flex flex-col gap-2 font-normal">
             {t("front.description")}
-            <Button asChild variant="link" className={"w-fit text-white"}>
-              <Link
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"https://ging.github.io/boiler/documentation/"}
-              >
-                {t("front.doc-button")}
-              </Link>
-            </Button>
+        
           </BannerDescription>
           <Divider />
           <Button
@@ -92,52 +81,58 @@ export default function Page() {
       {/* <BannerPum></BannerPum> */}
     
       <section className="standard_padding">
-        <div className="section-researchlines grid grid-cols-4 gap-4 pb-12">
-          <Card 
-          cardType={"researchline"} 
-          researchLine="data"
-          title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
-          />
-          <Card 
-          cardType={"researchline"} 
-          researchLine="e-learning"
-          title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
-          />
-          <Card 
-          cardType={"researchline"} 
-          researchLine="ai"
-          title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
-          />
+        
+      <Heading level="h3">{t("front.section1Title")}</Heading>
+        <Text type="p"> {t("front.section1Description")}</Text>
+
+        
+      </section>
+      <section className="margin_researchlines section-researchlines ">
+      <Heading level="h3" className="mb-8">
+          {t("front.ResearchLines.sectionTitle")}
+          
+        </Heading>
+        {/* Cards con iconos */}
+        
+        <div className="flex flex-col gap-4 pb-12 sm:grid sm:grid-cols-2 md:grid-cols-3  auto-rows-min lg:grid-cols-5 ">
+      
           <Card 
           cardType={"researchline"} 
           researchLine="videoconference"
           title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine4.ResearchLineBody")}
           />
+      
+          <Card 
+          cardType={"researchline"} 
+          researchLine="data"
+          title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
+          />
+            <Card 
+          cardType={"researchline"} 
+          researchLine="ai"
+          title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
+          />
+                 <Card 
+          cardType={"researchline"} 
+          researchLine="e-learning"
+          title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
+          />
+        <Card 
+          cardType={"researchline"} 
+          researchLine="networks"
+          title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
+          description={t("front.ResearchLines.ResearchLine5.ResearchLineBody")}
+          />
+       
+          
         </div>
+        </section>
+       
 
-        <Heading level="h3">{t("front.section1Title")}</Heading>
-        <Text type="p"> {t("front.section1Description")}</Text>
-        <Divider size="lg" />
-        <Heading level="h3" className="mb-8">
-          {t("front.ResearchLines.sectionTitle")}
-        </Heading>
-        {/* Cards con iconos */}
-  
-      </section>
     </main>
   );
 }
-
-const CreateLink = (props) => {
-  return props.route.match("http") ? (
-    <a target="_blank" href={props.route} rel="noopener noreferrer">
-      {props.children}
-    </a>
-  ) : (
-    <Link href={props.route}>{props.children}</Link>
-  );
-};

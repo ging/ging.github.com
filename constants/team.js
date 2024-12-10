@@ -1,8 +1,5 @@
-export const myteam = {
-  // upm -- team
-  "UPM Team": {
-    //title: "Associate Professors",
-    members: [
+export const myteam = [
+
       {
         name: "Pedro Reviriego",
         position: "(IP1)",
@@ -155,11 +152,9 @@ export const myteam = {
         description: "",
         img: "assets/img/team/carlos-aparicio.jpeg",
         github: "",
-        email: "",
+        email: "ce.aparicio@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "30",
       },
     
-    ],
-  },
-};
+    ]

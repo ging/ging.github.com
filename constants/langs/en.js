@@ -13,12 +13,12 @@ export const en = {
         "publicationstab": "Publications",
     },
     "front": {
-        "title": "Boilerplate by GING",
-        "description": "Customizable website template for research groups and other projects. See documentation at the link below to use the template.",
+        "title": "Next Generation Internet Group",
+        "description": "A research group from the Telematics Engineering Department (DIT) at Universidad Politécnica de Madrid (UPM)",
         "doc-button": "Documentation",
-        "action-button": "About us",
-        "section1Title": "Short description of the project",
-        "section1Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus, id fermentum augue est in nunc. Aliquam erat volutpat. Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien. Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+        "action-button": "Our researchlines",
+        "section1Title": "About us",
+       "section1Description": "Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FI-WARE.",
         "section1Subtitle": "Project principles",
         "latestPublicationsTitle": "Latest publications",
         "latestPublicationsButton": "See all publications",
@@ -36,11 +36,15 @@ export const en = {
                 "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
             },
             "ResearchLine3": {
-                "ResearchLineTitle": "Generative AI",
+                "ResearchLineTitle": "Artificial Intelligence",
                 "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
             "ResearchLine4": {
                 "ResearchLineTitle": "Videoconference",
+                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+            },
+            "ResearchLine5": {
+                "ResearchLineTitle": "Networks",
                 "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
             },
         },
@@ -171,14 +175,24 @@ export const en = {
     "contact": {
         "title": "Contact",
         "title2": "Any questions? Contact us. ",
-    
+        "contactmail": {
+            "ai": "Artificial Intelligence",
+            "e-learning": "E-Learning",
+            "data": "Data Spaces",
+            "videoconference": "Videoconferencing and WebRTC",
+            "networks": "Networks",
+            "general": "General"
+          
+        },
+
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "email":" Email address",
         "phone":" Telephone",
+        "fax":"Fax",
         "location":" Location",
-        "direction1": "Faculty",
-        "direction2": "Direction",
-        "direction3": "Zip Code, city"
+        "direction1": "E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN",
+        "direction2": "Av. Complutense, 30, Building B",
+        "direction3": "28040 Madrid"
     },
 
     "tools":{

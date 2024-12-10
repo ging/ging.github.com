@@ -291,7 +291,7 @@ const Card = React.forwardRef(
           CardVariants({ direction, className }) + "  bg-background-300 border-none shadow-md"
         )}
       >
-        <CardHeader>
+        <CardHeader className="flex flex-wrap">
           
             {Array.isArray(series) ? series.map(researchline => {
               let backgroundColorResearchLine;
@@ -302,20 +302,27 @@ const Card = React.forwardRef(
                 case 'data':
                   backgroundColorResearchLine = 'bg-data-500/40';  // Para la categoría 'data'
                   backgroundIcon = "assets/img/icons/data_icon.svg";
-                  textColorResearchLine = "text-data-400";
+                  textColorResearchLine = "text-data-300";
                   break;
                 case 'videoconference':
-                  backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
+                  backgroundColorResearchLine = 'bg-videoconference-600/60';  // Para la categoría 'videoconference'
+                  backgroundIcon = "assets/img/icons/videoconference_icon.svg";
+                  textColorResearchLine = "text-videoconference-200";
                   break;
                 case 'ai':
-                  backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
-                  // textColorResearchLine = "text-gray-900"
+                  backgroundColorResearchLine = 'bg-ai-700/40';  // Para la categoría 'ai'
+                  backgroundIcon = "assets/img/icons/ai_icon.svg";
+                  textColorResearchLine = "text-ai-400"
                   break;
                 case 'networks':
-                  backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
+                  backgroundColorResearchLine = 'bg-networks-600/60';
+                  backgroundIcon = "assets/img/icons/networks_icon.svg";
+                  textColorResearchLine = "text-networks-200";  // Para la categoría 'ai'
                   break;
                 case 'e-learning':
-                  backgroundColorResearchLine = 'bg-eLearning-500';  // Para la categoría 'ai'
+                  backgroundColorResearchLine = 'bg-eLearning-600/60';
+                  backgroundIcon = "assets/img/icons/e-learning_icon.svg";
+                  textColorResearchLine = "text-eLearning-200";  // Para la categoría 'ai'
                   break;
                 default:
                   backgroundColorResearchLine = 'bg-gray-500';  // Valor por defecto si no hay coincidencia
@@ -324,8 +331,8 @@ const Card = React.forwardRef(
 
               return (
               <Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
-              <img className="h-4 pr-1.5" src={backgroundIcon}></img>
-              {researchline} </Badge>
+              <img className="h-3 pr-1.5" src={backgroundIcon}></img>
+              <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Badge>
               )})  : null
             }
   
@@ -372,30 +379,33 @@ const Card = React.forwardRef(
         // className={
         //   cn(CardVariants({direction, className }))
         // }
-        className="w-64 bg-primary-300/60 h-86 p-4"
+        className="w-64 bg- transparent border-none shadow-none 300/60 h-86  items-center"
       >
         {(img || svg) && (
           <Image
-            className={"h-[220px] rounded-md"}
+            className={"h-[160px] w-[160px] rounded-full"}
             src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
             alt={title || "Image"} // Usa el título como alt si existe
             fit="cover" // Ajustamos el contenido al contenedor
-            hasBadge={position ? true : false} // Por defecto, no tiene badge
+            hasBadge={false} // Por defecto, no tiene badge
             badgeContent={position}
           />
         )}
         {(name || description || email) && (
-          <CardContent className="items-center mb-auto">
-            <CardTitle level="h5" className={"text-inherit text-center"}>
+          <CardContent className="flex justify-center items-center mb-auto">
+            <div className="flex flex-row">
+            <CardTitle level="title-sm" className={"text-inherit text-center"}>
               {name}
             </CardTitle>
+             {/* {position && (<Badge> {position}</Badge>)} */}
+            </div>
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
-              <CardDescription
-                className={"font-semibold break-words text-wrap"}
+              <Badge size="sm" variant="secondary"
+                className={"font-semibold break-words text-wrap mt-1 bg-background-300"}
               >
                 {email}
-              </CardDescription>
+              </Badge>
             )}
           </CardContent>
         )}
@@ -442,17 +452,19 @@ const Card = React.forwardRef(
     );
 
     const researchLineCard = (
-      <div>
+   
         <div
-          className={`card-researchline`}
+          className="card-researchline max-w-[300px]"
         >
           <ResearchlineIllust researchLine={researchLine} />
-          <Heading level="h4" className="pt-4 font-normal "> {title} </Heading>
+          <div >
+          <h6 className="pt-4 font-normal text-2xl text-white py-3"> {title} </h6>
           <Text className="font-light">
             {description}
           </Text>
+          </div>
         </div>
-      </div>
+
     );
 
     // Usar el prop cardType para determinar qué tipo de tarjeta renderizar
