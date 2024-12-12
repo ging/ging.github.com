@@ -108,7 +108,7 @@ export const projects = [
     description:
       "SGAME is a free web platform aimed at the educational community that allows to easily create web educational games by integrating educational resources into existing games.",
  
- researchLine: ["e-learning"],
+     researchLine: ["e-learning"],
      projectType: "national-project"
 	},
   {
@@ -118,7 +118,7 @@ export const projects = [
     description:
       "EducaInternet is a collaborative platform whose main objective is to facilitate the teaching community to learn and teach the safe and responsible use of technologies. The EducaInternet platform offers an authoring tool to create content, a contest for the best resources created and training courses. EducaInternet has more than 15,000 resources on the Secure Use of ICT and more than 4000 registered users to date.",
 
- researchLine: ["e-learning", "data"],
+     researchLine: ["e-learning", "data"],
      projectType: "national-project"
 	},
   {
