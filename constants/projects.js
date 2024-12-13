@@ -27,7 +27,7 @@ export const projects = [
     projectType: "national-project"
   },
   {
-    logo: "/assets/img/logos/iglue.png",
+    logo: "/assets/img/logos/iglue-logo-01.png",
     route: "https://iptc.upm.es/implementation-game-based-learning-using-escape-rooms-proyecto-2024-1-es01-ka220-hed-000256356",
     title: "Implementation of Game-Based Learning using Escape Rooms",
     description: "The project aims to develop a set of escape rooms that will be used as a tool to teach different subjects.",
