@@ -107,7 +107,8 @@ const Card = React.forwardRef(
       className,
       title,
       subtitle,
-      description,
+      description_en,
+      description_es,
       img,
       svg,
       tags,
@@ -124,7 +125,6 @@ const Card = React.forwardRef(
       buttonText,
       cardType,
       role,
-      currentLang,
       basePath,
       researchLine,
       logo,
@@ -134,15 +134,21 @@ const Card = React.forwardRef(
     },
     ref
   ) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const currentLang = i18n.language;  
 
     // PARA PROJECTCARD
     // Manejo de estado para ver si se ha expandido el "ver más" del texto
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleDescription = () => {
       setIsExpanded((prevState) => !prevState); // Alterna entre true y false,
-      // cogiendo de base el estado. Si es false lo convierte a true, y viceversa
     };
+
+    //elegir description o description_es según el currentLang
+    let description = description_en;
+    if (currentLang == "es" && description_es) {
+      description = description_es;
+    }
 
     // fondo researchline cards - project cards
     let backgroundColor;
@@ -167,6 +173,12 @@ const Card = React.forwardRef(
       default:
         backgroundColor = 'bg-gray-600/50';  // Valor por defecto si no hay coincidencia
         break;
+    }
+
+    //si tiene más de una researchline le ponemos all al link a las publicaciones
+    let pubResearchLine = "all";
+    if (researchLine && researchLine.length == 1) {
+      pubResearchLine = researchLine[0];
     }
 
     // PROJECT
@@ -199,7 +211,7 @@ const Card = React.forwardRef(
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
               <div className="flex gap-2 flex-wrap">
                 <div className="BADGES-RESEARCHLINE flex gap-2 ">
-              {Array.isArray(researchLine) ? researchLine.map(item => {
+              {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
                 // fondo researchline cards
                 let backgroundColorResearchLine;
@@ -229,13 +241,17 @@ const Card = React.forwardRef(
                 }
 
 
-                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={item} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
               })
                 : null}
                 </div>
             
                 </div>
-                <Button size="default" radius="rounded_sm" variant="outline">  {t(`projects.card.button`)} </Button>
+                <Button size="default" radius="rounded_sm" variant="outline" > 
+                  <Link href={`/research?researchline=${pubResearchLine}`}>
+                    {t(`projects.card.button`)} 
+                  </Link>                 
+                </Button>
             </div>
           </CardContent>
 

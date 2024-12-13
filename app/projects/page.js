@@ -1,41 +1,49 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { usePathname } from "next/navigation";
 import TabsResearchLineFilter from "@/components/filters/TabsResearchLineFilter";
 import { projects } from "@/constants/projects";
 import { Card } from "@/components/core/Cards";
 import { researchlines } from "@/constants/researchlines";
-import { usePageFilter } from "@/components/filters/usePageFilter.tsx";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text"
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Projects() {
 
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  const {filteredItems, handleResearchLineChange , handleBasePath, loading, selectedResearchLine  = "all"} = usePageFilter(projects)
+  const router = useRouter(); // Hook para manipular la URL
+  let searchParams = useSearchParams(); 
 
-  console.log(selectedResearchLine)
-  // 2. Agregar objeto "all", que sería "todas las líneas de inv."
-  let researchLines = ["all", ...researchlines];
+  const [researchLine, setResearchLine] = useState("all");
 
   const pathname = "/projects";
 
+  // 2. Agregar objeto "all", que sería "todas las líneas de inv."
+  let researchLines = ["all", ...researchlines];
 
-  if (loading) {
-    return (<div>
-      <TabsResearchLineFilter
-      researchLines={researchLines}
-      handleResearchLineChange={handleResearchLineChange}
-      selectedResearchLine={selectedResearchLine}
-      handleBasePath={handleBasePath}
-      pathname={pathname}
-      />
-    <p className="min-h-screen">loading...</p>
-    </div>)
-  }
+  //actualizar la URL cuando cambia algo en el estado, usamos router.push
+  useEffect(() => {
+    let query = {};
+    if (researchLine) query.researchline = researchLine;
+    router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
+  }, [researchLine]);
+
+
+  // función para obtener todos los parámetros de la URL
+  useEffect(() => {
+    let researchLineURL = searchParams.get('researchline');    
+    console.log("researchLineURL: " + researchLineURL);
+    setResearchLine(researchLineURL ? researchLineURL : "all");
+  }, []);
+  
+  // Filtrar los proyectos por línea de investigación
+  const filteredItems = projects.filter(
+    (item) => researchLine === "all" || item.researchLine.includes(researchLine)
+  );
 
   return (
     <div >
@@ -45,19 +53,10 @@ export default function Projects() {
           {t("projects.description")}
         </Text>
         </div>
-
     <div>
     <p className="text-red-500 standard_margin">filtro de tipos de proyecto</p>
       <div className="flex justify-center">
-
-      <TabsResearchLineFilter
-        className="flex justify-center"
-        researchLines={researchLines}
-        handleResearchLineChange={handleResearchLineChange}
-        selectedResearchLine={selectedResearchLine}
-        handleBasePath={handleBasePath}
-        pathname={pathname}
-      />
+      <TabsResearchLineFilter researchLines={researchLines} changeResearhLine={setResearchLine} researchLine={researchLine} />
       </div>
       <div className="project_cards standard_margin my-4 sm:my-6 lg:my-10 sm:gap-4">
         {filteredItems.map(
@@ -66,6 +65,7 @@ export default function Projects() {
               year,
               title,
               description,
+              description_es,
               researchLine,
               logo,
               route,
@@ -81,7 +81,8 @@ export default function Projects() {
               title={title}
               logo={logo}
               route={route}
-              description={description}
+              description_en={description}
+              description_es={description_es}
               projectType={projectType}
             ></Card>
           )

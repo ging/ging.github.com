@@ -24,7 +24,7 @@ export default function Research() {
   const [search, setSearch] = useState("");
   const [year, setYear] = useState(undefined);
   const [category, setCategory] = useState(undefined);
-  const [researchLine, setResearchLine] = useState("all");
+  const [researchLine, setResearchLine] = useState(undefined);
   const [papersToShow, setPapersToShow] = useState(6);
 
   let pathname = "/research";
@@ -105,7 +105,7 @@ export default function Research() {
           )) &&
       (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year)) &&
       (!category || (paper.type && paper.type === category)) &&
-      (researchLine === "all" || (paper.researchlines && paper.researchlines.includes(researchLine)))
+      (!researchLine || (paper.researchlines && paper.researchlines.includes(researchLine)))
     );
   });
 

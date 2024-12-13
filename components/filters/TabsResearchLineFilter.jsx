@@ -51,6 +51,12 @@ export default function TabsResearchLineFilter({ changeResearhLine, researchLine
     ]);
   };
 
+  const handleResearchLineChange = (value) => {
+    if(value==="all"){
+      value = undefined;
+    }
+    changeResearhLine(value);
+  }
 
 
   //IMPORTANTE: probé a poner dentro de clsx el bg-${researchLine}-400, pero 
@@ -59,7 +65,7 @@ export default function TabsResearchLineFilter({ changeResearhLine, researchLine
   return (
     <div className="bg-none flex flex-wrap mx-4 gap-3 justify-start md:flex-nowrap md:bg-background-300  md:items-center md:justify-center rounded-lg p-1 text-muted-foreground md:gap-1">
       {researchLines.map((item, index) => (
-        <button key={index} className={classes(item)} onClick={() => { changeResearhLine(item) }}>
+        <button key={index} className={classes(item)} onClick={() => { handleResearchLineChange(item) }}>
           {item.name === "all" ? t("projects.researchLines.all") : t(`projects.researchLines.${item}`)}
         </button>
       ))}
