@@ -1,56 +1,72 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import Filters from "@/components/filters/ResearchFilter";
-import Link from "next/link";
 import { publications } from "@/constants/publications";
 import { researchlines } from "@/constants/researchlines";
-
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import {Divider, DividerVariants} from "@/components/ui/divider";
-import TabsCategoryFilter from "@/components/filters/TabsCategoryFilter";
-import { usePageFilter } from "@/components/filters/usePageFilter.tsx";
-import TabsResearchLineFilter from "@/components/filters/TabsResearchLineFilter";
+import {Divider} from "@/components/ui/divider";
+import { useRouter, useSearchParams } from "next/navigation";
+
 
 export default function Research() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
-
-  const {filteredItems, handleResearchLineChange,  handleBasePath,  loading, selectedResearchLine  = "all"} = usePageFilter(publications)
-  // estado de filtro
-  const [state, setState] = useState({
-    items: publications,
-    search: "",
-    year: undefined,
-    category: undefined,
-    papersToShow: 6, // Number of papers to show initially
-  });
-
-  // nombre de ruta que se pasa al hook para que resetee la URL
-  // cuando todos los papers son seleccionados
-  const pathname = "/research"
-
+  const currentLang = i18n.language;  
+  const router = useRouter(); // Hook para manipular la URL
+  let searchParams = useSearchParams(); 
   
-    // 2. Agregar objeto "all", que sería "todas las líneas de inv."
-    let researchLines = ["all", ...researchlines];
+  //state para manejar los filtros de la página
+  const [items, setItems] = useState(publications);
+  const [search, setSearch] = useState("");
+  const [year, setYear] = useState(undefined);
+  const [category, setCategory] = useState(undefined);
+  const [researchLine, setResearchLine] = useState("all");
+  const [papersToShow, setPapersToShow] = useState(6);
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  let pathname = "/research";
 
-  // desestructuración state
-  const { items, search, year, category, papersToShow } = state;
+  // 2. Agregar objeto "all", que sería "todas las líneas de inv."
+  let researchLines = ["all", ...researchlines];
 
   // creado array de categorías de publications 
-  const categories = [...new Set(publications.map(publication => publication.category))];
-  categories.push("all")
+  const categories = ["all",...new Set(publications.map(publication => publication.type))];
 
-  console.log(categories)
+  //actualizar la URL cuando cambia algo en el estado, usamos router.push
+  useEffect(() => {
+    let query = {};
+    if (search) query.search = search;
+    if (year) query.year = year;
+    if (category) query.category = category;
+    if (researchLine) query.researchline = researchLine;
+    console.dir("query: " + query);
+    router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
+  }, [search, year, category, researchLine]);
+  
+
+  // función para obtener todos los parámetros de la URL
+  useEffect(() => {
+    let researchLineURL = searchParams.get('researchline');    
+    console.log("researchLineURL: " + researchLineURL);
+    setResearchLine(researchLineURL);
+
+    let searchURL = searchParams.get('search');
+    console.log("searchURL: " + searchURL);
+    setSearch(searchURL);
+
+    let yearURL = searchParams.get('year');
+    console.log("yearURL: " + yearURL);
+    setYear(yearURL);
+
+    let categoryURL = searchParams.get('category');
+    console.log("categoryURL: " + categoryURL);
+    setCategory(categoryURL);
+
+  }, []);
+
   
   let papersFiltered = items.filter((paper) => {
     return (
@@ -87,9 +103,9 @@ export default function Research() {
               .replace(new RegExp(/\W/g), "")
               .includes(item)
           )) &&
-      (!year ||
-        (paper.date && paper.date[0] && paper.date[0].toString() === year)) &&
-      (!category || (paper.category && paper.category === category))
+      (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year)) &&
+      (!category || (paper.type && paper.type === category)) &&
+      (researchLine === "all" || (paper.researchlines && paper.researchlines.includes(researchLine)))
     );
   });
 
@@ -108,38 +124,29 @@ export default function Research() {
           {t("publications.description")}
         </Text>
       </div>
-      <main className="research">
-      <div className="flex justify-center">
-
-      <TabsResearchLineFilter
-      researchLines={researchLines}
-      handleResearchLineChange={handleResearchLineChange}
-      selectedResearchLine={selectedResearchLine}
-      pathname={pathname}
-      handleBasePath={handleBasePath}
-      />
-      </div>
+      <main className="research">      
         <Filters
           search={search} // filtro 1: busqueda de texto
           year={year} // filtro 2: busqueda por año
           category={category} // filtro 3: busqueda por tipo de publicacion
+          researchLines={researchLines} // filtro 4: busqueda por linea de investigacion
+          researchLine={researchLine}
+          pathname={pathname}
           items={items} // lista de papers
-          // con estas funciones se comunica el hijo con el padre 
-          changeSearch={(search) => setState({ ...state, search: search })} // función para cambiar estado de texto de busqueda
-          changeYear={(year) => setState({ ...state, year: year })} // función para cambiar estado de input del año
-          changeCategory={(category) => setState({ ...state, category: category })} // función para cambiar estado de input del tipo de publicacion
+          changeSearch={(search) => setSearch(search)} // función para cambiar estado de input de busqueda
+          changeYear={(year) => setYear(year)} // función para cambiar estado de input de año
+          changeCategory={(category) => setCategory(category)} // función para cambiar estado de categoria
+          changeResearhLine={(researchLine) => setResearchLine(researchLine)} // función para cambiar estado de linea de investigacion
           categories={categories}
-          results={
-            papersFiltered instanceof Array ? papersFiltered.length : 0
-          }
+          results={ papersFiltered instanceof Array ? papersFiltered.length : 0 }
         />
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
           {papersFiltered
             .slice(0, papersToShow)
             .map(({ date, category, doi, author, title, journal, series, keywords }, key) => {
               return (
-                <Card 
-                key={key}
+                <Card
+                  key={key}
                   currentLang={currentLang}
                   cardType={"publication"}
                   className={CardVariants({

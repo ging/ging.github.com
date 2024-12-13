@@ -37,6 +37,7 @@ export default function FilterDate( {year, changeYear, items} ) {
       onValueChange={(value) =>
         changeYear(value === "all" ? undefined : value)
       }
+      value={year ? year : "all"}
     >
       <SelectTrigger className="w-full" htmlFor="publication">
         <SelectValue
@@ -49,7 +50,7 @@ export default function FilterDate( {year, changeYear, items} ) {
       </SelectTrigger>
       <SelectContent id="year" name="year">
         <SelectItem key={"all"} value={"all"}>
-          {t("publications.filter.fieldOpt5")}
+          {t("publications.filter.all")}
         </SelectItem>
         {years.map((y) => (
           <SelectItem key={y} value={y}>
