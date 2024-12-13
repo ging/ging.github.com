@@ -5,6 +5,9 @@
 * {
   /* border: 1px solid salmon */
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /*TYPE*/
 /* .text-h5 {
@@ -41,6 +44,9 @@
 
 /*PADDINGS*/
 .standard_padding {
+  @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
+}
+.standard_padding_xl {
   @apply p-6 sm:py-6 sm:px-8 md:py-8 md:px-14 lg:py-12 lg:px-24 xl:px-44 2xl:px-72;
 }
 .padding_home {

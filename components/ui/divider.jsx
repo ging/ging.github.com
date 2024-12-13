@@ -20,6 +20,8 @@ import { cn } from "@/lib/utils"
           sm: "h-6",
           md: "h-10",
           lg: "h-12",
+          xl: "h-16",
+          xxl: "h-24",
         },
       },
     }

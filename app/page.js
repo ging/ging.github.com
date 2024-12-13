@@ -51,43 +51,42 @@ export default function Page() {
     <main>
       <Banner>
         {/* <PruebaRectangulos></PruebaRectangulos> */}
-        <Image
-          className={"hidden md:flex"}
-          src="ging_logo.png"
-          alt="Descripción de la imagen"
-          fit="cover"
-          hasBadge={false}
+
+        <BannerImg    
         />
 
-        <BannerContent className={"w-full"}>
+        <BannerContent>
           <BannerTitle className={"text-white "}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance flex flex-col gap-2 font-normal">
             {t("front.description")}
         
           </BannerDescription>
           <Divider />
-          <Button
-            href="#"
+          <Link
+            href="#researchlines"
+            // scroll={false}
             className={ButtonVariants({
-              variant: "default",
+              variant: "outline",
               size: "lg",
               radius: "rounded_sm",
             })}
           >
             {t("front.action-button")} <ArrowForwardIcon className=" h-4 w-4" />
-          </Button>
+          </Link>
         </BannerContent>
       </Banner>
       {/* <BannerPum></BannerPum> */}
     
-      <section className="standard_padding">
+      <section className="standard_padding bg-background-200">
+      <Divider size="md"></Divider>
         
       <Heading level="h3">{t("front.section1Title")}</Heading>
-        <Text type="p"> {t("front.section1Description")}</Text>
+        <Heading level="subtitle"> {t("front.section1Description")}</Heading>
 
-        
+        <Divider size="xxl"></Divider>
+        <Divider size="xxl"></Divider>
       </section>
-      <section className="margin_researchlines section-researchlines ">
+      <section className="margin_researchlines section-researchlines " id="researchlines">
       <Heading level="h3" className="mb-8">
           {t("front.ResearchLines.sectionTitle")}
           

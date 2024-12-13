@@ -17,7 +17,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
       "padding_home md:min-h-[90dvh]",
       "text-snow",
      // "bg-main bg-cover bg-center",
-      "flex gap-8 justify-around items-center",
+      "flex gap-8 xl:gap-24 justify-around items-center",
       className
     )}
     {...props}
@@ -29,7 +29,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     level="h1"
-    className={cn("h-fit my-12", className)}
+    className={cn("h-fit my-12 w-1/2", className)}
     {...props}
   />
 ));
@@ -68,10 +68,10 @@ const BannerButton = React.forwardRef(({ className, ...props }, ref) => (
 BannerButton.displayName = "BannerButton";
 
 const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("hidden md:block relative w-full h-full overflow-hidden", className)}>
+  <div ref={ref} className={cn("hidden md:flex relative w-1/2 h-full overflow-hidden  justify-center", className)}>
     <img
-      className="w-full h-full flex items-center justify-center object-contain"
-     // src="placeholder.jpg"
+      className="w-80 h-full flex items-center justify-center object-contain"
+      src="ging_logo.png"
       alt="icon"
     />
   </div>

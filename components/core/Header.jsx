@@ -64,7 +64,7 @@ export default function Header(props) {
   return (
     <header className={headerClasses + "z-50"} id="header_home"> {/* route={routes.route} ?????*/}
       <a href="/">
-        <div className="h-6 py-0.5 flex gap-4">
+        <div className="h-6 py-0.5 flex gap-[9px]">
         <img
             className="object-contain"
             src="logo_sm_boiler_light.svg"

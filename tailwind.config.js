@@ -154,7 +154,9 @@ module.exports = {
     backgroundImage: {
       'videoconference_bg': `url('${basePathTailwind}/assets/img/backgrounds/videoconference_bg.svg')`,
       'data_bg': `url('${basePathTailwind}/assets/img/backgrounds/data_bg.svg')`,
-      
+      'eLearning_bg': `url('${basePathTailwind}/assets/img/backgrounds/e-learning_bg.svg')`,
+      'ai_bg': `url('${basePathTailwind}/assets/img/backgrounds/ai_bg.svg')`,
+      'networks_bg': `url('${basePathTailwind}/assets/img/backgrounds/networks_bg.svg')`,
 
     }
   },

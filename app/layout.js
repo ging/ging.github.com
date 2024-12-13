@@ -18,12 +18,12 @@ const sourceSans = Source_Sans_3({
 });
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["200","300","400", "500", "600", "700", "800"],
   variable: "--font-inter",
 });
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["200","300","400", "500", "600", "700"],
   variable: "--font-arimo",
 });
 

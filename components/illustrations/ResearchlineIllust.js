@@ -1,6 +1,7 @@
 import React from 'react';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutwardRounded';
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const ResearchlineIllust = ({researchLine}) => {
   // obsoleto, para la animación
@@ -15,7 +16,9 @@ const ResearchlineIllust = ({researchLine}) => {
           <div className="video-conference-item" id="video-conference-item-3"></div>
           <div className="video-conference-item" id="video-conference-item-4"></div>
         </div>
-        <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+      <Link href="projects?researchline=videoconference">
+      <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+      </Link> 
   </div>)
   const DataSpacesIllust = (       
     <div className="data-spaces-illust illust">    
@@ -26,7 +29,9 @@ const ResearchlineIllust = ({researchLine}) => {
     <div className="data-spaces-item" id="data-spaces-item-4"></div>
        
     </div>
+    <Link href="projects?researchline=data"> 
     <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+    </Link> 
     </div>)
   const GenerativeAIIllust = (       
     <div className="generative-ai-illust illust">    
@@ -37,7 +42,9 @@ const ResearchlineIllust = ({researchLine}) => {
     {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
        
     </div>
+    <Link href="projects?researchline=ai"> 
     <ArrowOutwardIcon className="text-background text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+    </Link> 
     </div>)
 
 const ELearningIllust = (       
@@ -49,7 +56,9 @@ const ELearningIllust = (
   {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
      
   </div>
+  <Link href="projects?researchline=e-learning"> 
   <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+  </Link> 
   </div>)
 
 const NetworksIllust = (       
@@ -58,7 +67,9 @@ const NetworksIllust = (
 <img className="networks-illust-img" src="assets/img/networks_illust.png"></img>
      
   </div>
+  <Link href="projects?researchline=networks"> 
   <ArrowOutwardIcon className="text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100"/>
+  </Link> 
   </div>)
 
 

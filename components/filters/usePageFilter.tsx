@@ -30,8 +30,8 @@ export const usePageFilter = (items) => {
       setFilteredItems(items);
     // handleBasePath
     } else {
-      const newFilteredCards = items.filter((proj) =>
-        proj.researchLine.some((l) => l === researchLine)
+      const newFilteredCards = items.filter((item) =>
+        item.researchLine.some((l) => l === researchLine)
       );
       setFilteredItems(newFilteredCards);
     }

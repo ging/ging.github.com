@@ -13,6 +13,7 @@ import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button } from "../ui/button";
 import Image from "../ui/image";
+import { Divider } from "../ui/divider"
 import ResearchlineIllust from "../illustrations/ResearchlineIllust";
 import {
   CustomCard,
@@ -27,6 +28,7 @@ import {
 
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+
 
 import {
   FaceIcon,
@@ -136,7 +138,7 @@ const Card = React.forwardRef(
   ) => {
     const { t } = useTranslation();
 
-    // PARA PROJECTCARD
+    // PARA PROJECTCARD / teamcard
     // Manejo de estado para ver si se ha expandido el "ver más" del texto
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleDescription = () => {
@@ -156,13 +158,13 @@ const Card = React.forwardRef(
         backgroundColor = 'bg-videoconference_bg';  // Para la categoría 'videoconference'
         break;
       case 'ai':
-        backgroundColor = 'bg-ai-600/30';  // Para la categoría 'ai'
+        backgroundColor = 'bg-ai_bg';  // Para la categoría 'ai'
         break;
       case 'networks':
-        backgroundColor = 'bg-networks-600/50';  // Para la categoría 'ai'
+        backgroundColor = 'bg-networks_bg';  // Para la categoría 'ai'
         break;
       case 'e-learning':
-        backgroundColor = 'bg-eLearning-600/50';  // Para la categoría 'ai'
+        backgroundColor = 'bg-eLearning_bg';  // Para la categoría 'ai'
         break;
       default:
         backgroundColor = 'bg-gray-600/50';  // Valor por defecto si no hay coincidencia
@@ -185,15 +187,16 @@ const Card = React.forwardRef(
  
         </div>
 
-        <CardBody>
-          <CardContent className="gap-5 mt-0.5 lg:mt-0 lg:gap-2">
+        <CardBody className="">
+          <CardContent className="gap-5 mt-0.5 lg:mt-0 lg:gap-[22px]">
             <div>
               <CardTitle level="h3"className=" w-fit hover:text-blue-400 transition-all mb-0">
                 <Link href={route} rel="noopener noreferrer"
                   target="_blank" className="flex flex-row w-fit items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
               </CardTitle>
 
-              <div className="flex flex-col gap-1">{description && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description}</CardDescription>}  <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>
+              <div className="flex flex-col gap-1">{description && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description}</CardDescription>} 
+               <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>
               </div>
             </div>
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
@@ -235,7 +238,7 @@ const Card = React.forwardRef(
                 </div>
             
                 </div>
-                <Button size="default" radius="rounded_sm" variant="outline">  {t(`projects.card.button`)} </Button>
+                {/* <Button size="default" radius="rounded_sm" variant="outline">  {t(`projects.card.button`)} </Button> */}
             </div>
           </CardContent>
 
@@ -379,26 +382,34 @@ const Card = React.forwardRef(
         // className={
         //   cn(CardVariants({direction, className }))
         // }
-        className="w-64 bg- transparent border-none shadow-none 300/60 h-86  items-center"
+        className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
       >
         {(img || svg) && (
-          <Image
-            className={"h-[160px] w-[160px] rounded-full"}
-            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
-            alt={title || "Image"} // Usa el título como alt si existe
-            fit="cover" // Ajustamos el contenido al contenedor
-            hasBadge={false} // Por defecto, no tiene badge
-            badgeContent={position}
-          />
+          // <Image
+          //   className={"h-[160px] w-[160px] rounded-md"}
+          //   src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
+          //   alt={title || "Image"} // Usa el título como alt si existe
+          //   fit="cover" // Ajustamos el contenido al contenedor
+          //   hasBadge={false} // Por defecto, no tiene badge
+          //   badgeContent={position}
+          // />
+          <div className="relative h-[160px] w-[160px]">
+            <div className="absolute h-[160px] w-[160px]  rounded-full bg-blue-700 opacity-30"></div>
+          <img src={img || "placeholder.jpg"} 
+          className={"absolute h-[160px] w-[160px] rounded-full object-cover saturate-0  mix-blend-lighten"}
+          >
+          </img>
+          </div>
         )}
         {(name || description || email) && (
-          <CardContent className="flex justify-center items-center mb-auto">
+          <CardContent className="flex justify-center items-start mb-auto">
             <div className="flex flex-row">
             <CardTitle level="title-sm" className={"text-inherit text-center"}>
               {name}
             </CardTitle>
              {/* {position && (<Badge> {position}</Badge>)} */}
             </div>
+           
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
               <Badge size="sm" variant="secondary"
@@ -406,7 +417,13 @@ const Card = React.forwardRef(
               >
                 {email}
               </Badge>
+              
             )}
+            <Divider size="sm"></Divider>
+             <Text type="small" className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description}</Text>
+             <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
+      {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }
+      </a>
           </CardContent>
         )}
         {/* {( email &&    

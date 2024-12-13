@@ -11,18 +11,18 @@ export const myteam = [
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "8",
       },
-      // {
-      //   name: "Juan Quemada",
-      //   position: "",
-      //   roleTranslationKey: "team.professorCards.roles.1",
-      //   description:
-      //     "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
-      //   img: "assets/img/team/juan-quemada.jpg",
-      //   github: "https://github.com/jquemada",
-      //   email: "juan.quemada@upm.es",
-      //   center: "E.T.S. de ingenieros de telecomunicacion",
-      //   key: "1",
-      // },
+      {
+        name: "Juan Quemada",
+        position: "",
+        roleTranslationKey: "team.professorCards.roles.1",
+        description:
+          "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
+        img: "assets/img/team/juan-quemada.jpg",
+        github: "https://github.com/jquemada",
+        email: "juan.quemada@upm.es",
+        center: "E.T.S. de ingenieros de telecomunicacion",
+        key: "1",
+      },
       {
         name: "Enrique Barra",
         // position: "team.professorCards.positions.1",
@@ -156,5 +156,6 @@ export const myteam = [
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "30",
       },
+    
     
     ]

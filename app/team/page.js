@@ -49,6 +49,7 @@ const Team = (props) => {
             role={translatedRole}
             center={center}
             email={email}
+            description={description}
           />
         );
       }
