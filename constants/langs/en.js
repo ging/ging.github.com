@@ -92,7 +92,7 @@ export const en = {
     },
     "publications": {
         "title": "Publications",
-        "description": "Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
+        "description": "This section compiles the group's publications related to our research lines. You can filter the publications by text, date, research line, or type of publication.",
         "publicationCards": {
             "categories": {
                 "article-journal": "Article Journal",
@@ -126,7 +126,7 @@ export const en = {
     },
     "projects": {
         "title": "Projects",
-        "description" :"Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
+        "description" :"In this section, you can explore the projects we are currently working on as well as past projects. If you wish, you can filter the projects by their research lines or access specific project pages.",
         "filterTitle1":"All",
         "filterTitle2":"Projects - individual",
         "filterTitle3":"Educational Research Group (GIE/ERG)",
@@ -185,7 +185,7 @@ export const en = {
           
         },
 
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "body": "If you have any questions or inquiries related to our research lines, projects and publications, or want to explore collaboration opportunities, feel free to contact us via our phone or the email addresses listed below. ",
         "email":" Email address",
         "phone":" Telephone",
         "fax":"Fax",

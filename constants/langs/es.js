@@ -108,7 +108,7 @@ export const es = {
   publications: {
     title: "Publicaciones",
     description:
-      "Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
+      "Esta sección recopila las publicaciones del GING relacionadas con nuestras líneas de investigación. Puedes filtrar las publicaciones por texto, fecha, línea de investigación, o tipo de publicación.",
     publicationCards: {
       categories: {
         "article-journal": "Artículo de revista",
@@ -141,11 +141,7 @@ export const es = {
   },
   projects: {
     title: "Proyectos",
-    description :"Ad senectus aliquet eu aliquam porttitor; nisi ante suscipit. Potenti lobortis nisi quam, rutrum rhoncus non. Laoreet potenti fermentum litora ornare, quis fringilla nostra.",
-    filterTitle1: "Todos",
-    filterTitle2: "Proyectos - individual",
-    filterTitle3: "Grupo de investigación educativa (GIE)",
-    filterTitle4: "Otros",
+    description :"En esta sección puedes explorar los proyectos en los que estamos trabajando actualmente y proyectos pasados. Si lo deseas, puedes filtrar los proyectos según sus líneas de investigación o acceder a las páginas específicas de los proyectos.",
     button: "Detalles",
     researchLines: {
       "data": "Datos",
@@ -198,7 +194,7 @@ export const es = {
       "general": "General"
     
   },
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    body: "Si tienes alguna duda o consulta relacionada con nuestras líneas de investigación, proyectos y publicaciones, o si deseas explorar posibilidades de colaboración, contáctanos a través de nuestro teléfono o los correos electrónicos indicados a continuación. ",
     email: "Dirección de correo",
     phone: " Teléfono",
     fax: " Fax",

@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils"
     {
       variants: {
         size: {
+          xs: "h-2",
           default: "h-4",
           sm: "h-6",
           md: "h-10",

@@ -126,9 +126,8 @@ export default function Page() {
           title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine5.ResearchLineBody")}
           />
-       
-          
         </div>
+    
         </section>
        
 

@@ -24,7 +24,7 @@ export default function Research() {
   const [search, setSearch] = useState("");
   const [year, setYear] = useState(undefined);
   const [category, setCategory] = useState(undefined);
-  const [researchLine, setResearchLine] = useState("all");
+  const [researchLine, setResearchLine] = useState(undefined);
   const [papersToShow, setPapersToShow] = useState(6);
 
   let pathname = "/research";
@@ -105,15 +105,12 @@ export default function Research() {
           )) &&
       (!year || (paper.date && paper.date[0] && paper.date[0].toString() === year)) &&
       (!category || (paper.type && paper.type === category)) &&
-      (researchLine === "all" || (paper.researchlines && paper.researchlines.includes(researchLine)))
+      (!researchLine || (paper.researchlines && paper.researchlines.includes(researchLine)))
     );
   });
 
   const handleLoadMore = () => {
-    setState((prevState) => ({
-      ...prevState,
-      papersToShow: prevState.papersToShow + 3,
-    }));
+    setPapersToShow(papersToShow + 6);
   };
 
   return (
@@ -143,7 +140,7 @@ export default function Research() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
           {papersFiltered
             .slice(0, papersToShow)
-            .map(({ date, category, doi, author, title, journal, series, keywords }, key) => {
+            .map(({ date, type, doi, author, title, journal, researchlines, keywords }, key) => {
               return (
                 <Card
                   key={key}
@@ -153,11 +150,11 @@ export default function Research() {
                     variant: "publication",
                   })}
                   date={date}
-                  category={category}
+                  category={type}
                   title={title}
                   author={author}
                   doi={doi}
-                  series={series}
+                  researchLine={researchlines}
                   keywords={keywords}
                 ></Card>
               );

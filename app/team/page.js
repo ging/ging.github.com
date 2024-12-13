@@ -25,6 +25,7 @@ const Team = (props) => {
         {
           name,
           description,
+          description_es,
           position,
           img,
           github,
@@ -49,7 +50,8 @@ const Team = (props) => {
             role={translatedRole}
             center={center}
             email={email}
-            description={description}
+            description_en={description}
+            description_es={description_es}
           />
         );
       }

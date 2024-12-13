@@ -36,7 +36,9 @@ import {
 } from "@radix-ui/react-icons";
 
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import Link from "next/link";
+import { researchlines } from "@/constants/researchlines";
 
 const CardVariants = cva(
   "border border-primary min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
@@ -110,6 +112,8 @@ const Card = React.forwardRef(
       title,
       subtitle,
       description,
+      description_en,
+      description_es,
       img,
       svg,
       tags,
@@ -126,9 +130,9 @@ const Card = React.forwardRef(
       buttonText,
       cardType,
       role,
-      currentLang,
       basePath,
       researchLine,
+      researchLines,
       logo,
       projectType = "european-project",
       series,
@@ -136,15 +140,21 @@ const Card = React.forwardRef(
     },
     ref
   ) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const currentLang = i18n.language;  
 
     // PARA PROJECTCARD / teamcard
     // Manejo de estado para ver si se ha expandido el "ver más" del texto
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleDescription = () => {
       setIsExpanded((prevState) => !prevState); // Alterna entre true y false,
-      // cogiendo de base el estado. Si es false lo convierte a true, y viceversa
     };
+
+    //elegir description o description_es según el currentLang
+    let description_translation = description_en;
+    if (currentLang == "es" && description_es) {
+      description_translation = description_es;
+    }
 
     // fondo researchline cards - project cards
     let backgroundColor;
@@ -171,6 +181,12 @@ const Card = React.forwardRef(
         break;
     }
 
+    //si tiene más de una researchline le ponemos all al link a las publicaciones
+    let pubResearchLine = "all";
+    if (researchLine && researchLine.length == 1) {
+      pubResearchLine = researchLine[0];
+    }
+
     // PROJECT
     const projectCard = (
 
@@ -189,20 +205,21 @@ const Card = React.forwardRef(
 
         <CardBody className="">
           <CardContent className="gap-5 mt-0.5 lg:mt-0 lg:gap-[22px]">
+          {/* lg:gap-[22px] */}
             <div>
               <CardTitle level="h3"className=" w-fit hover:text-blue-400 transition-all mb-0">
                 <Link href={route} rel="noopener noreferrer"
                   target="_blank" className="flex flex-row w-fit items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
               </CardTitle>
 
-              <div className="flex flex-col gap-1">{description && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description}</CardDescription>} 
+              <div className="flex flex-col gap-1">{description_translation && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description_translation}</CardDescription>} 
                <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>
               </div>
             </div>
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
               <div className="flex gap-2 flex-wrap">
                 <div className="BADGES-RESEARCHLINE flex gap-2 ">
-              {Array.isArray(researchLine) ? researchLine.map(item => {
+              {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
                 // fondo researchline cards
                 let backgroundColorResearchLine;
@@ -232,13 +249,17 @@ const Card = React.forwardRef(
                 }
 
 
-                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={item} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+                return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
               })
                 : null}
                 </div>
             
                 </div>
-                {/* <Button size="default" radius="rounded_sm" variant="outline">  {t(`projects.card.button`)} </Button> */}
+                {/* <Button size="default" radius="rounded_sm" variant="outline" > 
+                  <Link href={`/research?researchline=${pubResearchLine}`}>
+                    {t(`projects.card.button`)} 
+                  </Link>                 
+                </Button> */}
             </div>
           </CardContent>
 
@@ -296,7 +317,7 @@ const Card = React.forwardRef(
       >
         <CardHeader className="flex flex-wrap">
           
-            {Array.isArray(series) ? series.map(researchline => {
+            {Array.isArray(researchLine) ? researchLine.map((researchline, index) => {
               let backgroundColorResearchLine;
               let textColorResearchLine;
               let backgroundIcon;
@@ -333,7 +354,7 @@ const Card = React.forwardRef(
               }
 
               return (
-              <Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
+              <Badge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
               <img className="h-3 pr-1.5" src={backgroundIcon}></img>
               <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Badge>
               )})  : null
@@ -346,7 +367,8 @@ const Card = React.forwardRef(
             <CardTitle level="title-sm">
               {title}
             </CardTitle>
-           <div className="flex"> <Text type="small" className="font-bold">   {translateCategory(category, currentLang)}</Text>
+           <div className="flex"> <Text type="small" className="font-bold">   
+            {translateCategory(category, currentLang)}</Text>
            <div className="mx-2 mb-2">·</div> <Text type="small">    {date && date[0]} </Text> </div>
             <Text className="text-gray-300/90 mb-4" type="small">{author}</Text>
      <div className="flex flex-wrap gap-1.5">
@@ -405,7 +427,7 @@ const Card = React.forwardRef(
           <CardContent className="flex justify-center items-start mb-auto">
             <div className="flex flex-row">
             <CardTitle level="title-sm" className={"text-inherit text-center"}>
-              {name}
+            <b>{name} </b>
             </CardTitle>
              {/* {position && (<Badge> {position}</Badge>)} */}
             </div>
@@ -413,17 +435,23 @@ const Card = React.forwardRef(
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
               <Badge size="sm" variant="secondary"
-                className={"font-semibold break-words text-wrap mt-1 bg-background-300"}
+                className={"font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"}
               >
+                  <MailOutlinedIcon className=" h-[14px] w-4 text-gray-300 mr-1" />
                 {email}
               </Badge>
               
             )}
-            <Divider size="sm"></Divider>
-             <Text type="small" className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description}</Text>
+            <Divider></Divider>
+             <Text type="small" 
+             className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>
+              {description_translation}
+              </Text>
              <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
       {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }
       </a>
+      
+
           </CardContent>
         )}
         {/* {( email &&    

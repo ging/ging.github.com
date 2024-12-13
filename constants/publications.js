@@ -13,7 +13,7 @@ export const publications = [
     volume: "23",
     pages: "595-610",
     keywords: ["identity management", "educational platforms", "open source"],
-    researchlines: ["e-learning", " data"],
+    researchlines: ["e-learning", "data"],
     content:
       "Barra, E., Pozo, A., López-Pernas, S., Alonso, A., &#38; Gordillo, A. (2024). Integration of an Open Source Identity Management System in Educational Platforms. <i>Journal of Web Engineering</i>, <i>23</i>(04), 595–610. https://doi.org/10.13052/jwe1540-9589.2345",
   },
@@ -95,7 +95,7 @@ export const publications = [
       "programming",
       "academic procrastination",
     ],
-    researchlines: ["data", " e-learning"],
+    researchlines: ["data", "e-learning"],
     content:
       "Conde, J., Lopez-Pernas, S., Barra, E., &#38; Saqr, M. (2024). The Temporal Dynamics of Procrastination and its Impact on Academic Performance: The Case of a Task-oriented Programming Course. <i>Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing</i>, 48–55. https://doi.org/10.1145/3605098.3636072",
   },
