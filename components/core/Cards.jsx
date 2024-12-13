@@ -130,7 +130,7 @@ const Card = React.forwardRef(
       basePath,
       researchLine,
       logo,
-      projectType,
+      projectType = "european-project",
       series,
       keywords
     },

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const usePageFilter = (items) => {
   const router = useRouter(); // Hook para manipular la URL
-  let searchParams = useSearchParams()
+  let searchParams = useSearchParams();
   const [filteredItems, setFilteredItems] = useState(items);
   const [loading, setLoading] = useState(true);
   const [selectedResearchLine, setSelectedResearchLine] = useState("all")
@@ -24,14 +24,14 @@ export const usePageFilter = (items) => {
 // OKAY AHORA LA IDEA ES PODER PASARLE A HANDLERESEARCHLINE EL 
 // PARÁMETRO DE PATHNAME
   // Función para manejar el cambio de categoría
-  const handleResearchLineChange = (researchLine) => {
+  const changeResearhLine = (researchLine) => {
     setSelectedResearchLine(researchLine);
     if (researchLine === "all" || "") {
       setFilteredItems(items);
     // handleBasePath
     } else {
-      const newFilteredCards = items.filter((item) =>
-        item.researchLine.some((l) => l === researchLine)
+      const newFilteredCards = items.filter((proj) =>        
+        proj.researchlines &&  proj.researchlines.some((l) => l === researchLine)
       );
       setFilteredItems(newFilteredCards);
     }
@@ -47,7 +47,7 @@ export const usePageFilter = (items) => {
     // todas las líneas seleccionadas
     setSelectedResearchLine(researchLineURL === null ? (researchLineURL = "all") : (researchLineURL))
     if (researchLineURL) {
-      handleResearchLineChange(researchLineURL)
+      changeResearhLine(researchLineURL)
     } else {
       setLoading(false)
     }
@@ -55,7 +55,7 @@ export const usePageFilter = (items) => {
 
   return {
     filteredItems,
-    handleResearchLineChange,
+    changeResearhLine,
     loading,
     selectedResearchLine,
     handleBasePath
