@@ -309,7 +309,7 @@ const Card = React.forwardRef(
       >
         <CardHeader className="flex flex-wrap">
           
-            {Array.isArray(series) ? series.map(researchline => {
+            {Array.isArray(series) ? series.map((researchline, index) => {
               let backgroundColorResearchLine;
               let textColorResearchLine;
               let backgroundIcon;
@@ -346,7 +346,7 @@ const Card = React.forwardRef(
               }
 
               return (
-              <Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
+              <Badge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}> 
               <img className="h-3 pr-1.5" src={backgroundIcon}></img>
               <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Badge>
               )})  : null

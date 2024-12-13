@@ -110,10 +110,7 @@ export default function Research() {
   });
 
   const handleLoadMore = () => {
-    setState((prevState) => ({
-      ...prevState,
-      papersToShow: prevState.papersToShow + 3,
-    }));
+    setPapersToShow(papersToShow + 6);
   };
 
   return (
