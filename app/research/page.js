@@ -42,7 +42,7 @@ export default function Research() {
     if (year) query.year = year;
     if (category) query.category = category;
     if (researchLine) query.researchline = researchLine;
-    console.dir("query: " + query);
+    console.error("query: " + query);
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
   }, [search, year, category, researchLine]);
   
@@ -116,9 +116,9 @@ export default function Research() {
   return (
     <div className={"research page_" + currentLang}>
       <div className="standard_margin" id="banner-publications">
-        <Heading level="h2">{t("publications.title")}</Heading>
+        <Heading level="h2">{t("research.title")}</Heading>
         <Text type="p">
-          {t("publications.description")}
+          {t("research.description")}
         </Text>
       </div>
       <main className="research">      
@@ -133,7 +133,7 @@ export default function Research() {
           changeSearch={(search) => setSearch(search)} // función para cambiar estado de input de busqueda
           changeYear={(year) => setYear(year)} // función para cambiar estado de input de año
           changeCategory={(category) => setCategory(category)} // función para cambiar estado de categoria
-          changeResearhLine={(researchLine) => setResearchLine(researchLine)} // función para cambiar estado de linea de investigacion
+          changeResearchLine={(researchLine) => setResearchLine(researchLine)} // función para cambiar estado de linea de investigacion
           categories={categories}
           results={ papersFiltered instanceof Array ? papersFiltered.length : 0 }
         />
@@ -173,7 +173,7 @@ export default function Research() {
                 }) + " w-fit mt-4 my-auto"
               }
             >
-              {t("publications.button2")}
+              {t("research.button2")}
             </Button>
           )}
         </div>

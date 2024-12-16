@@ -7,6 +7,7 @@ import { Card } from "@/components/core/Cards";
 import { researchlines } from "@/constants/researchlines";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text"
+import ProjectsFilter from "@/components/filters/ProjectsFilter"
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -19,8 +20,13 @@ export default function Projects() {
   let searchParams = useSearchParams(); 
 
   const [researchLine, setResearchLine] = useState("all");
+  const [projectType, setProjectType] = useState(undefined);
+  const [search, setSearch] = useState("");
 
   const pathname = "/projects";
+  
+  // creado array de categorías de publications 
+  const projectTypes = ["all",...new Set(projects.map(project => project.projectType))];
 
   // 2. Agregar objeto "all", que sería "todas las líneas de inv."
   let researchLines = ["all", ...researchlines];
@@ -28,23 +34,72 @@ export default function Projects() {
   //actualizar la URL cuando cambia algo en el estado, usamos router.push
   useEffect(() => {
     let query = {};
+    if (search) query.search = search;
+    if (projectType) query.category = projectType;
     if (researchLine) query.researchline = researchLine;
+    console.error("query: " + query);
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
-  }, [researchLine]);
-
+  }, [search, projectType, researchLine]);
+  
 
   // función para obtener todos los parámetros de la URL
   useEffect(() => {
     let researchLineURL = searchParams.get('researchline');    
     console.log("researchLineURL: " + researchLineURL);
-    setResearchLine(researchLineURL ? researchLineURL : "all");
+    setResearchLine(researchLineURL);
+
+    let searchURL = searchParams.get('search');
+    console.log("searchURL: " + searchURL);
+    setSearch(searchURL);
+
+    let projectTypeURL = searchParams.get('category');
+    console.log("projectType: " + projectTypeURL);
+    setProjectType(projectTypeURL);
+
   }, []);
-  
+
   // Filtrar los proyectos por línea de investigación
   const filteredItems = projects.filter(
-    (item) => researchLine === "all" || item.researchLine.includes(researchLine)
-  );
 
+    (item) => 
+      
+      (!search ||
+        search
+          .toLowerCase()
+          .replace(new RegExp(/\s/g), "")
+          .replace(new RegExp(/[àáâãäå]/g), "a")
+          .replace(new RegExp(/æ/g), "ae")
+          .replace(new RegExp(/ç/g), "c")
+          .replace(new RegExp(/[èéêë]/g), "e")
+          .replace(new RegExp(/[ìíîï]/g), "i")
+          .replace(new RegExp(/ñ/g), "n")
+          .replace(new RegExp(/[òóôõö]/g), "o")
+          .replace(new RegExp(/œ/g), "oe")
+          .replace(new RegExp(/[ùúûü]/g), "u")
+          .replace(new RegExp(/[ýÿ]/g), "y")
+          .replace(new RegExp(/\W/g), "")
+          .split(" ")
+          .every((i) =>
+            item.title
+              .toLowerCase()
+              .replace(new RegExp(/\s/g), "")
+              .replace(new RegExp(/[àáâãäå]/g), "a")
+              .replace(new RegExp(/æ/g), "ae")
+              .replace(new RegExp(/ç/g), "c")
+              .replace(new RegExp(/[èéêë]/g), "e")
+              .replace(new RegExp(/[ìíîï]/g), "i")
+              .replace(new RegExp(/ñ/g), "n")
+              .replace(new RegExp(/[òóôõö]/g), "o")
+              .replace(new RegExp(/œ/g), "oe")
+              .replace(new RegExp(/[ùúûü]/g), "u")
+              .replace(new RegExp(/[ýÿ]/g), "y")
+              .replace(new RegExp(/\W/g), "")
+              .includes(i)
+          )) &&
+      (!researchLine || (researchLine === "all" || item.researchLine.includes(researchLine))) &&
+    (!projectType || (item.projectType && item.projectType === projectType))
+  );
+  console.log(filteredItems.map(filteredItem => filteredItem ));
   return (
     <div >
       <div className="standard_margin" id="banner-publications">
@@ -54,9 +109,20 @@ export default function Projects() {
         </Text>
         </div>
     <div>
-    <p className="text-red-500 standard_margin">filtro de tipos de proyecto</p>
-      <div className="flex justify-center">
-      <TabsResearchLineFilter researchLines={researchLines} changeResearhLine={setResearchLine} researchLine={researchLine} />
+  
+      <div className="flex flex-col justify-center">
+      <ProjectsFilter 
+        researchLines={researchLines} 
+        researchLine={researchLine}
+        projectType={projectType} 
+        projectTypes={projectTypes}
+        search={search}
+        changeProjectType={(projectType) => setProjectType(projectType)} 
+        changeResearchLine={(researchLine) => setResearchLine(researchLine)}
+        changeSearch={(search) => setSearch(search)} 
+        pathname={pathname}
+       />
+      
       </div>
       <div className="project_cards standard_margin my-4 sm:my-6 lg:my-10 sm:gap-4">
         {filteredItems.map(

@@ -7,11 +7,16 @@ import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
 
 
-export default function FilterText( {search, changeSearch} ) {
+export default function FilterText( {pathname, search, changeSearch} ) {
+
+  // esta funcion le quita la barra a pathname (ej, /research), para que
+  // en la hoja de traducciones se coja bien el nombre de la página, sin la barra
+  let pathnameFormated = pathname.replace("/", "")
+
   const { t } = useTranslation();
   return (
-    <div className="filter flex flex-wrap md:w-1/2">
-    <Label htmlFor="search">{t("publications.filter.fieldTitle1")}</Label>
+    <div className={pathname === "/research" ? "filter flex flex-wrap md:w-1/2" : "filter flex flex-wrap w-full " }>
+    <Label htmlFor="search">{t(`${pathnameFormated}.filter.fieldTitle1`)}</Label>
     <Input
       className="w-full"
       key={" "}

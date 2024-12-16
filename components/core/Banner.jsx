@@ -70,7 +70,7 @@ BannerButton.displayName = "BannerButton";
 const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("hidden md:flex relative w-1/2 h-full overflow-hidden  justify-center", className)}>
     <img
-      className="w-80 h-full flex items-center justify-center object-contain"
+      className="w-80 h-80 p-8 rounded-full bg-background-200  flex items-center justify-center object-contain"
       src="ging_logo.png"
       alt="icon"
     />

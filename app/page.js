@@ -75,20 +75,20 @@ export default function Page() {
           </Link>
         </BannerContent>
       </Banner>
-      {/* <BannerPum></BannerPum> */}
-    
-      <section className="standard_padding bg-background-200">
-      <Divider size="md"></Divider>
-        
+
+      <section className="padding_group_description bg-background-200">
+      <Divider size="lg" className="hidden md:flex"></Divider>  
+      <Divider size="sm" ></Divider>
       <Heading level="h3">{t("front.section1Title")}</Heading>
         <Heading level="subtitle"> {t("front.section1Description")}</Heading>
 
-        <Divider size="xxl"></Divider>
-        <Divider size="xxl"></Divider>
+        <Divider size="md" ></Divider>
+        <Divider size="xxl" className="hidden md:flex"></Divider>
         <div id="researchlines"></div>
       </section>
     
       <section className="margin_researchlines section-researchlines " id="researchlines" >
+      <Divider size="md" ></Divider>
       <Heading level="h3" className="mb-8">
           {t("front.ResearchLines.sectionTitle")}
           
@@ -129,7 +129,7 @@ export default function Page() {
           description={t("front.ResearchLines.ResearchLine5.ResearchLineBody")}
           />
         </div>
-    
+        <Divider size="md" ></Divider>
         </section>
        
 

@@ -5,12 +5,8 @@ import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 
 
-export default function TabsResearchLineFilter({ changeResearhLine, researchLines, researchLine }) {
+export default function TabsResearchLineFilter({ changeResearchLine, researchLines, researchLine }) {
   const { t } = useTranslation();
-
-  // transformar researchlines a formato tailwind para que puedan coger 
-  // las clases del color de fondo de cada línea (NO FUNCIONO ASI QUE LO ELIMINÉ,
-  // PERO HE AQUÍ EL RECUERDO DE QUE LO INTENTÉ, NO INTENTARLO DE NUEVO)
 
   // Función para aplicar las clases a los botones de las categorías
   const classes = (item) => {
@@ -53,9 +49,9 @@ export default function TabsResearchLineFilter({ changeResearhLine, researchLine
 
   const handleResearchLineChange = (value) => {
     if(value==="all"){
-      value = undefined;
+      value = "all";
     }
-    changeResearhLine(value);
+    changeResearchLine(value);
   }
 
 
@@ -65,8 +61,11 @@ export default function TabsResearchLineFilter({ changeResearhLine, researchLine
   return (
     <div className="bg-none flex flex-wrap mx-4 gap-3 justify-start md:flex-nowrap md:bg-background-300  md:items-center md:justify-center rounded-lg p-1 text-muted-foreground md:gap-1">
       {researchLines.map((item, index) => (
-        <button key={index} className={classes(item)} onClick={() => { handleResearchLineChange(item) }}>
-          {item.name === "all" ? t("projects.researchLines.all") : t(`projects.researchLines.${item}`)}
+        <button key={index} className={classes(item)} 
+          onClick={() => { handleResearchLineChange(item) }}>
+          {item.name === 
+          "all" ? t("projects.researchLines.all") :
+           t(`projects.researchLines.${item}`)}
         </button>
       ))}
     </div>

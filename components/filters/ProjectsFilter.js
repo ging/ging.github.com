@@ -7,10 +7,10 @@ import { Badge } from "@/components/ui/badge";
 
 import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
-import FilterCategory from "./FilterCategory";
+import FilterProjectType from "./FilterProjectType";
 import TabsResearchLineFilter from "./TabsResearchLineFilter";
 
-export default function Filters({pathname, search, changeSearch, year, changeYear, items, category, changeCategory, results, categories, researchLines, researchLine, changeResearchLine }) {
+export default function Filters({ pathname, search, changeSearch, year, changeYear, items, projectType, changeProjectType, results, projectTypes, researchLines, researchLine, changeResearchLine }) {
   const { t } = useTranslation();
 
   return (
@@ -18,12 +18,12 @@ export default function Filters({pathname, search, changeSearch, year, changeYea
       <div className="flex justify-center">
         <TabsResearchLineFilter researchLines={researchLines} researchLine={researchLine} changeResearchLine={changeResearchLine} />
       </div>
-      <div className="filters standard_margin ">
-        <div className="filter-block flex flex-col md:flex-row gap_filter">
+      <div className="filters standard_margin-x mt-8 justify-center flex ">
+        <div className="filter-block flex flex-col md:flex-row w-full sm:w-2/3 md:w-full lg:w-2/3  gap_filter">
           <FilterText pathname={pathname} search={search} changeSearch={changeSearch} ></FilterText>
-        <div className="w-full md:w-1/2 flex gap_grid">
-            <FilterCategory category={category} changeCategory={changeCategory} categories={categories} />      
-            <FilterDate items={items} year={year} changeYear={changeYear} />
+        <div className="w-full flex gap_grid">
+            <FilterProjectType projectType={projectType} changeProjectType={changeProjectType} projectTypes={projectTypes} />      
+            {/* <FilterDate items={items} year={year} changeYear={changeYear} /> */}
             </div>
         </div>
         {results === undefined ? null : (

@@ -90,7 +90,7 @@ export const en = {
             "sectionBody": "Porttitor ultricies magnis tincidunt nostra odio id. In pharetra efficitur, penatibus nascetur imperdiet mus torquent. Congue mauris euismod lorem vehicula tellus fringilla condimentum tincidunt diam. At vel semper mollis; semper vivamus sociosqu ex. Ultrices nunc commodo mi nascetur egestas neque potenti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos inceptos suspendisse cubilia urna? Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
         }
     },
-    "publications": {
+    "research": {
         "title": "Publications",
         "description": "This section compiles the group's publications related to our research lines. You can filter the publications by text, date, research line, or type of publication.",
         "publicationCards": {
@@ -140,6 +140,14 @@ export const en = {
             "networks": "Networks",
             "other":"Other",
             "all":"All"
+        },
+        "filter": {
+            "fieldTitle1":"Name search",
+            "fieldTitle2":"Project type",
+            "all":"All",
+            "national-project":"National Project",
+            "european-project":"European Project",
+            "private-project":"Private Project",
         },
         "card": {
             "toggleMore": "See more",

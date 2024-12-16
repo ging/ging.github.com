@@ -24,7 +24,7 @@ export const usePageFilter = (items) => {
 // OKAY AHORA LA IDEA ES PODER PASARLE A HANDLERESEARCHLINE EL 
 // PARÁMETRO DE PATHNAME
   // Función para manejar el cambio de categoría
-  const changeResearhLine = (researchLine) => {
+  const changeResearchLine = (researchLine) => {
     setSelectedResearchLine(researchLine);
     if (researchLine === "all" || "") {
       setFilteredItems(items);
@@ -47,7 +47,7 @@ export const usePageFilter = (items) => {
     // todas las líneas seleccionadas
     setSelectedResearchLine(researchLineURL === null ? (researchLineURL = "all") : (researchLineURL))
     if (researchLineURL) {
-      changeResearhLine(researchLineURL)
+      changeResearchLine(researchLineURL)
     } else {
       setLoading(false)
     }
@@ -55,7 +55,7 @@ export const usePageFilter = (items) => {
 
   return {
     filteredItems,
-    changeResearhLine,
+    changeResearchLine,
     loading,
     selectedResearchLine,
     handleBasePath

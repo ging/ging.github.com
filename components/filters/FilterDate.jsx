@@ -30,7 +30,7 @@ export default function FilterDate( {year, changeYear, items} ) {
 
   return (
     <div className="container_select_label w-1/2 lg:w-full">
-    <Label htmlFor="year">{t("publications.filter.fieldTitle3")}</Label>
+    <Label htmlFor="year">{t("research.filter.fieldTitle3")}</Label>
     <Select
       className="filter"
       id="filter_year"
@@ -50,7 +50,7 @@ export default function FilterDate( {year, changeYear, items} ) {
       </SelectTrigger>
       <SelectContent id="year" name="year">
         <SelectItem key={"all"} value={"all"}>
-          {t("publications.filter.all")}
+          {t("research.filter.all")}
         </SelectItem>
         {years.map((y) => (
           <SelectItem key={y} value={y}>

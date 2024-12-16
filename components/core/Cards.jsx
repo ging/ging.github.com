@@ -384,7 +384,7 @@ const Card = React.forwardRef(
           {doi ? (
             <Button asChild variant="outline" size="sm" radius="rounded_sm">
               <Link rel="noopener noreferrer" target="_blank" href={doi}>
-                {t("publications.action-button")}
+                {t("research.action-button")}
 
                 <ArrowRightIcon />
               </Link>

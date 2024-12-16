@@ -24,7 +24,7 @@ const inter = Inter({
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["200","300","400", "500", "600", "700"],
-  variable: "--font-arimo",
+  variable: "--font-dmSans",
 });
 
 export default function RootLayout({ children }) {

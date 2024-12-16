@@ -105,7 +105,7 @@ export const es = {
         "Porttitor ultricies magnis tincidunt nostra odio id. In pharetra efficitur, penatibus nascetur imperdiet mus torquent. Congue mauris euismod lorem vehicula tellus fringilla condimentum tincidunt diam. At vel semper mollis; semper vivamus sociosqu ex. Ultrices nunc commodo mi nascetur egestas neque potenti tempus eu. Integer pharetra eleifend platea mauris, mauris adipiscing aenean phasellus. Et blandit netus himenaeos inceptos suspendisse cubilia urna? Posuere facilisi mi conubia pulvinar donec elementum vel cursus vitae. Vehicula morbi platea; convallis ex purus nascetur diam cursus lobortis.",
     },
   },
-  publications: {
+  research: {
     title: "Publicaciones",
     description:
       "Esta sección recopila las publicaciones del GING relacionadas con nuestras líneas de investigación. Puedes filtrar las publicaciones por texto, fecha, línea de investigación, o tipo de publicación.",
@@ -152,6 +152,14 @@ export const es = {
       other: "Otros",
       all: "Todo",
     },
+    "filter": {
+      "fieldTitle1":"Búsqueda por nombre",
+      "fieldTitle2":"Tipo de proyecto",
+      "all":"Todo",
+      "national-project":"Proyecto nacional",
+      "european-project":"Proyecto europeo",
+      "private-project":"Proyecto privado",
+  },
     "card": {
       "toggleMore": "Ver más",
       "toggleLess": "Ver menos",
