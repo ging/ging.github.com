@@ -33,7 +33,7 @@ export const es = {
     ResearchLines: {
       sectionTitle: "Líneas de investigación",
       ResearchLine1: {
-        ResearchLineTitle: "Espacios de datos",
+        ResearchLineTitle: "Datos",
         ResearchLineBody:
           "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
       },

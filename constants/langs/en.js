@@ -28,7 +28,7 @@ export const en = {
         "ResearchLines": {
             "sectionTitle": "Research lines",
             "ResearchLine1": {
-                "ResearchLineTitle": "Data Spaces",
+                "ResearchLineTitle": "Data",
                 "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
             },
             "ResearchLine2": {
