@@ -32,7 +32,7 @@ const ResearchlineIllust = ({ researchLine }) => {
           id="video-conference-item-4"
         ></div>
       </div>
-      <Link className="icon_link_publication" href="projects?researchline=videoconference">
+      <Link className="icon_link_publication" target="_blank"  href="projects?researchline=videoconference">
         <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
         <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
@@ -46,7 +46,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         <div className="data-spaces-item" id="data-spaces-item-3"></div>
         <div className="data-spaces-item" id="data-spaces-item-4"></div>
       </div>
-      <Link className="icon_link_publication" href="projects?researchline=data">
+      <Link className="icon_link_publication" target="_blank" href="projects?researchline=data">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
       <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
@@ -60,7 +60,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         <div className="generative-ai-item" id="generative-ai-item-3"></div>
         {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
       </div>
-      <Link className="icon_link_publication" href="projects?researchline=ai">
+      <Link className="icon_link_publication" target="_blank" href="projects?researchline=ai">
         <ArrowOutwardIcon className=" text-background  text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
         <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
@@ -75,7 +75,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         <div className="e-learning-item" id="e-learning-item-3"></div>
         {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
       </div>
-      <Link className="icon_link_publication" href="projects?researchline=e-learning">
+      <Link className="icon_link_publication" target="_blank" href="projects?researchline=e-learning">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
       <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
@@ -90,7 +90,7 @@ const ResearchlineIllust = ({ researchLine }) => {
           src="assets/img/networks_illust.png"
         ></img>
       </div>
-      <Link className="icon_link_publication" href="projects?researchline=networks">
+      <Link className="icon_link_publication" target="_blank" href="projects?researchline=networks">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
         <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>

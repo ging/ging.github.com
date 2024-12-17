@@ -58,7 +58,7 @@ export default function Header(props) {
   const menuItemClasses = clsx(
     "w-full px-4 text-center md:p-0 md:w-fit",
     "text-lg md:text-base",
-    "hover:underline"
+    " hover:text-blue-300"
   );
 
   return (
@@ -105,7 +105,7 @@ export default function Header(props) {
                   href={route.route}
                   className={
                     currentPath == route.route
-                      ? menuItemClasses + " font-semibold"
+                      ? menuItemClasses + " font-semibold underline"
                       : menuItemClasses + " font-normal"
                   }
                 >

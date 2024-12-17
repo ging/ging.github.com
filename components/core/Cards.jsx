@@ -218,7 +218,7 @@ const Card = React.forwardRef(
             </div>
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
               <div className="flex gap-2 flex-wrap">
-                <div className="BADGES-RESEARCHLINE flex gap-2 ">
+                <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2 ">
               {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
                 // fondo researchline cards
