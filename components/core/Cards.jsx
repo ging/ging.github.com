@@ -103,6 +103,25 @@ const translateCategory = (category, currentLang) => {
   return renderCategory(category);
 };
 
+const isDescriptionLongEnough = (description) => {
+  return description.length >= getIdealLength();
+  // console.log(description)
+  // return true
+};
+
+const getIdealLength = () => {
+  const isMobile = window.innerWidth <= 600;
+  const isTablet = window.innerWidth <= 950;
+  if (isMobile) {
+    return 120;
+  } else if (isTablet) {
+    return 180;
+  } else {
+    return 302;
+  }
+};
+
+
 const Card = React.forwardRef(
   (
     {
@@ -212,9 +231,9 @@ const Card = React.forwardRef(
                   target="_blank" className="flex flex-row w-fit items-center gap-2">{title} <ExternalLinkIcon className="mt-1" width={24} height={24} /> </Link>
               </CardTitle>
 
-              <div className="flex flex-col gap-1">{description_translation && <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description_translation}</CardDescription>} 
-               <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>
-              </div>
+              {description_translation && <div className="flex flex-col gap-1"> <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description_translation}</CardDescription>
+               {isDescriptionLongEnough(description_translation) && <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`) }</a>}
+              </div>}
             </div>
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
               <div className="flex gap-2 flex-wrap">
