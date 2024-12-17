@@ -480,3 +480,23 @@ main {
   } 
   
 }
+
+/* EXTRAS */
+.icon_link_publication {
+  .link_publication {
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    background-color: #00000060;
+    
+  }
+  &:hover {
+    .link_publication {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+      transition: all 0.1s ease-in-out;
+      transition-delay: 0.3s;
+    }
+  }
+}
+

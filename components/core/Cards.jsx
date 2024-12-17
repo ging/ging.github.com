@@ -507,6 +507,13 @@ const Card = React.forwardRef(
           <Text className="font-light">
             {description}
           </Text>
+          {/* <Button asChild variant="outline" size="sm" radius="rounded_sm" className="mt-4">
+              <Link rel="noopener noreferrer" target="_blank" href={`projects?researchline=${researchLine}`} >
+                {t("front.ResearchLines.button")}
+
+                <ArrowRightIcon />
+              </Link>
+            </Button> */}
           </div>
         </div>
 

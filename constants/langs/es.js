@@ -32,6 +32,7 @@ export const es = {
       "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
     ResearchLines: {
       sectionTitle: "Líneas de investigación",
+       "button": "Ver proyectos",
       ResearchLine1: {
         ResearchLineTitle: "Datos",
         ResearchLineBody:

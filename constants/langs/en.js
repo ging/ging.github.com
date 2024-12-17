@@ -27,9 +27,11 @@ export const en = {
         "sectionHomeSubtitle": "“The collaboration between the groups will help in aligning the strategies to meet the objectives, instead of producing divergent solutions”.",
         "ResearchLines": {
             "sectionTitle": "Research lines",
+             "button": "See projets",
             "ResearchLine1": {
                 "ResearchLineTitle": "Data",
                 "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
+           
             },
             "ResearchLine2": {
                 "ResearchLineTitle": "E-Learning",
