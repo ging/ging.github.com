@@ -2,9 +2,12 @@ import React from "react";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/Badge"
+import { Badge } from "@/components/ui/Badge";
+import { useTranslation } from "react-i18next";
 
 const ResearchlineIllust = ({ researchLine }) => {
+      const { t, i18n } = useTranslation();
+
   // obsoleto, para la animación
   // const [isHovered1, setIsHovered1] = useState(false);
   // const handleMouseEnter = () => setIsHovered1(true);
@@ -31,7 +34,7 @@ const ResearchlineIllust = ({ researchLine }) => {
       </div>
       <Link className="icon_link_publication" href="projects?researchline=videoconference">
         <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14"> Ver publicaciones </Badge>
+        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
     </div>
   );
@@ -45,7 +48,7 @@ const ResearchlineIllust = ({ researchLine }) => {
       </div>
       <Link className="icon_link_publication" href="projects?researchline=data">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-      <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14"> Ver publicaciones </Badge>
+      <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
     </div>
   );
@@ -59,7 +62,7 @@ const ResearchlineIllust = ({ researchLine }) => {
       </div>
       <Link className="icon_link_publication" href="projects?researchline=ai">
         <ArrowOutwardIcon className=" text-background  text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14"> Ver publicaciones </Badge>
+        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
     </div>
   );
@@ -74,7 +77,7 @@ const ResearchlineIllust = ({ researchLine }) => {
       </div>
       <Link className="icon_link_publication" href="projects?researchline=e-learning">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-      <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14"> Ver publicaciones </Badge>
+      <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
     </div>
   );
@@ -89,7 +92,7 @@ const ResearchlineIllust = ({ researchLine }) => {
       </div>
       <Link className="icon_link_publication" href="projects?researchline=networks">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14"> Ver publicaciones </Badge>
+        <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
     </div>
   );
