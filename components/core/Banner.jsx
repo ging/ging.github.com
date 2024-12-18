@@ -14,10 +14,10 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      "padding_home md:min-h-[90dvh]",
+      " md:min-h-[90dvh]",
       "text-snow",
-     // "bg-main bg-cover bg-center",
-      "flex gap-8 xl:gap-24 justify-around items-center",
+      // "gap-6 xl:gap-12",
+      "flex justify-start items-center",
       className
     )}
     {...props}
@@ -29,11 +29,21 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     level="h1"
-    className={cn("h-fit my-12 w-full md:w-1/2", className)}
+    className={cn("h-fit py-12 px-20 w-full md:w-3/5 z-10 ", className)}
     {...props}
   />
 ));
 BannerContent.displayName = "BannerContent";
+
+
+const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
+  <img
+      className="w-64 mb-8 flex items-center justify-center object-contain"
+      src="ging_logo.png"
+      alt="icon"
+    />
+));
+BannerLogo.displayName = "BannerLogo";
 
 const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
   <Heading
@@ -48,7 +58,7 @@ BannerTitle.displayName = "BannerTitle";
 const BannerDescription = React.forwardRef(({ className, ...props }, ref) => (
     <Heading
     ref={ref}
-    level="h5"
+    level="subtitle"
     className= {cn("text-snow mb-4", className)}
     {...props} />
     ))
@@ -68,13 +78,39 @@ const BannerButton = React.forwardRef(({ className, ...props }, ref) => (
 BannerButton.displayName = "BannerButton";
 
 const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("hidden md:flex relative w-1/2 h-full overflow-hidden  justify-center", className)}>
-    <img
-      className="w-80 h-80 p-8 rounded-full bg-background-200  flex items-center justify-center object-contain"
-      src="ging_logo.png"
+  // <div ref={ref} className={cn("hidden md:flex relative w-1/2 h-full overflow-hidden  justify-center", className)}>
+  //   <img
+  //     className="w-80 h-80 p-8 rounded-full bg-background-200  flex items-center justify-center object-contain"
+  //     src="ging_logo.png"
+  //     alt="icon"
+  //   />
+  // </div>
+  <div className={
+    //landing 1 /2
+    // " absolute top-0 md:relative flex w-full md:w-7/12 z-0 h-20 md:h-[90vh] "
+  //  + 
+   //landing 3
+   "absolute top-0 md:relative flex w-full z-0 h-20 md:h-[90vh]"}>
+  <img
+      className="
+       flex items-center justify-center object-cover w-screen opacity-80"
+      src="assets/img/backgrounds/landing_4.svg"
       alt="icon"
     />
-  </div>
+    {/* <div className="hidden md:flex md:flex-col absolute  h-[90vh]  p-3 justify-start">
+      <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-2 col-start-2">
+         DATA </a>
+      <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-1 col-start-5">
+         VIDEOCONFERENCE </a>
+         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-4 col-start-3">
+        ARTIFICIAL INTELLIGENCE </a>
+         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-3 col-start-6 col-span-2">
+          E-LEARNING  </a>
+         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-6 col-start-6">
+          NETWORKS  </a>
+    
+    </div> */}
+</div>
 ));
 BannerImg.displayName = "BannerImg";
 
@@ -85,4 +121,5 @@ export {
   BannerContent,
   BannerImg,
   BannerButton,
+  BannerLogo
 };

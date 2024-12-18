@@ -33,6 +33,7 @@ import {
   BannerButton,
   BannerContent,
   BannerImg,
+  BannerLogo
 } from "@/components/core/Banner";
 import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
 
@@ -52,10 +53,11 @@ export default function Page() {
       <Banner>
         {/* <PruebaRectangulos></PruebaRectangulos> */}
 
-        <BannerImg    
-        />
+        <BannerImg></BannerImg>
 
-        <BannerContent>
+        <BannerContent className="absolute ">
+          
+          <BannerLogo></BannerLogo>
           <BannerTitle className={"text-white "}>{t("front.title")}</BannerTitle>
           <BannerDescription className="h-full text-balance flex flex-col gap-2 font-normal">
             {t("front.description")}
