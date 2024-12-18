@@ -17,7 +17,7 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
       " md:min-h-[90dvh]",
       "text-snow",
       // "gap-6 xl:gap-12",
-      "flex justify-start items-center",
+      "flex justify-start items-center h-full",
       className
     )}
     {...props}
@@ -29,7 +29,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     level="h1"
-    className={cn("h-fit py-12 px-20 w-full md:w-2/3 z-10 ", className)}
+    className={cn("h-fit py-12 px-4 xs:px-10 md:px-20 xl:px-40 w-full md:w-2/3 z-10 ", className)}
     {...props}
   />
 ));
@@ -90,7 +90,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
     // " absolute top-0 md:relative flex w-full md:w-7/12 z-0 h-20 md:h-[90vh] "
   //  + 
    //landing 3
-   "absolute top-0 md:relative flex w-full z-0 h-20 md:h-[90vh]"}>
+   "relative top-0 h-full md:relative flex w-full z-0 h-[90vh]"}>
   <img
       className="
        flex items-center justify-center object-cover w-screen opacity-80"
