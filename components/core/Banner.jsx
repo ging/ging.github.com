@@ -29,7 +29,7 @@ const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     level="h1"
-    className={cn("h-fit py-12 px-20 w-full md:w-3/5 z-10 ", className)}
+    className={cn("h-fit py-12 px-20 w-full md:w-2/3 z-10 ", className)}
     {...props}
   />
 ));
