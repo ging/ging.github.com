@@ -32,6 +32,12 @@ const Team = (props) => {
           email,
           center,
           roleTranslationKey,
+          researchgate,
+          orcid,
+          webOfScience,
+          googleScholar,
+          linkedin,
+          portalUpm
         },
         key
       ) => {
@@ -52,6 +58,12 @@ const Team = (props) => {
             email={email}
             description_en={description}
             description_es={description_es}
+            researchgate={researchgate}
+            orcid={orcid}
+            webOfScience={webOfScience}
+            googleScholar={googleScholar}
+            linkedin={linkedin}
+            portalUpm={portalUpm}
           />
         );
       }

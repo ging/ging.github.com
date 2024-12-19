@@ -83,7 +83,7 @@ export const projects = [
 	},
   {
     logo: "/assets/img/logos/smarterp.png",
-    route: "https://kunveno.digital",
+    route: "https://smarterp.kunveno.digital/",
     title: "SmarTerp",
     description: "SmarTerp addresses inefficiencies in interpreting by developing AI-powered tools embedded in a Remote Simultaneous Interpreting system that automates the human human task of extracting information in real-time to prevent the mistakes and loss of quality derived from the adoption of remote technologies. The Remote Simultaneous Interpreting system is based on Licode.",
     description_es: "SmarTerp aborda las ineficiencias en la interpretación mediante el desarrollo de herramientas impulsadas por IA integradas en un sistema de interpretación simultánea remota que automatiza la tarea humana de extraer información en tiempo real para prevenir los errores y la pérdida de calidad derivados de la adopción de tecnologías remotas. El sistema de interpretación simultánea remota se basa en Licode.",

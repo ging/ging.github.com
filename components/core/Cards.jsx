@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import Heading from "../ui/Heading";
 import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
-import { Button } from "../ui/button";
+import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
 import { Divider } from "../ui/divider"
 import ResearchlineIllust from "../illustrations/ResearchlineIllust";
@@ -37,6 +37,7 @@ import {
 
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import ArticleIcon from '@mui/icons-material/Article';
 import Link from "next/link";
 import { researchlines } from "@/constants/researchlines";
 
@@ -124,11 +125,11 @@ const returnPwidth = () => {
 
 const getIdealLength = () => {
   const isMobile = window.innerWidth <= 600;
-  
+
   if (isMobile) {
     return (window.innerWidth) * 4;
   } else {
-    return ((window.innerWidth/ returnPwidth())-150) * 4;
+    return ((window.innerWidth / returnPwidth()) - 150) * 4;
   }
 };
 
@@ -179,13 +180,16 @@ const Card = React.forwardRef(
       buttonText,
       cardType,
       role,
-      basePath,
       researchLine,
-      researchLines,
       logo,
       projectType = "european-project",
-      series,
-      keywords
+      keywords,
+      researchgate,
+      orcid,
+      webOfScience,
+      googleScholar,
+      linkedin,
+      portalUpm
     },
     ref
   ) => {
@@ -257,8 +261,9 @@ const Card = React.forwardRef(
             {/* lg:gap-[22px] */}
             <div>
               <CardTitle level="h3" className=" w-fit hover:text-blue-400 transition-all mb-0">
-                <Link href={route} rel="noopener noreferrer"
+                {title && <Link href={route} rel="noopener noreferrer"
                   target="_blank" className={`flex flex-row w-fit gap-2 ${title.length > 18 ? "items-start" : "items-center"}`}>{title} <ExternalLinkIcon className="mt-1 flex-shrink-0" width={24} height={24} /> </Link>
+                }
               </CardTitle>
 
               {description_translation && <div className="flex flex-col gap-1"> <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description_translation}</CardDescription>
@@ -268,7 +273,7 @@ const Card = React.forwardRef(
             <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
               <div className="flex gap-2 flex-wrap">
                 <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2 ">
-              {Array.isArray(researchLine) ? researchLine.map((item, index) => {
+                  {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
                     // fondo researchline cards
                     let backgroundColorResearchLine;
@@ -458,14 +463,7 @@ const Card = React.forwardRef(
         className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
       >
         {(img || svg) && (
-          // <Image
-          //   className={"h-[160px] w-[160px] rounded-md"}
-          //   src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
-          //   alt={title || "Image"} // Usa el título como alt si existe
-          //   fit="cover" // Ajustamos el contenido al contenedor
-          //   hasBadge={false} // Por defecto, no tiene badge
-          //   badgeContent={position}
-          // />
+
           <div className="relative h-[160px] w-[160px]">
             <div className="absolute h-[160px] w-[160px]  rounded-full bg-blue-700 opacity-30"></div>
             <img src={img || "placeholder.jpg"}
@@ -501,7 +499,28 @@ const Card = React.forwardRef(
             <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
               {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
             </a>
-
+            <div className="flex gap-2 mt-3">
+              {researchgate && <Link target="_blank" href={researchgate}
+                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-blue-600 hover:bg-blue-600 "}>
+                  <ArticleIcon className="h-5" />
+                </Button>
+              </Link>}
+              {orcid && <Link target="_blank" href={orcid}
+                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-green-600 hover:bg-green-700 "}>
+                  <ArticleIcon className="h-5" />
+                </Button>
+              </Link>}
+            </div>
 
           </CardContent>
         )}

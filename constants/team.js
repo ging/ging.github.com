@@ -2,7 +2,7 @@ export const myteam = [
 
       {
         name: "Pedro Reviriego",
-        position: "(IP1)",
+        position: "",
         roleTranslationKey: "team.professorCards.roles.1",
         description:
           "Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working on probabilistic data structures, high speed packet processing and machine learning.",
@@ -30,7 +30,7 @@ export const myteam = [
       {
         name: "Enrique Barra",
         // position: "team.professorCards.positions.1",
-        position: "(IP2)",
+        position: "",
         roleTranslationKey: "team.professorCards.roles.2",
         description:
           "Enrique Barra is a professor at Telematic Engineering Department, School of Telecommunications Engineering. He received the Ph.D. degree in Telematic Engineering with minoring in Multimedia and Technology Enhanced Learning from  Universidad Politécnica de Madrid (UPM).He has participated in many European projects, such as GLOBAL, FIWARE, and C@R. He is currently involved in several projects contributing to the generation and distribution of educational content in TEL environments. His research interests include videoconferencing, games in education, and social networks in education.",
@@ -40,6 +40,13 @@ export const myteam = [
         github: "https://github.com/ebarra",
         email: "enrique.barra@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
+        researchgate : "https://www.researchgate.net/profile/Enrique-Barra",
+        orcid:"https://orcid.org/0000-0001-9532-8962",
+        webOfScience:"https://www.webofscience.com/wos/author/record/AAT-1273-2020",  
+        googleScholar: "https://scholar.google.es/citations?hl=es-ES&user=NEtwvZkAAAAJ&hl",
+        linkedin:"https://www.linkedin.com/in/enriquebarra/",
+        portalUpm:"https://portalcientifico.upm.es/es/ipublic/researcher/309087",
+      
         key: "5",
       },
       {

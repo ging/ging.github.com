@@ -31,7 +31,7 @@ const ButtonVariants = cva(
         default: "px-4 py-2 text-base ",
         sm: "px-3 py-1.5 text-sm font-semibold",
         lg: "px-5 py-2.5 text-lg",
-        icon: "px-5 w-8 py-2.5",
+        icon: "px-2.5 py-2.5 min-w-7 w-7 min-h-7 h-7",
         icon_sm:"w-6 h-6 min-w-6 min-h-6 p-0" 
       },
       radius: {
