@@ -55,14 +55,14 @@ export default function Tools(props) {
       {/* <Header route="/tools" /> */}
       <div className="standard_margin ">
         <Heading level="h2">{t("tools.title")}</Heading>
-        <Text type="p">{t("tools.description")}</Text>
+        <Text type="p" className="pb-8 xs:p-6 md:p-0">{t("tools.description")}</Text>
       </div>
       <main className="standard_margin">
-        <div className="grid md:gap-4 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 ">
+        <div className="grid sm:gap-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 ">
           {tools.map(({ title, description, route, img, github }) => {
             return (
               <div className="tool" key={title}>
-                <div className="relative card-researchline rounded-md  flex justify-center items-center aspect-square bg-blue-500">
+                <div className="relative card-researchline rounded-md  flex justify-center items-center aspect-square bg-blue-500 max-w-[300px]">
                   <img src={img} alt="herramientas / tools"></img>
                   <Link
                     className="icon_link_publication"
@@ -76,7 +76,7 @@ export default function Tools(props) {
                       className="link_publication absolute right-2 bottom-14"
                     >
                       {" "}
-                      {t("front.ResearchLines.button")}{" "}
+                      {t("tools.toolCards.button")}{" "}
                     </Badge>
                   </Link>
                 </div>
@@ -86,7 +86,7 @@ export default function Tools(props) {
                     {" "}
                     {title}{" "}
                   </h6>
-                  <div className="tool_description">
+                  <div className="tool_description ">
                     <Text className="font-light">{description}</Text>
                   </div>
                   <div className="tool_button_container mt-4 flex flex-wrap justify-between gap-2">
