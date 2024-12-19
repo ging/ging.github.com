@@ -23,7 +23,7 @@ export const projects = [
     title: "FuN4DaTe",
     description: "FuN4DaTe, stands for 'Future Networks for Datacenters and Telcos', it is FECYT funded project. FuN4DaTe aims at designing a cost-effective energy-efficient network architecture that approaches the envisioned by the ITU FG-NET2030 network and the Hyperscale cloud providers to upgrade telco networks by boosting bandwidth, latency, security, manynets while incorporating AI/ML into the network operations, on attempts to deal with forthcoming challenging services like holographic-type communications, tactile Internet for remote operations, intelligent operations networks, network and computing convergence, digital twins, space-terrestrial integrated network and industrial IoT with cloudification.",
     description_es: "FuN4DaTe, son las siglas de 'Future Networks for Datacenters and Telcos', es un proyecto financiado por FECYT. FuN4DaTe tiene como objetivo diseñar una arquitectura de red energéticamente eficiente y rentable que se acerque a la visión de la red ITU FG-NET2030 y los proveedores de nube hiperescala para mejorar las redes de telecomunicaciones mediante el aumento del ancho de banda, la latencia, la seguridad, las redes de muchos mientras se incorpora la IA/ML en las operaciones de red, en un intento de hacer frente a servicios desafiantes futuros como las comunicaciones de tipo holográfico, Internet táctil para operaciones remotas, redes de operaciones inteligentes, convergencia de red y computación, gemelos digitales, red integrada espacio-terrestre e IIoT con cloudificación.",
-    researchLine: ["networks", "ai", "data"],
+    researchLine: ["computing", "ai", "data"],
     projectType: "national-project"
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     title: "Lynckia",
     description: "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!",
     description_es: "Lynckia está basado en tecnologías WebRTC. Es 100% compatible con las últimas versiones estables de Google Chrome. Los usuarios de la web podrán hablar desde sus navegadores web sin necesidad de instalar nada. ¡Lynckia permite a los desarrolladores web incluir salas de videoconferencia en sus webs. También pueden implementar streaming, grabación y cualquier otra característica multimedia en tiempo real!",
-    researchLine: ["videoconference", "networks"],
+    researchLine: ["videoconference"],
     projectType: "national-project"
 	},
   {

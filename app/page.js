@@ -126,7 +126,7 @@ export default function Page() {
           />
         <Card 
           cardType={"researchline"} 
-          researchLine="networks"
+          researchLine="computing"
           title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
           description={t("front.ResearchLines.ResearchLine5.ResearchLineBody")}
           />

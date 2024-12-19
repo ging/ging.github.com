@@ -223,7 +223,7 @@ const Card = React.forwardRef(
       case 'ai':
         backgroundColor = 'bg-ai_bg';  // Para la categoría 'ai'
         break;
-      case 'networks':
+      case 'computing':
         backgroundColor = 'bg-networks_bg';  // Para la categoría 'ai'
         break;
       case 'e-learning':
@@ -291,7 +291,7 @@ const Card = React.forwardRef(
                         backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
                         // textColorResearchLine = "text-gray-900"
                         break;
-                      case 'networks':
+                      case 'computing':
                         backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
                         break;
                       case 'e-learning':
@@ -392,7 +392,7 @@ const Card = React.forwardRef(
                 backgroundIcon = "assets/img/icons/ai_icon.svg";
                 textColorResearchLine = "text-ai-400"
                 break;
-              case 'networks':
+              case 'computing':
                 backgroundColorResearchLine = 'bg-networks-600/60';
                 backgroundIcon = "assets/img/icons/networks_icon.svg";
                 textColorResearchLine = "text-networks-200";  // Para la categoría 'ai'
@@ -568,9 +568,7 @@ const Card = React.forwardRef(
 
     const researchLineCard = (
 
-      <div
-        className="card-researchline max-w-[300px]"
-      >
+      <div className="card-researchline max-w-[300px]" >
         <ResearchlineIllust researchLine={researchLine} />
         <div >
           <h6 className="pt-4 font-normal text-2xl text-white py-3"> {title} </h6>
