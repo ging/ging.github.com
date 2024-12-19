@@ -30,24 +30,24 @@ export const en = {
              "button": "See projets",
             "ResearchLine1": {
                 "ResearchLineTitle": "Data",
-                "ResearchLineBody": "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
+                "ResearchLineBody": "This line addresses the study and development of advanced technologies for data processing, management, and analysis, including data spaces and digital twins.",
            
             },
             "ResearchLine2": {
-                "ResearchLineTitle": "E-Learning",
-                "ResearchLineBody": "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
+                "ResearchLineTitle": "Tecnología educativa",
+                "ResearchLineBody": "This line focuses on the design and development of advanced educational technologies, including learning platforms, authoring tools, ia in education and educational escape rooms.",
             },
             "ResearchLine3": {
                 "ResearchLineTitle": "Artificial Intelligence",
-                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+                "ResearchLineBody": "This line focuses on the research and development of artificial intelligence-based applications, including the evaluation of large-scale language models (LLMs), fine-tuning, and retrieval augmented generation (RAG).",
             },
             "ResearchLine4": {
                 "ResearchLineTitle": "Videoconference",
-                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+                "ResearchLineBody": "This line focuses on the development of videoconferencing tools and platforms, such as Isabel and Licode, as well as the application of these technologies to interpretation and multimedia communication, improving the quality, scalability and accessibility of videoconferencing services in professional and educational environments.",
             },
             "ResearchLine5": {
-                "ResearchLineTitle": "Networks",
-                "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+                "ResearchLineTitle": "Dependable Computing",
+                "ResearchLineBody": "This line focuses on the development of reliable computing systems, addressing fault tolerance, security, high availability and performance in distributed architectures.",
             },
         },
     },
@@ -139,7 +139,7 @@ export const en = {
             "ai":"Artificial Intelligence ",
             "e-learning":"E-learning",
             "videoconference":"Video Conference",
-            "networks": "Networks",
+            "computing": "Dependable Computing",
             "other":"Other",
             "all":"All"
         },
@@ -190,7 +190,7 @@ export const en = {
             "e-learning": "E-Learning",
             "data": "Data Spaces",
             "videoconference": "Videoconferencing and WebRTC",
-            "networks": "Networks",
+            "computing": "Dependable Computing",
             "general": "General"
           
         },

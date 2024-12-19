@@ -36,26 +36,26 @@ export const es = {
       ResearchLine1: {
         ResearchLineTitle: "Datos",
         ResearchLineBody:
-          "Nullam id dolor sit amet risus malesuada aliquet. In efficitur, purus ac vehicula gravida, sapien justo luctus metus.",
+          "Esta línea aborda el estudio y desarrollo de tecnologías avanzadas para el procesamiento, gestión y análisis de datos, incluyendo espacios de datos y gemelos digitales.",
       },
       ResearchLine2: {
         ResearchLineTitle: "E-Learning",
         ResearchLineBody:
-          "Duis pharetra, orci nec ultrices gravida, odio urna faucibus lorem, nec pharetra turpis felis nec sapien.",
+          "Esta línea se centra en el diseño y desarrollo de tecnologías educativas avanzadas, incluyendo plataformas de aprendizaje, herramientas de autor, ia en educación y escape rooms educativas.",
       },
       ResearchLine3: {
         ResearchLineTitle: "Inteligencia Artificial",
         ResearchLineBody:
-          "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+          "Esta línea se enfoca en la investigación y desarrollo de aplicaciones basadas en inteligencia artificial, incluyendo la evaluación de modelos de lenguaje de gran escala (LLMs), ajuste fino (fine-tuning), recuperación aumentada por generación (RAG).",
       },
       ResearchLine4: {
-        ResearchLineTitle: "Video conferencia",
+        ResearchLineTitle: "Videoconferencia",
         ResearchLineBody:
-          "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+          "Esta línea se centra en el desarrollo de herramientas y plataformas de videoconferencia, como Isabel y Licode, así como en la aplicación de estas tecnologías a la interpretación y la educación.",
       },
-      "ResearchLine5": {
-        "ResearchLineTitle": "Redes",
-        "ResearchLineBody": "Sed auctor lectus at elit consectetur, at venenatis ligula faucibus.",
+      ResearchLine5: {
+        ResearchLineTitle: "Computación Fiable",
+        ResearchLineBody: "Esta línea se enfoca en el desarrollo de sistemas de computación fiables, abordando la tolerancia a fallos, seguridad, alta disponibilidad y rendimiento en arquitecturas distribuidas.",
     },
     },
   },
@@ -149,7 +149,7 @@ export const es = {
       "ai": "Inteligencia Artificial",
       "e-learning": "E-learning",
       "videoconference": "Videoconferencia",
-      "networks": "Redes",
+      "computing": "Computación Fiable",
       other: "Otros",
       all: "Todo",
     },
@@ -199,7 +199,7 @@ export const es = {
       "e-learning": "E-Learning",
       "data": "Espacios de datos",
       "videoconference": "Videoconferencia y WebRTC",
-      "networks": "Redes",
+      "computing": "Computación Fiable",
       "general": "General"
     
   },

@@ -3,6 +3,5 @@ export const researchlines = [
     "ai",
     "videoconference",
     "e-learning",
-    "networks",
- 
+    "computing", 
 ]

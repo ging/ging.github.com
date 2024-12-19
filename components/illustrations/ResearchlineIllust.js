@@ -82,7 +82,7 @@ const ResearchlineIllust = ({ researchLine }) => {
     </div>
   );
 
-  const NetworksIllust = (
+  const ComputingIllust = (
     <div className="networks-illust illust">
       <div className="networks-illust-container illust-container ">
         <img
@@ -90,7 +90,7 @@ const ResearchlineIllust = ({ researchLine }) => {
           src="assets/img/networks_illust.png"
         ></img>
       </div>
-      <Link className="icon_link_publication" target="_blank" href="projects?researchline=networks">
+      <Link className="icon_link_publication" target="_blank" href="projects?researchline=computing">
       <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
         <Badge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Badge>
       </Link>
@@ -106,8 +106,8 @@ const ResearchlineIllust = ({ researchLine }) => {
       return GenerativeAIIllust;
     case "e-learning":
       return ELearningIllust;
-    case "networks":
-      return NetworksIllust;
+    case "computing":
+      return ComputingIllust;
   }
 };
 
