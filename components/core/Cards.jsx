@@ -13,7 +13,9 @@ import { Badge, badgeVariants } from "../ui/badge";
 import Text from "../ui/Text";
 import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
-import { Divider } from "../ui/divider"
+import { Divider } from "../ui/divider";
+// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,
+// } from "@/components/ui/tooltip";
 import ResearchlineIllust from "../illustrations/ResearchlineIllust";
 import {
   CustomCard,
@@ -506,7 +508,7 @@ const Card = React.forwardRef(
                   variant: "default",
                   size: "icon",
                   radius: "rounded_full",
-                }) + " bg-blue-600 hover:bg-blue-600 "}>
+                }) + " bg-blue-600 hover:bg-blue-700 "}>
                   <ArticleIcon className="h-5" />
                 </Button>
               </Link>}

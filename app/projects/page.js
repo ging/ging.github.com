@@ -37,7 +37,7 @@ export default function Projects() {
     if (search) query.search = search;
     if (projectType) query.category = projectType;
     if (researchLine) query.researchline = researchLine;
-    console.error("query: " + query);
+ 
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
   }, [search, projectType, researchLine]);
   
