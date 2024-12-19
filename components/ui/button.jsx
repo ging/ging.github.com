@@ -15,13 +15,13 @@ const ButtonVariants = cva(
         default:
           "bg-primary text-primary-foreground shadow hover:bg-primary-800",
         outline:
-          "border-[1px] border-gray-300 text-gray-300 bg-transparent hover:bg-white/5 hover:text-white hover:border-white/20",
+          "border border-gray-300 text-gray-300 bg-transparent hover:bg-white/5 hover:text-white hover:border-white/20",
         outlineForeground: //for outline buttons over dark backgrounds
           "border border-input border-secondary text-secondary-100 shadow-sm hover:bg-primary/30 hover:text-accent-foreground",
         secondary:
           "bg-background-400 text-gray-300 hover:text-white hover:bg-background-200",
           ghost:
-          "bg-transparent text-primary hover:underline-offset-4 hover:bg-secondary-200 shadow-none",
+          "border border-transparent bg-transparent text-orange-400 hover:text-orange-300 rounded-full hover:underline-offset-4 hover:bg-orange-400/20 shadow-none",
         link: 
           "!px-0.5 bg-transparent hover:bg-transparent text-primary underline hover:underline shadow-none",
         linkForeground:

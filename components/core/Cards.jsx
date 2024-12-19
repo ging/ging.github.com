@@ -520,7 +520,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-green-600 hover:bg-green-700 "}>
                   <img className="h-7 max-w-7"  src="/assets/img/logos/orcid.png"/>
-                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   Orcid </Badge>   
+                  <Badge variant="secondary" size="xs" className="link_publication shadow-lg bg-[#00000097] absolute left-0 bottom-7">   Orcid </Badge>   
                 </Button>
               </Link>}
               {/* {webOfScience && <Link target="_blank" href={webOfScience}
@@ -612,7 +612,6 @@ const Card = React.forwardRef(
     );
 
     const researchLineCard = (
-
       <div className="card-researchline max-w-[300px]" >
         <ResearchlineIllust researchLine={researchLine} />
         <div>

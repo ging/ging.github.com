@@ -7,11 +7,6 @@ import { useTranslation } from "react-i18next";
 
 const ResearchlineIllust = ({ researchLine }) => {
       const { t, i18n } = useTranslation();
-
-  // obsoleto, para la animación
-  // const [isHovered1, setIsHovered1] = useState(false);
-  // const handleMouseEnter = () => setIsHovered1(true);
-  // const handleMouseLeave = () => setIsHovered1(false);
   const VideoConferenceIllust = (
     <div className={`video-conference-illust illust`}>
       <div className="video-conference-illust-container illust-container">

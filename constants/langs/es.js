@@ -154,9 +154,7 @@ export const es = {
 
   tools: {
     title: "Herramientas",
-    desc: "Estas son algunas de las herramientas que hemos desarrollado.",
-    desc2:
-      "Si estás interesado en alguna herramienta, ya sea para utilizarla o personalizarla puedes ponerte en contacto con nosotros.",
+    description: "Estas son algunas de las herramientas que hemos desarrollado. Si estás interesado en alguna herramienta, ya sea para utilizarla o personalizarla puedes ponerte en contacto con nosotros.",
 
     toolCards: {
       description: {
@@ -169,7 +167,7 @@ export const es = {
         7: "Un sistema recomendador híbrido de Learning Objects basado en Europeana ",
         8: "RESCORM es un boilerplate para crear aplicaciones de React que cumplan con SCORM cuya finalidad es facilitar a los desarrolladores la creación de recursos de aprendizaje SCORM.",
       },
-      button: "Ir a herramienta",
+      button: "Ver herramienta",
     },
   },
   footer: {
