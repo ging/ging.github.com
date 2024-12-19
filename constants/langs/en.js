@@ -22,7 +22,7 @@ export const en = {
         "latestPublicationsButton": "See all publications",
         "ResearchLines": {
             "sectionTitle": "Research lines",
-             "button": "See projets",
+             "button": "See projetcs",
             "ResearchLine1": {
                 "ResearchLineTitle": "Data",
                 "ResearchLineBody": "This line addresses the study and development of advanced technologies for data processing, management, and analysis, including data spaces and digital twins.",

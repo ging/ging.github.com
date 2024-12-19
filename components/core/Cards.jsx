@@ -482,16 +482,13 @@ const Card = React.forwardRef(
               </CardTitle>
               {/* {position && (<Badge> {position}</Badge>)} */}
             </div>
-
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
               <Badge size="sm" variant="secondary"
-                className={"font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"}
-              >
+                className={"font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"}>
                 <MailOutlinedIcon className=" h-[14px] w-4 text-gray-300 mr-1" />
                 {email}
               </Badge>
-
             )}
             <Divider></Divider>
             <Text type="small"
@@ -500,30 +497,76 @@ const Card = React.forwardRef(
             </Text>
             <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
               {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
-            </a>
-            <div className="flex gap-2 mt-3">
+            </a> 
+            <div className="flex gap-2 mt-5">
               {researchgate && <Link target="_blank" href={researchgate}
-                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
                 <Button href="#" className={ButtonVariants({
                   variant: "default",
                   size: "icon",
                   radius: "rounded_full",
                 }) + " bg-blue-600 hover:bg-blue-700 "}>
-                  <ArticleIcon className="h-5" />
+                  <img className="h-5 max-w-5 contrast-200 saturate-50"  src="/assets/img/logos/researchgate.png"/>
+                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   ResearchGate </Badge>   
+
                 </Button>
+                
               </Link>}
               {orcid && <Link target="_blank" href={orcid}
-                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
                 <Button href="#" className={ButtonVariants({
                   variant: "default",
                   size: "icon",
                   radius: "rounded_full",
                 }) + " bg-green-600 hover:bg-green-700 "}>
-                  <ArticleIcon className="h-5" />
+                  <img className="h-7 max-w-7"  src="/assets/img/logos/orcid.png"/>
+                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   Orcid </Badge>   
+                </Button>
+              </Link>}
+              {/* {webOfScience && <Link target="_blank" href={webOfScience}
+                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-green-700 hover:bg-green-800 "}>
+                  <img className="h-5 max-w-5"  src="/assets/img/logos/researchgate.png"/>
+                </Button>
+              </Link>} */}
+              {googleScholar && <Link target="_blank" href={googleScholar}
+                className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-blue-800 hover:bg-blue-900 "}>
+                  <img className="h-7 max-w-7 rounded-full"  src="/assets/img/logos/google-scholar.png"/>
+                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Google Scholar </Badge>   
+                </Button>
+              </Link>}
+              {linkedin && <Link target="_blank" href={linkedin}
+                className={" icon_link_publication relative text-left h-7 max-w-7 mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-[#006198] hover:bg-[#006198] "}>
+                 <img className="h-[28px] rounded-full max-w-[28px] object-scale-down "  src="/assets/img/logos/linkedin.png"/>
+                 <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> LinkedIn </Badge>   
+                </Button>
+              </Link>}
+              {portalUpm  && <Link target="_blank" href={portalUpm}
+                className={"icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                <Button href="#" className={ButtonVariants({
+                  variant: "default",
+                  size: "icon",
+                  radius: "rounded_full",
+                }) + " bg-blue-600 hover:bg-blue-700 "}>
+                  <p className="text-2xs font-bold"> UPM </p>
+                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Portal Científico UPM </Badge>   
                 </Button>
               </Link>}
             </div>
-
           </CardContent>
         )}
         {/* {( email &&    
@@ -572,7 +615,7 @@ const Card = React.forwardRef(
 
       <div className="card-researchline max-w-[300px]" >
         <ResearchlineIllust researchLine={researchLine} />
-        <div >
+        <div>
           <h6 className="pt-4 font-normal text-2xl text-white py-3"> {title} </h6>
           <Text className="font-light">
             {description}
