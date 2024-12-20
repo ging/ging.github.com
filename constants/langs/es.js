@@ -20,7 +20,7 @@ export const es = {
       "Un grupo de investigación del Departamento de Ingeniería Telemática (DIT) de la Universidad Politécnica de Madrid (UPM)",
     "action-button": "Nuestras líneas de investigación",
     section1Title: "Sobre nosotros",
-  "section1Description": "Nuestros principales intereses de investigación se centran en las últimas tecnologías de Internet y la WWW, como HTML5. Tenemos una amplia experiencia en sistemas de videoconferencia, espacios de datos, IA generativa y e-Learning. Nuestra última participación en proyectos de investigación incluye proyectos en curso financiados por la UE y nacionales como Eunomia y FI-WARE.",
+  "section1Description": "Nuestros principales intereses de investigación se centran en las últimas tecnologías de Internet y la WWW, como HTML5. Tenemos una amplia experiencia en sistemas de videoconferencia, espacios de datos, IA generativa y e-Learning. Nuestra última participación en proyectos de investigación incluye proyectos en curso financiados por la UE y nacionales como Eunomia y FIWARE.",
     section1Subtitle: "Principios del proyecto",
     latestPublicationsTitle: "Últimas publicaciones",
     latestPublicationsButton: "Ver todas las publicaciones",
@@ -125,14 +125,15 @@ export const es = {
         5: "Profesor Titular de Universidad", // Full Professor
         6: "Profesor ayudante doctor",
         7: "Investigador",
-        8: "Personal externo",
+        8: "Personal externo colaborador",
       },
      
     },
   },
   contact: {
     title: "Contacto",
-    title2: "¿Alguna duda? Contáctanos.",
+
+    buttonDownload: "Descargar Presentación del Ging",
     "contactmail": {
       "ai": "Inteligencia Artificial ",
       "e-learning": "E-Learning",

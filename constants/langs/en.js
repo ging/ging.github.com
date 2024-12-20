@@ -19,7 +19,7 @@ export const en = {
     "action-button": "Our researchlines",
     section1Title: "About us",
     section1Description:
-      "Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FI-WARE.",
+      "Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FIWARE.",
     latestPublicationsTitle: "Latest publications",
     latestPublicationsButton: "See all publications",
     ResearchLines: {
@@ -130,13 +130,14 @@ export const en = {
         5: "Full Professor", // Profesor Titular de Universidad
         6: "Assistant Professor",
         7: "Researcher",
-        8: "External staff",
+        8: "External colaborator",
       },
     },
   },
   contact: {
     title: "Contact",
-    title2: "Any questions? Contact us. ",
+
+    buttonDownload: "Download GING presentation",
     contactmail: {
       ai: "Artificial Intelligence",
       "e-learning": "E-Learning",

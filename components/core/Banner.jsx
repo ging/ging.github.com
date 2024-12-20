@@ -14,10 +14,10 @@ const Banner = React.forwardRef(({ className, ...props }, ref) => (
   <section
     ref={ref}
     className={cn(
-      " md:min-h-[90dvh]",
+      " md:min-h-[85vh]",
       "text-snow",
       // "gap-6 xl:gap-12",
-      "flex justify-start items-center h-full",
+      "flex justify-start items-center h-[85vh]",
       className
     )}
     {...props}
@@ -38,7 +38,7 @@ BannerContent.displayName = "BannerContent";
 
 const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
   <img
-      className="w-40 md:w-52 mb-2 md:mb-8 flex items-center justify-center object-contain"
+      className="w-36 md:w-48 mb-2 md:mb-6 flex items-center justify-center object-contain"
       src="ging_logo.png"
       alt="icon"
     />
@@ -90,10 +90,10 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
     // " absolute top-0 md:relative flex w-full md:w-7/12 z-0 h-20 md:h-[90vh] "
   //  + 
    //landing 3
-   "relative top-0 h-full md:relative flex w-full z-0 h-[90vh]"}>
+   "relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
   <img
       className="
-       h-[32rem] md:h-screen flex items-center justify-center object-cover w-screen opacity-80"
+       h-[32rem] md:h-[85vh] flex items-center justify-center object-cover w-screen opacity-80"
       src="assets/img/backgrounds/landing_4.svg"
       alt="icon"
     />

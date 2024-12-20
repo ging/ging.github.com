@@ -58,7 +58,7 @@ export default function Tools(props) {
         <Text type="p" className="pb-8 xs:p-6 md:p-0">{t("tools.description")}</Text>
       </div>
       <main className="standard_margin">
-        <div className="grid sm:gap-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 ">
+        <div className="grid sm:gap-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
           {tools.map(({ title, description, route, img, github }) => {
             return (
               <div className="tool" key={title}>
