@@ -42,7 +42,7 @@ export default function Research() {
     if (year) query.year = year;
     if (category) query.category = category;
     if (researchLine) query.researchline = researchLine;
-    // console.error("query: " + query);
+ 
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
   }, [search, year, category, researchLine]);
   
