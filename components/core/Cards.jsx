@@ -244,10 +244,8 @@ const Card = React.forwardRef(
 
     // PROJECT
     const projectCard = (
-
       <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-400 border-b-1 bg-transparent rounded-none flex-col sm:flex-row gap-3 sm:gap-6 px-0 py-6 items-start"}>
         <div className={`w-full h-fit relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
-
           <Image className="brightness-0 invert min-h-[160px] !p-8 sm:!p-12 " src={logo} fit="contain"
             layout={"bottom-right"}
             hasBadge={true}
