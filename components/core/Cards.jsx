@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 
 import Heading from "../ui/Heading";
-import { Badge, badgeVariants } from "../ui/badge";
+import { Mybadge, badgeVariants } from "../ui/mybadge";
 import Text from "../ui/Text";
 import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
@@ -67,9 +67,9 @@ const renderTags = (tags) => {
   if (!tags) return null;
   const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
   return tagsArray.map((tag, index) => (
-    <Badge key={index} variant="default">
+    <Mybadge key={index} variant="default">
       {tag}
-    </Badge> // Añade una key a cada Label
+    </Mybadge> // Añade una key a cada Label
   ));
 };
 
@@ -248,7 +248,7 @@ const Card = React.forwardRef(
         <div className={`w-full h-fit relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
           <Image className="brightness-0 invert min-h-[160px] !p-8 sm:!p-12 " src={logo} fit="contain"
             layout={"bottom-right"}
-            hasBadge={true}
+            hasMybadge={true}
             badgeVariant={"secondary"}
             badgeSize={"md"}
             badgeContent={t(`projects.type.${projectType}`)}
@@ -303,7 +303,7 @@ const Card = React.forwardRef(
                     }
 
 
-                    return (<Badge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Badge>)
+                    return (<Mybadge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Mybadge>)
                   })
                     : null}
                 </div>
@@ -334,12 +334,12 @@ const Card = React.forwardRef(
         }}
       >
         <CardHeader className="flex w-full gap-2 items-center">
-          <Badge variant="outline" size="lg">
+          <Mybadge variant="outline" size="lg">
             {date}
-          </Badge>
-          <Badge variant="outline" size="lg">
+          </Mybadge>
+          <Mybadge variant="outline" size="lg">
             {category}
-          </Badge>
+          </Mybadge>
           <span className="spacer w-full" />
           <Button href={route} variant="ghost" size="lg">
             Ir al curso <ExternalLinkIcon className="w-5 h-5" />
@@ -408,9 +408,9 @@ const Card = React.forwardRef(
             }
 
             return (
-              <Badge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}>
+              <Mybadge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}>
                 <img className="h-3 pr-1.5" src={backgroundIcon}></img>
-                <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Badge>
+                <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Mybadge>
             )
           }) : null
           }
@@ -429,7 +429,7 @@ const Card = React.forwardRef(
             <div className="flex flex-wrap gap-1.5">
               {Array.isArray(keywords) ? keywords.map(keyword => {
                 return (
-                  <Badge size="default" className="bg-[#000000] border-none text-gray-300"> {keyword} </Badge>
+                  <Mybadge size="default" className="bg-[#000000] border-none text-gray-300"> {keyword} </Mybadge>
                 )
               }) : null}
             </div>
@@ -478,15 +478,15 @@ const Card = React.forwardRef(
               <CardTitle level="title-sm" className={"text-inherit text-center"}>
                 <b>{name} </b>
               </CardTitle>
-              {/* {position && (<Badge> {position}</Badge>)} */}
+              {/* {position && (<Mybadge> {position}</Mybadge>)} */}
             </div>
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
-              <Badge size="sm" variant="secondary"
+              <Mybadge size="sm" variant="secondary"
                 className={"font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"}>
                 <MailOutlinedIcon className=" h-[14px] w-4 text-gray-300 mr-1" />
                 {email}
-              </Badge>
+              </Mybadge>
             )}
             <Divider></Divider>
             <Text type="small"
@@ -505,7 +505,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-blue-600 hover:bg-blue-700 "}>
                   <img className="h-5 max-w-5 contrast-200 saturate-50"  src="/assets/img/logos/researchgate.png"/>
-                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   ResearchGate </Badge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   ResearchGate </Mybadge>   
 
                 </Button>
                 
@@ -518,7 +518,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-green-600 hover:bg-green-700 "}>
                   <img className="h-7 max-w-7"  src="/assets/img/logos/orcid.png"/>
-                  <Badge variant="secondary" size="xs" className="link_publication shadow-lg bg-[#00000097] absolute left-0 bottom-7">   Orcid </Badge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication shadow-lg bg-[#00000097] absolute left-0 bottom-7">   Orcid </Mybadge>   
                 </Button>
               </Link>}
               {/* {webOfScience && <Link target="_blank" href={webOfScience}
@@ -539,7 +539,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-blue-800 hover:bg-blue-900 "}>
                   <img className="h-7 max-w-7 rounded-full"  src="/assets/img/logos/google-scholar.png"/>
-                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Google Scholar </Badge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Google Scholar </Mybadge>   
                 </Button>
               </Link>}
               {linkedin && <Link target="_blank" href={linkedin}
@@ -550,7 +550,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-[#006198] hover:bg-[#006198] "}>
                  <img className="h-[28px] rounded-full max-w-[28px] object-scale-down "  src="/assets/img/logos/linkedin.png"/>
-                 <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> LinkedIn </Badge>   
+                 <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> LinkedIn </Mybadge>   
                 </Button>
               </Link>}
               {portalUpm  && <Link target="_blank" href={portalUpm}
@@ -561,7 +561,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-blue-600 hover:bg-blue-700 "}>
                   <p className="text-2xs font-bold"> UPM </p>
-                  <Badge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Portal Científico UPM </Badge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Portal Científico UPM </Mybadge>   
                 </Button>
               </Link>}
             </div>

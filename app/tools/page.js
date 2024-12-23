@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import FaceIcon from "@mui/icons-material/Face";
 import Text from "@/components/ui/Text";
 import Heading from "@/components/ui/Heading";
-import { Badge, badgeVariants } from "@/components/ui/Badge";
+import { Mybadge, badgeVariants } from "@/components/ui/mybadge";
 import { Button, buttonVariants } from "@/components/ui/button";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
@@ -70,14 +70,14 @@ export default function Tools(props) {
                     href={route}
                   >
                     <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
-                    <Badge
+                    <Mybadge
                       variant="secondary"
                       size="sm"
                       className="link_publication absolute right-2 bottom-14"
                     >
                       {" "}
                       {t("tools.toolCards.button")}{" "}
-                    </Badge>
+                    </Mybadge>
                   </Link>
                 </div>
 
