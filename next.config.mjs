@@ -43,7 +43,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  distDir: 'build',
+  distDir: 'docs',
   
   /**
    * Environment variables
