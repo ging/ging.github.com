@@ -1,14 +1,23 @@
 const fs = require("fs");
 const Cite = require('citation-js')
 
-fs.readFile("src/constants/publications.bib", function(err, buf) {
+fs.readFile("constants/publications.bib", function(err, buf) {
   	let bib = buf.toString();//.replace(/@\w*{(\w*)/,(a)=>a+Math.floor(10000*Math.random()))
   	let output = new Cite(bib).format('bibliography', {
 	  format: 'html',
 	  template: 'apa',
 	  lang: 'en-US',
 	  prepend (entry) {
-	  	let {id, issued, DOI, type, title, volume, page} = entry;
+	  	let {id, issued, DOI, type, title, volume, page, keyword, annote} = entry;
+		//keyword contains keywords separated by comma, but sometimes it is empty
+		if(!keyword){
+			keyword = "";
+		}	
+		//note field contains the research lines separated by comma, but sometimes it is empty
+		if(!annote){
+			annote = "";
+		}
+
 	  	if (DOI && !DOI.match(/http/)) {
 	  		DOI = "https://doi.org/" + DOI;
 	  	}
@@ -42,6 +51,8 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 				${ type ? ('"month": "' + month + '",'): "" }
 				${ type ? ('"volume": "' + volume + '",'): "" }
 				${ type ? ('"pages": "' + page + '",'): "" }
+				${ type ? ('"keywords": "' + keyword + '",'): "" }
+				${ type ? ('"researchlines": "' + annote + '",'): "" }
 	    		"content": "`
 	  },
 	  append: () => '"},'
@@ -52,7 +63,19 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 	output = output.replace('<div class="csl-bib-body">',"");
 	output = output.replace(/,([^,]*)$/,"$1");
 	output = "["+output+"]";
-	const str = JSON.parse(output).sort(function(a, b){
+	//transform keyword from "keyword1,keyword2" to ["keyword1", "keyword2"]
+	let jsonoutput = JSON.parse(output);
+	jsonoutput = jsonoutput.map((item) => {
+		if (item.keywords) {
+			item.keywords = item.keywords.split(",");
+		}
+		if(item.researchlines){
+			item.researchlines = item.researchlines.split(",");
+		}
+		return item;
+	});
+
+	const str = jsonoutput.sort(function(a, b){
 		if (a.date && b.date) {
 			return b.date[0] - a.date[0]
 		} else if (a.date) {
@@ -64,10 +87,9 @@ fs.readFile("src/constants/publications.bib", function(err, buf) {
 		}
 	});
 
-	let final_str = "export const mypublications = " + JSON.stringify(str) + ";";
+	let final_str = "export const publications = " + JSON.stringify(str) + ";";
 
-	fs.writeFile('src/constants/publications.js', final_str, (err) => {
+	fs.writeFile('constants/publications.js', final_str, (err) => {
 		if (err) throw err;
 	});
 });
-
