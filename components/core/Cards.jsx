@@ -419,7 +419,7 @@ const Card = React.forwardRef(
             return (
               <Mybadge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}>
                 <img className="h-3 pr-1.5" src={backgroundIcon}></img>
-                <div className="pb-0.5">{t(`projects.researchLines.${deleteSpaces(researchline)}`) } </div>  </Badge>
+                <div className="pb-0.5">{t(`projects.researchLines.${deleteSpaces(researchline)}`) } </div>  </Mybadge>
             )
           }) : null
           }
