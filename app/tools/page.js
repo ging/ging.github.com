@@ -2,13 +2,19 @@
 
 import Header from "@/components/core/Header";
 import React from "react";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Link from "next/link";
 import image from "next/image";
 import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
 import { useTranslation } from "react-i18next";
-import FaceIcon from '@mui/icons-material/Face';
+import FaceIcon from "@mui/icons-material/Face";
+import Text from "@/components/ui/Text";
+import Heading from "@/components/ui/Heading";
+import { Mybadge, badgeVariants } from "@/components/ui/mybadge";
+import { Button, buttonVariants } from "@/components/ui/button";
+
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
+import { GitHub } from "@mui/icons-material";
 
 export default function Tools(props) {
   const { t, i18n } = useTranslation();
@@ -19,7 +25,7 @@ export default function Tools(props) {
   useEffect(() => {
     const translatedTools = mytools.map(
       ({
-        logo,
+        img,
         route,
         title,
         translationKey,
@@ -29,7 +35,7 @@ export default function Tools(props) {
         description,
       }) => ({
         title,
-        logo,
+        img,
         route,
         github,
         gradient,
@@ -47,61 +53,56 @@ export default function Tools(props) {
   return (
     <div className={"tools page_" + currentLang}>
       {/* <Header route="/tools" /> */}
-      <div className="banner px-4 sm:px-8 md:px-14 md:py-2 lg:px-24 lg:py-4 xl:px-28 xl:py-4 2xl:px-32 2xl:py-6">
-        <h1>{t("tools.title")}</h1>
+      <div className="standard_margin ">
+        <Heading level="h2">{t("tools.title")}</Heading>
+        <Text type="p" className="pb-8 xs:p-6 md:p-0">{t("tools.description")}</Text>
       </div>
-      <main>
-        <section className="our_tools lg:mx-36 md:mx-14 sm:mx-8 mx-4 my-4 sm:my-4 md:my-8 lg:my-12 xl:my-16 2xl:my-20  xl:mx-44 2xl:mx-60">
-          <div className="tools_description text-slate-700 pb-8">
-            <p>{t("tools.desc")}</p>
-            <br />
-            <p>{t("tools.desc2")} </p>
-          </div>
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 150: 1, 600: 2, 900: 3 }}
-          >
-            <Masonry gutter="12px">
-              {tools.map(
-                ({ title, description, route, logo, github, gradient }) => {
-                  return (
-                    <div className="tool" key={title}>
-                      <div className={`tool_logo ${gradient}`}>
-                        <img alt={"Project Logo"} src={logo} />
-                      </div>
+      <main className="standard_margin">
+        <div className="grid sm:gap-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+          {tools.map(({ title, description, route, img, github }) => {
+            return (
+              <div className="tool" key={title}>
+                <div className="relative card-researchline rounded-md  flex justify-center items-center aspect-square bg-blue-500 max-w-[300px]">
+                  <img src={img} alt="herramientas / tools"></img>
+                  <Link
+                    className="icon_link_publication"
+                    target="_blank"
+                    href={route}
+                  >
+                    <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
+                    <Mybadge
+                      variant="secondary"
+                      size="sm"
+                      className="link_publication absolute right-2 bottom-14"
+                    >
+                      {" "}
+                      {t("tools.toolCards.button")}{" "}
+                    </Mybadge>
+                  </Link>
+                </div>
 
-                      <div className="tool_content">
-                        <div className="tool_title">
-                          <h3>{title}</h3>
-                        </div>
-                        <div className="tool_description">
-                          <p>{description}</p>
-                        </div>
-                        <div className="tool_button_container">
-                          <button className="tool_button">
-                            <CreateLink route={route}>
-                              <FaceIcon />
-                              <span> {t("tools.toolCards.button")}</span>
-                            </CreateLink>
-                          </button>
-                          <button className="tool_github">
-                            <CreateLink route={github}>
-                              {/* <FontAwesomeIcon
-                                className="mr-2 "
-                                icon={faGithub}
-                                size="lg"
-                              /> */}
-                              <span> Github </span>{" "}
-                            </CreateLink>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-              )}
-            </Masonry>
-          </ResponsiveMasonry>
-        </section>
+                <div className="tool_content">
+                  <h6 className="pt-4 font-normal text-2xl text-white py-3">
+                    {" "}
+                    {title}{" "}
+                  </h6>
+                  <div className="tool_description ">
+                    <Text className="font-light">{description}</Text>
+                  </div>
+                  <div className="tool_button_container mt-4 flex flex-wrap justify-between gap-2">
+                    <Button variant="outline" size="sm" className="" >
+                      <Link target="_blank"  href={route}> {t("tools.toolCards.button")}</Link>
+                    </Button>
+                    <Button variant="ghost" size="sm" className="gap-1">
+                      <GitHub className="h-5" />
+                      <Link target="_blank" href={github}>Github</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </main>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
-import { Badge } from "./badge";
+import { Mybadge } from "./mybadge";
 
 const Image = ({
   fit = "cover",
@@ -10,7 +10,7 @@ const Image = ({
   alt = "",
   className,
   layout = "top-right",
-  hasBadge = false,
+  hasMybadge = false,
   badgeVariant = "",
   badgeSize = "",
   badgeContent = "badge",
@@ -51,10 +51,10 @@ const Image = ({
       ) : (
         <img src={src} alt={alt} className={imageClasses} />
       )}
-      {hasBadge && (
-        <Badge className={badgeLayout} variant={badgeVariant} size={badgeSize}>
+      {hasMybadge && (
+        <Mybadge className={badgeLayout} variant={badgeVariant} size={badgeSize}>
           {badgeContent}
-        </Badge>
+        </Mybadge>
       )}
     </div>
   );

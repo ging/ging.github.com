@@ -10,9 +10,21 @@ import Text from "@/components/ui/Text"
 import ProjectsFilter from "@/components/filters/ProjectsFilter"
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Suspense } from 'react';
+
 
 export default function Projects() {
+  return (
+    <Suspense>
+      <ProjectsPage />
+    </Suspense>
+  );
 
+}
+
+
+
+function ProjectsPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
@@ -37,7 +49,7 @@ export default function Projects() {
     if (search) query.search = search;
     if (projectType) query.category = projectType;
     if (researchLine) query.researchline = researchLine;
-    console.error("query: " + query);
+ 
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
   }, [search, projectType, researchLine]);
   
@@ -101,60 +113,60 @@ export default function Projects() {
   );
   console.log(filteredItems.map(filteredItem => filteredItem ));
   return (
-    <div >
-      <div className="standard_margin" id="banner-publications">
-      <Heading level="h2">{t("projects.title")}</Heading>
-        <Text type="p">
-          {t("projects.description")}
-        </Text>
+      <div>
+        <div className="standard_margin" id="banner-publications">
+        <Heading level="h2">{t("projects.title")}</Heading>
+          <Text type="p">
+            {t("projects.description")}
+          </Text>
+          </div>
+      <div>
+    
+        <div className="flex flex-col justify-center">
+        <ProjectsFilter 
+          researchLines={researchLines} 
+          researchLine={researchLine}
+          projectType={projectType} 
+          projectTypes={projectTypes}
+          search={search}
+          changeProjectType={(projectType) => setProjectType(projectType)} 
+          changeResearchLine={(researchLine) => setResearchLine(researchLine)}
+          changeSearch={(search) => setSearch(search)} 
+          pathname={pathname}
+        />
+        
         </div>
-    <div>
-  
-      <div className="flex flex-col justify-center">
-      <ProjectsFilter 
-        researchLines={researchLines} 
-        researchLine={researchLine}
-        projectType={projectType} 
-        projectTypes={projectTypes}
-        search={search}
-        changeProjectType={(projectType) => setProjectType(projectType)} 
-        changeResearchLine={(researchLine) => setResearchLine(researchLine)}
-        changeSearch={(search) => setSearch(search)} 
-        pathname={pathname}
-       />
-      
+        <div className="project_cards standard_margin my-4 sm:my-6 lg:my-10 sm:gap-4">
+          {filteredItems.map(
+            (
+              {
+                year,
+                title,
+                description,
+                description_es,
+                researchLine,
+                logo,
+                route,
+                projectType
+              },
+              index
+            ) => (
+              <Card
+                key={index}
+                cardType={"project"}
+                year={year}
+                researchLine={researchLine}
+                title={title}
+                logo={logo}
+                route={route}
+                description_en={description}
+                description_es={description_es}
+                projectType={projectType}
+              ></Card>
+            )
+          )}
+        </div>
       </div>
-      <div className="project_cards standard_margin my-4 sm:my-6 lg:my-10 sm:gap-4">
-        {filteredItems.map(
-          (
-            {
-              year,
-              title,
-              description,
-              description_es,
-              researchLine,
-              logo,
-              route,
-              projectType
-            },
-            index
-          ) => (
-            <Card
-              key={index}
-              cardType={"project"}
-              year={year}
-              researchLine={researchLine}
-              title={title}
-              logo={logo}
-              route={route}
-              description_en={description}
-              description_es={description_es}
-              projectType={projectType}
-            ></Card>
-          )
-        )}
       </div>
-    </div>
-    </div>
   );
 }

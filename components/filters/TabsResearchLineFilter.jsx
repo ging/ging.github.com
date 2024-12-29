@@ -49,7 +49,7 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
 
   const handleResearchLineChange = (value) => {
     if(value==="all"){
-      value = "all";
+      value = undefined;
     }
     changeResearchLine(value);
   }

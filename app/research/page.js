@@ -11,9 +11,18 @@ import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import {Divider} from "@/components/ui/divider";
 import { useRouter, useSearchParams } from "next/navigation";
-
+import { Suspense } from 'react';
 
 export default function Research() {
+  return (
+    <Suspense>
+      <ResearchPage />
+    </Suspense>
+  );
+}
+
+
+function ResearchPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;  
   const router = useRouter(); // Hook para manipular la URL
@@ -42,7 +51,7 @@ export default function Research() {
     if (year) query.year = year;
     if (category) query.category = category;
     if (researchLine) query.researchline = researchLine;
-    console.error("query: " + query);
+ 
     router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
   }, [search, year, category, researchLine]);
   
@@ -114,71 +123,71 @@ export default function Research() {
   };
 
   return (
-    <div className={"research page_" + currentLang}>
-      <div className="standard_margin" id="banner-publications">
-        <Heading level="h2">{t("research.title")}</Heading>
-        <Text type="p">
-          {t("research.description")}
-        </Text>
-      </div>
-      <main className="research">      
-        <Filters
-          search={search} // filtro 1: busqueda de texto
-          year={year} // filtro 2: busqueda por año
-          category={category} // filtro 3: busqueda por tipo de publicacion
-          researchLines={researchLines} // filtro 4: busqueda por linea de investigacion
-          researchLine={researchLine}
-          pathname={pathname}
-          items={items} // lista de papers
-          changeSearch={(search) => setSearch(search)} // función para cambiar estado de input de busqueda
-          changeYear={(year) => setYear(year)} // función para cambiar estado de input de año
-          changeCategory={(category) => setCategory(category)} // función para cambiar estado de categoria
-          changeResearchLine={(researchLine) => setResearchLine(researchLine)} // función para cambiar estado de linea de investigacion
-          categories={categories}
-          results={ papersFiltered instanceof Array ? papersFiltered.length : 0 }
-        />
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
-          {papersFiltered
-            .slice(0, papersToShow)
-            .map(({ date, type, doi, author, title, journal, researchlines, keywords }, key) => {
-              return (
-                <Card
-                  key={key}
-                  currentLang={currentLang}
-                  cardType={"publication"}
-                  className={CardVariants({
-                    variant: "publication",
-                  })}
-                  date={date}
-                  category={type}
-                  title={title}
-                  author={author}
-                  doi={doi}
-                  researchLine={researchlines}
-                  keywords={keywords}
-                ></Card>
-              );
-            })}
-        </section>
-
-        <div className="mb-4 w-full flex justify-center">
-          {papersFiltered.length > papersToShow && (
-            <Button
-              onClick={handleLoadMore}
-              className={
-                ButtonVariants({
-                  variant: "secondary",
-                  size: "lg",
-                  radius: "rounded_sm",
-                }) + " w-fit mt-4 my-auto"
-              }
-            >
-              {t("research.button2")}
-            </Button>
-          )}
+      <div className={"research page_" + currentLang}>
+        <div className="standard_margin" id="banner-publications">
+          <Heading level="h2">{t("research.title")}</Heading>
+          <Text type="p">
+            {t("research.description")}
+          </Text>
         </div>
-        <Divider/>
-      </main>
-    </div>
+        <main className="research">      
+          <Filters
+            search={search} // filtro 1: busqueda de texto
+            year={year} // filtro 2: busqueda por año
+            category={category} // filtro 3: busqueda por tipo de publicacion
+            researchLines={researchLines} // filtro 4: busqueda por linea de investigacion
+            researchLine={researchLine}
+            pathname={pathname}
+            items={items} // lista de papers
+            changeSearch={(search) => setSearch(search)} // función para cambiar estado de input de busqueda
+            changeYear={(year) => setYear(year)} // función para cambiar estado de input de año
+            changeCategory={(category) => setCategory(category)} // función para cambiar estado de categoria
+            changeResearchLine={(researchLine) => setResearchLine(researchLine)} // función para cambiar estado de linea de investigacion
+            categories={categories}
+            results={ papersFiltered instanceof Array ? papersFiltered.length : 0 }
+          />
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
+            {papersFiltered
+              .slice(0, papersToShow)
+              .map(({ date, type, doi, author, title, journal, researchlines, keywords }, key) => {
+                return (
+                  <Card
+                    key={key}
+                    currentLang={currentLang}
+                    cardType={"publication"}
+                    className={CardVariants({
+                      variant: "publication",
+                    })}
+                    date={date}
+                    category={type}
+                    title={title}
+                    author={author}
+                    doi={doi}
+                    researchLine={researchlines}
+                    keywords={keywords}
+                  ></Card>
+                );
+              })}
+          </section>
+
+          <div className="mb-4 w-full flex justify-center">
+            {papersFiltered.length > papersToShow && (
+              <Button
+                onClick={handleLoadMore}
+                className={
+                  ButtonVariants({
+                    variant: "secondary",
+                    size: "lg",
+                    radius: "rounded_sm",
+                  }) + " w-fit mt-4 my-auto"
+                }
+              >
+                {t("research.button2")}
+              </Button>
+            )}
+          </div>
+          <Divider/>
+        </main>
+      </div>
   );
 }

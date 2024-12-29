@@ -89,7 +89,7 @@ export default function Page() {
         <div id="researchlines"></div>
       </section>
     
-      <section className="margin_researchlines section-researchlines " id="researchlines" >
+      <section className="margin_researchlines section-researchlines" id="researchlines" >
       <Divider size="md" ></Divider>
       <Heading level="h3" className="mb-8">
           {t("front.ResearchLines.sectionTitle")}

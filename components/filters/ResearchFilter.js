@@ -3,7 +3,7 @@
 import React from "react";
 
 import { useTranslation } from "react-i18next";
-import { Badge } from "@/components/ui/badge";
+import { Mybadge } from "@/components/ui/mybadge";
 
 import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
@@ -27,13 +27,13 @@ export default function Filters({pathname, search, changeSearch, year, changeYea
             </div>
         </div>
         {results === undefined ? null : (
-          <Badge className="research_results">
+          <Mybadge className="research_results">
             <p className="">
               {" "}
               {t("research.filter.text")}
               <b> {results} </b>{" "}
             </p>
-          </Badge>
+          </Mybadge>
         )}
       </div>
     </>
