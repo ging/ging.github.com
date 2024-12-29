@@ -154,6 +154,15 @@ const isDescriptionLongEnough = (description) => {
   return calculateTextWidth(description) >= getIdealLength();
 };
 
+const deleteSpaces = (string) => {
+  let cleanStr = ''
+  for (const char of [...string]) {
+    if (char != ' ') {
+      cleanStr += char;
+    }
+  }
+  return cleanStr
+}
 
 const Card = React.forwardRef(
   (
@@ -376,7 +385,7 @@ const Card = React.forwardRef(
             let textColorResearchLine;
             let backgroundIcon;
             // coge solo la primera researchline para ponerle el fondo
-            switch (researchline) {
+            switch (deleteSpaces(researchline)) {
               case 'data':
                 backgroundColorResearchLine = 'bg-data-500/40';  // Para la categoría 'data'
                 backgroundIcon = "assets/img/icons/data_icon.svg";
@@ -410,7 +419,7 @@ const Card = React.forwardRef(
             return (
               <Mybadge key={index} className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}>
                 <img className="h-3 pr-1.5" src={backgroundIcon}></img>
-                <div className="pb-0.5">{t(`projects.researchLines.${researchline}`)} </div>  </Mybadge>
+                <div className="pb-0.5">{t(`projects.researchLines.${deleteSpaces(researchline)}`) } </div>  </Badge>
             )
           }) : null
           }
@@ -489,14 +498,14 @@ const Card = React.forwardRef(
               </Mybadge>
             )}
             <Divider></Divider>
-            <Text type="small"
-              className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>
-              {description_translation}
+            <Text type="small">
+              <p className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description_translation}</p>
+              <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
+                {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
+              </a>
             </Text>
-            <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
-              {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
-            </a> 
-            <div className="flex gap-2 mt-5">
+            
+            <div className="flex gap-2 mt-3">
               {researchgate && <Link target="_blank" href={researchgate}
                 className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
                 <Button href="#" className={ButtonVariants({
