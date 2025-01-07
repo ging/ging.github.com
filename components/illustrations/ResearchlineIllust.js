@@ -42,7 +42,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         <div className="data-spaces-item" id="data-spaces-item-4"></div>
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=data">
-      <ArrowOutwardIcon className=" text-white text-5xl absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
+      <ArrowOutwardIcon className=" text-white text-5xl !important absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" />
       <Mybadge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Mybadge>
       </Link>
     </div>
