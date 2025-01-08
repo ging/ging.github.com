@@ -33,7 +33,7 @@ export const es = {
           "Esta línea aborda el estudio y desarrollo de tecnologías avanzadas para el procesamiento, gestión y análisis de datos, incluyendo espacios de datos y gemelos digitales.",
       },
       ResearchLine2: {
-        ResearchLineTitle: "E-Learning",
+        ResearchLineTitle: "Tecnología educativa",
         ResearchLineBody:
           "Esta línea se centra en el diseño y desarrollo de tecnologías educativas avanzadas, incluyendo plataformas de aprendizaje, herramientas de autor, ia en educación y escape rooms educativas.",
       },
@@ -119,11 +119,11 @@ export const es = {
     professorCards: {
       roles: {
         1: "Catedrático de Universidad", // Full Professor
-        2: "Profesor contratado doctor", // Associate Professor
+        2: "Profesor Contratado Doctor", // Associate Professor
         3: "Candidato de doctorado",
         4: "Técnico a tiempo completo",
         5: "Profesor Titular de Universidad", // Professor
-        6: "Profesor ayudante doctor",
+        6: "Profesor Ayudante Doctor",
         7: "Investigador",
         8: "Personal externo colaborador"
       },

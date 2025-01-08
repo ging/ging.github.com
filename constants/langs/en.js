@@ -31,7 +31,7 @@ export const en = {
           "This line addresses the study and development of advanced technologies for data processing, management, and analysis, including data spaces and digital twins.",
       },
       ResearchLine2: {
-        ResearchLineTitle: "Tecnología educativa",
+        ResearchLineTitle: "E-Learning",
         ResearchLineBody:
           "This line focuses on the design and development of advanced educational technologies, including learning platforms, authoring tools, ia in education and educational escape rooms.",
       },
@@ -123,11 +123,11 @@ export const en = {
     title: "Team",
     professorCards: {
       roles: {
-        1: "Full Professor", // Catedrático de Universidad
+        1: "Professor", // Catedrático de Universidad
         2: "Associate Professor", // Profesor contratado doctor
         3: "PhD candidate", // Estudiante de doctorado
         4: "Full-Time Technician",
-        5: "Professor", // Profesor Titular de Universidad
+        5: "Associate Professor", // Profesor Titular de Universidad
         6: "Assistant Professor",
         7: "Researcher",
         8: "External colaborator",
