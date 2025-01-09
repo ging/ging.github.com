@@ -31,7 +31,7 @@ export const en = {
           "This line addresses the study and development of advanced technologies for data processing, management, and analysis, including data spaces and digital twins.",
       },
       ResearchLine2: {
-        ResearchLineTitle: "Tecnología educativa",
+        ResearchLineTitle: "E-Learning",
         ResearchLineBody:
           "This line focuses on the design and development of advanced educational technologies, including learning platforms, authoring tools, ia in education and educational escape rooms.",
       },

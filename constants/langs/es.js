@@ -33,7 +33,7 @@ export const es = {
           "Esta línea aborda el estudio y desarrollo de tecnologías avanzadas para el procesamiento, gestión y análisis de datos, incluyendo espacios de datos y gemelos digitales.",
       },
       ResearchLine2: {
-        ResearchLineTitle: "E-Learning",
+        ResearchLineTitle: "Tecnología educativa",
         ResearchLineBody:
           "Esta línea se centra en el diseño y desarrollo de tecnologías educativas avanzadas, incluyendo plataformas de aprendizaje, herramientas de autor, ia en educación y escape rooms educativas.",
       },
