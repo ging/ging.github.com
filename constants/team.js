@@ -3,7 +3,7 @@ export const myteam = [
       {
         name: "Pedro Reviriego",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.5",
+        role:"professor",
         description:
           "Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working mainly of generative AI.",
           description_es:
@@ -22,8 +22,8 @@ export const myteam = [
       },
       {
         name: "Juan Quemada",
-        position: "",
-        roleTranslationKey: "team.professorCards.roles.1",
+        position: "Juan Quemada lidera el Grupo de Internet de Nueva Generación dentro del Departamento de Ingeniería Telemática de la Universidad Politécnica de Madrid (UPM), donde es Catedrático. También ocupa la Cátedra Telefónica de la UPM para Internet de Nueva Generación y es el representante de la UPM en el World Wide Web Consortium. Sus intereses de investigación incluyen la arquitectura de aplicaciones colaborativas y sociales para Internet y la Web, incluyendo la computación en la nube, con una fuerte implicación en proyectos de investigación europeos y españoles.",
+        role:"fullprofessor",
         description:
           "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
           description_es:
@@ -31,6 +31,12 @@ export const myteam = [
           img: "assets/img/team/juan-quemada.jpg",
         github: "https://github.com/jquemada",
         email: "juan.quemada@upm.es",
+        researchgate:"https://www.researchgate.net/profile/Juan-Quemada",
+        orcid:"https://orcid.org/0000-0002-5575-8834",
+        webOfScience:"",
+        googleScholar:"",
+        linkedin:"https://www.linkedin.com/in/juanquemada/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/302994",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "1",
       },
@@ -38,7 +44,7 @@ export const myteam = [
         name: "Enrique Barra",
         // position: "team.professorCards.positions.1",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.2",
+        role:"associate",
         description:
           "Enrique Barra is a professor at Telematic Engineering Department, School of Telecommunications Engineering. He received the Ph.D. degree in Telematic Engineering from  Universidad Politécnica de Madrid (UPM). He has participated in many European projects, such as GLOBAL, FIWARE, and C@R. He is currently involved in several projects contributing to the generation and distribution of educational content. His research interests include artificial intelligence, e-safety, videoconferencing and games in education.",
           description_es:
@@ -59,7 +65,7 @@ export const myteam = [
       {
         name: "Álvaro Alonso",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.2",
+        role:"associate",
         description:
           "Álvaro Alonso, Ph.D. in Telecommunications Engineering, Professor at the Telematic Systems Engineering Department, School of Telecommunications Engineering, is a WebHTML5 Videoconference and Cloud Computing expert.He is the author of several articles and participates in a lot of Spanish and European research projects. His research interests include multi-conferencing systems in cloud computing, security, and the IoT in the future Internet.",
           description_es:
@@ -80,13 +86,19 @@ export const myteam = [
       {
         name: "Aldo Gordillo",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.2",
+        role:"associate",
         description:
           "Aldo Gordillo received the degree in Telecommunications Engineering and the PhD degree in Telematics Engineering from UPM, in 2012 and 2017, respectively. From 2012 to 2017, he was a Research and Development Engineer with the Telematics Engineering Department, UPM. He is currently an Assistant Professor with the Computer Science Department, also at UPM. His research interests include the field of technology-enhanced learning, with a special focus on creation, evaluation, and dissemination of e-learning resources, computer science education, game-based learning, and e-learning systems.",
           description_es:
-          "",
+          "Aldo Gordillo obtuvo el título de Ingeniero en Telecomunicaciones y el doctorado en Ingeniería Telemática por la Universidad Politécnica de Madrid (UPM) en 2012 y 2017, respectivamente. Entre 2012 y 2017, trabajó como Ingeniero de Investigación y Desarrollo en el Departamento de Ingeniería Telemática de la UPM. Actualmente, es Profesor Ayudante en el Departamento de Informática, también en la UPM. Sus intereses de investigación se centran en el ámbito del aprendizaje mejorado por tecnología, con especial énfasis en la creación, evaluación y difusión de recursos de aprendizaje electrónico, la educación en ciencias de la computación, el aprendizaje basado en juegos y los sistemas de aprendizaje en línea.",
           img: "assets/img/team/aldo-gordillo.jpg",
         github: "https://github.com/agordillo",
+        researchgate:"",
+        orcid:"https://orcid.org/0000-0001-9785-4827",
+        webOfScience:"",
+        googleScholar:"https://scholar.google.es/citations?hl=es-ES&user=mGSVUJcAAAAJ",
+        linkedin:"https://www.linkedin.com/in/aldogordillo/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/311549",
         email: "a.gordillo@upm.es",
         center: "E.T.S de ing. de sistemas informáticos",
         key: "7",
@@ -94,13 +106,19 @@ export const myteam = [
       {
         name: "Gabriel Huecas",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.5",
+        role:"professor",
         description:
           "Gabriel Huecas, Ph.D in Telecommunications Engineering, is currently the Postgraduate Assistant Director at the School of Telecommunications Engineering of Universidad Politécnica de Madrid (UPM), as well as a professor at the same institution. He is the author of different Java 2 programming books.",
           description_es:
-          "",
+          "Gabriel Huecas, doctor en Ingeniería de Telecomunicaciones, es actualmente Subdirector de Postgrado en la Escuela de Ingeniería de Telecomunicación de la Universidad Politécnica de Madrid (UPM), además de profesor en la misma institución. Es autor de diversos libros sobre programación en Java 2.",
           img: "assets/img/team/gabriel-huecas.jpg",
         github: "https://github.com/ghuecas",
+        researchgate:"https://www.researchgate.net/profile/Gabriel-Huecas",
+        orcid:"https://orcid.org/0000-0001-5673-9312",
+        webOfScience:"",
+        googleScholar:"https://scholar.google.es/citations?hl=es-ES&user=NZjJqg4AAAAJ",
+        linkedin:"https://www.linkedin.com/in/gabrielhuecas/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/309825",
         email: "gabriel.huecas@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "4",
@@ -108,27 +126,39 @@ export const myteam = [
       {
         name: "Joaquín Salvachúa",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.5",
+        role:"professor",
         description:
           "Joaquín Salvachúa is a professor at UPM, where he received the M.Sc., Ph.D. in Telecommunications Engineering. He is also FIWARE Technical Steering Committee member elected as Remarkable individuals. His research interests include advanced cloud and edge architectures, big data infrastructure, data privacy and usage control, NoSql databases, applications, and identity in blockchain.",
           description_es:
-          "",
+          "Joaquín Salvachúa es profesor en la Universidad Politécnica de Madrid (UPM), donde obtuvo el título de Ingeniero de Telecomunicación y el doctorado en la misma disciplina. Además, es miembro del Comité Técnico de FIWARE, elegido como una de las personas destacadas. Sus intereses de investigación incluyen arquitecturas avanzadas de nube y edge, infraestructuras de big data, privacidad de datos y control de uso, bases de datos NoSql, aplicaciones e identidad en blockchain.",
           img: "assets/img/team/joaquin-salvachua.jpg",
         github: "https://github.com/jsalvachua",
+        researchgate:"https://www.researchgate.net/profile/Joaquin-Salvachua",
+        orcid:"https://orcid.org/0000-0002-7269-8079",
+        webOfScience:"",
+        googleScholar:"https://scholar.google.es/citations?hl=es-ES&user=obUGjHEAAAAJ",
+        linkedin:"https://www.linkedin.com/in/jsalvachua/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/305315",
         email: "joaquin.salvachua@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "2",
       },
       {
         name: "Santiago Pavón",
-        roleTranslationKey: "team.professorCards.roles.5",
-        position: "",
+        role:"",
+        position: "professor",
         description:
           "Santiago Pavón Gómez obtained the B.S. and Ph.D. in Telecommunication Engineer from the Universidad Politécnica de Madrid (UPM) in 1987 and 1990 respectively. Santiago obtained the position of Assistant Professor in 1991 and the position of Associate Professor in 1992. He has published several articles and participated in national and international research projects related to Formal Description Techniques, CSCW, Tele-Education, collaboration services, IPv6, virtualization, identity services, safely (Cyspa) and Blockchain (BAPI).",
           description_es:
-          "",
+          "Santiago Pavón Gómez obtuvo el título de Ingeniero de Telecomunicación y el doctorado en la misma disciplina por la Universidad Politécnica de Madrid (UPM) en 1987 y 1990, respectivamente. En 1991 obtuvo el puesto de Profesor Ayudante y en 1992 el de Profesor Titular. Ha publicado varios artículos y participado en proyectos de investigación nacionales e internacionales relacionados con Técnicas de Descripción Formal, CSCW, Teleeducación, servicios de colaboración, IPv6, virtualización, servicios de identidad, seguridad (Cyspa) y Blockchain (BAPI).",
           img: "assets/img/team/santiago-pavon.jpg",
         github: "https://github.com/sanpago",
+        researchgate:"https://www.researchgate.net/profile/Santiago-Pavon",
+        orcid:"https://orcid.org/0000-0003-1525-5287",
+        webOfScience:"",
+        googleScholar:"",
+        linkedin:"https://www.linkedin.com/in/santiagopavon/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/309789",
         email: "santiago.pavon@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "3",
@@ -136,13 +166,19 @@ export const myteam = [
       {
         name: "Jose Andres Muñoz",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.6",
+        role:"assistant",
         description:
           "Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
           description_es:
-          "",
+          "Andrés obtuvo el título de Ingeniero en Telemática de la Escuela Superior Politécnica del Litoral (ESPOL) en 2013. Posteriormente, obtuvo el M.Sc. en Ingeniería de Redes y Servicios Telemáticos en la Universidad Politécnica de Madrid (UPM). Actualmente, Andrés es estudiante de doctorado en Ingeniería de Telecomunicación e investigador en el Grupo de Investigación en Internet de Nueva Generación. Su experiencia previa incluye la coordinación de laboratorios telemáticos y el puesto de asistente de servidores y comunicaciones, ambos en ESPOL. Andrés ha llevado a cabo diversos proyectos de investigación, como el desarrollo de una plataforma web para el control y monitoreo de parámetros ambientales en la agricultura o el Proyecto Kiswar de sistemas reactivos de gestión de evacuación para situaciones de emergencia.",
           img: "assets/img/team/jose-andres-munoz.jpg",
         github: "https://github.com/anmunoz",
+        researchgate:"https://www.researchgate.net/profile/Jose-Munoz-Arcentales",
+        orcid:"https://orcid.org/0000-0003-1554-437X",
+        webOfScience:"",
+        googleScholar:"https://scholar.google.es/citations?hl=es-ES&user=MtClPqMAAAAJ&hl",
+        linkedin:"https://www.linkedin.com/in/jos%C3%A9-andr%C3%A9s-mu%C3%B1oz-arcentales-2ba567193/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/335938",
         email: "joseandres.munoz@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "9",
@@ -150,7 +186,7 @@ export const myteam = [
       {
         name: "Alejandro Pozo",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.6",
+        role:"assistant",
         description:
           "Researcher and Ph.D. student at Politécnica of Madrid (UPM). He received the M.Sc. in Telecommunications Engineering from the UPM, Spain, in 2017, where he is currently pursuing the Ph.D. in Telecommunications Engineering and is a Research Assistant with the Next Generation Internet Research Group. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
           description_es:
@@ -172,11 +208,11 @@ export const myteam = [
       {
         name: "Carlos Arriaga",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.3",
+        role:"phd",
         description:
           "Carlos is a Ph.D. student in Telecommunication Engineering at Universidad Politécnica de Madrid (UPM).  He received the B.S. and M.Sc. in Telecommunications Engineering from UPM in 2020 and 2022. His research interests lie in primarily in the field of video-conference scalability and WebRTC.",
           description_es:
-          "",
+          "Carlos es estudiante de doctorado en Ingeniería de Telecomunicación en la Universidad Politécnica de Madrid (UPM). Obtuvo el título de Grado y el M.Sc. en Ingeniería de Telecomunicación por la UPM en 2020 y 2022, respectivamente. Sus intereses de investigación se centran principalmente en el campo de la escalabilidad de videoconferencias y WebRTC.",
           img: "assets/img/team/carlos-arriaga.jpg",
         github: "https://github.com/Arri98",
         email: "carlos.arriaga.prieto@upm.es",
@@ -193,7 +229,7 @@ export const myteam = [
       {
         name: "Javier Conde",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.6",
+        role:"assistant",
         description:
           "Javier Conde, received a Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. Javier is coordinating the IEEE Spanish Local Group on AI. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
           description_es:
@@ -214,19 +250,25 @@ export const myteam = [
       {
         name: "Carlos Aparicio",
         position: "",
-        roleTranslationKey: "team.professorCards.roles.3",
-        description: "",
+        role:"phd",
+        description: "Carlos is a Ph.D. student in Telecommunication Engineering at the Universidad Politécnica de Madrid (UPM). He holds a B.Sc. and M.Sc. in Fine Arts, specializing in design, as well as an M.Sc. in Big Data Analysis and Visualization. With over a decade of experience in interaction design and full-stack web development, Carlos now focuses his research on big data and efficient data transfer systems within data space ecosystems.",
         description_es:
-        "",
+        "Carlos es estudiante de doctorado en Ingeniería de Telecomunicación en la Universidad Politécnica de Madrid (UPM). Posee un Grado y un Máster en Bellas Artes, con especialización en diseño, así como un Máster en Análisis y Visualización de Big Data. Con más de una década de experiencia en diseño de interacción y desarrollo web full-stack, Carlos centra ahora su investigación en el big data y en sistemas eficientes de transferencia de datos dentro de ecosistemas de espacios de datos.",
         img: "assets/img/team/carlos-aparicio.jpeg",
-        github: "",
+        github: "https://github.com/caparicio-esd",
+        researchgate:"https://www.researchgate.net/profile/Carlos-Aparicio-De-Santiago",
+        orcid:"",
+        webOfScience:"",
+        googleScholar:"",
+        linkedin:"https://www.linkedin.com/in/carlosapa/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/336492",
         email: "ce.aparicio@upm.es",
         center: "E.T.S. de ingenieros de telecomunicacion",
         key: "30",
       },
       {
         "name":"Iciar Villamayor",
-        roleTranslationKey: "team.professorCards.roles.7",
+        role:"researcher",
         "description":"Iciar is a UX/UI designer. She received the B.S and M.Sc in graphic design and interactive graphic design from Escuela Superior de Diseño de Madrid in 2020 and 2021. She's currently teaching at Escuela Superior de Diseño de Madrid. She sporadically collaborates with the GING as a Digital Product Designer.",
         description_es: "Icíar es diseñadora UX/UI. Se graduó del Grado en Diseño con especialización en gráfico de la Escuela Superior de Diseño de Madrid, donde también obtuvo su Master en Diseño Interactivo. Actualmente desempeña su labor como profesora de Medios Informáticos en la Escuela Superior de Diseño de Madrid y colabora esporádicamente con GING como diseñadora de producto digital.",
         "img":"/assets/img/team/iciar-villamayor.jpg",
@@ -243,21 +285,33 @@ export const myteam = [
      },
       {
         "name":"Sonsoles López-Pernas",
-        roleTranslationKey: "team.professorCards.roles.8",
+        role:"external",
         "description":"Sonsoles has a Ph.D. in Telematics Engineering from Universidad Politécnica de Madrid (UPM). Since 2015, she has conducted her research at the GING research group. She is currently an Assistant Professor at the Department of Computer Science at UPM. Her research interests include technology-enhanced learning, educational escape rooms, learning analytics, and data usage control.",
-        description_es: "",
+        description_es: "Sonsoles tiene un doctorado en Ingeniería Telemática por la Universidad Politécnica de Madrid (UPM). Desde 2015, ha desarrollado su investigación en el grupo de investigación GING. Actualmente, es Profesora Ayudante en el Departamento de Informática de la UPM. Sus intereses de investigación incluyen el aprendizaje mejorado por tecnología, los escape rooms educativos, el análisis del aprendizaje (learning analytics) y el control de uso de datos.",
         "img":"/assets/img/team/sonsoles-lopez.jpg",
         "github":"https://github.com/sonsoleslp",
+        researchgate:"https://www.researchgate.net/profile/Sonsoles-Lopez-Pernas",
+        orcid:"https://orcid.org/0000-0002-9621-1392",
+        webOfScience:"",
+        googleScholar:"https://scholar.google.es/citations?hl=es-ES&user=67eUI4gAAAAJ&hl",
+        linkedin:"https://www.linkedin.com/in/sonsoleslopezpernas/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/308068",
         "email": "sonsoles.lopez.pernas@upm.es"
      },
   
    {
       "name":"Abel Carril",
-      roleTranslationKey: "team.professorCards.roles.8",
-      description_es: "",
-      "description":"Videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
+      role:"external",
+      description_es: "Abel es especialista en soporte de videoconferencias y streaming con más de 10 años de experiencia. Experto en codificación de audio/video y desarrollador de aplicaciones de escritorio en Windows .NET C#",
+      "description":"Abel is a videoconference and streaming support specialist with more than 10 years of experience. Audio/Video encoding expert and Windows .NET C# desktop applications developer.",
       "img":"/assets/img/team/abel-carril.jpg",
       "github":"https://github.com/eibol",
+      researchgate:"https://www.researchgate.net/profile/Abel-Carril",
+      orcid:"",
+      webOfScience:"",
+      googleScholar:"",
+      linkedin:"",
+      portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/303395",
       "email": "abel.carril@upm.es"
    }
     

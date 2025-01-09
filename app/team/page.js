@@ -31,18 +31,17 @@ const Team = (props) => {
           github,
           email,
           center,
-          roleTranslationKey,
           researchgate,
           orcid,
           webOfScience,
           googleScholar,
           linkedin,
-          portalUpm
+          portalUpm, 
+          role
         },
         key
       ) => {
-        const translatedRole = t(`${roleTranslationKey}`);
-        const translatedPosition = t(position);
+        const translatedRole = t("team.professorCards.roles." + role);
         return (
           <Card
             key={key}

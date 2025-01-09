@@ -498,7 +498,7 @@ const Card = React.forwardRef(
               </Mybadge>
             )}
             <Divider></Divider>
-            <Text type="small">
+            <Text type="small" className="pb-2">
               <p className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description_translation}</p>
               <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
                 {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}

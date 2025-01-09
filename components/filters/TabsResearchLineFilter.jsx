@@ -22,8 +22,8 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
       case 'ai':
         backgroundColor = 'bg-ai-700';  // Para la categoría 'ai'
         break;
-        case 'networks':
-        backgroundColor = 'bg-networks-500';  // Para la categoría 'ai'
+        case 'computing':
+        backgroundColor = 'bg-networks-600';  // Para la categoría 'ai'
         break;
         case 'e-learning':
           backgroundColor = 'bg-eLearning-600';  // Para la categoría 'ai'

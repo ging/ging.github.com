@@ -122,16 +122,16 @@ export const en = {
   team: {
     title: "Team",
     professorCards: {
-      roles: {
-        1: "Full Professor", // Catedrático de Universidad
-        2: "Associate Professor", // Profesor contratado doctor
-        3: "PhD candidate", // Estudiante de doctorado
-        4: "Full-Time Technician",
-        5: "Professor", // Profesor Titular de Universidad
-        6: "Assistant Professor",
-        7: "Researcher",
-        8: "External colaborator",
-      },
+      "roles":{
+        "professor":"Professor", // Profesor Titular de Universidad
+        "associate":"Associate Professor", // Profesor Titular / Profesor contratado doctor
+        "phd":"PhD candidate", // Estudiante de doctorado
+        "fulltec":"Full-Time Technician",
+        "fullprofessor":"Full Professor", // Profesor Titular de Universidad
+        "assistant":"Assistant Professor",
+        "researcher":"Researcher",
+        "external":"External staff"
+    },
     },
   },
   contact: {
