@@ -526,7 +526,7 @@ const Card = React.forwardRef(
                   size: "icon",
                   radius: "rounded_full",
                 }) + " bg-green-600 hover:bg-green-700 "}>
-                  <img className="h-7 max-w-7"  src="/assets/img/logos/orcid.png"/>
+                  <img className="h-7 max-w-7"  src="/assets/img/logos/orcid-1.png"/>
                   <Mybadge variant="secondary" size="xs" className="link_publication shadow-lg bg-[#00000097] absolute left-0 bottom-7">   Orcid </Mybadge>   
                 </Button>
               </Link>}
