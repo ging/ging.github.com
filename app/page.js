@@ -73,7 +73,7 @@ export default function Page() {
               radius: "rounded_sm",
             })}
           >
-            {t("front.action-button")} <ArrowForwardIcon className=" h-4 w-4" />
+            {t("front.action-button")} <ArrowForwardIcon  className="mt-0.5" sx={{ fontSize: 22 }} />
           </Link>
         </BannerContent>
       </Banner>

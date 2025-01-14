@@ -493,12 +493,12 @@ const Card = React.forwardRef(
             {email && (
               <Mybadge size="sm" variant="secondary"
                 className={"font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"}>
-                <MailOutlinedIcon className=" h-[14px] w-4 text-gray-300 mr-1" />
+                <MailOutlinedIcon className=" text-gray-300 mr-1"  sx={{ fontSize: 16 }}/>
                 {email}
               </Mybadge>
             )}
             <Divider></Divider>
-            <Text type="small" className="pb-2">
+            <Text type="small" className="pb-3">
               <p className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description_translation}</p>
               <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
                 {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}

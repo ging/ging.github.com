@@ -84,12 +84,12 @@ export default function Header(props) {
         <div className="block md:hidden">
           {!state.open ? (
             <MenuOutlinedIcon
-              className="w-6 h-6"
+            sx={{ fontSize: 24 }}
               onClick={() => setState({ open: !state.open })}
             />
           ) : (
             <CloseOutlinedIcon
-              className="w-6 h-6"
+            sx={{ fontSize: 24 }}
               onClick={() => setState({ open: !state.open })}
             />
           )}

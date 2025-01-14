@@ -38,7 +38,7 @@ export default function Footer(props) {
         />
         <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0">
           <div className="flex flex-row">
-            <EmailOutlinedIcon className="mr-2" />
+            <EmailOutlinedIcon className="mr-2 mt-0.5"  sx={{ fontSize: 20 }}/>
             <Text className=" text-[14px] flex gap-1">
               <b>{t("footer.email")} </b>
             </Text>
@@ -79,7 +79,7 @@ export default function Footer(props) {
               size: "icon_sm",
               radius: "rounded_full",
             }) + " bg-red-600 hover:bg-red-600 mr-2"}>
-              <YouTube className="h-4" />
+              <YouTube  sx={{ fontSize: 18 }}/>
             </Button>
             <p>Youtube</p>
           </Link>
@@ -89,7 +89,7 @@ export default function Footer(props) {
               size: "icon_sm",
               radius: "rounded_full",
             }) + " bg-blue-600 hover:bg-blue-600 mr-2"}>
-              <ArticleIcon className="h-4" />
+              <ArticleIcon sx={{ fontSize: 18 }}/>
 
             </Button>
             <p>ResearchGate</p>
@@ -100,7 +100,7 @@ export default function Footer(props) {
               size: "icon_sm",
               radius: "rounded_full",
             }) + " bg-orange-500 hover:bg-orange-500 mr-2"}>
-              <GitHub className="h-4" />
+              <GitHub sx={{ fontSize: 18 }} />
             </Button>
             <p> Github</p>
           </Link>

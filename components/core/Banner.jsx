@@ -93,7 +93,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
    "relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
   <img
       className="
-       h-[32rem] md:h-[85vh] flex items-center justify-center object-cover w-screen opacity-80"
+     md:h-[85vh] flex items-center justify-center object-cover w-screen opacity-80"
       src="assets/img/backgrounds/landing_4.svg"
       alt="icon"
     />
