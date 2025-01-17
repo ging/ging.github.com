@@ -62,50 +62,6 @@ const tagContainerClasses = cn(
   "mt-6 w-full flex flex-wrap gap-2 justify-start"
 );
 
-
-const renderTags = (tags) => {
-  if (!tags) return null;
-  const tagsArray = tags.split(",").map((tag) => tag.trim()); // Convierte el string en array y elimina espacios
-  return tagsArray.map((tag, index) => (
-    <Mybadge key={index} variant="default">
-      {tag}
-    </Mybadge> // Añade una key a cada Label
-  ));
-};
-
-
-
-// quitarle guión, añadir espaciado, mayúscula (Formateo)
-const renderCategory = (category) => {
-  if (!category) return null;
-  const categoryFormat = category
-    .split("-") // cadena en un array de palabras
-    .map((palabra) => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // la primera letra en mayúscula
-    .join(" "); // unir las palabras con espacio
-  return categoryFormat
-};
-
-const translateCategory = (category, currentLang) => {
-  if (currentLang == "es") {
-    if (category == "article-journal") {
-      category = "artículo-revista";
-      // console.log(category);
-    } else if (category == "paper-conference") {
-      category = "acta-congreso";
-      // console.log(category);
-    } else if (category == "book") {
-      category = "libro";
-      // console.log(category);
-    } else if (category == "chapter") {
-      category = "capítulo";
-      // console.log(category);
-    }
-  } else if (currentLang == "en") {
-    // transformar "artículo-revista" en article journal
-  }
-  return renderCategory(category);
-};
-
 const returnPwidth = () => {
   const minWidth = 600;      // Ancho mínimo
   const maxWidth = 1600;     // Ancho máximo
@@ -125,6 +81,7 @@ const returnPwidth = () => {
   }
 };
 
+// VER MAS
 const getIdealLength = () => {
   const isMobile = window.innerWidth <= 600;
 
@@ -432,7 +389,7 @@ const Card = React.forwardRef(
               {title}
             </CardTitle>
             <div className="flex"> <Text type="small" className="font-bold">
-              {translateCategory(category, currentLang)}</Text>
+           {t(`research.filter.${category}`)}</Text>
               <div className="mx-2 mb-2">·</div> <Text type="small">    {date && date[0]} </Text> </div>
             <Text className="text-gray-300/90 mb-4" type="small">{author}</Text>
             <div className="flex flex-wrap gap-1.5">

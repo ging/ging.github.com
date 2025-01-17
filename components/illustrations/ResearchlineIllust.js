@@ -42,7 +42,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         <div className="data-spaces-item" id="data-spaces-item-4"></div>
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=data">
-      <ArrowOutwardIcon className=" text-white absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
+      <ArrowOutwardIcon className=" text-white absolute right-1 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
       <Mybadge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Mybadge>
       </Link>
     </div>
@@ -56,7 +56,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=ai">
-        <ArrowOutwardIcon className=" text-background  absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
+        <ArrowOutwardIcon className=" text-background  absolute right-1 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
         <Mybadge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Mybadge>
       </Link>
     </div>
@@ -71,7 +71,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         {/* <div className="generative-ai-item" id="generative-ai-item-4"></div> */}
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=e-learning">
-      <ArrowOutwardIcon className=" text-white  absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
+      <ArrowOutwardIcon className=" text-white  absolute right-1 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
       <Mybadge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Mybadge>
       </Link>
     </div>
@@ -86,7 +86,7 @@ const ResearchlineIllust = ({ researchLine }) => {
         ></img>
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=computing">
-      <ArrowOutwardIcon className=" text-white absolute right-2 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
+      <ArrowOutwardIcon className=" text-white absolute right-1 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
         <Mybadge variant="secondary" size="sm" className="link_publication absolute right-2 bottom-14">   {t("front.ResearchLines.button")} </Mybadge>
       </Link>
     </div>
