@@ -74,9 +74,6 @@ module.exports = {
         },
         accent: { // morado
           DEFAULT: "#62388E",
-          // 300: "#FF9900",
-          // 200: "#FFBD1B",
-          // 100: "#FFE685",
         },
         background: {
           600: "#3a3e47",
