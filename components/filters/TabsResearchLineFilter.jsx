@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 
@@ -22,15 +22,15 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
       case 'ai':
         backgroundColor = 'bg-ai-700';  // Para la categoría 'ai'
         break;
-        case 'computing':
-        backgroundColor = 'bg-networks-600';  // Para la categoría 'ai'
+      case 'computing':
+        backgroundColor = 'bg-networks-600';  // Para la categoría 'computing'
         break;
-        case 'e-learning':
-          backgroundColor = 'bg-eLearning-600';  // Para la categoría 'ai'
-          break;
-              case 'all': 
-          backgroundColor = 'bg-gray-700';
-          break;
+      case 'e-learning':
+        backgroundColor = 'bg-eLearning-600';  // Para la categoría 'elearning'
+        break;
+      case 'all': 
+        backgroundColor = 'bg-gray-700';
+        break;
       default:
         backgroundColor = 'bg-gray-700';  // Valor por defecto si no hay coincidencia
         break;
@@ -63,7 +63,7 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
       {researchLines.map((item, index) => (
         <button key={index} className={classes(item)} 
           onClick={() => { handleResearchLineChange(item) }}>
-          {item.name === 
+          {item === 
           "all" ? t("projects.researchLines.all") :
            t(`projects.researchLines.${item}`)}
         </button>

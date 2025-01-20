@@ -11,12 +11,12 @@ export default function FilterText( {pathname, search, changeSearch} ) {
 
   // esta funcion le quita la barra a pathname (ej, /research), para que
   // en la hoja de traducciones se coja bien el nombre de la página, sin la barra
-  let pathnameFormated = pathname.replace("/", "")
+  let pathnameFormatted = pathname.replace("/", "")
 
   const { t } = useTranslation();
   return (
     <div className={pathname === "/research" ? "filter flex flex-wrap md:w-1/2" : "filter flex flex-wrap w-full " }>
-    <Label htmlFor="search">{t(`${pathnameFormated}.filter.fieldTitle1`)}</Label>
+    <Label htmlFor="search">{t(`${pathnameFormatted}.filter.fieldTitle1`)}</Label>
     <Input
       className="w-full"
       key={" "}
