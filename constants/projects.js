@@ -45,7 +45,7 @@ export const projects = [
     projectType: "european-project"
 	},
   {
-    logo: "/assets/img/logos/lynkia.svg",
+    logo: "/assets/img/logos/lynckia.svg",
     route: "http://lynckia.com/",
     title: "Lynckia",
     description: "Lynckia is based on WebRTC technologies. It is 100% compatible with latest stable versions of Google Chrome. Web users will be able to talk from their web browsers with no need to installing anything. Lynckia allows web developers to include videoconference rooms on their web. They can also implement streaming, recording and any other real-time multimedia features!",
@@ -128,7 +128,7 @@ export const projects = [
      projectType: "european-project"
 	},
   {
-    logo: "/assets/img/logos/eid4u.png",
+    logo: "/assets/img/logos/eid4u.svg",
     route:
       "https://ec.europa.eu/inea/en/connecting-europe-facility/cef-telecom",
     title: "eID4U",
