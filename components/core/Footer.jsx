@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { activeRoutes } from "@/constants/routes";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Image from "../ui/image";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import Link from 'next/link';
 import { YouTube } from "@mui/icons-material";
 import { GitHub } from "@mui/icons-material";

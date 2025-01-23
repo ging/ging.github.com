@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
 import { useTranslation } from "react-i18next";
 import FaceIcon from "@mui/icons-material/Face";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
 import Heading from "@/components/ui/Heading";
 import { Mybadge, badgeVariants } from "@/components/ui/mybadge";
 import { Button, buttonVariants } from "@/components/ui/button";

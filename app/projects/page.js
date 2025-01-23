@@ -6,7 +6,7 @@ import { projects } from "@/constants/projects";
 import { Card } from "@/components/core/Cards";
 import { researchlines } from "@/constants/researchlines";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text"
+import Text from "@/components/ui/text"
 import ProjectsFilter from "@/components/filters/ProjectsFilter"
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -111,7 +111,7 @@ function ProjectsPage() {
       (!researchLine || (researchLine === "all" || item.researchLine.includes(researchLine))) &&
     (!projectType || (item.projectType && item.projectType === projectType))
   );
-  console.log(filteredItems.map(filteredItem => filteredItem ));
+  /* console.log(filteredItems.map(filteredItem => filteredItem ));*/
   return (
       <div>
         <div className="standard_margin" id="banner-publications">

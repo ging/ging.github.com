@@ -2,15 +2,21 @@
 
 import clsx from "clsx";
 import * as React from "react";
+import { useState } from "react";
+import Link from "next/link";
 
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
+// Data
+import { useTranslation } from "react-i18next";
+import { researchlines } from "@/constants/researchlines";
 
+// Components
 import Heading from "../ui/Heading";
 import { Mybadge, badgeVariants } from "../ui/mybadge";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
 import { Divider } from "../ui/divider";
@@ -28,20 +34,12 @@ import {
   CardHeader,
 } from "@/components/ui/customCard";
 
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-
-
-import {
-  FaceIcon,
-  ArrowRightIcon,
-} from "@radix-ui/react-icons";
-
+// Icons
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import ArticleIcon from '@mui/icons-material/Article';
-import Link from "next/link";
-import { researchlines } from "@/constants/researchlines";
+
 
 const CardVariants = cva(
   "border border-primary min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
@@ -57,59 +55,6 @@ const CardVariants = cva(
     },
   }
 );
-
-const tagContainerClasses = cn(
-  "mt-6 w-full flex flex-wrap gap-2 justify-start"
-);
-
-const returnPwidth = () => {
-  const minWidth = 600;      // Ancho mínimo
-  const maxWidth = 1600;     // Ancho máximo
-  const minValue = 2.1;      // Valor mínimo (para 1600px y más)
-  const maxValue = 2.4;      // Valor máximo (para 600px)
-
-  const width = window.innerWidth;
-
-  if (width <= minWidth) {
-    return maxValue; // Si el ancho es <= 600, devuelve 2.4
-  } else if (width >= maxWidth) {
-    return minValue; // Si el ancho es >= 1600, devuelve 1.8
-  } else {
-    // Cálculo lineal entre 600 y 1600
-    const ratio = (width - minWidth) / (maxWidth - minWidth);
-    return maxValue - ratio * (maxValue - minValue);
-  }
-};
-
-// VER MAS
-const getIdealLength = () => {
-  const isMobile = window.innerWidth <= 600;
-
-  if (isMobile) {
-    return (window.innerWidth) * 4;
-  } else {
-    return ((window.innerWidth / returnPwidth()) - 150) * 4;
-  }
-};
-
-const calculateTextWidth = (description) => {
-  const canvas = document.createElement("canvas");
-  const context = canvas.getContext("2d");
-  context.font = "16px sans-serif";
-
-  const characters = [...description];
-
-  let totalWidth = 0;
-  for (const letter of characters) {
-    const letterWidth = context.measureText(letter).width;
-    totalWidth += letterWidth;
-  }
-  return totalWidth;
-};
-
-const isDescriptionLongEnough = (description) => {
-  return calculateTextWidth(description) >= getIdealLength();
-};
 
 const deleteSpaces = (string) => {
   let cleanStr = ''
@@ -210,21 +155,22 @@ const Card = React.forwardRef(
 
     // PROJECT
     const projectCard = (
-      <CustomCard className={cn(CardVariants({ direction, className })) + " hover:scale-[100%] border-transparent shadow-none border-b-gray-400 border-b-1 bg-transparent rounded-none flex-col sm:flex-row gap-3 sm:gap-6 px-0 py-6 items-start"}>
-        <div className={`w-full h-fit relative sm:self-stretch sm:w-1/2 flex min-w-[184px] sm:min-h-[200px] sm:h-[237px] sm:max-h-[237px] justify-center items-center ${backgroundColor} rounded-md `}>
-          <Image className="brightness-0 invert min-h-[160px] !p-8 sm:!p-12 " src={logo} fit="contain"
+      <CustomCard className={cn(CardVariants({ direction, className })) 
+        + "hover:scale-[100%] bg-transparent border-transparent shadow-none border-b-gray-400 border-b-1 rounded-none py-6 flex flex-col items-start sm:flex-row gap-3 sm:gap-6"}>
+        <div className={`w-full min-w-[184px] sm:w-1/2 h-[237px] ${backgroundColor} rounded-md `}>
+          <Image className="brightness-0 invert p-8" 
+            src={logo}
+            fit="contain"
             layout={"bottom-right"}
             hasMybadge={true}
             badgeVariant={"secondary"}
             badgeSize={"md"}
             badgeContent={t(`projects.type.${projectType}`)}
           />
-
         </div>
 
-        <CardBody className="">
-          <CardContent className="gap-5 mt-0.5 lg:mt-0 lg:gap-[22px]">
-            {/* lg:gap-[22px] */}
+        <CardBody>
+          <CardContent className="gap-5 my-0.5 lg:mt-0 lg:gap-[22px]">
             <div>
               <CardTitle level="h3" className=" w-fit hover:text-blue-400 transition-all mb-0">
                 {title && <Link href={route} rel="noopener noreferrer"
@@ -232,55 +178,55 @@ const Card = React.forwardRef(
                 }
               </CardTitle>
 
-              {description_translation && <div className="flex flex-col gap-1"> <CardDescription className={isExpanded ? "line-clamp-none" : "line-clamp-4"}>{description_translation}</CardDescription>
-                {isDescriptionLongEnough(description_translation) && <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription} > {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}</a>}
-              </div>}
+              {description_translation && 
+                <CardDescription lines={3}>
+                  {description_translation}
+                </CardDescription>
+              }
             </div>
-            <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 lg:justify-between lg:items-end">
-              <div className="flex gap-2 flex-wrap">
-                <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2 ">
-                  {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
-                    // fondo researchline cards
-                    let backgroundColorResearchLine;
-                    let textColorResearchLine;
+            {/* <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 justify-between lg:items-end"> */}
+              <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2">
+                {Array.isArray(researchLine) ? researchLine.map((item, index) => {
 
-                    // coge solo la primera researchline para ponerle el fondo
-                    switch (item) {
-                      case 'data':
-                        backgroundColorResearchLine = 'bg-data-500';  // Para la categoría 'data'
-                        break;
-                      case 'videoconference':
-                        backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
-                        break;
-                      case 'ai':
-                        backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
-                        // textColorResearchLine = "text-gray-900"
-                        break;
-                      case 'computing':
-                        backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
-                        break;
-                      case 'e-learning':
-                        backgroundColorResearchLine = 'bg-eLearning-500';  // Para la categoría 'ai'
-                        break;
-                      default:
-                        backgroundColorResearchLine = 'bg-gray-500';  // Valor por defecto si no hay coincidencia
-                        break;
-                    }
+                  // fondo researchline cards
+                  let backgroundColorResearchLine;
+                  let textColorResearchLine;
 
-
-                    return (<Mybadge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> {t(`projects.researchLines.${item}`)}    </Mybadge>)
-                  })
-                    : null}
-                </div>
-
+                  // coge solo la primera researchline para ponerle el fondo
+                  switch (item) {
+                    case 'data':
+                      backgroundColorResearchLine = 'bg-data-500';  // Para la categoría 'data'
+                      break;
+                    case 'videoconference':
+                      backgroundColorResearchLine = 'bg-videoconference-500';  // Para la categoría 'videoconference'
+                      break;
+                    case 'ai':
+                      backgroundColorResearchLine = 'bg-ai-700';  // Para la categoría 'ai'
+                      // textColorResearchLine = "text-gray-900"
+                      break;
+                    case 'computing':
+                      backgroundColorResearchLine = 'bg-networks-500';  // Para la categoría 'ai'
+                      break;
+                    case 'e-learning':
+                      backgroundColorResearchLine = 'bg-eLearning-500';  // Para la categoría 'ai'
+                      break;
+                    default:
+                      backgroundColorResearchLine = 'bg-gray-500';  // Valor por defecto si no hay coincidencia
+                      break;
+                  }
+                  return (<Mybadge className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`} key={index} variant="default" size="lg"> 
+                    {t(`projects.researchLines.${item}`)}    
+                  </Mybadge>)
+                  }) : null}
               </div>
               {/* <Button size="default" radius="rounded_sm" variant="outline" > 
                   <Link href={`/research?researchline=${pubResearchLine}`}>
                     {t(`projects.card.button`)} 
                   </Link>                 
-                </Button> */}
-            </div>
+                </Button> 
+              */}
+            {/* </div> */}
           </CardContent>
 
         </CardBody>
@@ -380,17 +326,17 @@ const Card = React.forwardRef(
             )
           }) : null
           }
-
-
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
             <CardTitle level="title-sm">
               {title}
             </CardTitle>
-            <div className="flex"> <Text type="small" className="font-bold">
-           {t(`research.filter.${category}`)}</Text>
-              <div className="mx-2 mb-2">·</div> <Text type="small">    {date && date[0]} </Text> </div>
+            <div className="flex"> 
+              <Text type="small" className="font-bold">{t(`research.filter.${category}`)}</Text>
+              <div className="mx-2 mb-2">·</div> 
+              <Text type="small">{date && date[0]}</Text>
+            </div>
             <Text className="text-gray-300/90 mb-4" type="small">{author}</Text>
             <div className="flex flex-wrap gap-1.5">
               {Array.isArray(keywords) ? keywords.map((keyword, index) => {
@@ -429,23 +375,21 @@ const Card = React.forwardRef(
         className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
       >
         {(img || svg) && (
-
-          <div className="relative h-[160px] w-[160px]">
-            <div className="absolute h-[160px] w-[160px]  rounded-full bg-blue-700 opacity-30"></div>
-            <img src={img || "placeholder.jpg"}
-              className={"absolute h-[160px] w-[160px] rounded-full object-cover saturate-0  mix-blend-lighten"}
-            >
-            </img>
+          <div className="aspect-square h-60 rounded-full overflow-hidden bg-blue-700/30">
+            <Image className="saturate-0 mix-blend-lighten" 
+              src={img || "placeholder.jpg"}
+              fit="cover"
+            />
           </div>
         )}
         {(name || description || email) && (
-          <CardContent className="flex justify-center items-start mb-auto">
-            <div className="flex flex-row">
+          <CardContent className="flex justify-start items-start mb-auto">
+            {/* <div className="flex flex-row"> */}
               <CardTitle level="title-sm" className={"text-inherit text-center"}>
                 <b>{name} </b>
               </CardTitle>
               {/* {position && (<Mybadge> {position}</Mybadge>)} */}
-            </div>
+            {/* </div> */}
             {role && <CardDescription type="short-p">{role}</CardDescription>}
             {email && (
               <Mybadge size="sm" variant="secondary"
@@ -455,36 +399,47 @@ const Card = React.forwardRef(
               </Mybadge>
             )}
             <Divider></Divider>
-            <Text type="small" className="pb-3">
-              <p className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}>{description_translation}</p>
-              <a className="cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" onClick={toggleDescription}>
-                {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
-              </a>
-            </Text>
+            <div className="pb-3">
+              <Text
+                type="small"
+                className={isExpanded ? "line-clamp-none text-white" : "line-clamp-4 text-white"}
+              >
+                {description_translation}
+              </Text>
+              <Button 
+                size="sm" variant="link" 
+                className="!min-w-fit p-0 cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2" 
+                onClick={toggleDescription}
+                >
+                  {isExpanded ? t(`projects.card.toggleLess`) : t(`projects.card.toggleMore`)}
+              </Button>
+            </div>
+            
             
             <div className="flex gap-2 mt-3">
-              {researchgate && <Link target="_blank" href={researchgate}
-                className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+              {researchgate &&
+                <Link target="_blank" href={researchgate}
+                  className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
                 <Button href="#" className={ButtonVariants({
                   variant: "default",
                   size: "icon",
                   radius: "rounded_full",
                 }) + " bg-blue-600 hover:bg-blue-700 "}>
                   <img className="h-5 max-w-5 contrast-200 saturate-50"  src="/assets/img/logos/researchgate.png"/>
-                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7">   ResearchGate </Mybadge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication absolute left-0 bottom-7 bg-[#00000097]">   ResearchGate </Mybadge>   
 
                 </Button>
                 
               </Link>}
               {orcid && <Link target="_blank" href={orcid}
-                className={" icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+                className={"relative icon_link_publication mb-1 lg:mb-1.5 hover:underline z-50 w-fit flex flex-row items-center cursor-pointer"}>
                 <Button href="#" className={ButtonVariants({
                   variant: "default",
                   size: "icon",
                   radius: "rounded_full",
                 }) + " bg-green-600 hover:bg-green-700 "}>
                   <img className="h-7 max-w-7"  src="/assets/img/logos/orcid-1.png"/>
-                  <Mybadge variant="secondary" size="xs" className="link_publication shadow-lg bg-[#00000097] absolute left-0 bottom-7">   Orcid </Mybadge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication absolute -translate-x-1/2 left-1/2 bottom-7 shadow-lg bg-[#00000097]">   Orcid </Mybadge>   
                 </Button>
               </Link>}
               {/* {webOfScience && <Link target="_blank" href={webOfScience}
@@ -505,7 +460,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-blue-800 hover:bg-blue-900 "}>
                   <img className="h-7 max-w-7 rounded-full"  src="/assets/img/logos/google-scholar.png"/>
-                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Google Scholar </Mybadge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"> Google Scholar </Mybadge>   
                 </Button>
               </Link>}
               {linkedin && <Link target="_blank" href={linkedin}
@@ -516,7 +471,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-[#006198] hover:bg-[#006198] "}>
                  <img className="h-[28px] rounded-full max-w-[28px] object-scale-down "  src="/assets/img/logos/linkedin.png"/>
-                 <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> LinkedIn </Mybadge>   
+                 <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"> LinkedIn </Mybadge>   
                 </Button>
               </Link>}
               {portalUpm  && <Link target="_blank" href={portalUpm}
@@ -527,7 +482,7 @@ const Card = React.forwardRef(
                   radius: "rounded_full",
                 }) + " bg-blue-600 hover:bg-blue-700 "}>
                   <p className="text-2xs font-bold"> UPM </p>
-                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute left-0 bottom-7"> Portal Científico UPM </Mybadge>   
+                  <Mybadge variant="secondary" size="xs" className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"> Portal Científico UPM </Mybadge>   
                 </Button>
               </Link>}
             </div>

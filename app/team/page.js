@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 // Components
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
 import { Card, CardVariants } from "@/components/core/Cards";
 import dynamic from "next/dynamic";
 
@@ -75,7 +75,7 @@ const Team = (props) => {
         <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
           {t("team.title")}
         </Heading>
-        <section className="justify-center flex flex-wrap xs:gap-x-6 md:gap-x-8 gap-y-8 md:gap-y-12">
+        <section className="justify-center flex flex-wrap xs:gap-x-8 md:gap-x-10 gap-y-8 md:gap-y-12">
           {Array.isArray(team) && team.length > 0 ? (
             renderMembers(team)
           ) : (

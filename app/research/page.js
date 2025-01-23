@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
 import { Divider } from "@/components/ui/divider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";

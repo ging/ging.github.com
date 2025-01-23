@@ -159,6 +159,7 @@ module.exports = {
     }
   },
   plugins: [
+    require("@tailwindcss/line-clamp"),
     plugin(function({ addBase, theme }) {
       // addBase({
       //   'h1': { fontFamily: theme('fontFamily.inter') },

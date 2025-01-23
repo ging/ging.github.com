@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
-import Text from "@/components/ui/Text";
+import Text from "@/components/ui/text";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "@/components/ui/image";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";

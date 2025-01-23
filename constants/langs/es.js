@@ -92,8 +92,8 @@ export const es = {
       "e-learning": "E-learning",
       "videoconference": "Videoconferencia",
       "computing": "Computación Fiable",
-      other: "Otros",
-      all: "Todo",
+      "other": "Otros",
+      "all": "Todo",
     },
     "filter": {
       "fieldTitle1":"Búsqueda por nombre",

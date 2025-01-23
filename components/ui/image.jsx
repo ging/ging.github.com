@@ -14,13 +14,14 @@ const Image = ({
   badgeVariant = "",
   badgeSize = "",
   badgeContent = "badge",
-  isSvg = false, // prop para detectar SVG
-  svgCode = "",  // SVG en formato de código
+  svgCode,  // SVG en formato de código
 }) => {
-  const imageContainerClasses = clsx(
-    "relative flex w-full h-full overflow-hidden",
-    className 
-  );
+
+  /**----------------------------------
+   * Component Styles
+   * ----------------------------------
+   */
+  const imageContainerClasses = "relative flex w-full h-full overflow-hidden " + className;
 
   const imageClasses = clsx(
     "w-full h-full flex items-center justify-center", 
@@ -43,12 +44,15 @@ const Image = ({
 
   return (
     <div className={imageContainerClasses}>
-      {isSvg ? (
+      {/* Se pinta si hay código svg */}
+      {svgCode && (
         <div
           className={imageClasses + ""}
           dangerouslySetInnerHTML={{ __html: svgCode }} // Renderizamos SVG
         />
-      ) : (
+      )}
+      {/* Se pinta si hay una ruta de imagen */}
+      { src && (
         <img src={src} alt={alt} className={imageClasses} />
       )}
       {hasMybadge && (

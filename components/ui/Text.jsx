@@ -2,6 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
+import { useRef } from "react";
 
 /* 
   ------------------------------------------------------------------
@@ -9,7 +10,7 @@ import clsx from "clsx";
   ------------------------------------------------------------------
 */
 
-const Text = ({ type = "p", children, className }) => {
+const Text = React.forwardRef(({ type = "p", children, className, ...props }, ref) => {
   // Determinar el componente HTML según el nivel
   let Component;
   switch (type) {
@@ -39,7 +40,7 @@ const Text = ({ type = "p", children, className }) => {
     className
   ])
 
-  return <Component className={classes}>{children}</Component>;
-};
+  return <Component ref={ref} className={classes} {...props}>{children}</Component>;
+});
 
 export default Text;
