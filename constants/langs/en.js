@@ -76,6 +76,7 @@ export const en = {
       "chapter":"Chapter",
       "document":"Document",
       "all":"All",   
+      "text":"Results"
     },
     button: "Read publication",
     button2: "Load more",
