@@ -31,10 +31,11 @@ export default function Footer(props) {
   return (
     <footer className="narrow_padding flex flex-col flex-wrap justify-start gap-8 xs:flex-row md:justify-between items-start bg-background-300 text-gray-300">
       <div className={projectLogoContainerClasses}>
-        <img
+      <Image
           className="min-w-40 max-w-[155px] opacity-70 mb-4" // Corrige la sintaxis del max-width
           src="ging_logo.png"
-          alt="logo placeholder"
+          alt="ging logo"
+          fit="contain"
         />
         <div className=" flex justify-center flex-col gap-0 xs:gap-2 md:flex-col md:gap-0">
           <div className="flex flex-row">

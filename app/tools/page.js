@@ -63,7 +63,7 @@ export default function Tools(props) {
             return (
               <div className="tool" key={title}>
                 <div className="relative card-researchline rounded-md  flex justify-center items-center aspect-square bg-blue-500 max-w-[300px]">
-                  <img src={img} alt="herramientas / tools"></img>
+                  <Image className={'p-6'} src={img} alt="herramientas / tools" fit="contain"></Image>
                   <Link
                     className="icon_link_publication"
                     target="_blank"

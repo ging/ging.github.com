@@ -10,10 +10,9 @@ const Image = ({
   alt = "",
   className,
   layout = "top-right",
-  hasMybadge = false,
   badgeVariant = "",
   badgeSize = "",
-  badgeContent = "badge",
+  badgeContent = "",
   svgCode,  // SVG en formato de código
 }) => {
 
@@ -55,7 +54,7 @@ const Image = ({
       { src && (
         <img src={src} alt={alt} className={imageClasses} />
       )}
-      {hasMybadge && (
+      {badgeContent && (
         <Mybadge className={badgeLayout} variant={badgeVariant} size={badgeSize}>
           {badgeContent}
         </Mybadge>

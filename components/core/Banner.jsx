@@ -7,6 +7,7 @@ import Text from "../ui/text";
 import { Button, ButtonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "../ui/image";
 
 // la imagen de fondo del banner está enganchada en tailwind.config
 
@@ -37,10 +38,11 @@ BannerContent.displayName = "BannerContent";
 
 
 const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
-  <img
-      className="w-36 md:w-48 mb-2 md:mb-6 flex items-center justify-center object-contain"
+  <Image
+      className="w-36 md:w-48 mb-2 md:mb-6"
       src="ging_logo.png"
-      alt="icon"
+      alt="Ging logo"
+      fit="contain"
     />
 ));
 BannerLogo.displayName = "BannerLogo";
@@ -91,11 +93,11 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   //  + 
    //landing 3
    "relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
-  <img
-      className="
-     md:h-[85vh] flex items-center justify-center object-cover w-screen opacity-80"
+    <Image
+      className="md:h-[85vh] opacity-80"
       src="assets/img/backgrounds/landing_4.svg"
-      alt="icon"
+      alt="background illustration"
+      fit="cover"
     />
     {/* <div className="hidden md:flex md:flex-col absolute  h-[90vh]  p-3 justify-start">
       <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-2 col-start-2">

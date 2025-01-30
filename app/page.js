@@ -97,7 +97,7 @@ export default function Page() {
         </Heading>
         {/* Cards con iconos */}
         
-        <div className="flex flex-col gap-4 pb-12 sm:grid sm:grid-cols-2 md:grid-cols-3  auto-rows-min lg:grid-cols-5 ">
+        <div className="flex flex-col gap-4 items-center pb-12 sm:items-start sm:grid sm:grid-cols-2 md:grid-cols-3 auto-rows-min lg:grid-cols-5 ">
       
           <Card 
           cardType={"researchline"} 

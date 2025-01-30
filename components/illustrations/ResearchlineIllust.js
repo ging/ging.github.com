@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Mybadge } from "@/components/ui/mybadge";
 import { useTranslation } from "react-i18next";
+import Image from "../ui/image";
 
 const ResearchlineIllust = ({ researchLine }) => {
       const { t, i18n } = useTranslation();
@@ -80,10 +81,11 @@ const ResearchlineIllust = ({ researchLine }) => {
   const ComputingIllust = (
     <div className="networks-illust illust">
       <div className="networks-illust-container illust-container ">
-        <img
+        <Image
           className="networks-illust-img"
           src="assets/img/networks_illust.png"
-        ></img>
+          fit="contain"
+        />
       </div>
       <Link className="icon_link_publication" target="_blank" href="projects?researchline=computing">
       <ArrowOutwardIcon className=" text-white absolute right-1 hover:right-0 bottom-1 transition-all hover:bottom-2 font-bold opacity-75 hover:opacity-100" sx={{ fontSize: 48 }} />
