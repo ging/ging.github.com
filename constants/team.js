@@ -145,8 +145,9 @@ export const myteam = [
       },
       {
         name: "Santiago Pavón",
-        role:"",
-        position: "professor",
+       
+        position: "",
+        role:"professor",
         description:
           "Santiago Pavón Gómez obtained the B.S. and Ph.D. in Telecommunication Engineer from the Universidad Politécnica de Madrid (UPM) in 1987 and 1990 respectively. Santiago obtained the position of Assistant Professor in 1991 and the position of Associate Professor in 1992. He has published several articles and participated in national and international research projects related to Formal Description Techniques, CSCW, Tele-Education, collaboration services, IPv6, virtualization, identity services, safely (Cyspa) and Blockchain (BAPI).",
           description_es:
