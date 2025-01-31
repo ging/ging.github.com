@@ -10,8 +10,9 @@ import LangSwitcher from "@/components/LangSwitcher";
 import { activeRoutes } from "@/constants/routes";
 
 // icons
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import Image from "../ui/image";
 
 export default function Header(props) {
   const [state, setState] = useState({ open: false });
@@ -25,7 +26,7 @@ export default function Header(props) {
     "px-8 py-4 sticky -top-[1px] w-full",
     "flex justify-between items-center md:items-start",
     "bg-background text-text shadow-md",
-    
+
     `header_${currentLang} z-50`,
     {
       "font-semibold": true,
@@ -51,8 +52,7 @@ export default function Header(props) {
 
   const menuItems = clsx(
     "flex flex-col justify-end items-center md:flex-row",
-    "gap-1 md:gap-4",
-    
+    "gap-1 md:gap-4"
   );
 
   const menuItemClasses = clsx(
@@ -62,9 +62,10 @@ export default function Header(props) {
   );
 
   return (
-    <header className={headerClasses + "z-50"} id="header_home"> {/* route={routes.route} ?????*/}
-      <a href="/">
-        <div className="h-6 py-0.5 flex gap-[9px]">
+    <header className={headerClasses + "z-50"} id="header_home">
+      {" "}
+      {/* route={routes.route} ?????*/}
+      <a href="/" className="h-6 py-0.5 flex gap-2">
         <img
             className="object-contain"
             src="logo_sm_boiler_light.svg"
@@ -75,30 +76,28 @@ export default function Header(props) {
             src="ging_logo.png"
             alt="logo"
           />
-        </div>
       </a>
-
       {/* menu container */}
       <div className="relative w-fit flex">
         {/* menu icons */}
         <div className="block md:hidden">
           {!state.open ? (
             <MenuOutlinedIcon
-            sx={{ fontSize: 24 }}
+              sx={{ fontSize: 24 }}
               onClick={() => setState({ open: !state.open })}
             />
           ) : (
             <CloseOutlinedIcon
-            sx={{ fontSize: 24 }}
+              sx={{ fontSize: 24 }}
               onClick={() => setState({ open: !state.open })}
             />
           )}
         </div>
         {/* /menu icons */}
 
-        {/* menu nav */} 
+        {/* menu nav */}
         <div className={menuClasses}>
-        <ul className={menuItems}>
+          <ul className={menuItems}>
             {activeRoutes.map((route, index, page) => (
               <li key={index}>
                 <Link
@@ -113,7 +112,7 @@ export default function Header(props) {
                 </Link>
               </li>
             ))}
-          </ul>         
+          </ul>
           <LangSwitcher />
         </div>
         {/* /menu nav */}
