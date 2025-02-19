@@ -42,6 +42,7 @@ module.exports = {
       },
       colors: {
         // whiteFull: "#ffffff",
+        text: "#f8f8f8",
         snow: "#EFF7FB",
         black: "#0D0D1C",
 
@@ -91,9 +92,6 @@ module.exports = {
         },
         title: {
           DEFAULT:"#323232"
-        },
-        text: {
-          DEFAULT:"#f8f8f8"
         },
         data: {
           DEFAULT: "#236B5E",

@@ -37,7 +37,7 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "w-screen px-8 py-4 md:p-0 md:w-fit",
+    "w-screen  md:p-0 md:w-fit",
     "absolute top-[40px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",
@@ -56,7 +56,7 @@ export default function Header(props) {
   );
 
   const menuItemClasses = clsx(
-    "w-full px-4 text-center md:p-0 md:w-fit",
+    "w-full h-full text-center px-8 py-4 md:p-0 md:w-fit",
     "text-lg md:text-base",
     " hover:text-blue-300"
   );
@@ -99,13 +99,15 @@ export default function Header(props) {
         <div className={menuClasses}>
           <ul className={menuItems}>
             {activeRoutes.map((route, index, page) => (
-              <li key={index}>
+              <li key={index} className={menuItemClasses}
+              onClick={() => setState({ open: false })}
+              >
                 <Link
                   href={route.route}
                   className={
                     currentPath == route.route
-                      ? menuItemClasses + " font-semibold underline"
-                      : menuItemClasses + " font-normal"
+                      ? " font-semibold underline"
+                      : " font-normal"
                   }
                 >
                   {t(route.key)}
@@ -113,7 +115,7 @@ export default function Header(props) {
               </li>
             ))}
           </ul>
-          <LangSwitcher />
+          <LangSwitcher/>
         </div>
         {/* /menu nav */}
       </div>

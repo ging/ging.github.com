@@ -352,10 +352,10 @@ const Card = React.forwardRef(
                 return (
                   <Mybadge
                     key={index}
-                    className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
+                    className={`pt-1.5 ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
                   >
                     <Image
-                      className={"h-3 pr-1.5"}
+                      className={"h-[16px] pr-2 mb-[2px]"}
                       src={backgroundIcon}
                       alt={"Research line icon"}
                       fit="contain"
@@ -420,9 +420,6 @@ const Card = React.forwardRef(
     // TEAM - ok
     const teamCard = (
       <CustomCard
-        // className={
-        //   cn(CardVariants({direction, className }))
-        // }
         className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
       >
         {(img || svg) && (
@@ -713,13 +710,13 @@ const Card = React.forwardRef(
     );
 
     const researchLineCard = (
-      <div className="card-researchline max-w-[300px]">
+      <CustomCard className="card-researchline max-w-[300px] h-fit mb-8 md:mb-0">
         <ResearchlineIllust researchLine={researchLine} />
-        <div>
-          <h6 className="pt-4 font-normal text-2xl text-white py-3">
+        <CardContent>
+          <CardTitle level='h4' className="font-semibold text-2xl text-white">
             {" "}
             {title}{" "}
-          </h6>
+          </CardTitle>
           <Text className="font-light">{description}</Text>
           {/* <Button asChild variant="outline" size="sm" radius="rounded_sm" className="mt-4">
               <Link rel="noopener noreferrer" target="_blank" href={`projects?researchline=${researchLine}`} >
@@ -728,8 +725,8 @@ const Card = React.forwardRef(
                 <ArrowRightIcon />
               </Link>
             </Button> */}
-        </div>
-      </div>
+        </CardContent>
+      </CustomCard>
     );
 
     // Usar el prop cardType para determinar qué tipo de tarjeta renderizar

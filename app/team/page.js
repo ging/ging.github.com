@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text";
-import { Card, CardVariants } from "@/components/core/Cards";
+import TeamCard from "@/components/cards/TeamCard";
 import dynamic from "next/dynamic";
 
 const Team = (props) => {
@@ -28,6 +28,7 @@ const Team = (props) => {
           description_es,
           position,
           img,
+          svg,
           github,
           email,
           center,
@@ -43,12 +44,8 @@ const Team = (props) => {
       ) => {
         const translatedRole = t("team.professorCards.roles." + role);
         return (
-          <Card
+          <TeamCard
             key={key}
-            cardType={"team"}
-            className={CardVariants({
-              variant: "team",
-            })}
             img={img}
             name={name}
             position={position}

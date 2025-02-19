@@ -30,12 +30,12 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
 
   // clsx, aplica clases según el valor del atributo level de manera dinámica
   const classes = clsx([
-    "font-main",
+    "font-main text-text",
     {/*"text-balance"*/},
     {
-      "text-base text-text max-w-[65ch] xl:max-w-[70ch] 2xl:max-w-[90ch] text-pretty": type === "p",
+      "text-base max-w-[65ch] xl:max-w-[70ch] 2xl:max-w-[90ch] text-pretty": type === "p",
       "text-sm text-wrap leading-normal": type === "small",
-      "text-base text-text max-w-[66ch] xl:max-w-[71ch] 2xl:max-w-[83ch]": type === "short-p",
+      "text-base max-w-[66ch] xl:max-w-[71ch] 2xl:max-w-[83ch]": type === "short-p",
     },
     className
   ])

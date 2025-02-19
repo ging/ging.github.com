@@ -33,7 +33,7 @@ import {
   BannerButton,
   BannerContent,
   BannerImg,
-  BannerLogo
+  BannerLogo,
 } from "@/components/core/Banner";
 import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
 
@@ -56,12 +56,12 @@ export default function Page() {
         <BannerImg></BannerImg>
 
         <BannerContent className="absolute ">
-          
           <BannerLogo></BannerLogo>
-          <BannerTitle className={"text-white "}>{t("front.title")}</BannerTitle>
+          <BannerTitle className={"text-white "}>
+            {t("front.title")}
+          </BannerTitle>
           <BannerDescription className="h-full text-balance flex flex-col gap-2 font-normal">
             {t("front.description")}
-        
           </BannerDescription>
           <Divider />
           <Link
@@ -73,68 +73,79 @@ export default function Page() {
               radius: "rounded_sm",
             })}
           >
-            {t("front.action-button")} <ArrowForwardIcon  className="mt-0.5" sx={{ fontSize: 22 }} />
+            {t("front.action-button")}{" "}
+            <ArrowForwardIcon className="mt-0.5" sx={{ fontSize: 22 }} />
           </Link>
         </BannerContent>
       </Banner>
 
       <section className="padding_group_description bg-background-200">
-      <Divider size="lg" className="hidden md:flex"></Divider>  
-      <Divider size="sm" ></Divider>
-      <Heading level="h3">{t("front.section1Title")}</Heading>
+        <Divider size="lg" className="hidden md:flex"></Divider>
+        <Divider size="sm"></Divider>
+
+        <Heading level="h3">{t("front.section1Title")}</Heading>
         <Heading level="subtitle"> {t("front.section1Description")}</Heading>
 
-        <Divider size="md" ></Divider>
+        <Divider size="md"></Divider>
         <Divider size="xxl" className="hidden md:flex"></Divider>
         <div id="researchlines"></div>
       </section>
-    
-      <section className="margin_researchlines section-researchlines" id="researchlines" >
-      <Divider size="md" ></Divider>
-      <Heading level="h3" className="mb-8">
+
+      <section
+        className="margin_researchlines section-researchlines"
+        id="researchlines"
+      >
+        <Divider size="md"></Divider>
+        <Heading level="h3" className="mb-8">
           {t("front.ResearchLines.sectionTitle")}
-          
         </Heading>
         {/* Cards con iconos */}
-        
-        <div className="flex flex-col gap-4 items-center pb-12 sm:items-start sm:grid sm:grid-cols-2 md:grid-cols-3 auto-rows-min lg:grid-cols-5 ">
-      
-          <Card 
-          cardType={"researchline"} 
-          researchLine="videoconference"
-          title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine4.ResearchLineBody")}
-          />
-      
-          <Card 
-          cardType={"researchline"} 
-          researchLine="data"
-          title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine1.ResearchLineBody")}
-          />
-            <Card 
-          cardType={"researchline"} 
-          researchLine="ai"
-          title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine3.ResearchLineBody")}
-          />
-                 <Card 
-          cardType={"researchline"} 
-          researchLine="e-learning"
-          title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine2.ResearchLineBody")}
-          />
-        <Card 
-          cardType={"researchline"} 
-          researchLine="computing"
-          title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
-          description={t("front.ResearchLines.ResearchLine5.ResearchLineBody")}
-          />
-        </div>
-        <Divider size="md" ></Divider>
-        </section>
-       
 
+        <section className="flex flex-col gap-4 mx-auto pb-12 justify-center items-center sm:items-start sm:grid sm:grid-cols-2 sm:place-items-center md:grid-cols-3 auto-rows-min xl:grid-cols-5 ">
+          <Card
+            cardType={"researchline"}
+            researchLine="videoconference"
+            title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
+            description={t(
+              "front.ResearchLines.ResearchLine4.ResearchLineBody"
+            )}
+          />
+
+          <Card
+            cardType={"researchline"}
+            researchLine="data"
+            title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
+            description={t(
+              "front.ResearchLines.ResearchLine1.ResearchLineBody"
+            )}
+          />
+          <Card
+            cardType={"researchline"}
+            researchLine="ai"
+            title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
+            description={t(
+              "front.ResearchLines.ResearchLine3.ResearchLineBody"
+            )}
+          />
+          <Card
+            cardType={"researchline"}
+            researchLine="e-learning"
+            title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
+            description={t(
+              "front.ResearchLines.ResearchLine2.ResearchLineBody"
+            )}
+          />
+          <Card
+            cardType={"researchline"}
+            researchLine="computing"
+            title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
+            description={t(
+              "front.ResearchLines.ResearchLine5.ResearchLineBody"
+            )}
+          />
+        </section>
+        <Divider size="md"></Divider>
+      </section>
     </main>
   );
 }

@@ -20,7 +20,7 @@ const CustomCard = React.forwardRef(({ className, ...props }, ref) => (
   <article
     ref={ref}
     className={cn(
-      "p-2 h-full w-full border flex flex-col justify-start gap-4 overflow-hidden shadow bg-primary-200/70 text-primary-800",
+      "h-full w-full flex flex-col justify-start gap-4 overflow-hidden",
       className
     )}
     {...props}

@@ -10,7 +10,7 @@ export const en = {
     projects: "Projects",
   },
   header: {
-    publicationstab: "Publications",
+    publicationstab: "Research",
   },
   front: {
     title: "Next Generation Internet Group",
@@ -54,7 +54,7 @@ export const en = {
   },
 
   research: {
-    title: "Publications",
+    title: "Research",
     description:
       "This section compiles the group's publications related to our research lines. You can filter the publications by text, date, research line, or type of publication.",
     publicationCards: {

@@ -28,7 +28,7 @@ export const myteam = [
           "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
           description_es:
           "",
-          img: "assets/img/team/juan-quemada.jpg",
+        img: "assets/img/team/juan-quemada.jpg",
         github: "https://github.com/jquemada",
         email: "juan.quemada@upm.es",
         researchgate:"https://www.researchgate.net/profile/Juan-Quemada",
