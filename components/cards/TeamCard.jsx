@@ -21,7 +21,7 @@ import { Divider } from "../ui/divider";
 // Icons
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 
-const TeamCard = React.forwardRef(
+const Card = React.forwardRef(
   (
     {
       description,
@@ -97,7 +97,7 @@ const TeamCard = React.forwardRef(
             <Button
               size="sm"
               variant="link"
-              className="p-0 font-bold hover:text-blue-300 text-white underline underline-offset-2"
+              className="min-w-fit p-0 font-bold hover:text-blue-300 text-white underline underline-offset-2"
               onClick={toggleDescription}
             >
               {isExpanded
@@ -227,6 +227,6 @@ const renderIconLink = (href, imgSrc, label, className, text = null) => (
   </Link>
 );
 
-TeamCard.displayName = "TeamCard";
+Card.displayName = "TeamCard";
 
-export default TeamCard;
+export default Card;

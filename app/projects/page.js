@@ -3,7 +3,7 @@
 import { useTranslation } from "react-i18next";
 import TabsResearchLineFilter from "@/components/filters/TabsResearchLineFilter";
 import { projects } from "@/constants/projects";
-import { Card } from "@/components/core/Cards";
+import ProjectCard from "@/components/cards/ProjectCard";
 import { researchlines } from "@/constants/researchlines";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text"
@@ -151,9 +151,8 @@ function ProjectsPage() {
               },
               index
             ) => (
-              <Card
+              <ProjectCard
                 key={index}
-                cardType={"project"}
                 year={year}
                 researchLine={researchLine}
                 title={title}
@@ -162,7 +161,7 @@ function ProjectsPage() {
                 description_en={description}
                 description_es={description_es}
                 projectType={projectType}
-              ></Card>
+              ></ProjectCard>
             )
           )}
         </div>

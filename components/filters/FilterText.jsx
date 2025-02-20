@@ -18,6 +18,7 @@ export default function FilterText( {pathname, search, changeSearch} ) {
     <div className={pathname === "/research" ? "filter flex flex-wrap md:w-1/2" : "filter flex flex-wrap w-full " }>
     <Label htmlFor="search">{t(`${pathnameFormatted}.filter.fieldTitle1`)}</Label>
     <Input
+      id="search"
       className="w-full"
       key={" "}
       type={"text"}

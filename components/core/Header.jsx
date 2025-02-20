@@ -65,7 +65,7 @@ export default function Header(props) {
     <header className={headerClasses + "z-50"} id="header_home">
       {" "}
       {/* route={routes.route} ?????*/}
-      <a href="/" className="h-6 py-0.5 flex gap-2">
+      <a href="/" className="h-7 py-1 sm:h-6 sm:py-0.5 flex gap-2">
         <img
             className="object-contain"
             src="logo_sm_boiler_light.svg"
@@ -83,7 +83,7 @@ export default function Header(props) {
         <div className="block md:hidden">
           {!state.open ? (
             <MenuOutlinedIcon
-              sx={{ fontSize: 24 }}
+              sx={{ fontSize: 28 }}
               onClick={() => setState({ open: !state.open })}
             />
           ) : (
@@ -100,7 +100,7 @@ export default function Header(props) {
           <ul className={menuItems}>
             {activeRoutes.map((route, index, page) => (
               <li key={index} className={menuItemClasses}
-              onClick={() => setState({ open: false })}
+                onClick={() => setState({ open: false })}
               >
                 <Link
                   href={route.route}

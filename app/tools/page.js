@@ -3,7 +3,6 @@
 import Header from "@/components/core/Header";
 import React from "react";
 import Link from "next/link";
-import image from "next/image";
 import { useState, useEffect } from "react";
 import { mytools } from "@/constants/tools";
 import { useTranslation } from "react-i18next";
@@ -15,6 +14,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { GitHub } from "@mui/icons-material";
+import Image from "@/components/ui/image";
+import { Divider, DividerVariants } from "@/components/ui/divider";
 
 export default function Tools(props) {
   const { t, i18n } = useTranslation();
@@ -90,7 +91,7 @@ export default function Tools(props) {
                     <Text className="font-light">{description}</Text>
                   </div>
                   <div className="tool_button_container mt-4 flex flex-wrap justify-between gap-2">
-                    <Button variant="outline" size="sm" className="" >
+                    <Button variant="outline" size="sm" className="">
                       <Link target="_blank"  href={route}> {t("tools.toolCards.button")}</Link>
                     </Button>
                     <Button variant="ghost" size="sm" className="gap-1">
@@ -104,6 +105,7 @@ export default function Tools(props) {
           })}
         </div>
       </main>
+      <Divider size="xl"/>
     </div>
   );
 }

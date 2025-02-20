@@ -110,7 +110,7 @@ const CardDescription = React.forwardRef(
         {/* Botón dinámico */}
         {isTruncated && (
           <Button
-            className="!min-w-fit p-0 pt-2 cursor-pointer font-bold hover:text-blue-300 text-white underline underline-offset-2"
+            className="min-w-fit p-0 pt-2 cursor-pointer font-bold hover:text-blue-300 text-white underline underline-offset-2"
             size="sm" variant="link" 
             onClick={() => setIsExpanded(!isExpanded)}
           >

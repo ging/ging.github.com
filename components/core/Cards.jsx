@@ -41,7 +41,7 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import ArticleIcon from "@mui/icons-material/Article";
 
 const CardVariants = cva(
-  "border border-primary min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
+  "min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
   {
     variants: {
       direction: {
@@ -65,6 +65,7 @@ const deleteSpaces = (string) => {
   return cleanStr;
 };
 
+// Las cards comentadas son las que ya están aisladas en la carpeta cards
 const Card = React.forwardRef(
   (
     {
@@ -152,115 +153,115 @@ const Card = React.forwardRef(
       pubResearchLine = researchLine[0];
     }
 
-    // PROJECT
-    const projectCard = (
-      <CustomCard
-        className={
-          cn(CardVariants({ direction, className })) +
-          "hover:scale-[100%] bg-transparent border-transparent shadow-none border-b-gray-400 border-b-1 rounded-none py-6 flex flex-col items-start sm:flex-row gap-3 sm:gap-6"
-        }
-      >
-        <div
-          className={`w-full min-w-[184px] sm:w-1/2 h-[237px] bg-cover sm:bg-center ${backgroundColor} rounded-md `}
-        >
-          <Image
-            className="brightness-0 invert p-8"
-            src={logo}
-            fit="contain"
-            layout={"bottom-right"}
-            badgeVariant={"secondary"}
-            badgeSize={"md"}
-            badgeContent={t(`projects.type.${projectType}`)}
-          />
-        </div>
+    // // PROJECT
+    // const projectCard = (
+    //   <CustomCard
+    //     className={
+    //       cn(CardVariants({ direction, className })) +
+    //       "hover:scale-[100%] bg-transparent border-transparent shadow-none border-b-gray-400 border-b-1 rounded-none py-6 flex flex-col items-start sm:flex-row gap-3 sm:gap-6"
+    //     }
+    //   >
+    //     <div
+    //       className={`w-full min-w-[184px] sm:w-1/2 h-[237px] bg-cover sm:bg-center ${backgroundColor} rounded-md `}
+    //     >
+    //       <Image
+    //         className="brightness-0 invert p-8"
+    //         src={logo}
+    //         fit="contain"
+    //         layout={"bottom-right"}
+    //         badgeVariant={"secondary"}
+    //         badgeSize={"md"}
+    //         badgeContent={t(`projects.type.${projectType}`)}
+    //       />
+    //     </div>
 
-        <CardBody>
-          <CardContent className="gap-5 my-0.5 lg:mt-0 lg:gap-[22px]">
-            <div>
-              <CardTitle
-                level="h3"
-                className=" w-fit hover:text-blue-400 transition-all mb-0"
-              >
-                {title && (
-                  <Link
-                    href={route}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className={`flex flex-row w-fit gap-2 ${
-                      title.length > 18 ? "items-start" : "items-center"
-                    }`}
-                  >
-                    {title}{" "}
-                    <ExternalLinkIcon
-                      className="mt-1 flex-shrink-0"
-                      width={24}
-                      height={24}
-                    />{" "}
-                  </Link>
-                )}
-              </CardTitle>
+    //     <CardBody>
+    //       <CardContent className="gap-5 my-0.5 lg:mt-0 lg:gap-[22px]">
+    //         <div>
+    //           <CardTitle
+    //             level="h3"
+    //             className=" w-fit hover:text-blue-400 transition-all mb-0"
+    //           >
+    //             {title && (
+    //               <Link
+    //                 href={route}
+    //                 rel="noopener noreferrer"
+    //                 target="_blank"
+    //                 className={`flex flex-row w-fit gap-2 ${
+    //                   title.length > 18 ? "items-start" : "items-center"
+    //                 }`}
+    //               >
+    //                 {title}{" "}
+    //                 <ExternalLinkIcon
+    //                   className="mt-1 flex-shrink-0"
+    //                   width={24}
+    //                   height={24}
+    //                 />{" "}
+    //               </Link>
+    //             )}
+    //           </CardTitle>
 
-              {description_translation && (
-                <CardDescription lines={3}>
-                  {description_translation}
-                </CardDescription>
-              )}
-            </div>
+    //           {description_translation && (
+    //             <CardDescription lines={3}>
+    //               {description_translation}
+    //             </CardDescription>
+    //           )}
+    //         </div>
 
-            {/* <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 justify-between lg:items-end"> */}
-            <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2">
-              {Array.isArray(researchLine)
-                ? researchLine.map((item, index) => {
-                    // fondo researchline cards
-                    let backgroundColorResearchLine;
-                    let textColorResearchLine;
+    //         {/* <div className="flex flex-col items-start lg:flex-row gap-4 lg:gap-0 justify-between lg:items-end"> */}
+    //         <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2">
+    //           {Array.isArray(researchLine)
+    //             ? researchLine.map((item, index) => {
+    //                 // fondo researchline cards
+    //                 let backgroundColorResearchLine;
+    //                 let textColorResearchLine;
 
-                    // coge solo la primera researchline para ponerle el fondo
-                    switch (item) {
-                      case "data":
-                        backgroundColorResearchLine = "bg-data-500"; // Para la categoría 'data'
-                        break;
-                      case "videoconference":
-                        backgroundColorResearchLine = "bg-videoconference-500"; // Para la categoría 'videoconference'
-                        break;
-                      case "ai":
-                        backgroundColorResearchLine = "bg-ai-700"; // Para la categoría 'ai'
-                        // textColorResearchLine = "text-gray-900"
-                        break;
-                      case "computing":
-                        backgroundColorResearchLine = "bg-networks-500"; // Para la categoría 'ai'
-                        break;
-                      case "e-learning":
-                        backgroundColorResearchLine = "bg-eLearning-500"; // Para la categoría 'ai'
-                        break;
-                      default:
-                        backgroundColorResearchLine = "bg-gray-500"; // Valor por defecto si no hay coincidencia
-                        break;
-                    }
-                    return (
-                      <Mybadge
-                        className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
-                        key={index}
-                        variant="default"
-                        size="lg"
-                      >
-                        {t(`projects.researchLines.${item}`)}
-                      </Mybadge>
-                    );
-                  })
-                : null}
-            </div>
-            {/* <Button size="default" radius="rounded_sm" variant="outline" > 
-                  <Link href={`/research?researchline=${pubResearchLine}`}>
-                    {t(`projects.card.button`)} 
-                  </Link>                 
-                </Button> 
-              */}
-            {/* </div> */}
-          </CardContent>
-        </CardBody>
-      </CustomCard>
-    );
+    //                 // coge solo la primera researchline para ponerle el fondo
+    //                 switch (item) {
+    //                   case "data":
+    //                     backgroundColorResearchLine = "bg-data-500"; // Para la categoría 'data'
+    //                     break;
+    //                   case "videoconference":
+    //                     backgroundColorResearchLine = "bg-videoconference-500"; // Para la categoría 'videoconference'
+    //                     break;
+    //                   case "ai":
+    //                     backgroundColorResearchLine = "bg-ai-700"; // Para la categoría 'ai'
+    //                     // textColorResearchLine = "text-gray-900"
+    //                     break;
+    //                   case "computing":
+    //                     backgroundColorResearchLine = "bg-networks-500"; // Para la categoría 'ai'
+    //                     break;
+    //                   case "e-learning":
+    //                     backgroundColorResearchLine = "bg-eLearning-500"; // Para la categoría 'ai'
+    //                     break;
+    //                   default:
+    //                     backgroundColorResearchLine = "bg-gray-500"; // Valor por defecto si no hay coincidencia
+    //                     break;
+    //                 }
+    //                 return (
+    //                   <Mybadge
+    //                     className={` ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
+    //                     key={index}
+    //                     variant="default"
+    //                     size="lg"
+    //                   >
+    //                     {t(`projects.researchLines.${item}`)}
+    //                   </Mybadge>
+    //                 );
+    //               })
+    //             : null}
+    //         </div>
+    //         {/* <Button size="default" radius="rounded_sm" variant="outline" > 
+    //               <Link href={`/research?researchline=${pubResearchLine}`}>
+    //                 {t(`projects.card.button`)} 
+    //               </Link>                 
+    //             </Button> 
+    //           */}
+    //         {/* </div> */}
+    //       </CardContent>
+    //     </CardBody>
+    //   </CustomCard>
+    // );
 
     // COURSE
     const courseCard = (
@@ -303,376 +304,376 @@ const Card = React.forwardRef(
     );
 
     // PUBLICATIONS - ok
-    const publicationCard = (
-      <CustomCard
-        className={cn(
-          CardVariants({ direction, className }) +
-            "  bg-background-300 border-none shadow-md"
-        )}
-      >
-        <CardHeader className="flex flex-wrap">
-          {Array.isArray(researchLine)
-            ? researchLine.map((researchline, index) => {
-                let backgroundColorResearchLine;
-                let textColorResearchLine;
-                let backgroundIcon;
-                // coge solo la primera researchline para ponerle el fondo
-                switch (deleteSpaces(researchline)) {
-                  case "data":
-                    backgroundColorResearchLine = "bg-data-500/40"; // Para la categoría 'data'
-                    backgroundIcon = "assets/img/icons/data_icon.svg";
-                    textColorResearchLine = "text-data-300";
-                    break;
-                  case "videoconference":
-                    backgroundColorResearchLine = "bg-videoconference-600/60"; // Para la categoría 'videoconference'
-                    backgroundIcon =
-                      "assets/img/icons/videoconference_icon.svg";
-                    textColorResearchLine = "text-videoconference-200";
-                    break;
-                  case "ai":
-                    backgroundColorResearchLine = "bg-ai-700/40"; // Para la categoría 'ai'
-                    backgroundIcon = "assets/img/icons/ai_icon.svg";
-                    textColorResearchLine = "text-ai-400";
-                    break;
-                  case "computing":
-                    backgroundColorResearchLine = "bg-networks-600/60";
-                    backgroundIcon = "assets/img/icons/networks_icon.svg";
-                    textColorResearchLine = "text-networks-200"; // Para la categoría 'ai'
-                    break;
-                  case "e-learning":
-                    backgroundColorResearchLine = "bg-eLearning-600/60";
-                    backgroundIcon = "assets/img/icons/e-learning_icon.svg";
-                    textColorResearchLine = "text-eLearning-200"; // Para la categoría 'ai'
-                    break;
-                  default:
-                    backgroundColorResearchLine = "bg-gray-500"; // Valor por defecto si no hay coincidencia
-                    break;
-                }
+    // const publicationCard = (
+    //   <CustomCard
+    //     className={cn(
+    //       CardVariants({ direction, className }) +
+    //         "  bg-background-300 border-none shadow-md"
+    //     )}
+    //   >
+    //     <CardHeader className="flex flex-wrap">
+    //       {Array.isArray(researchLine)
+    //         ? researchLine.map((researchline, index) => {
+    //             let backgroundColorResearchLine;
+    //             let textColorResearchLine;
+    //             let backgroundIcon;
+    //             // coge solo la primera researchline para ponerle el fondo
+    //             switch (deleteSpaces(researchline)) {
+    //               case "data":
+    //                 backgroundColorResearchLine = "bg-data-500/40"; // Para la categoría 'data'
+    //                 backgroundIcon = "assets/img/icons/data_icon.svg";
+    //                 textColorResearchLine = "text-data-300";
+    //                 break;
+    //               case "videoconference":
+    //                 backgroundColorResearchLine = "bg-videoconference-600/60"; // Para la categoría 'videoconference'
+    //                 backgroundIcon =
+    //                   "assets/img/icons/videoconference_icon.svg";
+    //                 textColorResearchLine = "text-videoconference-200";
+    //                 break;
+    //               case "ai":
+    //                 backgroundColorResearchLine = "bg-ai-700/40"; // Para la categoría 'ai'
+    //                 backgroundIcon = "assets/img/icons/ai_icon.svg";
+    //                 textColorResearchLine = "text-ai-400";
+    //                 break;
+    //               case "computing":
+    //                 backgroundColorResearchLine = "bg-networks-600/60";
+    //                 backgroundIcon = "assets/img/icons/networks_icon.svg";
+    //                 textColorResearchLine = "text-networks-200"; // Para la categoría 'ai'
+    //                 break;
+    //               case "e-learning":
+    //                 backgroundColorResearchLine = "bg-eLearning-600/60";
+    //                 backgroundIcon = "assets/img/icons/e-learning_icon.svg";
+    //                 textColorResearchLine = "text-eLearning-200"; // Para la categoría 'ai'
+    //                 break;
+    //               default:
+    //                 backgroundColorResearchLine = "bg-gray-500"; // Valor por defecto si no hay coincidencia
+    //                 break;
+    //             }
 
-                return (
-                  <Mybadge
-                    key={index}
-                    className={`pt-1.5 ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
-                  >
-                    <Image
-                      className={"h-[16px] pr-2 mb-[2px]"}
-                      src={backgroundIcon}
-                      alt={"Research line icon"}
-                      fit="contain"
-                    />
-                    <div className="pb-0.5">
-                      {t(
-                        `projects.researchLines.${deleteSpaces(researchline)}`
-                      )}{" "}
-                    </div>{" "}
-                  </Mybadge>
-                );
-              })
-            : null}
-        </CardHeader>
-        <CardBody>
-          <CardContent className="gap-1">
-            <CardTitle level="title-sm">{title}</CardTitle>
-            <div className="flex">
-              <Text type="small" className="font-bold">
-                {t(`research.filter.${category}`)}
-              </Text>
-              <div className="mx-2 mb-2">·</div>
-              <Text type="small">{date && date[0]}</Text>
-            </div>
-            <Text className="text-gray-300/90 mb-4" type="small">
-              {author}
-            </Text>
-            <div className="flex flex-wrap gap-1.5">
-              {Array.isArray(keywords)
-                ? keywords.map((keyword, index) => {
-                    return (
-                      <Mybadge
-                        key={index}
-                        size="default"
-                        className="bg-[#000000] border-none text-gray-300"
-                      >
-                        {" "}
-                        {keyword}{" "}
-                      </Mybadge>
-                    );
-                  })
-                : null}
-            </div>
-          </CardContent>
-        </CardBody>
-        <CardFooter>
-          {doi ? (
-            <Button asChild variant="outline" size="sm" radius="rounded_sm">
-              <Link rel="noopener noreferrer" target="_blank" href={doi}>
-                {t("research.action-button")}
+    //             return (
+    //               <Mybadge
+    //                 key={index}
+    //                 className={`pt-1.5 ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
+    //               >
+    //                 <Image
+    //                   className={"h-[16px] pr-2 mb-[2px]"}
+    //                   src={backgroundIcon}
+    //                   alt={"Research line icon"}
+    //                   fit="contain"
+    //                 />
+    //                 <div className="pb-0.5">
+    //                   {t(
+    //                     `projects.researchLines.${deleteSpaces(researchline)}`
+    //                   )}{" "}
+    //                 </div>{" "}
+    //               </Mybadge>
+    //             );
+    //           })
+    //         : null}
+    //     </CardHeader>
+    //     <CardBody>
+    //       <CardContent className="gap-1">
+    //         <CardTitle level="title-sm">{title}</CardTitle>
+    //         <div className="flex">
+    //           <Text type="small" className="font-bold">
+    //             {t(`research.filter.${category}`)}
+    //           </Text>
+    //           <div className="mx-2 mb-2">·</div>
+    //           <Text type="small">{date && date[0]}</Text>
+    //         </div>
+    //         <Text className="text-gray-300/90 mb-4" type="small">
+    //           {author}
+    //         </Text>
+    //         <div className="flex flex-wrap gap-1.5">
+    //           {Array.isArray(keywords)
+    //             ? keywords.map((keyword, index) => {
+    //                 return (
+    //                   <Mybadge
+    //                     key={index}
+    //                     size="default"
+    //                     className="bg-[#000000] border-none text-gray-300"
+    //                   >
+    //                     {" "}
+    //                     {keyword}{" "}
+    //                   </Mybadge>
+    //                 );
+    //               })
+    //             : null}
+    //         </div>
+    //       </CardContent>
+    //     </CardBody>
+    //     <CardFooter>
+    //       {doi ? (
+    //         <Button asChild variant="outline" size="sm" radius="rounded_sm">
+    //           <Link rel="noopener noreferrer" target="_blank" href={doi}>
+    //             {t("research.action-button")}
 
-                <ArrowRightIcon />
-              </Link>
-            </Button>
-          ) : null}
-        </CardFooter>
-        {/* 
-          {console.log(date && date[0])} */}
-      </CustomCard>
-    );
+    //             <ArrowRightIcon />
+    //           </Link>
+    //         </Button>
+    //       ) : null}
+    //     </CardFooter>
+    //     {/* 
+    //       {console.log(date && date[0])} */}
+    //   </CustomCard>
+    // );
 
     // TEAM - ok
-    const teamCard = (
-      <CustomCard
-        className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
-      >
-        {(img || svg) && (
-          <div className="aspect-square h-40 max-h-40 min-h-40 rounded-full overflow-hidden bg-blue-700/30">
-            <Image
-              className="saturate-0 mix-blend-lighten"
-              src={img || "placeholder.jpg"}
-              fit="cover"
-            />
-          </div>
-        )}
-        {(name || description || email) && (
-          <CardContent className="flex justify-start items-start mb-auto">
-            {/* <div className="flex flex-row"> */}
-            <CardTitle level="title-sm" className={"text-inherit text-center"}>
-              <b>{name} </b>
-            </CardTitle>
-            {/* {position && (<Mybadge> {position}</Mybadge>)} */}
-            {/* </div> */}
-            {role && <CardDescription type="short-p">{role}</CardDescription>}
-            {email && (
-              <Mybadge
-                size="sm"
-                variant="secondary"
-                className={
-                  "font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"
-                }
-              >
-                <MailOutlinedIcon
-                  className=" text-gray-300 mr-1"
-                  sx={{ fontSize: 16 }}
-                />
-                {email}
-              </Mybadge>
-            )}
-            <Divider></Divider>
-            <div className="pb-3">
-              <Text
-                type="small"
-                className={
-                  isExpanded
-                    ? "line-clamp-none text-white"
-                    : "line-clamp-4 text-white"
-                }
-              >
-                {description_translation}
-              </Text>
-              <Button
-                size="sm"
-                variant="link"
-                className="!min-w-fit p-0 cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2"
-                onClick={toggleDescription}
-              >
-                {isExpanded
-                  ? t(`projects.card.toggleLess`)
-                  : t(`projects.card.toggleMore`)}
-              </Button>
-            </div>
+    // const teamCard = (
+    //   <CustomCard
+    //     className="w-80 bg- transparent border-none shadow-none 300/60 h-86  items-start"
+    //   >
+    //     {(img || svg) && (
+    //       <div className="aspect-square h-40 max-h-40 min-h-40 rounded-full overflow-hidden bg-blue-700/30">
+    //         <Image
+    //           className="saturate-0 mix-blend-lighten"
+    //           src={img || "placeholder.jpg"}
+    //           fit="cover"
+    //         />
+    //       </div>
+    //     )}
+    //     {(name || description || email) && (
+    //       <CardContent className="flex justify-start items-start mb-auto">
+    //         {/* <div className="flex flex-row"> */}
+    //         <CardTitle level="title-sm" className={"text-inherit text-center"}>
+    //           <b>{name} </b>
+    //         </CardTitle>
+    //         {/* {position && (<Mybadge> {position}</Mybadge>)} */}
+    //         {/* </div> */}
+    //         {role && <CardDescription type="short-p">{role}</CardDescription>}
+    //         {email && (
+    //           <Mybadge
+    //             size="sm"
+    //             variant="secondary"
+    //             className={
+    //               "font-semibold break-words text-wrap mt-1 text-gray-300 bg-background-300"
+    //             }
+    //           >
+    //             <MailOutlinedIcon
+    //               className=" text-gray-300 mr-1"
+    //               sx={{ fontSize: 16 }}
+    //             />
+    //             {email}
+    //           </Mybadge>
+    //         )}
+    //         <Divider></Divider>
+    //         <div className="pb-3">
+    //           <Text
+    //             type="small"
+    //             className={
+    //               isExpanded
+    //                 ? "line-clamp-none text-white"
+    //                 : "line-clamp-4 text-white"
+    //             }
+    //           >
+    //             {description_translation}
+    //           </Text>
+    //           <Button
+    //             size="sm"
+    //             variant="link"
+    //             className="!min-w-fit p-0 cursor-pointer font-bold hover:text-blue-300  text-white underline underline-offset-2"
+    //             onClick={toggleDescription}
+    //           >
+    //             {isExpanded
+    //               ? t(`projects.card.toggleLess`)
+    //               : t(`projects.card.toggleMore`)}
+    //           </Button>
+    //         </div>
 
-            <div className="flex gap-2 mt-3">
-              {researchgate && (
-                <Link
-                  target="_blank"
-                  href={researchgate}
-                  className={
-                    " icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
-                  }
-                >
-                  <Button
-                    href="#"
-                    className={
-                      ButtonVariants({
-                        variant: "default",
-                        size: "icon",
-                        radius: "rounded_full",
-                      }) +
-                      " bg-blue-600 hover:bg-blue-700 p-[6px] overflow-hidden"
-                    }
-                  >
-                    <Image
-                      className="w-full h-full contrast-200 saturate-50"
-                      src="/assets/img/logos/researchgate.png"
-                      alt="Research Gate icon"
-                      fit="cover"
-                    />
-                    <Mybadge
-                      variant="secondary"
-                      size="xs"
-                      className="link_publication absolute left-0 bottom-7 bg-[#00000097]"
-                    >
-                      {" "}
-                      ResearchGate{" "}
-                    </Mybadge>
-                  </Button>
-                </Link>
-              )}
-              {orcid && (
-                <Link
-                  target="_blank"
-                  href={orcid}
-                  className={
-                    "relative icon_link_publication mb-1 lg:mb-1.5 hover:underline z-50 w-fit flex flex-row items-center cursor-pointer"
-                  }
-                >
-                  <Button
-                    href="#"
-                    className={
-                      ButtonVariants({
-                        variant: "default",
-                        size: "icon",
-                        radius: "rounded_full",
-                      }) +
-                      " bg-green-600 hover:bg-green-700 p-0 overflow-hidden"
-                    }
-                  >
-                    <Image
-                      src="/assets/img/logos/orcid-1.png"
-                      alt="orcid icon"
-                      fit="contain"
-                    />
-                    <Mybadge
-                      variant="secondary"
-                      size="xs"
-                      className="link_publication absolute -translate-x-1/2 left-1/2 bottom-7 shadow-lg bg-[#00000097]"
-                    >
-                      {" "}
-                      Orcid{" "}
-                    </Mybadge>
-                  </Button>
-                </Link>
-              )}
-              {/* {webOfScience && <Link target="_blank" href={webOfScience}
-                className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
-                <Button href="#" className={ButtonVariants({
-                  variant: "default",
-                  size: "icon",
-                  radius: "rounded_full",
-                }) + " bg-green-700 hover:bg-green-800 p-0 overflow-hidden"}>
-                  <Image
-                    src="/assets/img/logos/researchgate.png"
-                    alt="Research Gate icon"
-                    fit="contain"
-                  />
-                </Button>
-              </Link>} */}
-              {googleScholar && (
-                <Link
-                  target="_blank"
-                  href={googleScholar}
-                  className={
-                    " icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
-                  }
-                >
-                  <Button
-                    href="#"
-                    className={
-                      ButtonVariants({
-                        variant: "default",
-                        size: "icon",
-                        radius: "rounded_full",
-                      }) + " bg-blue-800 hover:bg-blue-900 p-0 overflow-hidden"
-                    }
-                  >
-                    <Image
-                      src="/assets/img/logos/google-scholar.png"
-                      alt="Google Scholar icon"
-                      fit="contain"
-                    />
-                    <Mybadge
-                      variant="secondary"
-                      size="xs"
-                      className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
-                    >
-                      {" "}
-                      Google Scholar{" "}
-                    </Mybadge>
-                  </Button>
-                </Link>
-              )}
-              {linkedin && (
-                <Link
-                  target="_blank"
-                  href={linkedin}
-                  className={
-                    " icon_link_publication relative text-left h-7 max-w-7 mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
-                  }
-                >
-                  <Button
-                    href="#"
-                    className={
-                      ButtonVariants({
-                        variant: "default",
-                        size: "icon",
-                        radius: "rounded_full",
-                      }) +
-                      " bg-[#006198] hover:bg-[#006198] p-0 overflow-hidden"
-                    }
-                  >
-                    <Image
-                      src="/assets/img/logos/linkedin.png"
-                      alt="LinkedIn icon"
-                      fit="contain"
-                    />
-                    <Mybadge
-                      variant="secondary"
-                      size="xs"
-                      className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
-                    >
-                      {" "}
-                      LinkedIn{" "}
-                    </Mybadge>
-                  </Button>
-                </Link>
-              )}
-              {portalUpm && (
-                <Link
-                  target="_blank"
-                  href={portalUpm}
-                  className={
-                    "icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
-                  }
-                >
-                  <Button
-                    href="#"
-                    className={
-                      ButtonVariants({
-                        variant: "default",
-                        size: "icon",
-                        radius: "rounded_full",
-                      }) + " bg-blue-600 hover:bg-blue-700 "
-                    }
-                  >
-                    <p className="text-2xs font-bold"> UPM </p>
-                    <Mybadge
-                      variant="secondary"
-                      size="xs"
-                      className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
-                    >
-                      {" "}
-                      Portal Científico UPM{" "}
-                    </Mybadge>
-                  </Button>
-                </Link>
-              )}
-            </div>
-          </CardContent>
-        )}
-        {/* {( email &&    
-        <CardFooter>
-          <a href={email}>{email}</a>
-        </CardFooter>)} */}
-      </CustomCard>
-    );
+    //         <div className="flex gap-2 mt-3">
+    //           {researchgate && (
+    //             <Link
+    //               target="_blank"
+    //               href={researchgate}
+    //               className={
+    //                 " icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+    //               }
+    //             >
+    //               <Button
+    //                 href="#"
+    //                 className={
+    //                   ButtonVariants({
+    //                     variant: "default",
+    //                     size: "icon",
+    //                     radius: "rounded_full",
+    //                   }) +
+    //                   " bg-blue-600 hover:bg-blue-700 p-[6px] overflow-hidden"
+    //                 }
+    //               >
+    //                 <Image
+    //                   className="w-full h-full contrast-200 saturate-50"
+    //                   src="/assets/img/logos/researchgate.png"
+    //                   alt="Research Gate icon"
+    //                   fit="cover"
+    //                 />
+    //                 <Mybadge
+    //                   variant="secondary"
+    //                   size="xs"
+    //                   className="link_publication absolute left-0 bottom-7 bg-[#00000097]"
+    //                 >
+    //                   {" "}
+    //                   ResearchGate{" "}
+    //                 </Mybadge>
+    //               </Button>
+    //             </Link>
+    //           )}
+    //           {orcid && (
+    //             <Link
+    //               target="_blank"
+    //               href={orcid}
+    //               className={
+    //                 "relative icon_link_publication mb-1 lg:mb-1.5 hover:underline z-50 w-fit flex flex-row items-center cursor-pointer"
+    //               }
+    //             >
+    //               <Button
+    //                 href="#"
+    //                 className={
+    //                   ButtonVariants({
+    //                     variant: "default",
+    //                     size: "icon",
+    //                     radius: "rounded_full",
+    //                   }) +
+    //                   " bg-green-600 hover:bg-green-700 p-0 overflow-hidden"
+    //                 }
+    //               >
+    //                 <Image
+    //                   src="/assets/img/logos/orcid-1.png"
+    //                   alt="orcid icon"
+    //                   fit="contain"
+    //                 />
+    //                 <Mybadge
+    //                   variant="secondary"
+    //                   size="xs"
+    //                   className="link_publication absolute -translate-x-1/2 left-1/2 bottom-7 shadow-lg bg-[#00000097]"
+    //                 >
+    //                   {" "}
+    //                   Orcid{" "}
+    //                 </Mybadge>
+    //               </Button>
+    //             </Link>
+    //           )}
+    //           {/* {webOfScience && <Link target="_blank" href={webOfScience}
+    //             className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+    //             <Button href="#" className={ButtonVariants({
+    //               variant: "default",
+    //               size: "icon",
+    //               radius: "rounded_full",
+    //             }) + " bg-green-700 hover:bg-green-800 p-0 overflow-hidden"}>
+    //               <Image
+    //                 src="/assets/img/logos/researchgate.png"
+    //                 alt="Research Gate icon"
+    //                 fit="contain"
+    //               />
+    //             </Button>
+    //           </Link>} */}
+    //           {googleScholar && (
+    //             <Link
+    //               target="_blank"
+    //               href={googleScholar}
+    //               className={
+    //                 " icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+    //               }
+    //             >
+    //               <Button
+    //                 href="#"
+    //                 className={
+    //                   ButtonVariants({
+    //                     variant: "default",
+    //                     size: "icon",
+    //                     radius: "rounded_full",
+    //                   }) + " bg-blue-800 hover:bg-blue-900 p-0 overflow-hidden"
+    //                 }
+    //               >
+    //                 <Image
+    //                   src="/assets/img/logos/google-scholar.png"
+    //                   alt="Google Scholar icon"
+    //                   fit="contain"
+    //                 />
+    //                 <Mybadge
+    //                   variant="secondary"
+    //                   size="xs"
+    //                   className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
+    //                 >
+    //                   {" "}
+    //                   Google Scholar{" "}
+    //                 </Mybadge>
+    //               </Button>
+    //             </Link>
+    //           )}
+    //           {linkedin && (
+    //             <Link
+    //               target="_blank"
+    //               href={linkedin}
+    //               className={
+    //                 " icon_link_publication relative text-left h-7 max-w-7 mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+    //               }
+    //             >
+    //               <Button
+    //                 href="#"
+    //                 className={
+    //                   ButtonVariants({
+    //                     variant: "default",
+    //                     size: "icon",
+    //                     radius: "rounded_full",
+    //                   }) +
+    //                   " bg-[#006198] hover:bg-[#006198] p-0 overflow-hidden"
+    //                 }
+    //               >
+    //                 <Image
+    //                   src="/assets/img/logos/linkedin.png"
+    //                   alt="LinkedIn icon"
+    //                   fit="contain"
+    //                 />
+    //                 <Mybadge
+    //                   variant="secondary"
+    //                   size="xs"
+    //                   className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
+    //                 >
+    //                   {" "}
+    //                   LinkedIn{" "}
+    //                 </Mybadge>
+    //               </Button>
+    //             </Link>
+    //           )}
+    //           {portalUpm && (
+    //             <Link
+    //               target="_blank"
+    //               href={portalUpm}
+    //               className={
+    //                 "icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+    //               }
+    //             >
+    //               <Button
+    //                 href="#"
+    //                 className={
+    //                   ButtonVariants({
+    //                     variant: "default",
+    //                     size: "icon",
+    //                     radius: "rounded_full",
+    //                   }) + " bg-blue-600 hover:bg-blue-700 "
+    //                 }
+    //               >
+    //                 <p className="text-2xs font-bold"> UPM </p>
+    //                 <Mybadge
+    //                   variant="secondary"
+    //                   size="xs"
+    //                   className="link_publication bg-[#00000097] absolute -translate-x-1/2 left-1/2 bottom-7"
+    //                 >
+    //                   {" "}
+    //                   Portal Científico UPM{" "}
+    //                 </Mybadge>
+    //               </Button>
+    //             </Link>
+    //           )}
+    //         </div>
+    //       </CardContent>
+    //     )}
+    //     {/* {( email &&    
+    //     <CardFooter>
+    //       <a href={email}>{email}</a>
+    //     </CardFooter>)} */}
+    //   </CustomCard>
+    // );
 
     // TOOL - ok
     const toolCard = (

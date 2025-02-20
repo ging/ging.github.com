@@ -6,6 +6,7 @@ import { publications } from "@/constants/publications";
 import { researchlines } from "@/constants/researchlines";
 import { useTranslation } from "react-i18next";
 import { Card, CardVariants } from "@/components/core/Cards";
+import PublicationCard from "@/components/cards/PublicationCard";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text";
@@ -154,6 +155,7 @@ function ResearchPage() {
             .map(
               (
                 {
+                  className,
                   date,
                   type,
                   doi,
@@ -166,13 +168,14 @@ function ResearchPage() {
                 key
               ) => {
                 return (
-                  <Card
+                  <PublicationCard
                     key={key}
                     currentLang={currentLang}
-                    cardType={"publication"}
-                    className={CardVariants({
-                      variant: "publication",
-                    })}
+                    // cardType={"publication"}
+                    // className={CardVariants({
+                    //   variant: "publication",
+                    // })} /* borrar cuando se borre el macro componente Card */
+                    className={className + 'bg-background-300'}
                     date={date}
                     category={type}
                     title={title}
@@ -180,7 +183,7 @@ function ResearchPage() {
                     doi={doi}
                     researchLine={researchlines}
                     keywords={keywords}
-                  ></Card>
+                  ></PublicationCard>
                 );
               }
             )}
