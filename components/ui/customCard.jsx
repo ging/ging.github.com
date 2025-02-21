@@ -4,6 +4,8 @@ import * as React from "react";
 import { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 
+import { useTranslation } from "react-i18next";
+
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
@@ -11,6 +13,8 @@ import { cn } from "@/lib/utils";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text";
 import { Button, ButtonVariants } from "@/components/ui/button";
+
+
 
 /** --------------------------------------
  * CARD CONTAINER
@@ -73,12 +77,14 @@ CardSubtitle.displayName = "CardSubtitle";
 
 const CardDescription = React.forwardRef(
   ({ className, children, lines = 3, ...props }, ref) => {
+    const { t, i18n } = useTranslation();
+    const currentLang = i18n.language;
     const [isTruncated, setIsTruncated] = useState(false); // Si el texto está truncado
     const [isExpanded, setIsExpanded] = useState(false); // Si el texto está desplegado
     const textRef = useRef(null); // Referencia al párrafo
 
     // Verifica si el contenido está truncado
-    useEffect(() => {      
+    useEffect(() => {
       if (textRef.current) {
         const isContentTruncated =
           textRef.current.scrollHeight > textRef.current.offsetHeight;
@@ -86,7 +92,7 @@ const CardDescription = React.forwardRef(
         setIsTruncated(isContentTruncated);
       }
     }, [children, lines]);
-    
+
     return (
       <div>
         <Text
@@ -111,10 +117,13 @@ const CardDescription = React.forwardRef(
         {isTruncated && (
           <Button
             className="min-w-fit p-0 pt-2 cursor-pointer font-bold hover:text-blue-300 text-white underline underline-offset-2"
-            size="sm" variant="link" 
+            size="sm"
+            variant="link"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            {isExpanded ? "Ver menos" : "Ver más"}
+            {isExpanded
+              ? t("projects.card.toggleLess")
+              : t("projects.card.toggleMore")}
           </Button>
         )}
       </div>

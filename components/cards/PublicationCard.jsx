@@ -101,8 +101,7 @@ const Card = React.forwardRef(
       // const publicationCard = (
       <CustomCard
         className={cn(
-          " p-4 sm:py-4 whitespace-nowrap rounded-md font-body text-sm text-text bg-background-300 border-none shadow-md hover:scale-[101%] transition-all overflow-hidden" +
-            "  "
+          " p-4 sm:py-4 whitespace-nowrap rounded-md font-body text-sm text-text bg-background-300 border-none shadow-md hover:scale-[101%] transition-all overflow-hidden"
         )}
       >
         <CardHeader className="flex flex-wrap">
@@ -207,7 +206,7 @@ const Card = React.forwardRef(
             </Button>
           ) : null}
         </CardFooter>
-        {/* 
+        {/*
           {console.log(date && date[0])} */}
       </CustomCard>
     );

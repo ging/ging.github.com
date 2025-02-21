@@ -42,7 +42,7 @@ const Card = React.forwardRef(
   ) => {
     const { t, i18n } = useTranslation();
     const [isExpanded, setIsExpanded] = useState(false);
-    const currentLang = i18n.language;
+    const currentLang = i18n.language;    
 
     // Elegir la descripción según el idioma
     const description_translation =
