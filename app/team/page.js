@@ -5,9 +5,7 @@ import { myteam } from "@/constants/team";
 import { useTranslation } from "react-i18next";
 
 // Components
-import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/text";
 import TeamCard from "@/components/cards/TeamCard";
 import dynamic from "next/dynamic";
 
@@ -19,7 +17,7 @@ const Team = (props) => {
   const currentLang = i18n.language;
   console.log(team);
 
-  const renderMembers = (member) => {
+  const renderMembers = () => {
     return team.map(
       (
         {

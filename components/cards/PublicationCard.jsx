@@ -43,8 +43,6 @@ const deleteSpaces = (string) => {
 const Card = React.forwardRef(
   (
     {
-      direction,
-      className,
       title,
       description_en,
       description_es,
@@ -72,19 +70,19 @@ const Card = React.forwardRef(
     // coge solo la primera researchline para ponerle el fondo
     switch (researchLine && researchLine[0]) {
       case "data":
-        backgroundColor = "bg-data_bg"; // Para la categoría 'data'
+        backgroundColor = "bg-data_bg";
         break;
       case "videoconference":
-        backgroundColor = "bg-videoconference_bg"; // Para la categoría 'videoconference'
+        backgroundColor = "bg-videoconference_bg";
         break;
       case "ai":
-        backgroundColor = "bg-ai_bg"; // Para la categoría 'ai'
+        backgroundColor = "bg-ai_bg";
         break;
       case "computing":
-        backgroundColor = "bg-networks_bg"; // Para la categoría 'ai'
+        backgroundColor = "bg-networks_bg";
         break;
       case "e-learning":
-        backgroundColor = "bg-eLearning_bg"; // Para la categoría 'ai'
+        backgroundColor = "bg-eLearning_bg";
         break;
       default:
         backgroundColor = "bg-gray-600/50"; // Valor por defecto si no hay coincidencia

@@ -676,39 +676,39 @@ const Card = React.forwardRef(
     // );
 
     // TOOL - ok
-    const toolCard = (
-      <CustomCard className={cn(CardVariants({ direction, className }))}>
-        {img && (
-          <Image
-            src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-            alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
-            className={"h-24"}
-            fit="contain"
-          />
-        )}
-        <CardBody>
-          <CardContent>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{description}</CardDescription>
-          </CardContent>
-        </CardBody>
-        <CardFooter>
-          {github && (
-            <Button asChild variant="link">
-              <Link rel="noopener noreferrer" target="_blank" href={github}>
-                GitHub
-              </Link>
-            </Button>
-          )}
-          <Button asChild variant="secondary" radius="rounded_md">
-            <Link rel="noopener noreferrer" target="_blank" href={route}>
-              Ver herramienta
-              <ArrowRightIcon />
-            </Link>
-          </Button>
-        </CardFooter>
-      </CustomCard>
-    );
+    // const toolCard = (
+    //   <CustomCard className="">
+    //     {img && (
+    //       <Image
+    //         src={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+    //         alt={/* process.env.PUBLIC_URL */ +img || "placeholder.jpg"}
+    //         className={"h-24"}
+    //         fit="contain"
+    //       />
+    //     )}
+    //     <CardBody>
+    //       <CardContent>
+    //         <CardTitle>{title}</CardTitle>
+    //         <CardDescription>{description}</CardDescription>
+    //       </CardContent>
+    //     </CardBody>
+    //     <CardFooter>
+    //       {github && (
+    //         <Button asChild variant="link">
+    //           <Link rel="noopener noreferrer" target="_blank" href={github}>
+    //             GitHub
+    //           </Link>
+    //         </Button>
+    //       )}
+    //       <Button asChild variant="secondary" radius="rounded_md">
+    //         <Link rel="noopener noreferrer" target="_blank" href={route}>
+    //           Ver herramienta
+    //           <ArrowRightIcon />
+    //         </Link>
+    //       </Button>
+    //     </CardFooter>
+    //   </CustomCard>
+    // );
 
     const researchLineCard = (
       <CustomCard className="card-researchline max-w-[300px] h-fit mb-8 md:mb-0">

@@ -20,6 +20,7 @@ import { Divider } from "../ui/divider";
 
 // Icons
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
+import Text from "../ui/Text";
 
 const Card = React.forwardRef(
   (
@@ -86,14 +87,15 @@ const Card = React.forwardRef(
           <Divider />
 
           <div className="pb-3">
-            <p
+            <Text
               className={clsx("text-white", {
                 "line-clamp-none": isExpanded,
                 "line-clamp-3": !isExpanded,
               })}
             >
               {description_translation}
-            </p>
+              {description_translation}
+            </Text>
             <Button
               size="sm"
               variant="link"
