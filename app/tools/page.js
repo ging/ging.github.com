@@ -51,14 +51,15 @@ export default function Tools(props) {
         </Text>
       </div>
       <section className="standard_margin grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {tools.map(({ title, description, route, img, github }, key) => {
+        {tools.map(({ title, description_en, description_es, route, img, github }, key) => {
           return (
             <ToolCard
             key={key}
             title={title}
             img={img}
             route={route}
-            description={description}
+            description_en={description_en}
+            description_es={description_es}
             github={github}
           ></ToolCard>
           );

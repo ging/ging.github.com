@@ -142,7 +142,7 @@ function ProjectsPage() {
               {
                 year,
                 title,
-                description,
+                description_en,
                 description_es,
                 researchLine,
                 logo,
@@ -158,7 +158,7 @@ function ProjectsPage() {
                 title={title}
                 logo={logo}
                 route={route}
-                description_en={description}
+                description_en={description_en}
                 description_es={description_es}
                 projectType={projectType}
               ></ProjectCard>

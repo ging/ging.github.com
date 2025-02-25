@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 // Components
-import { Mybadge, badgeVariants } from "../ui/mybadge";
 import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
 
@@ -25,15 +24,16 @@ import { GitHub } from "@mui/icons-material";
 
 const Card = React.forwardRef(
   (
-    {title, img, route, description, description_es, github},
+    {title, img, route, description_en, description_es, github},
     ref
   ) => {
     const { t, i18n } = useTranslation();
-    const currentLang = i18n.language;    
+    const currentLang = i18n.language;
 
-    // Elegir la descripción según el idioma
-    const description_translation =
-      currentLang === "en" && description_es ? description_es : description;
+    let description_translation = description_en;
+    if (currentLang === "es" && description_es) {
+      description_translation = description_es;
+    }
 
     return (
       <CustomCard>

@@ -20,12 +20,8 @@ export default function Footer(props) {
     "flex flex-col gap-4 items-start justify-start sm:justify-center"
   );
 
-  const partnerLogoClasses = clsx(
-    "flex justify-start items-start h-20 w-40 overflow-hidden"
-  );
-
   const sectionTitleClasses = clsx(
-    "smallcaps text-left-2 text-[14px] font-bold mb-3 "
+    "uppercase text-left-2 text-[14px] mb-3 "
   );
 
   return (
@@ -51,7 +47,7 @@ export default function Footer(props) {
       <nav className="">
         <div className={sectionTitleClasses}>{t("footer.title1")}</div>
         <ul
-          className={`columns-1 gap-x-4 inline-block ${activeRoutes.length <= 3 ? "xs:columns-1" : "xs:columns-2"
+          className={`font-semibold columns-1 gap-x-4 inline-block ${activeRoutes.length <= 3 ? "xs:columns-1" : "xs:columns-2"
             }`}
         >
           {activeRoutes.map((route, index) => (
@@ -73,7 +69,7 @@ export default function Footer(props) {
 
       <nav className="">
         <div className={sectionTitleClasses}>{t("footer.title2")}</div>
-        <ul className="flex flex-col gap-0.5">
+        <ul className="font-semibold flex flex-col gap-0.5">
           <Link target="_blank" href="https://www.youtube.com/user/FirefoxOSHTML5/featured" className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
             <Button href="#" className={ButtonVariants({
               variant: "default",

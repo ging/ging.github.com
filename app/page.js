@@ -16,7 +16,7 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import CategoryIcon from "@mui/icons-material/Category";
 import HubIcon from "@mui/icons-material/Hub";
-import { Card, CardVariants } from "@/components/core/Cards";
+import { Card } from "@/components/core/Cards";
 
 import {
   CustomCard,
@@ -92,7 +92,7 @@ export default function Page() {
       </section>
 
       <section
-        className="margin_researchlines section-researchlines"
+        className="standard_margin-s section-researchlines"
         id="researchlines"
       >
         <Divider size="md"></Divider>
@@ -101,7 +101,7 @@ export default function Page() {
         </Heading>
         {/* Cards con iconos */}
 
-        <section className="flex flex-col gap-4 mx-auto pb-12 justify-center items-center sm:items-start sm:grid sm:grid-cols-2 sm:place-items-center md:grid-cols-3 auto-rows-min xl:grid-cols-5 ">
+        <section className="pb-12 flex flex-col justify-center justify-items-center gap-4 mx-auto place-items-center sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5">
           <Card
             cardType={"researchline"}
             researchLine="videoconference"

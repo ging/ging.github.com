@@ -4,25 +4,26 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
-  "inline-flex px-3 py-1 items-center h-fit w-fit rounded-md  border transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex px-3 py-1 items-center border h-fit w-fit rounded-sm transition-colors",
   {
     variants: {
       variant: {
         default:
-          "border-secondary-600 bg-secondary-600 text-secondary-foreground",
+          "bg-text text-primary-foreground",
+          primary:
+            "bg-text text-black",
         outline:
           "border-primary bg-tranparent text-primary",
         secondary:
-          
           "bg-gray-900/20 text-gray-300 border-none ",
       },
       size: {
         default:
           "px-1.5 py-0.5 text-xs rounded-sm",
         lg:
-          "px-3 py-1 border-2 text-[14px] font-bold uppercase",
+          "px-3 py-1 border-1 text-[14px] font-bold uppercase",
           md:
-          "px-3 py-1 border-2 text-[14px]",
+          "px-3 py-1 border-1 text-[14px]",
           sm:
           "py-0.5 px-1.5 text-sm rounded-sm" ,
         xs:

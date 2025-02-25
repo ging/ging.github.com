@@ -11,7 +11,6 @@ import dynamic from "next/dynamic";
 
 const Team = (props) => {
   console.log(myteam)
-  // Puedes usar directamente el array 'team' en lugar de 'teamData', pero si prefieres manejar el estado:
   const [team, setMembers] = useState(myteam); // Inicializa el estado con los datos de 'team'
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -22,7 +21,7 @@ const Team = (props) => {
       (
         {
           name,
-          description,
+          description_en,
           description_es,
           position,
           img,
@@ -50,7 +49,7 @@ const Team = (props) => {
             role={translatedRole}
             center={center}
             email={email}
-            description_en={description}
+            description_en={description_en}
             description_es={description_es}
             researchgate={researchgate}
             orcid={orcid}
