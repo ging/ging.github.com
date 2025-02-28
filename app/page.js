@@ -16,14 +16,8 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import CategoryIcon from "@mui/icons-material/Category";
 import HubIcon from "@mui/icons-material/Hub";
-import { Card } from "@/components/core/Cards";
-
-import {
-  CustomCard,
-  CardContent,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/customCard";
+import ResearchLineCard from "@/components/cards/ResearchLineCard";
+import {Card} from "@/components/core/Cards";
 
 //Banner
 import {
@@ -102,8 +96,7 @@ export default function Page() {
         {/* Cards con iconos */}
 
         <section className="pb-12 flex flex-col justify-center justify-items-center gap-4 mx-auto place-items-center sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5">
-          <Card
-            cardType={"researchline"}
+          <ResearchLineCard
             researchLine="videoconference"
             title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}
             description={t(
@@ -111,32 +104,28 @@ export default function Page() {
             )}
           />
 
-          <Card
-            cardType={"researchline"}
+          <ResearchLineCard
             researchLine="data"
             title={t("front.ResearchLines.ResearchLine1.ResearchLineTitle")}
             description={t(
               "front.ResearchLines.ResearchLine1.ResearchLineBody"
             )}
           />
-          <Card
-            cardType={"researchline"}
+          <ResearchLineCard
             researchLine="ai"
             title={t("front.ResearchLines.ResearchLine3.ResearchLineTitle")}
             description={t(
               "front.ResearchLines.ResearchLine3.ResearchLineBody"
             )}
           />
-          <Card
-            cardType={"researchline"}
+          <ResearchLineCard
             researchLine="e-learning"
             title={t("front.ResearchLines.ResearchLine2.ResearchLineTitle")}
             description={t(
               "front.ResearchLines.ResearchLine2.ResearchLineBody"
             )}
           />
-          <Card
-            cardType={"researchline"}
+          <ResearchLineCard
             researchLine="computing"
             title={t("front.ResearchLines.ResearchLine5.ResearchLineTitle")}
             description={t(
@@ -144,6 +133,7 @@ export default function Page() {
             )}
           />
         </section>
+        
         <Divider size="md"></Divider>
       </section>
     </main>
