@@ -19,20 +19,6 @@ import {
 } from "@/components/ui/customCard";
 
 
-// const CardVariants = cva(
-//   "min-w-20 p-4 sm:py-4 inline-flex flex-col gap-4 items-center whitespace-nowrap rounded-md font-body text-sm text-text drop-shadow-md hover:scale-[101%] transition-all overflow-hidden",
-//   {
-//     variants: {
-//       direction: {
-//         default: "flex flex-col", // horizontal
-//         vertical: "flex",
-//       },
-//     },
-//     defaultVariants: {
-//       direction: "default",
-//     },
-//   }
-// );
 
 // Las cards comentadas son las que ya están aisladas en la carpeta cards
 const Card = React.forwardRef(
@@ -98,9 +84,8 @@ const Card = React.forwardRef(
       <CustomCard className="card-researchline w-fit max-w-[300px] h-fit mb-8 md:mb-0">
         <ResearchlineIllust researchLine={researchLine} />
         <CardContent>
-          <CardTitle level='h4' className="font-semibold text-2xl text-white">
-            {" "}
-            {title}{" "}
+          <CardTitle level='h4' className="font-semibold text-white">
+            {title}
           </CardTitle>
           <Text className="font-light">{description}</Text>
           {/* <Button asChild variant="outline" size="sm" radius="rounded_sm" className="mt-4">

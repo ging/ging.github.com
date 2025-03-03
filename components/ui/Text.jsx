@@ -2,7 +2,6 @@
 
 import React from "react";
 import clsx from "clsx";
-import { useRef } from "react";
 
 /* 
   ------------------------------------------------------------------
@@ -33,9 +32,9 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
     "font-main text-text max-w-[70ch]",
     {/*"text-balance"*/},
     {
-      "text-base text-pretty": type === "p",
-      "text-sm text-wrap leading-normal": type === "small",
-      "text-base": type === "short-p",
+      " text-18 sm:text-base text-pretty": type === "p",
+      "text-base sm:text-sm text-wrap leading-normal": type === "small",
+      " text-18 sm:text-base": type === "short-p",
     },
     className
   ])

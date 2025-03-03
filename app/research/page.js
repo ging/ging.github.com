@@ -5,12 +5,11 @@ import Filters from "@/components/filters/ResearchFilter";
 import { publications } from "@/constants/publications";
 import { researchlines } from "@/constants/researchlines";
 import { useTranslation } from "react-i18next";
-import { Card, CardVariants } from "@/components/core/Cards";
 import PublicationCard from "@/components/cards/PublicationCard";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text";
-import { Divider } from "@/components/ui/divider";
+import { Divider, DividerVariants } from "@/components/ui/divider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
@@ -128,11 +127,12 @@ function ResearchPage() {
   };
 
   return (
-    <div className={"research page_" + currentLang}>
-      <div className="standard_margin" id="banner-publications">
+    <div className={"standard_margin research page_" + currentLang}>
+      <div className="" id="banner-publications">
         <Heading level="h2">{t("research.title")}</Heading>
         <Text type="p">{t("research.description")}</Text>
       </div>
+      <Divider size="md"/>
       <main className="research">
         <Filters
           search={search} // filtro 1: busqueda de texto
@@ -149,7 +149,8 @@ function ResearchPage() {
           categories={categories}
           results={papersFiltered instanceof Array ? papersFiltered.length : 0}
         />
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4 standard_margin">
+        <Divider size="md"/>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {papersFiltered
             .slice(0, papersToShow)
             .map(
@@ -171,10 +172,6 @@ function ResearchPage() {
                   <PublicationCard
                     key={key}
                     currentLang={currentLang}
-                    // cardType={"publication"}
-                    // className={CardVariants({
-                    //   variant: "publication",
-                    // })} /* borrar cuando se borre el macro componente Card */
                     className={className + 'bg-background-300'}
                     date={date}
                     category={type}
@@ -189,7 +186,7 @@ function ResearchPage() {
             )}
         </section>
 
-        <div className="mb-4 w-full flex justify-center">
+        <div className="mt-4 w-full flex justify-center">
           {papersFiltered.length > papersToShow && (
             <Button
               onClick={handleLoadMore}
@@ -205,7 +202,6 @@ function ResearchPage() {
             </Button>
           )}
         </div>
-        <Divider />
       </main>
     </div>
   );

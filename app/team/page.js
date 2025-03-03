@@ -8,9 +8,10 @@ import { useTranslation } from "react-i18next";
 import Heading from "@/components/ui/Heading";
 import TeamCard from "@/components/cards/TeamCard";
 import dynamic from "next/dynamic";
+import { Divider } from "@/components/ui/divider";
 
 const Team = (props) => {
-  console.log(myteam)
+  console.log(myteam);
   const [team, setMembers] = useState(myteam); // Inicializa el estado con los datos de 'team'
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -34,8 +35,8 @@ const Team = (props) => {
           webOfScience,
           googleScholar,
           linkedin,
-          portalUpm, 
-          role
+          portalUpm,
+          role,
         },
         key
       ) => {
@@ -64,19 +65,18 @@ const Team = (props) => {
   };
 
   return (
-    <main className={"team page_" + currentLang}>
-      <main className="padding_home">
-        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
-          {t("team.title")}
-        </Heading>
-        <section className="justify-center flex flex-wrap xs:gap-x-8 md:gap-x-10 gap-y-8 md:gap-y-12">
-          {Array.isArray(team) && team.length > 0 ? (
-            renderMembers(team)
-          ) : (
-            <p>No members found.</p>
-          )}
-        </section>
-      </main>
+    <main className={"standard_margin-s team page_" + currentLang}>
+      <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
+        {t("team.title")}
+      </Heading>
+      <Divider size="md"/>
+      <section className="justify-center flex flex-wrap xs:gap-x-8 md:gap-x-10 gap-y-8 md:gap-y-12">
+        {Array.isArray(team) && team.length > 0 ? (
+          renderMembers(team)
+        ) : (
+          <p>No members found.</p>
+        )}
+      </section>
     </main>
   );
 };

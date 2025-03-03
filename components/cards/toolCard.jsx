@@ -45,12 +45,13 @@ const Card = React.forwardRef(
             fit="contain"
           />
         )}
-        <CardBody className="h-fit">
+        <CardBody className="h-full sm:-mb-16"> {/* no quitar margin, está ajustando la altura */}
           <CardContent>
             <CardTitle>{title}</CardTitle>
             <CardDescription>{description_translation}</CardDescription>
           </CardContent>
         </CardBody>
+
         <CardFooter className="align-end justify-between">
           {github && (
             <Button variant="ghost" size="sm" className="gap-1">
@@ -67,6 +68,7 @@ const Card = React.forwardRef(
             </Link>
           </Button>
         </CardFooter>
+
       </CustomCard>
     );
   }

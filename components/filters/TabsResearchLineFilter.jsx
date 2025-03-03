@@ -40,7 +40,7 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
   
     // Retornamos las clases combinadas
     return clsx([
-      "font-medium inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-3 text-base ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "font-medium flex items-center justify-center whitespace-nowrap rounded-md px-4 py-3 text-base ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
       selectedResearchLine === item
         ? `${backgroundColor} text-white` // Si está seleccionado, aplicamos el color dinámico
         : "bg-background-300 text-gray-400 hover:bg-background-600 md:hover:bg-background hover:text-white", // Si no está seleccionado
@@ -59,7 +59,7 @@ export default function TabsResearchLineFilter({ changeResearchLine, researchLin
   //resulta que Tailwind no puede interpretar correctamente este valor dinámico y generar las clases correspondientes.
   //Explicación de Chatgpt: Tailwind CSS utiliza una técnica llamada purga de CSS (o "tree-shaking") para eliminar las clases no utilizadas en tu archivo final de CSS, de manera que el archivo resultante sea lo más pequeño posible. Esto significa que Tailwind solo incluirá en el CSS final aquellas clases que se encuentren explícitamente en el código JavaScript o HTML de tu proyecto.
   return (
-    <div className="bg-none flex flex-wrap mx-4 gap-3 justify-start md:flex-nowrap md:bg-background-300  md:items-center md:justify-center rounded-lg p-1 text-muted-foreground md:gap-1">
+    <div className="bg-none flex flex-wrap gap-3 justify-start lg:flex-nowrap lg:bg-background-300  lg:items-center lg:justify-center rounded-lg p-1 text-muted-foreground md:gap-1">
       {researchLines.map((item, index) => (
         <button key={index} className={classes(item)} 
           onClick={() => { handleResearchLineChange(item) }}>

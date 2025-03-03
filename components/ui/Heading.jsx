@@ -63,7 +63,6 @@
 // };
 
 // export default Heading;
-
 "use client";
 
 import React from "react";
@@ -74,7 +73,7 @@ const Heading = ({ level = "h1", children, className = "" }) => {
     highlight: "h4", "title-sm": "h6", subtitle: "h5",
   }[level] || "h1";
 
-  const baseClasses = "text-text font-title text-pretty";
+  const baseClasses = "text-text font-title text-balance";
   const sizeClasses = {
     h1: "text-36 sm:text-40 mb-6 font-medium",
     h2: "text-32 sm:text-36 mb-4 font-medium",
@@ -83,11 +82,16 @@ const Heading = ({ level = "h1", children, className = "" }) => {
     h5: "text-20 sm:text-24 mb-2 font-medium",
     h6: "text-base font-medium uppercase mb-2",
     "title-sm": "text-base sm:text-20 font-normal mb-2 leading-snug",
-    subtitle: "text-base sm:text-20 md:text-24 mb-2 font-light max-w-[50ch] md:max-w-[70ch] 2xl:max-w-[75ch]",
+    subtitle: "text-20 md:text-24 mb-2 font-light max-w-[50ch] md:max-w-[70ch] 2xl:max-w-[75ch]",
   }[level] || "";
 
-  return <Component className={`${baseClasses} ${sizeClasses} ${className}`}>{children}</Component>;
+  return (
+    <Component className={baseClasses + " " + sizeClasses + " " + className}>
+      {children}
+    </Component>
+  );
 };
 
 export default Heading;
+
 

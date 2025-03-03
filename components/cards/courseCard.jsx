@@ -62,15 +62,15 @@ const Card = React.forwardRef(
         </header>
         {/* <Image
             className={"h-40"}
-            src={img || "placeholder.jpg"} // La imagen por defecto será una cadena vacía si no hay src
-            alt={title || "Image"} // Usa el título como alt si existe
-            fit="cover" // Ajustamos el contenido al contenedor
+            src={img || "placeholder.jpg"}
+            alt={title || "Image"}
+            fit="cover"
           /> */}
         <CardBody>
           <CardContent>
             <CardTitle level="h5">{title_translation}</CardTitle>
             <CardSubtitle level="h6">{subtitle}</CardSubtitle>
-            <CardDescription>{description_translation}</CardDescription>
+            <CardDescription description={description_translation}></CardDescription>
             {/* <div className={tagContainerClasses}>{renderTags(tags)}</div> */}
           </CardContent>
         </CardBody>

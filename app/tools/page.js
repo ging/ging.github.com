@@ -42,28 +42,34 @@ export default function Tools(props) {
   }, []);
 
   return (
-    <main className={"tools page_" + currentLang}>
+    <main className={"standard_margin tools page_" + currentLang}>
       {/* <Header route="/tools" /> */}
-      <div className="standard_margin ">
+      <div className=" ">
         <Heading level="h2">{t("tools.title")}</Heading>
         <Text type="p" className="pb-8 xs:p-6 md:p-0">
           {t("tools.description")}
         </Text>
       </div>
-      <section className="standard_margin grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {tools.map(({ title, description_en, description_es, route, img, github }, key) => {
-          return (
-            <ToolCard
-            key={key}
-            title={title}
-            img={img}
-            route={route}
-            description_en={description_en}
-            description_es={description_es}
-            github={github}
-          ></ToolCard>
-          );
-        })}
+      <Divider size="md" />
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tools.map(
+          (
+            { title, description_en, description_es, route, img, github },
+            ref
+          ) => {
+            return (
+              <ToolCard 
+                key={ref}
+                title={title}
+                img={img}
+                route={route}
+                description_en={description_en}
+                description_es={description_es}
+                github={github}
+              ></ToolCard>
+            );
+          }
+        )}
       </section>
       <Divider size="xl" />
     </main>

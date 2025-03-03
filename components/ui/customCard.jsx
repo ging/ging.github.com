@@ -6,9 +6,6 @@ import clsx from "clsx";
 
 import { useTranslation } from "react-i18next";
 
-import { Slot } from "@radix-ui/react-slot";
-import { cva } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/text";
@@ -76,50 +73,53 @@ CardSubtitle.displayName = "CardSubtitle";
 // CardDescription.displayName = "CardDescription"
 
 const CardDescription = React.forwardRef(
-  ({ className, children, lines = 3, ...props }, ref) => {
-    const { t, i18n } = useTranslation();
-    const currentLang = i18n.language;
-    const [isTruncated, setIsTruncated] = useState(false); // Si el texto está truncado
-    const [isExpanded, setIsExpanded] = useState(false); // Si el texto está desplegado
-    const textRef = useRef(null); // Referencia al párrafo
+  ({description}, ref) => {
+    const { t } = useTranslation();
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isTruncated, setIsTruncated] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);  // Estado para controlar si ya se comprobó la truncación
+    const textRef = useRef(null);
 
-    // Verifica si el contenido está truncado
+    const toggleDescription = () => setIsExpanded(!isExpanded);
+
+    // Efecto para detectar si el texto está truncado, solo se ejecuta la primera vez
     useEffect(() => {
-      if (textRef.current) {
-        const isContentTruncated =
-          textRef.current.scrollHeight > textRef.current.offsetHeight;
+      if (!isChecked) {
+        const checkTruncation = () => {
+          if (textRef.current) {
+            const isTruncated = textRef.current.scrollHeight > textRef.current.clientHeight;
+            setIsTruncated(isTruncated);
+          }
+        };
 
-        setIsTruncated(isContentTruncated);
+        checkTruncation(); // Comprueba la truncación al montar el componente
+        setIsChecked(true); // Marcar como comprobado
+
+        window.addEventListener("resize", checkTruncation); // Vuelve a comprobar cuando se redimensione la ventana
+        return () => {
+          window.removeEventListener("resize", checkTruncation); // Limpiar el evento de resize
+        };
       }
-    }, [children, lines]);
+    }, [isChecked, description]);  // Se ejecuta solo una vez cuando el texto cambia
 
     return (
-      <div>
+      <div className="pb-3">
         <Text
           ref={textRef}
-          className={clsx(
-            "text-muted-foreground overflow-hidden",
-            isExpanded ? "line-clamp-none" : `line-clamp-${lines}`,
-            className
-          )}
-          style={{
-            display: "-webkit-box",
-            WebkitLineClamp: isExpanded ? "none" : lines, // Fallback dinámico para estilos inline
-            WebkitBoxOrient: "vertical",
-            overflow: isExpanded ? "visible" : "hidden",
-          }}
-          {...props}
+          className={clsx("text-white", {
+            "line-clamp-none": isExpanded,
+            "line-clamp-3": !isExpanded,
+          })}
         >
-          {children}
+          {description}
         </Text>
 
-        {/* Botón dinámico */}
         {isTruncated && (
           <Button
-            className="min-w-fit p-0 pt-2 cursor-pointer font-bold hover:text-blue-300 text-white underline underline-offset-2"
             size="sm"
             variant="link"
-            onClick={() => setIsExpanded(!isExpanded)}
+            className="min-w-fit p-0 font-bold hover:text-blue-300 text-white underline underline-offset-2"
+            onClick={toggleDescription}
           >
             {isExpanded
               ? t("projects.card.toggleLess")
@@ -130,9 +130,18 @@ const CardDescription = React.forwardRef(
     );
   }
 );
+
+
 CardDescription.displayName = "CardDescription";
 
+  /* usage:
+     <CardDescription 
+      description={description_translation}
+    />
+  */
+
 export default CardDescription;
+
 
 /** -----------------------------------
  * CARD BODY

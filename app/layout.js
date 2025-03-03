@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
     // <html className={` ${sourceSans.variable} ${inter.variable} `}>
           <html className={` ${dmSans.variable} ${inter.variable} `}>
       <title>GING </title>
-      <body className="bg-background">
+      <body className="bg-background text-text">
         <Header route={"/"} />
         <main className="min-h-[70dvh]">
           {children}

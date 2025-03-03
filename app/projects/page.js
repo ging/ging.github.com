@@ -6,12 +6,12 @@ import { projects } from "@/constants/projects";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { researchlines } from "@/constants/researchlines";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/text"
-import ProjectsFilter from "@/components/filters/ProjectsFilter"
+import Text from "@/components/ui/text";
+import ProjectsFilter from "@/components/filters/ProjectsFilter";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Suspense } from 'react';
-
+import { Suspense } from "react";
+import { Divider } from "@/components/ui/divider";
 
 export default function Projects() {
   return (
@@ -19,26 +19,26 @@ export default function Projects() {
       <ProjectsPage />
     </Suspense>
   );
-
 }
-
-
 
 function ProjectsPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
   const router = useRouter(); // Hook para manipular la URL
-  let searchParams = useSearchParams(); 
+  let searchParams = useSearchParams();
 
   const [researchLine, setResearchLine] = useState("all");
   const [projectType, setProjectType] = useState(undefined);
   const [search, setSearch] = useState("");
 
   const pathname = "/projects";
-  
-  // creado array de categorías de publications 
-  const projectTypes = ["all",...new Set(projects.map(project => project.projectType))];
+
+  // creado array de categorías de publications
+  const projectTypes = [
+    "all",
+    ...new Set(projects.map((project) => project.projectType)),
+  ];
 
   // 2. Agregar objeto "all", que sería "todas las líneas de inv."
   let researchLines = ["all", ...researchlines];
@@ -49,32 +49,31 @@ function ProjectsPage() {
     if (search) query.search = search;
     if (projectType) query.category = projectType;
     if (researchLine) query.researchline = researchLine;
- 
-    router.push(`${pathname}/?${new URLSearchParams(query).toString()}`, undefined);
+
+    router.push(
+      `${pathname}/?${new URLSearchParams(query).toString()}`,
+      undefined
+    );
   }, [search, projectType, researchLine]);
-  
 
   // función para obtener todos los parámetros de la URL
   useEffect(() => {
-    let researchLineURL = searchParams.get('researchline');    
+    let researchLineURL = searchParams.get("researchline");
     console.log("researchLineURL: " + researchLineURL);
     setResearchLine(researchLineURL);
 
-    let searchURL = searchParams.get('search');
+    let searchURL = searchParams.get("search");
     console.log("searchURL: " + searchURL);
     setSearch(searchURL);
 
-    let projectTypeURL = searchParams.get('category');
+    let projectTypeURL = searchParams.get("category");
     console.log("projectType: " + projectTypeURL);
     setProjectType(projectTypeURL);
-
   }, []);
 
   // Filtrar los proyectos por línea de investigación
   const filteredItems = projects.filter(
-
-    (item) => 
-      
+    (item) =>
       (!search ||
         search
           .toLowerCase()
@@ -108,35 +107,35 @@ function ProjectsPage() {
               .replace(new RegExp(/\W/g), "")
               .includes(i)
           )) &&
-      (!researchLine || (researchLine === "all" || item.researchLine.includes(researchLine))) &&
-    (!projectType || (item.projectType && item.projectType === projectType))
+      (!researchLine ||
+        researchLine === "all" ||
+        item.researchLine.includes(researchLine)) &&
+      (!projectType || (item.projectType && item.projectType === projectType))
   );
   /* console.log(filteredItems.map(filteredItem => filteredItem ));*/
   return (
-      <div>
-        <div className="standard_margin" id="banner-publications">
+    <main className="standard_margin">
+      <div className="" id="banner-publications">
         <Heading level="h2">{t("projects.title")}</Heading>
-          <Text type="p">
-            {t("projects.description")}
-          </Text>
-          </div>
+        <Text type="p">{t("projects.description")}</Text>
+      </div>
+      <Divider size="md"/>
       <div>
-    
         <div className="flex flex-col justify-center">
-        <ProjectsFilter 
-          researchLines={researchLines} 
-          researchLine={researchLine}
-          projectType={projectType} 
-          projectTypes={projectTypes}
-          search={search}
-          changeProjectType={(projectType) => setProjectType(projectType)} 
-          changeResearchLine={(researchLine) => setResearchLine(researchLine)}
-          changeSearch={(search) => setSearch(search)} 
-          pathname={pathname}
-        />
-        
+          <ProjectsFilter
+            researchLines={researchLines}
+            researchLine={researchLine}
+            projectType={projectType}
+            projectTypes={projectTypes}
+            search={search}
+            changeProjectType={(projectType) => setProjectType(projectType)}
+            changeResearchLine={(researchLine) => setResearchLine(researchLine)}
+            changeSearch={(search) => setSearch(search)}
+            pathname={pathname}
+          />
         </div>
-        <div className="project_cards standard_margin my-4 sm:my-6 lg:my-10 sm:gap-4">
+        <Divider size="md"/>
+        <div className="project_cards my-4 sm:my-6 lg:my-10 sm:gap-4">
           {filteredItems.map(
             (
               {
@@ -147,7 +146,7 @@ function ProjectsPage() {
                 researchLine,
                 logo,
                 route,
-                projectType
+                projectType,
               },
               index
             ) => (
@@ -166,6 +165,6 @@ function ProjectsPage() {
           )}
         </div>
       </div>
-      </div>
+    </main>
   );
 }

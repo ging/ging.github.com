@@ -8,6 +8,9 @@ import { useTranslation } from "react-i18next";
 import Text from "@/components/ui/text";
 import Heading from "@/components/ui/Heading";
 
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
+import { GitHub } from "@mui/icons-material";
+import Image from "@/components/ui/image";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import CourseCard from "@/components/cards/CourseCard";
 
@@ -20,15 +23,16 @@ export default function Tools(props) {
   }, []);
 
   return (
-    <main className={"courses page_" + currentLang}>
+    <main className={"standard_margin courses page_" + currentLang}>
       {/* <Header route="/courses" /> */}
-      <div className="standard_margin ">
+      <div className="">
         <Heading level="h2">{t("courses.title")}</Heading>
         <Text type="p" className="pb-8 xs:p-6 md:p-0">
           {t("courses.description")}
         </Text>
       </div>
-      <section className="standard_margin-s grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <Divider size="md"/>
+      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {courses.map(({title, title_es, subtitle, description_en, description_es, date, edition, route}, key) => {
           return (
             <CourseCard

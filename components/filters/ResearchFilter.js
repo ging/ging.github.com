@@ -9,6 +9,7 @@ import FilterText from "./FilterText";
 import FilterDate from "./FilterDate";
 import FilterCategory from "./FilterCategory";
 import TabsResearchLineFilter from "./TabsResearchLineFilter";
+import { Divider } from "../ui/divider";
 
 export default function Filters({pathname, search, changeSearch, year, changeYear, items, category, changeCategory, results, categories, researchLines, researchLine, changeResearchLine }) {
   const { t } = useTranslation();
@@ -18,7 +19,8 @@ export default function Filters({pathname, search, changeSearch, year, changeYea
       <div className="flex justify-center">
         <TabsResearchLineFilter researchLines={researchLines} researchLine={researchLine} changeResearchLine={changeResearchLine} />
       </div>
-      <div className="filters standard_margin ">
+      <Divider size="sm"/>
+      <div className="filters">
         <div className="filter-block flex flex-col md:flex-row gap_filter">
           <FilterText pathname={pathname} search={search} changeSearch={changeSearch} ></FilterText>
         <div className="w-full md:w-1/2 flex gap_grid">
@@ -27,7 +29,7 @@ export default function Filters({pathname, search, changeSearch, year, changeYea
             </div>
         </div>
         {results === undefined ? null : (
-          <Mybadge className="research_results">
+          <Mybadge className="research_results bg-background-300">
             <p className="">
               {" "}
               {t("research.filter.text")}

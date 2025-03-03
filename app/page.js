@@ -1,23 +1,14 @@
 "use client";
 import * as React from "react";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
 import { Divider, DividerVariants } from "@/components/ui/divider";
-import Text from "@/components/ui/text";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Image from "@/components/ui/image";
-import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
-import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import CategoryIcon from "@mui/icons-material/Category";
-import HubIcon from "@mui/icons-material/Hub";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
-import {Card} from "@/components/core/Cards";
 
 //Banner
 import {

@@ -18,7 +18,7 @@ export default function Filters({ pathname, search, changeSearch, year, changeYe
       <div className="flex justify-center">
         <TabsResearchLineFilter researchLines={researchLines} researchLine={researchLine} changeResearchLine={changeResearchLine} />
       </div>
-      <div className="filters standard_margin-x mt-8 justify-center flex ">
+      <div className="filters mt-8 justify-center flex ">
         <div className="filter-block flex flex-col md:flex-row w-full sm:w-2/3 md:w-full lg:w-2/3  gap_filter">
           <FilterText pathname={pathname} search={search} changeSearch={changeSearch} ></FilterText>
         <div className="w-full flex gap_grid">

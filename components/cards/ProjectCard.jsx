@@ -16,6 +16,7 @@ import {
   CardContent,
   CardTitle,
   CardDescription,
+  CardFooter,
 } from "@/components/ui/customCard";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
@@ -25,7 +26,6 @@ const Card = React.forwardRef(
       title,
       description_en,
       description_es,
-      img,
       route,
       researchLine,
       logo,
@@ -72,36 +72,36 @@ const Card = React.forwardRef(
 
         <CardBody>
           <CardContent className="gap-5 my-0.5 lg:mt-0 lg:gap-[22px]">
-            <div>
-              <CardTitle
-                level="h3"
-                className="w-fit hover:text-blue-400 transition-all mb-0"
-              >
-                {title && (
-                  <Link
-                    href={route}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="flex flex-row w-fit gap-2 items-center"
+
+              {title && (
+                <Link
+                  href={route}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="flex flex-row w-full gap-2 justify-between items-center"
+                >
+                  <CardTitle
+                    level="h3"
+                    className="hover:text-blue-400 transition-all mb-0"
                   >
-                    {title}{" "}
-                    <ExternalLinkIcon
-                      className="mt-1 flex-shrink-0"
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
-                )}
-              </CardTitle>
+                    {title}
+                  </CardTitle>
+
+                  <ExternalLinkIcon
+                    className="mt-1 flex-shrink-0"
+                    width={24}
+                    height={24}
+                  />
+                </Link>
+              )}
+              {/* </CardTitle> */}
 
               {description_translation && (
-                <CardDescription lines={4}>
-                  {description_translation}
-                </CardDescription>
+                <CardDescription lines={4} description={description_translation}/>
               )}
-            </div>
 
-            <div className="BADGES-RESEARCHLINE flex flex-wrap gap-2">
+          </CardContent>
+          <CardFooter className="BADGES-RESEARCHLINE flex flex-wrap gap-2 justify-start">
               {Array.isArray(researchLine) &&
                 researchLine.map((item, index) => {
                   const colors = {
@@ -124,8 +124,7 @@ const Card = React.forwardRef(
                     </Mybadge>
                   );
                 })}
-            </div>
-          </CardContent>
+            </CardFooter>
         </CardBody>
       </CustomCard>
     );

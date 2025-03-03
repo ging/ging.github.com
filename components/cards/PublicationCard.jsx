@@ -98,10 +98,9 @@ const Card = React.forwardRef(
     return (
       // const publicationCard = (
       <CustomCard
-        className={cn(
+        className=
           " p-4 sm:py-4 whitespace-nowrap rounded-md font-body text-sm text-text bg-background-300 border-none shadow-md hover:scale-[101%] transition-all overflow-hidden"
-        )}
-      >
+        >
         <CardHeader className="flex flex-wrap">
           {Array.isArray(researchLine)
             ? researchLine.map((researchline, index) => {
@@ -164,15 +163,15 @@ const Card = React.forwardRef(
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
-            <CardTitle level="title-sm">{title}</CardTitle>
+            <CardTitle level="h5" className="text-pretty xl:pr-4">{title}</CardTitle>
             <div className="flex">
               <Text type="small" className="font-bold">
                 {t(`research.filter.${category}`)}
               </Text>
-              <div className="mx-2 mb-2">·</div>
+              <span className="mx-2 mb-2">·</span>
               <Text type="small">{date && date[0]}</Text>
             </div>
-            <Text className="text-gray-300/90 mb-4" type="small">
+            <Text className="text-gray-300/90 mb-4 lg:pr-16" type="p">
               {author}
             </Text>
             <div className="flex flex-wrap gap-1.5">
@@ -181,7 +180,7 @@ const Card = React.forwardRef(
                     return (
                       <Mybadge
                         key={index}
-                        size="default"
+                        size="xs"
                         className="bg-[#000000] border-none text-gray-300"
                       >
                         {" "}

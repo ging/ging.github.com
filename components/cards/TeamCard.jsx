@@ -20,12 +20,11 @@ import { Divider } from "../ui/divider";
 
 // Icons
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
-import Text from "../ui/Text";
+import Text from "../ui/text";
 
 const Card = React.forwardRef(
   (
     {
-      description,
       description_en,
       description_es,
       img = "/placeholder.jpg",
@@ -42,14 +41,11 @@ const Card = React.forwardRef(
     ref
   ) => {
     const { t, i18n } = useTranslation();
-    const [isExpanded, setIsExpanded] = useState(false);
     const currentLang = i18n.language;    
 
-    // Elegir la descripción según el idioma
     const description_translation =
       currentLang === "es" && description_es ? description_es : description_en;
 
-    const toggleDescription = () => setIsExpanded(!isExpanded);
 
     return (
       <CustomCard className="w-80 bg-transparent border-none shadow-none items-start text-text">
@@ -64,9 +60,9 @@ const Card = React.forwardRef(
           </div>
         )}
 
-        <CardContent className="flex flex-col items-start mb-auto">
-          <CardTitle level="title-sm" className="text-inherit text-center">
-            <b>{name}</b>
+        <CardContent className="flex flex-col items-start mb-3">
+          <CardTitle level="h5" className="text-inherit text-center">
+            {name}
           </CardTitle>
           {role && <CardDescription type="short-p">{role}</CardDescription>}
 
@@ -74,7 +70,7 @@ const Card = React.forwardRef(
             <Mybadge
               size="sm"
               variant="secondary"
-              className="font-semibold break-words mt-1 text-gray-300 bg-background-300"
+              className="mb-4 font-semibold break-words mt-1 text-gray-300 bg-background-300"
             >
               <MailOutlinedIcon
                 className="text-gray-300 mr-1"
@@ -83,30 +79,7 @@ const Card = React.forwardRef(
               {email}
             </Mybadge>
           )}
-
-          <Divider />
-
-          <div className="pb-3">
-            <Text
-              className={clsx("text-white", {
-                "line-clamp-none": isExpanded,
-                "line-clamp-3": !isExpanded,
-              })}
-            >
-              {description_translation}
-              {description_translation}
-            </Text>
-            <Button
-              size="sm"
-              variant="link"
-              className="min-w-fit p-0 font-bold hover:text-blue-300 text-white underline underline-offset-2"
-              onClick={toggleDescription}
-            >
-              {isExpanded
-                ? t("projects.card.toggleLess")
-                : t("projects.card.toggleMore")}
-            </Button>
-          </div>
+          <CardDescription lines={3} description={description_translation}/>
 
           <CardFooter className="justify-start mb-6">
             {researchgate && (
@@ -114,7 +87,7 @@ const Card = React.forwardRef(
                 target="_blank"
                 href={researchgate}
                 className={
-                  " icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
+                  "icon_link_publication relative text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"
                 }
               >
                 <Button
