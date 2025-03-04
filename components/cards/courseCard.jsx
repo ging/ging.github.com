@@ -23,6 +23,7 @@ import {
 // icons
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
+
 const Card = React.forwardRef(
   (
     {title, title_es, subtitle, description_en, description_es, date, category, route},
@@ -43,21 +44,22 @@ const Card = React.forwardRef(
 
     return (
       <CustomCard
-        className={'px-3 bg-cover bg-center bg-no-repeat border border-pink-400'}
+        className={'p-6 bg-cover bg-center bg-no-repeat text-text bg-background-300 rounded-md'}
         style={{
           backgroundImage: "url('assets/fondos/background_image.png')",
         }}
       >
-        <header className="flex w-full gap-2 items-center">
-          <Mybadge variant="primary" size="md">
-            {date}
-          </Mybadge>
-          <Mybadge variant="primary" size="md">
-            {category}
-          </Mybadge>
-          <span className="spacer w-full" />
-          <Button href={route} variant="ghost" size="lg">
-            Ir al curso <ExternalLinkIcon className="w-5 h-5" />
+        <header className="flex w-full justify-between items-center mb-2">
+          <span className="w-fit flex justify-start gap-2">
+            <Mybadge variant="secondary" className={'bg-background-600/50 text-white'}>
+              {date}
+            </Mybadge>
+            <Mybadge variant="secondary" className={'bg-background-600/50 text-white'}>
+              {category}
+            </Mybadge>
+          </span>
+          <Button href={route} variant="ghost" size="lg" className="flex w-fit items-center px-10 py-0">
+            Ir al curso<ExternalLinkIcon className="h-8 min-w-6"/>
           </Button>
         </header>
         {/* <Image
@@ -68,9 +70,9 @@ const Card = React.forwardRef(
           /> */}
         <CardBody>
           <CardContent>
-            <CardTitle level="h5">{title_translation}</CardTitle>
+            <CardTitle level="h4">{title_translation}</CardTitle>
             <CardSubtitle level="h6">{subtitle}</CardSubtitle>
-            <CardDescription description={description_translation}></CardDescription>
+            <CardDescription description={description_translation}/>
             {/* <div className={tagContainerClasses}>{renderTags(tags)}</div> */}
           </CardContent>
         </CardBody>

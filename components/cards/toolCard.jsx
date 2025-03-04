@@ -36,7 +36,7 @@ const Card = React.forwardRef(
     }
 
     return (
-      <CustomCard>
+      <CustomCard className="p-3 rounded-2xl border border-white">
         {img && (
           <Image
             src={process.env.PUBLIC_URL + img || "placeholder.jpg"}
@@ -45,10 +45,10 @@ const Card = React.forwardRef(
             fit="contain"
           />
         )}
-        <CardBody className="h-full sm:-mb-16"> {/* no quitar margin, está ajustando la altura */}
-          <CardContent>
+        <CardBody className="h-fit sm:h-full sm:-mb-20"> {/* no quitar margin, está ajustando la altura */}
+          <CardContent className="h-fit md:h-full">
             <CardTitle>{title}</CardTitle>
-            <CardDescription>{description_translation}</CardDescription>
+            <CardDescription description={description_translation}/>
           </CardContent>
         </CardBody>
 

@@ -33,7 +33,7 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
     {/*"text-balance"*/},
     {
       " text-18 sm:text-base text-pretty": type === "p",
-      "text-base sm:text-sm text-wrap leading-normal": type === "small",
+      "text-base text-wrap leading-normal": type === "small",
       " text-18 sm:text-base": type === "short-p",
     },
     className

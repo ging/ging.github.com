@@ -61,7 +61,7 @@ const Card = React.forwardRef(
         )}
 
         <CardContent className="flex flex-col items-start mb-3">
-          <CardTitle level="h5" className="text-inherit text-center">
+          <CardTitle level="h4" className="text-inherit text-center">
             {name}
           </CardTitle>
           {role && <CardDescription type="short-p">{role}</CardDescription>}

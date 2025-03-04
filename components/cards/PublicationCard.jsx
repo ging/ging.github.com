@@ -9,6 +9,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
+
 // Data
 import { useTranslation } from "react-i18next";
 import { researchlines } from "@/constants/researchlines";
@@ -104,49 +105,49 @@ const Card = React.forwardRef(
         <CardHeader className="flex flex-wrap">
           {Array.isArray(researchLine)
             ? researchLine.map((researchline, index) => {
-                let backgroundColorResearchLine;
-                let textColorResearchLine;
+                let researchLineColorStyles;
                 let backgroundIcon;
+                let iconSpacing;
                 // coge solo la primera researchline para ponerle el fondo
                 switch (deleteSpaces(researchline)) {
                   case "data":
-                    backgroundColorResearchLine = "bg-data-500/40"; // Para la categoría 'data'
+                    researchLineColorStyles = "bg-data-500/40 text-data-300";
                     backgroundIcon = "assets/img/icons/data_icon.svg";
-                    textColorResearchLine = "text-data-300";
+                    iconSpacing = "mb-[2px]"
                     break;
                   case "videoconference":
-                    backgroundColorResearchLine = "bg-videoconference-600/60"; // Para la categoría 'videoconference'
+                    researchLineColorStyles = "bg-videoconference-600/60 text-videoconference-200"; 
                     backgroundIcon =
                       "assets/img/icons/videoconference_icon.svg";
-                    textColorResearchLine = "text-videoconference-200";
                     break;
                   case "ai":
-                    backgroundColorResearchLine = "bg-ai-700/40"; // Para la categoría 'ai'
+                    researchLineColorStyles = "bg-ai-700/40 text-ai-400";
                     backgroundIcon = "assets/img/icons/ai_icon.svg";
-                    textColorResearchLine = "text-ai-400";
+                    iconSpacing = "mb-.5"
                     break;
                   case "computing":
-                    backgroundColorResearchLine = "bg-networks-600/60";
+                    researchLineColorStyles = "bg-networks-600/60 text-networks-200";
                     backgroundIcon = "assets/img/icons/networks_icon.svg";
-                    textColorResearchLine = "text-networks-200"; // Para la categoría 'ai'
+                    iconSpacing = "mb-.5"
                     break;
                   case "e-learning":
-                    backgroundColorResearchLine = "bg-eLearning-600/60";
+                    researchLineColorStyles = "bg-eLearning-600/60 text-eLearning-200";
                     backgroundIcon = "assets/img/icons/e-learning_icon.svg";
-                    textColorResearchLine = "text-eLearning-200"; // Para la categoría 'ai'
+                    iconSpacing = "mb-1"
                     break;
                   default:
-                    backgroundColorResearchLine = "bg-gray-500"; // Valor por defecto si no hay coincidencia
+                    researchLineColorStyles = "bg-gray-500"; // Valor por defecto si no hay coincidencia
+                    iconSpacing = "mb-1"
                     break;
                 }
 
                 return (
                   <Mybadge
                     key={index}
-                    className={`pt-1.5 ${backgroundColorResearchLine} text-white ${textColorResearchLine} border-none tracking-widest`}
+                    className={`pt-1.5 ${researchLineColorStyles} text-white border-none tracking-widest`}
                   >
                     <Image
-                      className={"h-[16px] pr-2 mb-[2px]"}
+                      className={`pr-2 mb- ${iconSpacing}`}
                       src={backgroundIcon}
                       alt={"Research line icon"}
                       fit="contain"
@@ -163,15 +164,15 @@ const Card = React.forwardRef(
         </CardHeader>
         <CardBody>
           <CardContent className="gap-1">
-            <CardTitle level="h5" className="text-pretty xl:pr-4">{title}</CardTitle>
+            <CardTitle level="h5" className="text-pretty">{title}</CardTitle>
             <div className="flex">
-              <Text type="small" className="font-bold">
+              <Text type="small" className="font-bold text-sm">
                 {t(`research.filter.${category}`)}
               </Text>
               <span className="mx-2 mb-2">·</span>
               <Text type="small">{date && date[0]}</Text>
             </div>
-            <Text className="text-gray-300/90 mb-4 lg:pr-16" type="p">
+            <Text className="text-gray-300/90 mb-4 lg:pr-16" type="small">
               {author}
             </Text>
             <div className="flex flex-wrap gap-1.5">
@@ -180,11 +181,10 @@ const Card = React.forwardRef(
                     return (
                       <Mybadge
                         key={index}
-                        size="xs"
-                        className="bg-[#000000] border-none text-gray-300"
+                        size="sm"
+                        className="bg-[#000000] border-none text-gray-300 capitalize"
                       >
-                        {" "}
-                        {keyword}{" "}
+                        {keyword}
                       </Mybadge>
                     );
                   })

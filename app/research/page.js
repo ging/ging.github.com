@@ -185,8 +185,9 @@ function ResearchPage() {
               }
             )}
         </section>
+        <Divider size="sm"/>
 
-        <div className="mt-4 w-full flex justify-center">
+        <div className="w-full flex justify-center">
           {papersFiltered.length > papersToShow && (
             <Button
               onClick={handleLoadMore}
@@ -202,6 +203,8 @@ function ResearchPage() {
             </Button>
           )}
         </div>
+        <Divider size="sm"/>
+
       </main>
     </div>
   );

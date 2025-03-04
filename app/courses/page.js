@@ -32,10 +32,11 @@ export default function Tools(props) {
         </Text>
       </div>
       <Divider size="md"/>
-      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid gap-8 md:grid-cols-2">
         {courses.map(({title, title_es, subtitle, description_en, description_es, date, edition, route}, key) => {
           return (
             <CourseCard
+              // key={key}
               title = {title} 
               title_es = {title_es} 
               subtitle = {subtitle}
