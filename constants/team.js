@@ -21,11 +21,11 @@ export const myteam = [
   {
     name: "Juan Quemada",
     position:
-      "Juan Quemada lidera el Grupo de Internet de Nueva Generación dentro del Departamento de Ingeniería Telemática de la Universidad Politécnica de Madrid (UPM), donde es Catedrático. También ocupa la Cátedra Telefónica de la UPM para Internet de Nueva Generación y es el representante de la UPM en el World Wide Web Consortium. Sus intereses de investigación incluyen la arquitectura de aplicaciones colaborativas y sociales para Internet y la Web, incluyendo la computación en la nube, con una fuerte implicación en proyectos de investigación europeos y españoles.",
+      "",
     role: "fullprofessor",
     description_en:
       "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
-    description_es: "",
+    description_es: "Juan Quemada lidera el Grupo de Internet de Nueva Generación dentro del Departamento de Ingeniería Telemática de la Universidad Politécnica de Madrid (UPM), donde es Catedrático. También ocupa la Cátedra Telefónica de la UPM para Internet de Nueva Generación y es el representante de la UPM en el World Wide Web Consortium. Sus intereses de investigación incluyen la arquitectura de aplicaciones colaborativas y sociales para Internet y la Web, incluyendo la computación en la nube, con una fuerte implicación en proyectos de investigación europeos y españoles.",
     img: "assets/img/team/juan-quemada.jpg",
     github: "https://github.com/jquemada",
     email: "juan.quemada@upm.es",
