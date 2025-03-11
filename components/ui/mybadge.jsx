@@ -18,6 +18,7 @@ const badgeVariants = cva(
         lg: "px-3 py-1 border-1 text-[14px] font-bold uppercase",
         md: "px-3 py-1 border-1 text-[14px]",
         sm: "py-0.5 px-1.5 text-sm rounded-sm",
+        xs: "py-0.5 px-1.5 text-xs rounded-sm",
       },
       type: {
         success: "border-green-100 bg-green-100 text-green-800",

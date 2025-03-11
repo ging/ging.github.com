@@ -81,7 +81,8 @@ const Card = React.forwardRef(
           )}
           <CardDescription lines={3} description={description_translation}/>
 
-          <CardFooter className="justify-start mb-6">
+          <CardFooter className="justify-start mb-6 pt-[18px]">
+            {/* En badged meter position que si es el primer elemento tenga left-0 */}
             {researchgate && (
               <Link
                 target="_blank"
