@@ -34,13 +34,12 @@ export const projects = [
   },
   {
     logo: "/assets/img/logos/iglue-logo-01.png",
-    route:
-      "https://iptc.upm.es/implementation-game-based-learning-using-escape-rooms-proyecto-2024-1-es01-ka220-hed-000256356",
-    title: "Implementation of Game-Based Learning using Escape Rooms",
+    route: "https://iglue.dit.upm.es",
+    title: "Implementation of Game-Based Learning Using Escape Rooms (IGLUE)",
     description_en:
-      "The project aims to develop a set of escape rooms that will be used as a tool to teach different subjects.",
+      "The IGLUE project aims to empower universities to create and conduct pedagogically sound educational escape rooms and promote the widespread use and adoption of such innovative learning activities across Europe.",
     description_es:
-      "El proyecto tiene como objetivo desarrollar un conjunto de salas de escape que se utilizarán como herramienta para enseñar diferentes materias.",
+      "El proyecto IGLUE tiene como objetivo capacitar a las universidades para crear y llevar a cabo escape rooms educativas pedagógicamente sólidas y promover el uso y la adopción generalizada de estas innovadoras actividades de aprendizaje en toda Europa.",
     researchLine: ["e-learning"],
     projectType: "european-project",
   },
