@@ -1,0 +1,32 @@
+<svg width="382" height="230" viewBox="0 0 382 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_413_3446)">
+<rect width="382" height="230" fill="#534068"/>
+<rect width="382" height="230" fill="#534068"/>
+<g opacity="0.3" clip-path="url(#clip1_413_3446)">
+<g opacity="0.4" clip-path="url(#clip2_413_3446)">
+<rect x="411.81" y="136.908" width="246.11" height="43.7018" transform="rotate(-180 411.81 136.908)" fill="#C99FFA" fill-opacity="0.37"/>
+<circle cx="167" cy="115" r="22" fill="#B477FA"/>
+<rect x="360.495" y="216.978" width="246.11" height="43.7018" transform="rotate(-135 360.495 216.978)" fill="#C99FFA" fill-opacity="0.37"/>
+<rect x="267.592" y="237.31" width="246.11" height="43.7018" transform="rotate(-90 267.592 237.31)" fill="#C99FFA" fill-opacity="0.37"/>
+<rect x="187.522" y="185.994" width="246.11" height="43.7018" transform="rotate(-45 187.522 185.994)" fill="#C99FFA" fill-opacity="0.37"/>
+<circle cx="202.879" cy="28.3793" r="22" transform="rotate(45 202.879 28.3793)" fill="#B477FA"/>
+<circle cx="289.5" cy="-7.5" r="22" transform="rotate(90 289.5 -7.5)" fill="#B477FA"/>
+<circle cx="376.121" cy="28.3789" r="22" transform="rotate(135 376.121 28.3789)" fill="#B477FA"/>
+<circle cx="376.121" cy="201.621" r="22" transform="rotate(45 376.121 201.621)" fill="#B477FA"/>
+<circle cx="289.5" cy="237.5" r="22" transform="rotate(90 289.5 237.5)" fill="#B477FA"/>
+<circle cx="202.879" cy="201.62" r="22" transform="rotate(135 202.879 201.62)" fill="#B477FA"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_413_3446">
+<rect width="382" height="230" fill="white"/>
+</clipPath>
+<clipPath id="clip1_413_3446">
+<rect width="290.033" height="290.033" fill="white" transform="translate(99 -41)"/>
+</clipPath>
+<clipPath id="clip2_413_3446">
+<rect width="290.033" height="290.033" fill="white" transform="translate(145 -31)"/>
+</clipPath>
+</defs>
+</svg>
