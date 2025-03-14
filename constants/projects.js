@@ -37,9 +37,9 @@ export const projects = [
     route: "https://iglue.dit.upm.es",
     title: "Implementation of Game-Based Learning Using Escape Rooms (IGLUE)",
     description_en:
-      "The IGLUE project aims to empower universities to create and conduct pedagogically sound educational escape rooms and promote the widespread use and adoption of such innovative learning activities across Europe.",
+      "The IGLUE project aims to empower universities to create and conduct pedagogically sound educational escape rooms, as well as to promote the widespread use and adoption of such innovative learning activities across Europe in order to enhance students’ performance and engagement. The project involves activities aimed at overcoming the main barriers that currently hamper the adoption of educational escape rooms by providing teachers with the training and tools they need to effectively design, build, and conduct these learning activities.",
     description_es:
-      "El proyecto IGLUE tiene como objetivo capacitar a las universidades para crear y llevar a cabo escape rooms educativas pedagógicamente sólidas y promover el uso y la adopción generalizada de estas innovadoras actividades de aprendizaje en toda Europa.",
+      "El proyecto IGLUE pretende capacitar a las universidades para crear y llevar a cabo escape rooms educativas pedagógicamente sólidas, así como promover el uso y la adopción generalizada de estas actividades de aprendizaje innovadoras en toda Europa con el fin de mejorar el rendimiento y la motivación de los estudiantes. El proyecto incluye actividades destinadas a superar las principales barreras que actualmente obstaculizan la adopción de las escape rooms educativas. Para ello, se proporcionará a los profesores la formación y las herramientas que necesitan para diseñar, construir y llevar a cabo de forma eficaz estas actividades de aprendizaje.",
     researchLine: ["e-learning"],
     projectType: "european-project",
   },
