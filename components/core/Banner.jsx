@@ -39,7 +39,7 @@ BannerContent.displayName = "BannerContent";
 
 const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
   <Image
-      className="w-36 md:w-48 mb-2 md:mb-6"
+      className="w-36 md:w-48 mb-6 md:mb-6 max-w-60"
       src="ging_logo.png"
       alt="Ging logo"
       fit="contain"

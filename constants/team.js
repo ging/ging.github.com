@@ -20,8 +20,7 @@ export const myteam = [
   },
   {
     name: "Juan Quemada",
-    position:
-      "",
+    position: "",
     role: "fullprofessor",
     description_en:
       "Juan Quemada leads the Next Generation Internet Group within the Telematics Engineering Department, Universidad Politécnica de Madrid (UPM), where he is Full Professor. He is also the Telefonica Chair of UPM, for the next-generation Internet, and the UPM Representative at the World Wide Web Consortium. His research interests include collaborative and social application architecture for the Internet and the Web, including cloud computing, where he has a strong involvement in European and Spanish research.",
@@ -84,9 +83,9 @@ export const myteam = [
     position: "",
     role: "associate",
     description_en:
-      "Aldo Gordillo received the degree in Telecommunications Engineering and the PhD degree in Telematics Engineering from UPM, in 2012 and 2017, respectively. From 2012 to 2017, he was a Research and Development Engineer with the Telematics Engineering Department, UPM. He is currently an Assistant Professor with the Computer Science Department, also at UPM. His research interests include the field of technology-enhanced learning, with a special focus on creation, evaluation, and dissemination of e-learning resources, computer science education, game-based learning, and e-learning systems.",
+      "Aldo Gordillo is an Associate Professor at Universidad Politécnica de Madrid (UPM) and a member of the Next Generation Internet research group as well as the Information Processing and Telecommunications Center (IPTC). He received a Ph.D. in telematics engineering from UPM in 2017. His research interests include technology-enhanced learning, with a special focus on the creation, evaluation, and dissemination of e-learning resources, computing education, game-based learning, gamification, and e-learning systems. Aldo has an H-index of 24 according to Google Scholar and has published more than 60 scientific articles related to technology-enhanced learning in prestigious international journals and conferences. Moreover, he has participated in numerous national and European research projects, as well as in research projects funded by private organizations, many of which are related to educational technology.",
     description_es:
-      "Aldo Gordillo obtuvo el título de Ingeniero en Telecomunicaciones y el doctorado en Ingeniería Telemática por la Universidad Politécnica de Madrid (UPM) en 2012 y 2017, respectivamente. Entre 2012 y 2017, trabajó como Ingeniero de Investigación y Desarrollo en el Departamento de Ingeniería Telemática de la UPM. Actualmente, es Profesor Ayudante en el Departamento de Informática, también en la UPM. Sus intereses de investigación se centran en el ámbito del aprendizaje mejorado por tecnología, con especial énfasis en la creación, evaluación y difusión de recursos de aprendizaje electrónico, la educación en ciencias de la computación, el aprendizaje basado en juegos y los sistemas de aprendizaje en línea.",
+      "Aldo Gordillo es Profesor Contratado Doctor en la Universidad Politécnica de Madrid (UPM) y miembro del grupo de investigación GING (Grupo de Internet de Nueva Generación), así como del Centro de Procesamiento de la Información y Telecomunicaciones (IPTC). Aldo obtuvo un doctorado en ingeniería telemática por la UPM en 2017. Sus intereses de investigación incluyen el aprendizaje potenciado por la tecnología, con especial énfasis en la creación, evaluación y distribución de recursos de aprendizaje digitales, la educación en informática, el aprendizaje basado en juegos, la gamificación y los sistemas de e-learning. Aldo tiene un índice H de 24 de acuerdo a Google Scholar y ha publicado más de 60 artículos científicos sobre aprendizaje potenciado por la tecnología en prestigiosas revistas y conferencias internacionales. Además, ha participado en numerosos proyectos de investigación nacionales y europeos, así como en proyectos financiados por organizaciones privadas, muchos de ellos relacionados con tecnologías educativas.",
     img: "assets/img/team/aldo-gordillo.jpg",
     github: "https://github.com/agordillo",
     researchgate: "",
@@ -97,7 +96,7 @@ export const myteam = [
     linkedin: "https://www.linkedin.com/in/aldogordillo/",
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/311549",
     email: "a.gordillo@upm.es",
-    center: "E.T.S de ing. de sistemas informáticos",
+    center: "Escuela Técnica Superior de Ingeniería de Sistemas Informáticos",
   },
   {
     name: "Gabriel Huecas",

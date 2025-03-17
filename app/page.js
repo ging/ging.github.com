@@ -81,12 +81,12 @@ export default function Page() {
         id="researchlines"
       >
         <Divider size="md"></Divider>
-        <Heading level="h3" className="mb-8">
+        <Heading level="h3" className="mb-8 text-center md:text-left">
           {t("front.ResearchLines.sectionTitle")}
         </Heading>
         {/* Cards con iconos */}
 
-        <section className="pb-12 flex flex-col justify-center justify-items-center gap-4 mx-auto place-items-center sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5">
+        <section className="pb-12 flex flex-col justify-center justify-items-center gap-4 mx-auto md:mx-0 place-items-center sm:grid sm:grid-cols-2 sm:items-start md:grid-cols-3 md:w-fit auto-rows-min xl:grid-cols-5">
           <ResearchLineCard
             researchLine="videoconference"
             title={t("front.ResearchLines.ResearchLine4.ResearchLineTitle")}

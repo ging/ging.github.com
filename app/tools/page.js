@@ -1,6 +1,6 @@
 "use client";
 
-import ToolCard from "@/components/cards/ToolCard";
+import ToolCard from "@/components/cards/toolCard";
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";

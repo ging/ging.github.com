@@ -12,7 +12,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { GitHub } from "@mui/icons-material";
 import Image from "@/components/ui/image";
 import { Divider, DividerVariants } from "@/components/ui/divider";
-import CourseCard from "@/components/cards/CourseCard";
+import CourseCard from "@/components/cards/courseCard";
 
 export default function Tools(props) {
   const { t, i18n } = useTranslation();
