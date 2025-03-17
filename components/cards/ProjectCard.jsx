@@ -55,7 +55,7 @@ const Card = React.forwardRef(
     }
 
     return (
-      <CustomCard className="py-6 flex flex-col items-start sm:flex-row gap-3 sm:gap-6 bg-transparent border-transparent shadow-none border-b-gray-400 border-b-1 rounded-none ">
+      <CustomCard className="py-6 flex flex-col items-start sm:flex-row gap-3 sm:gap-6 bg-transparent border-transparent shadow-none border-b-gray-400 border-b rounded-none ">
         <div
           className={`w-full min-w-[184px] sm:w-1/2 h-[237px] bg-cover sm:bg-center ${backgroundColor} rounded-md`}
         >

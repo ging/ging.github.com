@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { researchlines } from "@/constants/researchlines";
 
 // Components
-import Text from "../ui/text";
+import Text from "../ui/Text";
 import ResearchlineIllust from "../illustrations/ResearchlineIllust";
 import {
   CustomCard,

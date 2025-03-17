@@ -29,7 +29,7 @@ export default function Filters({pathname, search, changeSearch, year, changeYea
             </div>
         </div>
         {results === undefined ? null : (
-          <Mybadge className="research_results bg-background-300">
+          <Mybadge className="research_results bg-background-300/60 border-gray-500 text-gray-300">
             <p className="">
               {" "}
               {t("research.filter.text")}

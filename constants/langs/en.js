@@ -127,7 +127,7 @@ export const en = {
         "associate":"Associate Professor", // Profesor Titular / Profesor contratado doctor
         "phd":"PhD candidate", // Estudiante de doctorado
         "fulltec":"Full-Time Technician",
-        "fullprofessor":"Full Professor", // Profesor Titular de Universidad
+        "fullprofessor":"Professor", // Profesor Titular de Universidad
         "assistant":"Assistant Professor",
         "researcher":"Researcher",
         "external":"External staff"

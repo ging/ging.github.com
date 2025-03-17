@@ -6,7 +6,7 @@ import { projects } from "@/constants/projects";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { researchlines } from "@/constants/researchlines";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/text";
+import Text from "@/components/ui/Text";
 import ProjectsFilter from "@/components/filters/ProjectsFilter";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -134,7 +134,7 @@ function ProjectsPage() {
             pathname={pathname}
           />
         </div>
-        <Divider size="md"/>
+        {/* <Divider size="md"/> */}
         <div className="project_cards my-4 sm:my-6 lg:my-10 sm:gap-4">
           {filteredItems.map(
             (

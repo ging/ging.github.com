@@ -3,7 +3,7 @@
 import { useTranslation } from "react-i18next";
 
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/text";
+import Text from "@/components/ui/Text";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
