@@ -20,7 +20,7 @@ import { Divider } from "../ui/divider";
 
 // Icons
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
-import Text from "../ui/text";
+import Text from "../ui/Text";
 
 const Card = React.forwardRef(
   (

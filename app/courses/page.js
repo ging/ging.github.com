@@ -5,14 +5,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { courses } from "@/constants/courses";
 import { useTranslation } from "react-i18next";
-import Text from "@/components/ui/text";
+import Text from "@/components/ui/Text";
 import Heading from "@/components/ui/Heading";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";
 import { GitHub } from "@mui/icons-material";
 import Image from "@/components/ui/image";
 import { Divider, DividerVariants } from "@/components/ui/divider";
-import CourseCard from "@/components/cards/CourseCard";
+import CourseCard from "@/components/cards/courseCard";
 
 export default function Tools(props) {
   const { t, i18n } = useTranslation();

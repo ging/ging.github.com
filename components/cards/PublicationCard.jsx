@@ -16,7 +16,7 @@ import { researchlines } from "@/constants/researchlines";
 
 // Components
 import { Mybadge, badgeVariants } from "../ui/mybadge";
-import Text from "../ui/text";
+import Text from "../ui/Text";
 import { Button, ButtonVariants } from "../ui/button";
 import Image from "../ui/image";
 import {
