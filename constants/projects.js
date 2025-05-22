@@ -11,6 +11,17 @@ export const projects = [
     projectType: "european-project",
   },
   {
+    logo: "/assets/img/logos/ENDGAME.png",
+    route: "https://endgameproject.github.io/",
+    title: "ENDGAME",
+    description_en:
+      "ENDGAME is an innovative European project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
+    description_es:
+      "ENDGAME es un proyecto Europeo innovador destinado a fomentar el pensamiento crítico y la ciudadanía digital responsable entre los jóvenes a través de escape rooms educativas que simulan escenarios reales de consumo de información.",
+    researchLine: ["e-learning"],
+    projectType: "european-project",
+  },
+  {
     logo: "/assets/img/logos/SMARTY.png",
     route: "https://www.smarty-project.eu/",
     title: "SMARTY",

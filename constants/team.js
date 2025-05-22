@@ -2,7 +2,7 @@ export const myteam = [
   {
     name: "Pedro Reviriego",
     position: "",
-    role: "professor",
+    role: "fullprofessor",
     description_en:
       "Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working mainly of generative AI.",
     description_es:
@@ -161,7 +161,7 @@ export const myteam = [
   {
     name: "Jose Andres Muñoz",
     position: "",
-    role: "assistant",
+    role: "associate",
     description_en:
       "Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
     description_es:
@@ -182,7 +182,7 @@ export const myteam = [
   {
     name: "Alejandro Pozo",
     position: "",
-    role: "assistant",
+    role: "associate",
     description_en:
       "Researcher and Ph.D. student at Politécnica of Madrid (UPM). He received the M.Sc. in Telecommunications Engineering from the UPM, Spain, in 2017, where he is currently pursuing the Ph.D. in Telecommunications Engineering and is a Research Assistant with the Next Generation Internet Research Group. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
     description_es:
@@ -240,6 +240,26 @@ export const myteam = [
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/332900",
   },
   {
+        name: "Gonzalo Martínez",
+        position: "",
+        role: "assistant",
+        description_en:
+          "Gonzalo Martínez received a Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. Javier is coordinating the IEEE Spanish Local Group on AI. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
+        description_es:
+          "Gonzalo Martínez obtuvo un doctorado en Ingeniería Telemática en la UPM, donde actualmente es Profesor Ayudante Doctor en el Departamento de Ingeniería de Sistemas Telemáticos. Desde 2024, Javier se convirtió en Young Scholar de la Marconi Society, siendo el primer investigador español en recibir este reconocimiento. Actualmente también coordina el Grupo Local de España de IA del IEEE. Sus áreas de interés en investigación incluyen Gemelos Digitales, Big Data e Inteligencia Artificial.",
+        img: "./assets/img/team/gonzalo.jpg",
+        github: "https://github.com/javicond3",
+        email: "javier.conde.diaz@upm.es",
+        center: "E.T.S. de ingenieros de telecomunicacion",
+        researchgate: "https://www.researchgate.net/profile/Javier-Conde-4",
+        orcid: "https://orcid.org/0000-0002-5304-0626",
+        webOfScience: "https://www.webofscience.com/wos/author/record/33174652",
+        googleScholar:
+          "https://scholar.google.es/citations?hl=es-ES&user=2e_XTLcAAAAJ&hl",
+        linkedin: "https://www.linkedin.com/in/javier-conde-diaz/",
+        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/332900",
+      },
+  {
     name: "Carlos Aparicio",
     position: "",
     role: "phd",
@@ -258,23 +278,6 @@ export const myteam = [
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/336492",
     email: "ce.aparicio@upm.es",
     center: "E.T.S. de ingenieros de telecomunicacion",
-  },
-  {
-    name: "Iciar Villamayor",
-    role: "researcher",
-    description_en:
-      "Iciar is a UX/UI designer. She received the B.S and M.Sc in graphic design and interactive graphic design from Escuela Superior de Diseño de Madrid in 2020 and 2021. She's currently teaching at Escuela Superior de Diseño de Madrid. She sporadically collaborates with the GING as a Digital Product Designer.",
-    description_es:
-      "Icíar es diseñadora UX/UI. Se graduó del Grado en Diseño con especialización en gráfico de la Escuela Superior de Diseño de Madrid, donde también obtuvo su Master en Diseño Interactivo. Actualmente desempeña su labor como profesora de Medios Informáticos en la Escuela Superior de Diseño de Madrid y colabora esporádicamente con GING como diseñadora de producto digital.",
-    img: "/assets/img/team/iciar-villamayor.jpg",
-    github: "https://github.com/IciarVillamayor",
-    email: "iciarvillamayor@hotmail.com",
-    researchgate: "https://www.researchgate.net/profile/Iciar-Villamayor-2",
-    orcid: "",
-    webOfScience: "",
-    googleScholar: "",
-    linkedin: "https://www.linkedin.com/in/ivillamayor/",
-    portalUpm: "",
   },
   {
     name: "Sonsoles López-Pernas",
