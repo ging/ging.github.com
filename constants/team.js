@@ -184,9 +184,9 @@ export const myteam = [
     position: "",
     role: "associate",
     description_en:
-      "Researcher and Ph.D. student at Politécnica of Madrid (UPM). He received the M.Sc. in Telecommunications Engineering from the UPM, Spain, in 2017, where he is currently pursuing the Ph.D. in Telecommunications Engineering and is a Research Assistant with the Next Generation Internet Research Group. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
+      "Alejandro Pozo Huertas is a permanent lecturer in the Department of Telematics Engineering at the School of Telecommunications Engineering. He obtained his PhD in Telematic Systems Engineering in 2022. He has published several articles and participated in various research projects at both national and European levels. His research interests include identity management systems, access control, IoT, and remote language interpretation systems.",
     description_es:
-      "Alejandro Pozo se doctoró y obtuvo un máster en Ingeniería de Telecomunicaciones en la UPM, España, donde actualmente trabaja como profesor. Ha participado en varios proyectos europeos y ha realizado varias publicaciones en revistas de prestigio relacionadas con el Internet de las Cosas, la seguridad y la gestión de identidades. Actualmente investiga sobre sistemas de interpretación remota basados en herramientas de videoconferencia.",
+      "Alejandro Pozo Huertas es profesor permanente laboral del Departamento de Ingeniería Telemática de la Escuela Técnica Superior de Ingenieros de Telecomunicación. Se doctoró en ingeniería de Sistemas Telemáticos en 2022. Ha publicado varios artículos y participado en varios proyectos de investigación tanto a nivel nacional como europeo. Sus intereses de investigación incluyen sistemas de gestión de identidades, control de acceso, IoT o sistemas de interpretación remota de idiomas.",
     img: "assets/img/team/alejandro-pozo.jpg",
     github: "https://github.com/apozohue10",
     email: "alejandro.pozo@upm.es",
@@ -244,20 +244,14 @@ export const myteam = [
         position: "",
         role: "assistant",
         description_en:
-          "Gonzalo Martínez received a Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. Javier is coordinating the IEEE Spanish Local Group on AI. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
+          "Gonzalo Martínez Ruiz de Arcaute obtained his PhD in Telematics Engineering from Universidad Carlos III de Madrid in 2024. After that, he joined the Universidad Politécnica de Madrid (ETSISI) as Assistant Professor. His research is at the intersection between communication networks and Artificial Intelligence: he analyzes low latency optical and satellite networks, develops telemetry solutions in P4 and designs evaluations for LLMs.",
         description_es:
-          "Gonzalo Martínez obtuvo un doctorado en Ingeniería Telemática en la UPM, donde actualmente es Profesor Ayudante Doctor en el Departamento de Ingeniería de Sistemas Telemáticos. Desde 2024, Javier se convirtió en Young Scholar de la Marconi Society, siendo el primer investigador español en recibir este reconocimiento. Actualmente también coordina el Grupo Local de España de IA del IEEE. Sus áreas de interés en investigación incluyen Gemelos Digitales, Big Data e Inteligencia Artificial.",
-        img: "./assets/img/team/gonzalo.jpg",
-        github: "https://github.com/javicond3",
-        email: "javier.conde.diaz@upm.es",
-        center: "E.T.S. de ingenieros de telecomunicacion",
-        researchgate: "https://www.researchgate.net/profile/Javier-Conde-4",
-        orcid: "https://orcid.org/0000-0002-5304-0626",
-        webOfScience: "https://www.webofscience.com/wos/author/record/33174652",
-        googleScholar:
-          "https://scholar.google.es/citations?hl=es-ES&user=2e_XTLcAAAAJ&hl",
-        linkedin: "https://www.linkedin.com/in/javier-conde-diaz/",
-        portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/332900",
+          "Gonzalo Martínez Ruiz de Arcaute obtuvo su doctorado en Ingeniería Telemática por la Universidad Carlos III de Madrid en 2024. Tras ello, se incorporó a la Universidad Politécnica de Madrid (ETSISI) como Profesor Ayudante Doctor. Su investigación se sitúa en la intersección entre redes de comunicaciones e Inteligencia Artificial: analiza redes ópticas y satelitales de baja latencia, desarrolla soluciones de telemetría en P4 y diseña evaluaciones para LLMs",
+        img: "assets/img/team/gonzalo.jpg",
+        email: "gonzalo.martinez.ruizdearcaute@upm.es",
+        center: "E.T.S. de ingenieros de sistemas de Informáticos",
+        orcid: "https://orcid.org/0000-0002-9125-6225",
+        googleScholar: "https://scholar.google.com/citations?user=FF6Yw5QAAAAJ",
       },
   {
     name: "Carlos Aparicio",
