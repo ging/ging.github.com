@@ -1,13 +1,13 @@
 "use client";
 
-import ToolCard from "@/components/cards/ToolCard";
+import ToolCard from "@/components/cards/toolCard";
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { tools } from "@/constants/tools";
 import { useTranslation } from "react-i18next";
 import FaceIcon from "@mui/icons-material/Face";
-import Text from "@/components/ui/text";
+import Text from "@/components/ui/Text";
 import Heading from "@/components/ui/Heading";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutwardRounded";

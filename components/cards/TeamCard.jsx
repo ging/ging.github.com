@@ -20,7 +20,7 @@ import { Divider } from "../ui/divider";
 
 // Icons
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
-import Text from "../ui/text";
+import Text from "../ui/Text";
 
 const Card = React.forwardRef(
   (
@@ -64,7 +64,8 @@ const Card = React.forwardRef(
           <CardTitle level="h4" className="text-inherit text-center">
             {name}
           </CardTitle>
-          {role && <CardDescription type="short-p">{role}</CardDescription>}
+       
+          {role && <Text type="short-p" className="pb-3">{role}</Text>}
 
           {email && (
             <Mybadge

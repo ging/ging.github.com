@@ -41,6 +41,7 @@ const Team = (props) => {
         key
       ) => {
         const translatedRole = t("team.professorCards.roles." + role);
+       console.log(translatedRole)
         return (
           <TeamCard
             key={key}

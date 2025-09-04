@@ -2,7 +2,7 @@ export const myteam = [
   {
     name: "Pedro Reviriego",
     position: "",
-    role: "professor",
+    role: "fullprofessor",
     description_en:
       "Pedro Reviriego received the M.Sc. and Ph.D. degrees in telecommunications engineering from the Technical University of Madrid, Madrid, Spain, in 1994 and 1997, respectively. From 1997 to 2000, he was an Engineer with Teldat, Madrid, working on router implementation. In 2000, he joined Massana to work on the development of 1000BASE-T transceivers. From 2004 to 2007, he was a Distinguished Member of Technical Staff with the LSI Corporation, working on the development of Ethernet transceivers. From 2007 to 2018 he was with Nebrija University, from 2018 to 2022 with Universidad Carlos III de Madrid. He is currently with Universidad Politécnica de Madrid working mainly of generative AI.",
     description_es:
@@ -161,7 +161,7 @@ export const myteam = [
   {
     name: "Jose Andres Muñoz",
     position: "",
-    role: "assistant",
+    role: "associate",
     description_en:
       "Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
     description_es:
@@ -182,11 +182,11 @@ export const myteam = [
   {
     name: "Alejandro Pozo",
     position: "",
-    role: "assistant",
+    role: "associate",
     description_en:
-      "Researcher and Ph.D. student at Politécnica of Madrid (UPM). He received the M.Sc. in Telecommunications Engineering from the UPM, Spain, in 2017, where he is currently pursuing the Ph.D. in Telecommunications Engineering and is a Research Assistant with the Next Generation Internet Research Group. He participates in several European projects and publishes results in journals related to the Internet of Things, security, and identity management.",
+      "Alejandro Pozo Huertas is a permanent lecturer in the Department of Telematics Engineering at the School of Telecommunications Engineering. He obtained his PhD in Telematic Systems Engineering in 2022. He has published several articles and participated in various research projects at both national and European levels. His research interests include identity management systems, access control, IoT, and remote language interpretation systems.",
     description_es:
-      "Alejandro Pozo se doctoró y obtuvo un máster en Ingeniería de Telecomunicaciones en la UPM, España, donde actualmente trabaja como profesor. Ha participado en varios proyectos europeos y ha realizado varias publicaciones en revistas de prestigio relacionadas con el Internet de las Cosas, la seguridad y la gestión de identidades. Actualmente investiga sobre sistemas de interpretación remota basados en herramientas de videoconferencia.",
+      "Alejandro Pozo Huertas es profesor permanente laboral del Departamento de Ingeniería Telemática de la Escuela Técnica Superior de Ingenieros de Telecomunicación. Se doctoró en ingeniería de Sistemas Telemáticos en 2022. Ha publicado varios artículos y participado en varios proyectos de investigación tanto a nivel nacional como europeo. Sus intereses de investigación incluyen sistemas de gestión de identidades, control de acceso, IoT o sistemas de interpretación remota de idiomas.",
     img: "assets/img/team/alejandro-pozo.jpg",
     github: "https://github.com/apozohue10",
     email: "alejandro.pozo@upm.es",
@@ -240,6 +240,20 @@ export const myteam = [
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/332900",
   },
   {
+        name: "Gonzalo Martínez",
+        position: "",
+        role: "assistant",
+        description_en:
+          "Gonzalo Martínez Ruiz de Arcaute obtained his PhD in Telematics Engineering from Universidad Carlos III de Madrid in 2024. After that, he joined the Universidad Politécnica de Madrid (ETSISI) as Assistant Professor. His research is at the intersection between communication networks and Artificial Intelligence: he analyzes low latency optical and satellite networks, develops telemetry solutions in P4 and designs evaluations for LLMs.",
+        description_es:
+          "Gonzalo Martínez Ruiz de Arcaute obtuvo su doctorado en Ingeniería Telemática por la Universidad Carlos III de Madrid en 2024. Tras ello, se incorporó a la Universidad Politécnica de Madrid (ETSISI) como Profesor Ayudante Doctor. Su investigación se sitúa en la intersección entre redes de comunicaciones e Inteligencia Artificial: analiza redes ópticas y satelitales de baja latencia, desarrolla soluciones de telemetría en P4 y diseña evaluaciones para LLMs",
+        img: "assets/img/team/gonzalo.jpg",
+        email: "gonzalo.martinez.ruizdearcaute@upm.es",
+        center: "E.T.S. de ingenieros de sistemas de Informáticos",
+        orcid: "https://orcid.org/0000-0002-9125-6225",
+        googleScholar: "https://scholar.google.com/citations?user=FF6Yw5QAAAAJ",
+      },
+  {
     name: "Carlos Aparicio",
     position: "",
     role: "phd",
@@ -258,23 +272,6 @@ export const myteam = [
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/336492",
     email: "ce.aparicio@upm.es",
     center: "E.T.S. de ingenieros de telecomunicacion",
-  },
-  {
-    name: "Iciar Villamayor",
-    role: "researcher",
-    description_en:
-      "Iciar is a UX/UI designer. She received the B.S and M.Sc in graphic design and interactive graphic design from Escuela Superior de Diseño de Madrid in 2020 and 2021. She's currently teaching at Escuela Superior de Diseño de Madrid. She sporadically collaborates with the GING as a Digital Product Designer.",
-    description_es:
-      "Icíar es diseñadora UX/UI. Se graduó del Grado en Diseño con especialización en gráfico de la Escuela Superior de Diseño de Madrid, donde también obtuvo su Master en Diseño Interactivo. Actualmente desempeña su labor como profesora de Medios Informáticos en la Escuela Superior de Diseño de Madrid y colabora esporádicamente con GING como diseñadora de producto digital.",
-    img: "/assets/img/team/iciar-villamayor.jpg",
-    github: "https://github.com/IciarVillamayor",
-    email: "iciarvillamayor@hotmail.com",
-    researchgate: "https://www.researchgate.net/profile/Iciar-Villamayor-2",
-    orcid: "",
-    webOfScience: "",
-    googleScholar: "",
-    linkedin: "https://www.linkedin.com/in/ivillamayor/",
-    portalUpm: "",
   },
   {
     name: "Sonsoles López-Pernas",
