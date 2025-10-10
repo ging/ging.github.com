@@ -55,6 +55,17 @@ export const projects = [
     projectType: "european-project",
   },
   {
+    logo: "/assets/img/logos/sost-gen.png",
+    route: "https://sostenibilidadgenerativa.cotec.es/",
+    title: "#SostenibilidadGenerativa",
+    description_en:
+      "#SostenibilidadGenerativa is a project funded by the Cotect Foundation that emerges as an initiative aimed at demonstrating that it is possible to reconcile technological progress with environmental preservation. Contrary to the widespread perception that the ecological footprint of AI is limited to training and development processes, evidence shows that it also manifests in the everyday usage patterns of citizens. Our research approach focuses on quantifying the energy and material consumption associated with the AI life cycle, while at the same time raising public awareness of its implications and disseminating practical strategies for a more sustainable interaction with these technologies.",
+    description_es:
+      "#SostenibilidadGenerativa es un proyecto financiado por la Fundación Cotect que surge como una iniciativa orientada a demostrar que es posible conciliar el progreso tecnológico con la preservación del entorno. Contrario a la percepción extendida de que la huella ecológica de la IA se restringe a los procesos de entrenamiento y desarrollo, la evidencia indica que también se manifiesta en las dinámicas de uso cotidiano por parte de la ciudadanía. Nuestro enfoque de investigación se centra en cuantificar el consumo energético y material asociado al ciclo de vida de la IA, al tiempo que buscamos sensibilizar a la sociedad sobre las implicaciones de su empleo y difundir estrategias prácticas para una interacción más sostenible con estas tecnologías.",
+      researchLine: ["ai"],
+    projectType: "private-project",
+  },
+  {
     logo: "/assets/img/logos/fiware.svg",
     route: "https://www.fiware.org/",
     title: "FIWARE",
