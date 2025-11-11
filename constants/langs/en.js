@@ -19,7 +19,7 @@ export const en = {
     "action-button": "Our researchlines",
     section1Title: "About us",
     section1Description:
-      "Our main research interests focus on data space technologies, generative AI, e-Learning, and videoconferencing systems. We have extensive experience in protocol and specification design, as well as in the development of software components and use cases in these areas. We participate in competitive publicly funded research projects at the national and European level and in collaboration agreements with companies.",
+      "Our main research interests are focused on the last technologies in Internet and the WWW, such as HTML5. We have extensive experience in video-conferencing systems, Data Spaces, GenerativeAI and e-Learning. Our latest participation in research projects include ongoing EU-founded and national projects such as Eunomia and FIWARE.",
     latestPublicationsTitle: "Latest publications",
     latestPublicationsButton: "See all publications",
     ResearchLines: {
@@ -63,6 +63,8 @@ export const en = {
         "paper-conference": "Paper Conference",
         book: "Book",
         chapter: "Chapter",
+        "patent":"Patent",
+        "thesis":"Thesis"
       },
     },
     "action-button": "Read publication",
@@ -75,6 +77,8 @@ export const en = {
       "book":"Book",
       "chapter":"Chapter",
       "document":"Document",
+      "patent":"Patent",
+      "thesis":"Thesis",
       "all":"All",   
       "text":"Results"
     },
