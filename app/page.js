@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
+import Text from "@/components/ui/Text";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
@@ -20,7 +21,6 @@ import {
   BannerImg,
   BannerLogo,
 } from "@/components/core/Banner";
-import PruebaRectangulos from "@/components/pruebas/pruebaRectangulos";
 
 // UI
 export default function Page() {
@@ -35,11 +35,12 @@ export default function Page() {
 
   return (
     <main>
+     
+        <Link href="#section2" scroll={true} class="arrowScroll arrows" >  </Link>
+  
       <Banner>
-        {/* <PruebaRectangulos></PruebaRectangulos> */}
-
         <BannerImg></BannerImg>
-
+        
         <BannerContent className="absolute ">
           <BannerLogo></BannerLogo>
           <BannerTitle className={"text-white "}>
@@ -61,17 +62,38 @@ export default function Page() {
             {t("front.action-button")}{" "}
             <ArrowForwardIcon className="mt-0.5" sx={{ fontSize: 22 }} />
           </Link>
+        
         </BannerContent>
+        
       </Banner>
 
-      <section className="padding_group_description bg-background-200">
-        <Divider size="lg" className="hidden md:flex"></Divider>
-        <Divider size="sm"></Divider>
+      <section className="padding_group_description bg-background-200" >
+        <Divider size="xl" className="hidden md:flex"  id="section2"></Divider>
 
         <Heading level="h3">{t("front.section1Title")}</Heading>
         <Heading level="subtitle"> {t("front.section1Description")}</Heading>
 
-        <Divider size="md"></Divider>
+        <Divider size="md" className="hidden md:flex" ></Divider>
+         <Divider size="xs" className="flex md:hidden"></Divider>
+        <div className="statisticsContainer">
+          <div className="statisticItemContainer"> 
+            <h1 className="numbersFront"> +400</h1> 
+            <p className="unitFront">{t("front.statistics.papers")}</p>
+          </div>
+           <div className="statisticItemContainer"> 
+            <h1 className="numbersFront">+6K</h1> 
+            <p className="unitFront">{t("front.statistics.citations")}</p>
+          </div>
+           <div className="statisticItemContainer"> 
+            <h1 className="numbersFront">+150</h1> 
+            <p className="unitFront">{t("front.statistics.projects")}</p>
+          </div>
+           <div className="statisticItemContainer"> 
+            <h1 className="numbersFront">45</h1> 
+            <p className="unitFront">H-Index</p>
+          </div>
+           
+        </div>
         <Divider size="xxl" className="hidden md:flex"></Divider>
         <div id="researchlines"></div>
       </section>
@@ -124,7 +146,7 @@ export default function Page() {
             )}
           />
         </section>
-        
+
         <Divider size="md"></Divider>
       </section>
     </main>

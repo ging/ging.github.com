@@ -309,4 +309,65 @@ export const myteam = [
     portalUpm: "https://portalcientifico.upm.es/es/ipublic/researcher/303395",
     email: "abel.carril@upm.es",
   },
+  {
+    name: "Clara Salgado",
+    position: "",
+    role: "researcher",
+    description_en:
+      "Clara Salgado is a graphic, interface, and user experience designer trained at the Escuela Superior de Diseño de Madrid. She has worked with agencies such as Wearebold.es and Eh!Universo.media, and as a freelancer on print, digital, and audiovisual projects. In 2024, she earned her Master’s degree in UX/UI. As part of her final projects, she redesigned the user interface of Som Energia’s solar calculator and proposed new features and a design system update for Karakolas, a platform to manage consumer groups.",
+    description_es:
+      "Clara Salgado es diseñadora gráfica, de interfaz y experiencia de usuario, formada en la Escuela Superior de Diseño de Madrid. Ha trabajado en agencias como Wearebold.es y Eh!Universo.media, y como freelance en proyectos impresos, digitales y audiovisuales. Obtuvo en 2024 su máster en UX/UI y como trabajo de fin de máster, rediseñó el sistema de diseño y propuso nuevas funcionalidades a la plataforma de grupos de consumo de Karakolas. En su trabajo de fin de grado rediseñó la interfaz de la calculadora solar fotovoltáica de la cooperativa de renovables Som Energia.  ",
+    img: "assets/img/team/clara-salgado.jpeg",
+    github: "",
+    email: "clara.salgado.zurborn@upm.es",
+    center: "E.T.S de Ingenieros de Telecomunicación",
+    researchgate: "",
+    orcid: "",
+    webOfScience: "",
+    googleScholar:
+      "",
+    linkedin: "https://www.linkedin.com/in/clara-salgado-553634129/",
+    portalUpm: "",
+  },
+   {
+    name: "Laura Rodriguez",
+    position: "",
+    role: "researcher",
+    description_en:
+      "Laura is a designer specialized in web design and development. She works at the Next Generation Internet Research Group at UPM designing and developing games, websites and applications in educational environments. She has worked on projects such as Smarterp or EUNOMIA, and actively collaborates with the Educational Innovation Group Cyberaula. In addition, she focuses on interactive and reactive interfaces and data visualization through semantic interfaces and how technology and digital design can be used to improve education and culture.",
+    description_es:
+      "Laura es una diseñadora gráfica especializada en diseño y desarrollo web. Actualmente trabaja en el Grupo Internet de Nueva Generación en la UPM diseñando y desarrollando webs y aplicaciones, así como juegos en el ámbito educativo. También ha trabajado en proyectos como Smarterp y EUNOMIA, y colabora activamente con el grupo de innovación educativa CyberAula. Además, sus intereses se centran en el diseño de interfaces interactivas y reactivas y en la visualización de datos a través de interfaces semánticas, abordando el papel de la tecnología y el diseño digital como herramientas para fortalecer los procesos educativos y culturales.",
+    img: "assets/img/team/laura-rodriguez.png",
+    github: "",
+    email: "laura.rodriguezs@upm.es",
+    center: "E.T.S de Ingenieros de Telecomunicación",
+    researchgate: "",
+    orcid: "",
+    webOfScience: "",
+    googleScholar:
+      "",
+    linkedin: "https://www.linkedin.com/in/laura-log/",
+    portalUpm: "",
+  },
+
+     {
+    name: "Rodrigo Menéndez",
+    position: "",
+    role: "researcher",
+    description_en:
+     "Rodrigo is a telecommunications Engineer specialized in digital identity technologies. Currently a researcher in the field of identity within data spaces, focusing on Self-Sovereign Identity (SSI)–based solutions and advanced credential management models.",
+    description_es:
+      "Rodrigo es ingeniero de Telecomunicaciones, especializado en tecnologías de identidad digital. Actualmente es investigador en el ámbito de la identidad en los espacios de datos, centrado en soluciones basadas en Self-Sovereign Identity (SSI) y modelos avanzados de gestión de credenciales",
+    img: "assets/img/team/rodrigo-menendez.jpeg",
+    github: "",
+    email: "rodrigo.menendez@alumnos.upm.es",
+    center: "E.T.S de Ingenieros de Telecomunicación",
+    researchgate: "",
+    orcid: "",
+    webOfScience: "",
+    googleScholar:
+      "https://scholar.google.es/citations?user=mbVQHG8AAAAJ&hl=es",
+    linkedin: "https://www.linkedin.com/in/rodrigo-menendez-munoz/",
+    portalUpm: "",
+  },
 ];

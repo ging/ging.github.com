@@ -16,12 +16,19 @@ export const en = {
     title: "Next Generation Internet Group",
     description:
       "A research group from the Telematics Engineering Department (DIT) at Universidad Politécnica de Madrid (UPM)",
-    "action-button": "Our researchlines",
+      "action-button": "Our researchlines",
     section1Title: "About us",
     section1Description:
       "Our main research interests focus on data space technologies, generative AI, e-Learning, and videoconferencing systems. We have extensive experience in protocol and specification design, as well as in the development of software components and use cases in these areas. We participate in competitive publicly funded research projects at the national and European level and in collaboration agreements with companies.",
-    latestPublicationsTitle: "Latest publications",
-    latestPublicationsButton: "See all publications",
+    statistics: {
+      papers: "papers",
+      citations: "citations",
+      projects: "projects",
+      
+
+    },
+    // latestPublicationsTitle: "Latest publications",
+    // latestPublicationsButton: "See all publications",
     ResearchLines: {
       sectionTitle: "Research lines",
       button: "See projetcs",

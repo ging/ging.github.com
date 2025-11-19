@@ -18,12 +18,17 @@ export const es = {
     title: "Grupo de Internet de Nueva Generación",
     description:
       "Un grupo de investigación del Departamento de Ingeniería Telemática (DIT) de la Universidad Politécnica de Madrid (UPM)",
-    "action-button": "Ver líneas de investigación",
+      "action-button": "Ver líneas de investigación",
     section1Title: "Sobre nosotros",
-  "section1Description": "Nuestros principales intereses de investigación se centran en tecnologías de espacios de datos, IA generativa, e-Learning y sistemas de videoconferencia. Tenemos una amplia experiencia en diseño de protocolos y especificaciones así como en el desarrollo de componentes software y casos de uso en estas áreas. Participamos en proyectos de investigación competitivos de financiación pública a nivel nacional y europeo y en convenios de colaboración con empresas.",
+      "section1Description": "Nuestros principales intereses de investigación se centran en tecnologías de espacios de datos, IA generativa, e-Learning y sistemas de videoconferencia. Tenemos una amplia experiencia en diseño de protocolos y especificaciones así como en el desarrollo de componentes software y casos de uso en estas áreas. Participamos en proyectos de investigación competitivos de financiación pública a nivel nacional y europeo y en convenios de colaboración con empresas.",
     section1Subtitle: "Principios del proyecto",
-    latestPublicationsTitle: "Últimas publicaciones",
-    latestPublicationsButton: "Ver todas las publicaciones",
+       statistics: {
+      papers: "publicaciones",
+      citations: "citas",
+      projects: "proyectos",
+    },
+    // latestPublicationsTitle: "Últimas publicaciones",
+    // latestPublicationsButton: "Ver todas las publicaciones",
     ResearchLines: {
       sectionTitle: "Líneas de investigación",
        "button": "Ver proyectos",
