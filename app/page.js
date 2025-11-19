@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 import { Button, ButtonVariants } from "@/components/ui/button";
 import Heading from "@/components/ui/Heading";
-import Text from "@/components/ui/Text";
 import { Divider, DividerVariants } from "@/components/ui/divider";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -76,32 +75,72 @@ export default function Page() {
         
       </Banner>
 
-<<<<<<< HEAD
-      <section className="padding_group_description bg-background-200" >
-        <Divider size="xl" className="hidden md:flex"  id="section2"></Divider>
-=======
       <section className="padding_group_description" style={{backgroundImage: "linear-gradient(to right, #948CFFDD, #2c2e33)" }}>
+
+
         <Divider size="lg" className="hidden md:flex"></Divider>
+
+
         <Divider size="sm"></Divider>
 
+
+
+
+
         <Heading level="h3">40 Aniversario de internet en España</Heading>
+
+
         <div className="flex gap-4">
+
+
           <Heading level="subtitle" className="flex items-center gap-1 line"><AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30</Heading>
+
+
           <Heading level="subtitle" className="flex items-center gap-1 line"><EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de diciembre</Heading>
+
+
           <Heading level="subtitle" className="flex items-center gap-1 line"><PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />Salón de actos del Edificio C de la ETSIT</Heading>
+
+
         </div>
+
+
         
+
+
         
+
+
         <Text
+
+
           type="p"
+
+
           className="mb-1"
+
+
         >La primera conexión a internet en España fue realizada en 1985 desde la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT) de la Universidad Politécnica de Madrid (UPM). El envío de un email de prueba por una red TCP/IP conectada al servicio de correo electrónico de internet a través de EUnet, cuya transcendencia histórica ignoraban sus propios protagonistas, marcó el comienzo de la expansión en nuestro país de la que acabaría siendo en poco tiempo la red de redes. El acto para conmemorar este hito incluirá la participación por videoconferencia de los estadounidenses Vinton Cerf y Robert Kahn, considerados los padres de internet.</Text>
+
+
         <div className="flex gap-4 mt-8">
+
+
           <a href="https://eventos.upm.es/143851/detail/40o-aniversario-de-internet-en-espana.html" target="_blank">
+
+
                 <Button variant="outline" className="mb-8 gap-1 pb-2.5 flex items-center">
+
+
                   Inscripciones
+
+
                   <ArrowForwardIcon className="h-6"/>
+
+
                 </Button>
+
+
               </a>
           <a href="/assets/documents/Articulo_FHT.pdf" download="Articulo_FHT.pdf">
                 <Button variant="outline" className="mb-8 gap-1 pb-2.5 flex items-center">
@@ -110,15 +149,12 @@ export default function Page() {
                 </Button>
               </a>
         </div>
-        
         {/* <Divider size="md"></Divider> */}
         <Divider size="xxl" className="hidden md:flex"></Divider>
       </section>
 
-      <section className="padding_group_description bg-background-200">
-        <Divider size="lg" className="hidden md:flex"></Divider>
-        <Divider size="sm"></Divider>
->>>>>>> bcf65e195e638c1f613124bf434852606fdbd771
+      <section className="padding_group_description bg-background-200" >
+        <Divider size="xl" className="hidden md:flex"  id="section2"></Divider>
 
         <Heading level="h3">{t("front.section1Title")}</Heading>
         <Heading level="subtitle"> {t("front.section1Description")}</Heading>
