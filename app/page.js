@@ -73,15 +73,15 @@ export default function Page() {
         </BannerContent>
       </Banner>
 
-      <section className="padding_group_description" style={{background: "linear-gradient(to left, #948CFFDD, #2C2E33)" }}>
+      <section className="padding_group_description" style={{backgroundImage: "linear-gradient(to right, #948CFFDD, #2c2e33)" }}>
         <Divider size="lg" className="hidden md:flex"></Divider>
         <Divider size="sm"></Divider>
 
         <Heading level="h3">40 Aniversario de internet en España</Heading>
         <div className="flex gap-4">
-          <Heading level="subtitle" className="flex items-center gap-1"><AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30</Heading>
-          <Heading level="subtitle" className="flex items-center gap-1"><EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de diciembre</Heading>
-          <Heading level="subtitle" className="flex items-center gap-1"><PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />Salón de actos del Edificio C de la ETSIT</Heading>
+          <Heading level="subtitle" className="flex items-center gap-1 line"><AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30</Heading>
+          <Heading level="subtitle" className="flex items-center gap-1 line"><EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de diciembre</Heading>
+          <Heading level="subtitle" className="flex items-center gap-1 line"><PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />Salón de actos del Edificio C de la ETSIT</Heading>
         </div>
         
         
