@@ -70,6 +70,8 @@ export const en = {
         "paper-conference": "Paper Conference",
         book: "Book",
         chapter: "Chapter",
+        "patent":"Patent",
+        "thesis":"Thesis"
       },
     },
     "action-button": "Read publication",
@@ -82,6 +84,8 @@ export const en = {
       "book":"Book",
       "chapter":"Chapter",
       "document":"Document",
+      "patent":"Patent",
+      "thesis":"Thesis",
       "all":"All",   
       "text":"Results"
     },
