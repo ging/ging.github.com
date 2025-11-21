@@ -18,7 +18,7 @@ import { FileDownloadOutlined } from "@mui/icons-material";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
 import Text from "@/components/ui/Text";
 import Image from "@/components/ui/image";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/mybadge";
 
 //Banner
 import {
