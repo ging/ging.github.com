@@ -8,7 +8,7 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 	  template: 'apa',
 	  lang: 'en-US',
 	  prepend (entry) {
-	  	let {id, issued, DOI, type, title, volume, page, keyword, annote} = entry;
+	  	let {id, issued, DOI, type, title, volume, page, keyword, publisher, annote} = entry;
 		//keyword contains keywords separated by comma, but sometimes it is empty
 		if(!keyword){
 			keyword = "";
@@ -17,10 +17,15 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 		if(!annote){
 			annote = "";
 		}
+		
+		// If type is a document one, check if is a patent to overwrite the type
+		if (type === 'document' && publisher && (publisher.includes('Patent') || publisher.includes('patent'))) {
+			type = 'patent';
+		}
 
-	  	if (DOI && !DOI.match(/http/)) {
-	  		DOI = "https://doi.org/" + DOI;
-	  	}
+		if (DOI && !DOI.match(/http/)) {
+			DOI = "https://doi.org/" + DOI;
+		}
 		//get container-title from entry (journal name)
 		let journal = entry['container-title'];
 		//get year from issued
@@ -34,7 +39,7 @@ fs.readFile("constants/publications.bib", function(err, buf) {
 		}
 		//get author names from entry, separated by comma and adding "and" before the last one
 		let author = entry.author.map((a, i) => {
-			if (i === entry.author.length - 1) {
+			if (entry.author.length > 1 && i === entry.author.length - 1) {
 				return "and " + a.given + " " + a.family;
 			}
 			return a.given + " " + a.family;

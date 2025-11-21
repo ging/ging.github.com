@@ -88,10 +88,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
   //   />
   // </div>
   <div className={
-    //landing 1 /2
-    // " absolute top-0 md:relative flex w-full md:w-7/12 z-0 h-20 md:h-[90vh] "
-  //  + 
-   //landing 3
+ 
    "relative top-0 md:relative flex w-full z-0 h-[85vh]"}>
     <Image
       className="md:h-[85vh] opacity-80"
@@ -99,19 +96,8 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
       alt="background illustration"
       fit="cover"
     />
-    {/* <div className="hidden md:flex md:flex-col absolute  h-[90vh]  p-3 justify-start">
-      <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-2 col-start-2">
-         DATA </a>
-      <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-1 col-start-5">
-         VIDEOCONFERENCE </a>
-         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-4 col-start-3">
-        ARTIFICIAL INTELLIGENCE </a>
-         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-3 col-start-6 col-span-2">
-          E-LEARNING  </a>
-         <a className="flex text-24 opacity-45 font-semibold text-white items-center justify-center row-start-6 col-start-6">
-          NETWORKS  </a>
     
-    </div> */}
+
 </div>
 ));
 BannerImg.displayName = "BannerImg";

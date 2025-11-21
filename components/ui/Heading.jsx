@@ -73,7 +73,7 @@ const Heading = ({ level = "h1", children, className = "" }) => {
     highlight: "h4", "title-sm": "h6", subtitle: "h5",
   }[level] || "h1";
 
-  const baseClasses = "text-text font-title text-balance";
+  const baseClasses = "text-text font-main text-balance";
   const sizeClasses = {
     h1: "text-36 sm:text-40 mb-6 font-medium",
     h2: "text-32 sm:text-36 mb-4 font-medium",

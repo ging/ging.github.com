@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ISABEL Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Isabel's 25th anniversary">
+  <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+  <link href="assets/sass/main.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="confetti"></div>
+  <header>
+    <div class="menu_icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <div class="menu" id="menu">
+    <div class="menu_close" onclick="toggleMenu()">close</div>
+    <div class="menu_main">
+      <ul>
+        <a href="agenda.html">
+          <li>Agenda</li>
+        </a>
+        <a href="group.html">
+          <li>Facebook Group</li>
+        </a>
+        <a href="gallery.html">
+          <li>Gallery</li>
+        </a>
+        <a href="location.html">
+          <li>Where is it?</li>
+        </a>
+        <a href="more.html">
+          <li>Short Isabel history</li>
+        </a>
+
+        <a href="events.html">
+          <li>First Isabel events </li>
+        </a>
+      </ul>
+    </div>
+    <div class="menu_footer">
+      <ul>
+          <a href="streaming.html">
+              <li>Streaming<span class="live"></span></li>
+          </a>
+        <a href="index.html">
+          <li class="selected">Home</li>
+        </a>
+      </ul>
+
+    </div>
+  </div><!-- menu -->
+
+  <div class="wrapper wrapper_index">
+    <div id="mydiv" class="window window_01">
+
+      <div id="mydivheader" class="window_header">
+        <div class="icon">
+          <img src="assets/img/ico/window_icon.png" alt="">
+        </div>
+        <div class="title">
+          <h2>Isabel.info</h2>
+        </div>
+        <div class="actions">
+          <div class="action">_</div>
+          <div class="action">-</div>
+          <div class="action">x</div>
+        </div>
+      </div>
+
+      <div class="window_content">
+        <p>
+          This anniversary commemorates the first event performed with the Isabel application, namely the
+          second Summer School on Advanced Broadband Communication in July 1994, a 3 day event
+          connecting 5 auditoriums located in Spain, Portugal and Switzerland. Speakers and attendees
+          could attend in any of the sites. ISABEL connected over the first ATM broadband infrastructures to
+          demonstrate the power of broadband applications.
+        </p>
+      </div>
+
+    </div><!-- window -->
+
+    <div class="index_rigth">
+      <div class="window window_timer" style="display:none;">
+        <div id="mydivheader" class="window_header">
+          <div class="icon">
+            <img src="assets/img/ico/window_icon.png" alt="">
+          </div>
+          <div class="title">
+            <h2>Countdown.exe</h2>
+          </div>
+          <div class="actions">
+            <div class="action">_</div>
+            <div class="action">-</div>
+            <div class="action">x</div>
+          </div>
+        </div>
+
+        <div class="window_content">
+          <p id="timer"></p>
+        </div>
+      </div><!-- window -->
+
+      <div id="mydiv" class="window window_sponsor">
+
+        <div id="mydivheader" class="window_header">
+          <div class="icon">
+            <img src="assets/img/ico/window_icon.png" alt="">
+          </div>
+          <div class="title">
+            <h2>Sponsors</h2>
+          </div>
+          <div class="actions">
+            <div class="action">_</div>
+            <div class="action">-</div>
+            <div class="action">x</div>
+          </div>
+        </div>
+
+        <div class="window_content">
+          <div class="sponsor"><a href="https://www.mashme.io/" target="_blank">
+              <img src="./assets/img/logos/Mashme.png" alt="MashMe"></a>
+          </div><!-- sponsor -->
+        </div>
+
+      </div><!-- window -->
+    </div> <!-- Right -->
+
+    <footer>
+      <div class="event_description">
+        <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm CEST</h1>
+      </div>
+
+      <div class="logo">
+        <img src="assets/img/logos/logo.png" alt="Isabel Logo">
+      </div>
+    </footer>
+  </div><!-- wrapper -->
+
+  <script src="./countdown.js"></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>

@@ -11,6 +11,17 @@ export const projects = [
     projectType: "european-project",
   },
   {
+    logo: "/assets/img/logos/ENDGAME.png",
+    route: "https://endgameproject.github.io/",
+    title: "ENDGAME",
+    description_en:
+      "ENDGAME is an innovative European project aimed at ultivating critical thinking and responsible digital citizenship among European youth through educational escape rooms that simulate real-life scenarios of information consumption. We aim to immerse participants in time-sensitive, interactive, and challenging experiences, where they will develop their skills in identifying disinformation, recognizing AI-generated content, and understanding the implications of personal data exposure on social media platforms.",
+    description_es:
+      "ENDGAME es un proyecto Europeo innovador destinado a fomentar el pensamiento crítico y la ciudadanía digital responsable entre los jóvenes a través de escape rooms educativas que simulan escenarios reales de consumo de información.",
+    researchLine: ["e-learning"],
+    projectType: "european-project",
+  },
+  {
     logo: "/assets/img/logos/SMARTY.png",
     route: "https://www.smarty-project.eu/",
     title: "SMARTY",
@@ -42,6 +53,17 @@ export const projects = [
       "El proyecto IGLUE pretende capacitar a las universidades para crear y llevar a cabo escape rooms educativas pedagógicamente sólidas, así como promover el uso y la adopción generalizada de estas actividades de aprendizaje innovadoras en toda Europa con el fin de mejorar el rendimiento y la motivación de los estudiantes. El proyecto incluye actividades destinadas a superar las principales barreras que actualmente obstaculizan la adopción de las escape rooms educativas. Para ello, se proporcionará a los profesores la formación y las herramientas que necesitan para diseñar, construir y llevar a cabo de forma eficaz estas actividades de aprendizaje.",
     researchLine: ["e-learning"],
     projectType: "european-project",
+  },
+  {
+    logo: "/assets/img/logos/sost-gen.png",
+    route: "https://sostenibilidadgenerativa.cotec.es/",
+    title: "#SostenibilidadGenerativa",
+    description_en:
+      "#SostenibilidadGenerativa is a project funded by the Cotect Foundation that emerges as an initiative aimed at demonstrating that it is possible to reconcile technological progress with environmental preservation. Contrary to the widespread perception that the ecological footprint of AI is limited to training and development processes, evidence shows that it also manifests in the everyday usage patterns of citizens. Our research approach focuses on quantifying the energy and material consumption associated with the AI life cycle, while at the same time raising public awareness of its implications and disseminating practical strategies for a more sustainable interaction with these technologies.",
+    description_es:
+      "#SostenibilidadGenerativa es un proyecto financiado por la Fundación Cotect que surge como una iniciativa orientada a demostrar que es posible conciliar el progreso tecnológico con la preservación del entorno. Contrario a la percepción extendida de que la huella ecológica de la IA se restringe a los procesos de entrenamiento y desarrollo, la evidencia indica que también se manifiesta en las dinámicas de uso cotidiano por parte de la ciudadanía. Nuestro enfoque de investigación se centra en cuantificar el consumo energético y material asociado al ciclo de vida de la IA, al tiempo que buscamos sensibilizar a la sociedad sobre las implicaciones de su empleo y difundir estrategias prácticas para una interacción más sostenible con estas tecnologías.",
+      researchLine: ["ai"],
+    projectType: "private-project",
   },
   {
     logo: "/assets/img/logos/fiware.svg",

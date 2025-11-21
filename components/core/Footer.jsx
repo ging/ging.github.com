@@ -10,6 +10,7 @@ import Text from "../ui/Text";
 import Link from 'next/link';
 import { YouTube } from "@mui/icons-material";
 import { GitHub } from "@mui/icons-material";
+import { X } from "@mui/icons-material";
 import { Button, ButtonVariants } from "@/components/ui/button";
 import ArticleIcon from '@mui/icons-material/Article';
 
@@ -37,10 +38,10 @@ export default function Footer(props) {
           <div className="flex flex-row">
             <EmailOutlinedIcon className="mr-2 mt-0.5"  sx={{ fontSize: 20 }}/>
             <Text className=" text-[14px] flex gap-1">
-              <b>{t("footer.email")} </b>
+              {t("footer.email")}   
             </Text>
           </div>
-          <Text className=""> gi.internetng@upm.es</Text>
+          <Text className="font-semibold"> gi.internetng@upm.es</Text>
         </div>
       </div>
 
@@ -85,7 +86,7 @@ export default function Footer(props) {
               variant: "default",
               size: "icon_sm",
               radius: "rounded_full",
-            }) + " bg-blue-600 hover:bg-blue-600 mr-2"}>
+            }) + " bg-teal-600 hover:bg-teal-600 mr-2"}>
               <ArticleIcon sx={{ fontSize: 18 }}/>
 
             </Button>
@@ -101,11 +102,20 @@ export default function Footer(props) {
             </Button>
             <p> Github</p>
           </Link>
-
+          <Link target="_blank" href="https://x.com/GING_UPM" className={"text-left mb-1 lg:mb-1.5 hover:underline flex flex-row items-center cursor-pointer"}>
+            <Button href="#" className={ButtonVariants({
+              variant: "default",
+              size: "icon_sm",
+              radius: "rounded_full",
+            }) + " bg-blue-700 hover:bg-blue-700 mr-2"}>
+              <X sx={{ fontSize: 18 }} />
+            </Button>
+            <p> X (Twitter)</p>
+          </Link>
         </ul>
       </nav>
       <div className="font-sm flex flex-col max-w-[20ch]">
-        <small className="mb-[1rem]">2024 © </small>
+        <small className="mb-[1rem]">2025 © </small>
         <small className="mb-[1rem]"> Department of Telematic Systems Engineering </small>
         <small >ETSI Telecomunicación UPM</small>
       </div>
