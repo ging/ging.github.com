@@ -44,7 +44,7 @@ export default function Page() {
   return (
     <main>
      
-        <Link href="#section2" scroll={true} class="arrowScroll arrows" >  </Link>
+        <Link href="#section2" scroll={true} className="arrowScroll arrows" >  </Link>
   
       <Banner>
         <BannerImg></BannerImg>
@@ -121,10 +121,75 @@ export default function Page() {
 
 
         >La primera conexión a internet en España fue realizada en 1985 desde la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT) de la Universidad Politécnica de Madrid (UPM). El envío de un email de prueba por una red TCP/IP conectada al servicio de correo electrónico de internet a través de EUnet, cuya transcendencia histórica ignoraban sus propios protagonistas, marcó el comienzo de la expansión en nuestro país de la que acabaría siendo en poco tiempo la red de redes. El acto para conmemorar este hito incluirá la participación por videoconferencia de los estadounidenses Vinton Cerf y Robert Kahn, considerados los padres de internet.</Text>
-
+        <div className="grid grid-cols-[3rem_1fr] gap-x-4 mt-8">
+          <Text
+            type="p"
+            className="mb-1"
+          >12:30</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Apertura institucional presidida por el rector de la UPM, Óscar García.</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >12:45</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Charla del profesor emérito Juan Quemada sobre los primeros pasos en el despliegue de internet en España.</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >13:10</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Diálogo por videoconferencia con Vinton Cerf y Robert Kahn, padres de internet, moderado por Juan Quemada.</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >13:45</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Mesa redonda con pioneros españoles de internet moderada por el profesor emérito Juan Riera.</Text>
+          <Text
+            type="small"
+            className="mb-1 col-start-2 pl-4 text-sm"
+          >José Antonio Mañas, socio fundador de Goya Servicios Telemáticos.</Text>
+          <Text
+            type="small"
+            className="mb-1 col-start-2 pl-4 text-sm"
+          >José Barberá, exdirector de RedIRIS.</Text>
+          <Text
+            type="small"
+            className="mb-1 col-start-2 pl-4 text-sm"
+          >Víctor Castelo, exdirector de RedIRIS.</Text>
+          <Text
+            type="small"
+            className="mb-1 col-start-2 pl-4 text-sm"
+          >Isidoro Padilla, director de Servicios en Infovía (Telefónica).</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >14:20</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Inauguración de la sección sobre la historia de internet en España en el Museo de Telecomunicación de la ETSIT-UPM.</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >14:30</Text>
+          <Text
+            type="p"
+            className="mb-1"
+          >Cóctel.</Text>
+        </div>
 
         <div className="flex gap-4 mt-8">
-
+        
 
           <a href="https://eventos.upm.es/143851/detail/40o-aniversario-de-internet-en-espana.html" target="_blank">
 
