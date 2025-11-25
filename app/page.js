@@ -18,6 +18,7 @@ import { FileDownloadOutlined } from "@mui/icons-material";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
 import Text from "@/components/ui/Text";
 import Image from "@/components/ui/image";
+import { Mybadge, badgeVariants } from "@/components/ui/mybadge";
 
 //Banner
 import {
@@ -76,50 +77,24 @@ export default function Page() {
       </Banner>
 
       <section className="padding_group_description" style={{backgroundImage: "linear-gradient(to right, #948CFFDD, #2c2e33)" }}>
-
-
-        <Divider size="lg" className="hidden md:flex"></Divider>
-
-
+      <Divider size="lg" className="hidden md:flex"></Divider>
         <Divider size="sm"></Divider>
-
-
-
-
-
-        <Heading level="h3">40 Aniversario de internet en España</Heading>
-
-
+        <Heading level="h1">40 Aniversario de internet en España</Heading>
         <div className="flex gap-4">
-
-
-          <Heading level="subtitle" className="flex items-center gap-1 line"><AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30</Heading>
-
-
-          <Heading level="subtitle" className="flex items-center gap-1 line"><EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de diciembre</Heading>
-
-
-          <Heading level="subtitle" className="flex items-center gap-1 line"><PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />Salón de actos del Edificio C de la ETSIT</Heading>
-
-
+          <Mybadge variant="event" > 
+          <Heading level="subtitle" className="flex items-center gap-1 line !mb-0"><AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30</Heading>
+          </Mybadge>
+               <Mybadge variant="event" > 
+          <Heading level="subtitle" className="flex items-center gap-1 line !mb-0"><EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de diciembre</Heading>
+                       </Mybadge>
+               <Mybadge variant="event" > 
+          <Heading level="subtitle" className="flex items-center gap-1 line !mb-0"><PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />Salón de actos del Edificio C de la ETSIT</Heading>
+                </Mybadge>
         </div>
-
-
-        
-
-
-        
-
-
+        <Divider />
         <Text
-
-
           type="p"
-
-
           className="mb-1"
-
-
         >La primera conexión a internet en España fue realizada en 1985 desde la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT) de la Universidad Politécnica de Madrid (UPM). El envío de un email de prueba por una red TCP/IP conectada al servicio de correo electrónico de internet a través de EUnet, cuya transcendencia histórica ignoraban sus propios protagonistas, marcó el comienzo de la expansión en nuestro país de la que acabaría siendo en poco tiempo la red de redes. El acto para conmemorar este hito incluirá la participación por videoconferencia de los estadounidenses Vinton Cerf y Robert Kahn, considerados los padres de internet.</Text>
         <div className="grid grid-cols-[3rem_1fr] gap-x-4 mt-8">
           <Text
