@@ -18,7 +18,7 @@ import { FileDownloadOutlined } from "@mui/icons-material";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
 import Text from "@/components/ui/Text";
 import Image from "@/components/ui/image";
-import { Badge } from "@/components/ui/mybadge";
+import { Mybadge } from "@/components/ui/mybadge";
 
 //Banner
 import {
@@ -33,8 +33,6 @@ import {
 
 // UI
 export default function Page() {
-  //const [projects, setProjects] = useState(myprojectCards);
-
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   // useEffect(() => {
@@ -75,7 +73,7 @@ export default function Page() {
         </BannerContent>
       </Banner>
 
-      <section
+      {/* <section
         className="padding_group_description"
         style={{
           backgroundImage: "linear-gradient(to right, #948CFFDD, #2c2e33)",
@@ -86,20 +84,32 @@ export default function Page() {
         <Heading level="h2">40 Aniversario de internet en España</Heading>
 
         <div className="flex gap-4">
-          <Badge variant="">
-          <Heading level="subtitle" className="flex items-center gap-1 line">
-            <AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30
-          </Heading>
-</Badge>
-          <Heading level="subtitle" className="flex items-center gap-1 line">
-            <EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de
-            diciembre
-          </Heading>
-
-          <Heading level="subtitle" className="flex items-center gap-1 line">
-            <PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />
-            Salón de actos del Edificio C de la ETSIT
-          </Heading>
+          <Mybadge variant="secondary">
+            <Heading
+              level="subtitle"
+              className="flex items-center gap-1 line !mb-0"
+            >
+              <AccessTimeIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 12:30
+            </Heading>
+          </Mybadge>
+          <Mybadge variant="secondary">
+            <Heading
+              level="subtitle"
+              className="flex items-center gap-1 line !mb-0"
+            >
+              <EventIcon className="mt-0.5" sx={{ fontSize: 22 }} /> 2 de
+              diciembre
+            </Heading>
+          </Mybadge>
+          <Mybadge variant="secondary">
+            <Heading
+              level="subtitle"
+              className="flex items-center gap-1 line !mb-0"
+            >
+              <PlaceIcon className="mt-0.5" sx={{ fontSize: 22 }} />
+              Salón de actos del Edificio C de la ETSIT
+            </Heading>
+          </Mybadge>
         </div>
 
         <Text type="p" className="mb-1">
@@ -195,11 +205,10 @@ export default function Page() {
               <FileDownloadOutlined className="h-6" />
             </Button>
           </a>
-        </div>
-        {/* <Divider size="md"></Divider> */}
+        </div> 
         <Divider size="xxl" className="hidden md:flex"></Divider>
       </section>
-
+*/}
       <section className="padding_group_description bg-background-200">
         <Divider size="xl" className="hidden md:flex" id="section2"></Divider>
 
