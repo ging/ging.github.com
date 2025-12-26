@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ISABEL Location</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isabel's 25th anniversary">
+    <meta http-equiv="Page-Enter" content="revealTrans(Duration=2.0,Transition=12)">
+
+    <link href="assets/sass/main.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/ico/favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu_icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <div class="menu" id="menu">
+        <div class="menu_close" onclick="toggleMenu()">close</div>
+        <div class="menu_main">
+            <ul>
+                <a href="agenda.html">
+                    <li>Agenda</li>
+                </a>
+                <a href="group.html">
+                    <li>Facebook Group</li>
+                </a>
+                <a href="gallery.html">
+                    <li>Gallery</li>
+                </a>
+                <a href="location.html">
+                    <li class="selected">Where is it?</li>
+                </a>
+                <a href="more.html">
+                    <li>Short Isabel history</li>
+                </a>
+
+                <a href="events.html">
+                    <li>First Isabel events </li>
+                </a>
+            </ul>
+        </div>
+        <div class="menu_footer">
+            <ul>
+                <a href="streaming.html">
+                    <li>Streaming<span class="live"></span></li>
+                </a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+            </ul>
+
+        </div>
+    </div><!-- menu -->
+
+    <div class="wrapper wrapper_location">
+        <div class="window window_address">
+            <div id="mydivheader" class="window_header">
+                <div class="icon">
+                    <img src="assets/img/ico/window_icon.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>Event's location</h2>
+                </div>
+                <div class="actions">
+                    <div class="action">x</div>
+                </div>
+            </div>
+            <div class="window_content">
+                <p>The event site will be at <b><u>Salón de Actos Edificio C of ETSIT - UPM</u></b>, which will be
+                    connected to many remote
+                    sites
+                    by the Room of the Future of <a href="https://www.mashme.io/" target="_blank">MashMe.io</a> which
+                    inherits many ideas from Isabel.</p>
+
+                <p>Avenida Complutense, 30, 28040 Madrid</p>
+            </div>
+        </div> <!-- window -->
+
+        <div class="window window_map">
+            <div id="mydivheader" class="window_header">
+                <div class="icon">
+                    <img src="assets/img/ico/window_icon.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>Event site</h2>
+                </div>
+                <div class="actions">
+                    <div class="action">x</div>
+                </div>
+            </div>
+            <div class="window_content">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=escuela%20t%C3%A9cnica%20superior%20de%20ingenieros%20de%20telecomunicaciones&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps
+                        Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 390px;
+                            width: 350px;
+                        }
+
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 390px;
+                            width: 600px;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div> <!-- window -->
+
+        <div class="window window_remote">
+            <div id="mydivheader" class="window_header">
+                <div class="icon">
+                    <img src="assets/img/ico/window_icon.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>Remote sites</h2>
+                </div>
+                <div class="actions">
+                    <div class="action">x</div>
+                </div>
+            </div>
+            <div class="window_content">
+                <img src="./assets/img/images/remote_sites.jpg" alt="Remote sites Isabel">
+            </div>
+        </div> <!-- window -->
+    </div><!-- wrapper -->
+
+    <footer>
+        <div class="event_description">
+            <h1>ISABEL's 25th anniversary July 2nd 2019 at 5pm CEST</h1>
+        </div>
+
+        <div class="logo">
+            <img src="assets/img/logos/logo.png" alt="Isabel Logo">
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
