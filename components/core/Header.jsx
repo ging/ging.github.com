@@ -27,7 +27,7 @@ export default function Header(props) {
     "flex justify-between items-center md:items-start",
     "bg-background text-text shadow-md",
 
-    `header_${currentLang} z-50`,
+    `header_${currentLang} z-[150]`,
     {
       "font-semibold": true,
       underlined: true,
@@ -37,7 +37,7 @@ export default function Header(props) {
   //
 
   const menuClasses = clsx(
-    "w-screen  md:p-0 md:w-fit",
+    "w-screen  md:p-0 md:w-fit ",
     "absolute top-[40px] -right-8 md:static",
     "flex flex-col lg:flex-row ",
     "gap-4 md:gap-2 lg:gap-8",

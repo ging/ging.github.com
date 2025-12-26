@@ -12,6 +12,7 @@ const badgeVariants = cva(
         primary: "bg-text text-black",
         outline: "border-primary bg-tranparent text-primary",
         secondary: "bg-gray-900/20 text-gray-300 border-none ",
+        event:"bg-gray-900/30 text-gray-300 border border-white/40 rounded-sm "
       },
       size: {
         default: "px-1.5 py-0.5 text-sm rounded-sm",

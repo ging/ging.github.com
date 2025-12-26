@@ -18,7 +18,7 @@ import { FileDownloadOutlined } from "@mui/icons-material";
 import ResearchLineCard from "@/components/cards/ResearchLineCard";
 import Text from "@/components/ui/Text";
 import Image from "@/components/ui/image";
-import { Mybadge } from "@/components/ui/mybadge";
+import { Mybadge, badgeVariants } from "@/components/ui/mybadge";
 
 //Banner
 import {
@@ -81,8 +81,7 @@ export default function Page() {
       >
         <Divider size="lg" className="hidden md:flex"></Divider>
         <Divider size="sm"></Divider>
-        <Heading level="h2">40 Aniversario de internet en España</Heading>
-
+        <Heading level="h1">40 Aniversario de internet en España</Heading>
         <div className="flex gap-4">
           <Mybadge variant="secondary">
             <Heading
@@ -111,19 +110,11 @@ export default function Page() {
             </Heading>
           </Mybadge>
         </div>
-
-        <Text type="p" className="mb-1">
-          La primera conexión a internet en España fue realizada en 1985 desde
-          la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT)
-          de la Universidad Politécnica de Madrid (UPM). El envío de un email de
-          prueba por una red TCP/IP conectada al servicio de correo electrónico
-          de internet a través de EUnet, cuya transcendencia histórica ignoraban
-          sus propios protagonistas, marcó el comienzo de la expansión en
-          nuestro país de la que acabaría siendo en poco tiempo la red de redes.
-          El acto para conmemorar este hito incluirá la participación por
-          videoconferencia de los estadounidenses Vinton Cerf y Robert Kahn,
-          considerados los padres de internet.
-        </Text>
+        <Divider />
+        <Text
+          type="p"
+          className="mb-1"
+        >La primera conexión a internet en España fue realizada en 1985 desde la Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT) de la Universidad Politécnica de Madrid (UPM). El envío de un email de prueba por una red TCP/IP conectada al servicio de correo electrónico de internet a través de EUnet, cuya transcendencia histórica ignoraban sus propios protagonistas, marcó el comienzo de la expansión en nuestro país de la que acabaría siendo en poco tiempo la red de redes. El acto para conmemorar este hito incluirá la participación por videoconferencia de los estadounidenses Vinton Cerf y Robert Kahn, considerados los padres de internet.</Text>
         <div className="grid grid-cols-[3rem_1fr] gap-x-4 mt-8">
           <Text type="p" className="mb-1">
             12:30
