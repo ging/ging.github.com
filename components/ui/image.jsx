@@ -20,7 +20,7 @@ const Image = ({
    * Component Styles
    * ----------------------------------
    */
-  const imageContainerClasses = "relative flex w-full h-full overflow-hidden " + className;
+  const imageContainerClasses = " relative flex w-full h-full overflow-hidden " + className;
 
   const imageClasses = clsx(
     "w-full h-full flex items-center justify-center", 

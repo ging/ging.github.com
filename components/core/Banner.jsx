@@ -48,10 +48,9 @@ const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
 BannerLogo.displayName = "BannerLogo";
 
 const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <Heading
-    ref={ref}
-    level="h2"
-    className={cn("text-snow", className)}
+  // NO CAMBIAR H1 por Heading, está puesto así para SEO
+  <h1
+    className={cn("text-snow text-36 sm:text-40 mb-6 font-medium", className)}
     {...props}
   />
 ));
@@ -93,7 +92,7 @@ const BannerImg = React.forwardRef(({ className, ...props }, ref) => (
     <Image
       className="md:h-[85vh] opacity-80"
       src="assets/img/backgrounds/landing_4.svg"
-      alt="background illustration"
+      alt="background illustration Next Generation Internet Research Group"
       fit="cover"
     />
     

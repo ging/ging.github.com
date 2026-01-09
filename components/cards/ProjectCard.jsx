@@ -67,6 +67,7 @@ const Card = React.forwardRef(
             badgeVariant="secondary"
             badgeSize="md"
             badgeContent={t(`projects.type.${projectType}`)}
+            alt={title}
           />
         </div>
 
@@ -78,17 +79,17 @@ const Card = React.forwardRef(
                   href={route}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="flex flex-row w-full gap-2 justify-between items-center"
+                  className="flex flex-row w-full gap-4 items-center hover:text-blue-400"
                 >
                   <CardTitle
                     level="h3"
-                    className="hover:text-blue-400 transition-all mb-0"
+                    className=" transition-all !mb-0 hover:text-blue-400"
                   >
                     {title}
                   </CardTitle>
 
                   <ExternalLinkIcon
-                    className="mt-1 flex-shrink-0"
+                    className="mt-0.5 flex-shrink-0"
                     width={24}
                     height={24}
                   />

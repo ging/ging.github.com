@@ -2,13 +2,7 @@
 
 import clsx from "clsx";
 import * as React from "react";
-import { useState } from "react";
 import Link from "next/link";
-
-import { Slot } from "@radix-ui/react-slot";
-import { cva } from "class-variance-authority";
-import { cn } from "@/lib/utils";
-
 
 // Data
 import { useTranslation } from "react-i18next";

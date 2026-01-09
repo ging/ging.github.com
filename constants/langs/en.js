@@ -59,7 +59,26 @@ export const en = {
       },
     },
   },
-
+ newsEvents: {
+    title: "News and events",
+    titleArchive: "News and events archive",
+    newsEventsCard: {
+      readMore: "Read more",
+      category: {
+        event: "Event",
+        new: "New",
+        price: "Prize",
+      },
+      buttons: {
+        inscription: "Inscription",
+        downloadArticle: "Download article",
+        web: "See web",
+        article: "See article",
+      },
+      archivedIn: "Filed under:",
+    },
+    button: "See all news",
+  },
   research: {
     title: "Research",
     description:
@@ -165,19 +184,6 @@ export const en = {
     direction1: "E.T.S. DE INGENIEROS DE TELECOMUNICACIÓN",
     direction2: "Av. Complutense, 30, Building B",
     direction3: "28040 Madrid",
-  },
-  tools: {
-    title: "Tools",
-    description:
-      "These are some of the tools we have developed. If you are interested in any of our tools, whether it's to use or customize it, you can get in touch with us. ",
-    toolCards: {
-      button: "See tool",
-    },
-  },
-  courses: {
-    title: "Courses",
-    description:
-      "Here you can see a list of our MOOCs and courses",
   },
   footer: {
     title1: "Sections",

@@ -58,6 +58,26 @@ export const es = {
     },
     },
   },
+  newsEvents: {
+    title: "Noticias y Eventos",
+      titleArchive: "Archivo de Noticias y Eventos",
+    newsEventsCard: {
+      readMore: "Leer más",
+      category: {
+        event: "Evento",
+        new: "Noticia",
+        price: "Premio",
+      },
+       buttons: {
+        inscription: "Inscripción",
+        downloadArticle: "Descargar artículo",
+        web: "Ver web",
+        article: "Ver artículo",
+       },
+       archivedIn: "Archivado en:",
+    },
+    button: "Ver todas las noticias",
+  },
   research: {
     title: "Publicaciones",
     description:
@@ -161,18 +181,6 @@ export const es = {
     direction3: "28040 Madrid",
   },
 
-  tools: {
-    title: "Herramientas",
-    description: "Estas son algunas de las herramientas que hemos desarrollado. Si estás interesado en alguna herramienta, ya sea para utilizarla o personalizarla puedes ponerte en contacto con nosotros.",
-    toolCards: {
-      button: "Ver herramienta"
-    },
-  },
-  courses: {
-    title: "Cursos",
-    description:
-      "Aquí puedes ver nuestros MOOCs y cursos online",
-  },
   footer: {
     title1: "Secciones",
     title2: "Síguenos en:",
