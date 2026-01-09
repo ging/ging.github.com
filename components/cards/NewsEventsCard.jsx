@@ -124,7 +124,7 @@ const Card = React.forwardRef((
         <CardFooter className=" p-4 pt-0">
           {route ? (
             <Button asChild variant="link" size="sm" radius="rounded_sm">
-              <Link rel="noopener noreferrer" target="_blank" href={route}>
+              <Link rel="noopener noreferrer" href={`${route}#${title_en}`}>
                 {t("newsEvents.newsEventsCard.readMore")}
 
                 <ArrowRightIcon />
