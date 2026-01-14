@@ -9,7 +9,7 @@ import clsx from "clsx";
   ------------------------------------------------------------------
 */
 
-const Text = React.forwardRef(({ type = "p", children, className, ...props }, ref) => {
+const Text = React.forwardRef(({ type = "p", children, className, id, ...props }, ref) => {
   // Determinar el componente HTML según el nivel
   let Component;
   switch (type) {
@@ -33,13 +33,13 @@ const Text = React.forwardRef(({ type = "p", children, className, ...props }, re
     {/*"text-balance"*/},
     {
       " text-18 sm:text-base text-pretty": type === "p",
-      "text-base text-wrap leading-normal": type === "small",
+      "text-base sm:text-sm text-wrap leading-normal": type === "small",
       " text-18 sm:text-base": type === "short-p",
     },
     className
   ])
 
-  return <Component ref={ref} className={classes} {...props}>{children}</Component>;
+  return <Component ref={ref} className={classes} id={id} {...props}>{children}</Component>;
 });
 
 export default Text;

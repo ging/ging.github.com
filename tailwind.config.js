@@ -78,6 +78,7 @@ module.exports = {
         },
         background: {
           600: "#3a3e47",
+          550: "#3c3d44",
           DEFAULT:"#2c2e33",
           400:"#1d1e23",
           300: "#17181c", 
@@ -145,7 +146,8 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px', 
-      '3xl': '1700px'   
+      '3xl': '1700px',
+      '4xl': '1980px',   
     },
     backgroundImage: {
       'videoconference_bg': `url('${basePathTailwind}/assets/img/backgrounds/videoconference_bg.svg')`,

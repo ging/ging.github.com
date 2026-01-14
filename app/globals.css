@@ -519,13 +519,22 @@ main {
 
 .arrows {
   position: absolute;
-  bottom: 8rem;
-  top: 83%;
   left: 50%;
   width: var(--size);
   height: var(--size);
   transform: translate(-10%, -50%);
   z-index: 100;
+  /* phone */
+  @media (max-width: 768px) {
+    top: 85%;
+    scale: 0.5;
+
+  };
+  /* rest of devices */
+  @media (min-width: 769px) {
+    top: 83%;
+    scale: 1;
+  }
 }
 
 .arrows::before,

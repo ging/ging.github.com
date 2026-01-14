@@ -89,6 +89,7 @@ const ResearchlineIllust = ({ researchLine }) => {
           className="networks-illust-img"
           src="assets/img/networks_illust.png"
           fit="contain"
+          alt="Computing researchline illustration"
         />
       </div>
   
