@@ -12,11 +12,27 @@ import { Divider } from "@/components/ui/divider";
 import { Button, ButtonVariants} from "@/components/ui/button"
 import { FileDownloadOutlined } from "@mui/icons-material";
 
+//SEO
+import SEO from "@/components/SEOWrapper";
+import { getPageMetadata } from "@/constants/metadata";
+
+//Schema
+import StructuredData from "@/components/StructuredData";
+import { contactPageSchema } from "@/constants/schemas";
+
 export default function Contact(props) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata("contact", currentLang);
+
   return (
     <div className={"about page_" + currentLang}>
+      <SEO
+              title={metadata.title}
+              description={metadata.description}
+              keywords={metadata.keywords}
+            />
+            <StructuredData data={contactPageSchema} />
       {/* <Header route={"/about"} /> */}
 
       <main className="standard_padding ">

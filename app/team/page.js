@@ -10,12 +10,20 @@ import TeamCard from "@/components/cards/TeamCard";
 import dynamic from "next/dynamic";
 import { Divider } from "@/components/ui/divider";
 
+//SEO
+import SEO from "@/components/SEOWrapper";
+import { getPageMetadata } from "@/constants/metadata";
+
+//Schema
+import StructuredData from "@/components/StructuredData";
+import { teamPageSchema } from "@/constants/schemas";
+
 const Team = (props) => {
   console.log(myteam);
   const [team, setMembers] = useState(myteam); // Inicializa el estado con los datos de 'team'
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(team);
+  const metadata = getPageMetadata("team", currentLang);
 
   const renderMembers = () => {
     return team.map(
@@ -41,7 +49,7 @@ const Team = (props) => {
         key
       ) => {
         const translatedRole = t("team.professorCards.roles." + role);
-       console.log(translatedRole)
+        console.log(translatedRole);
         return (
           <TeamCard
             key={key}
@@ -66,19 +74,27 @@ const Team = (props) => {
   };
 
   return (
-    <main className={"standard_margin-s team page_" + currentLang}>
-      <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
-        {t("team.title")}
-      </Heading>
-      <Divider size="md"/>
-      <section className="justify-center flex flex-wrap xs:gap-x-8 md:gap-x-10 gap-y-8 md:gap-y-12">
-        {Array.isArray(team) && team.length > 0 ? (
-          renderMembers(team)
-        ) : (
-          <p>No members found.</p>
-        )}
-      </section>
-    </main>
+    <>
+      <SEO
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+      />
+      <StructuredData data={teamPageSchema} />
+      <main className={"standard_margin-s team page_" + currentLang}>
+        <Heading level="h2" className="mx-auto mb-8 sm:mx-0 text-center">
+          {t("team.title")}
+        </Heading>
+        <Divider size="md" />
+        <section className="justify-center flex flex-wrap xs:gap-x-8 md:gap-x-10 gap-y-8 md:gap-y-12">
+          {Array.isArray(team) && team.length > 0 ? (
+            renderMembers(team)
+          ) : (
+            <p>No members found.</p>
+          )}
+        </section>
+      </main>
+    </>
   );
 };
 

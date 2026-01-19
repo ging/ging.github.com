@@ -13,6 +13,14 @@ import { Divider, DividerVariants } from "@/components/ui/divider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
+//SEO
+import SEO from "@/components/SEOWrapper";
+import { getPageMetadata } from "@/constants/metadata";
+
+//Schema
+import StructuredData from "@/components/StructuredData";
+import { researchPageSchema } from "@/constants/schemas";
+
 export default function Research() {
   return (
     <Suspense>
@@ -24,6 +32,7 @@ export default function Research() {
 function ResearchPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+    const metadata = getPageMetadata("research", currentLang);
   const router = useRouter(); // Hook para manipular la URL
   let searchParams = useSearchParams();
 
@@ -128,6 +137,12 @@ function ResearchPage() {
 
   return (
     <div className={"standard_margin research page_" + currentLang}>
+       <SEO
+              title={metadata.title}
+              description={metadata.description}
+              keywords={metadata.keywords}
+            />
+            <StructuredData data={researchPageSchema} />
       <div className="" id="banner-publications">
         <Heading level="h2">{t("research.title")}</Heading>
         <Text type="p">{t("research.description")}</Text>

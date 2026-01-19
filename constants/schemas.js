@@ -4,15 +4,17 @@
 export const baseOrganizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  'name': 'Boiler',
-  'url': 'https://ging.github.io/boiler/', //(URL example: https://endgameproject.github.io)
-  'logo': 'https://ging.github.io/boiler/assets/logo_boiler.svg',
-  'description': 'Customizable website template for research groups and other projects. See documentation at the link below to use the template.',
+  'name': 'GING - Next Generation Internet Group',
+  'url': 'https://ging.github.io/', //(URL example: https://endgameproject.github.io)
+  'logo': 'https://ging.github.io/boiler/assets/ging_logo.png',
+  'description': 'A research group from the Telematics Engineering Department (DIT) at Universidad Politécnica de Madrid (UPM).We are focused on educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence.',
   'sameAs': [ //SEO Description is the same for social media
-    'https://x.com/...',
-    'https://www.instagram.com/...'
+    'https://x.com/GING_UPM',
+    'https://github.com/ging',
+    'https://www.youtube.com/user/FirefoxOSHTML5/featured',
+    'https://www.researchgate.net/lab/Next-Generation-Internet-Group-Juan-Quemada'
   ],
-  'foundingDate': '2024',
+  'foundingDate': '2015',
   
   // keywords example
   'knowsAbout': [
@@ -26,9 +28,9 @@ export const baseOrganizationSchema = {
 export const homePageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  'name': '... - Home',
-  'url': 'https://...',
-  'description': '//',
+  'name': 'GING - Next Generation Internet Group',
+  'url': 'https://ging.github.io/',
+  'description': 'A research group from the Telematics Engineering Department (DIT) at Universidad Politécnica de Madrid (UPM). We are focused on educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence.',
   'publisher': baseOrganizationSchema,
   'author': baseOrganizationSchema
 };
@@ -36,47 +38,55 @@ export const homePageSchema = {
 export const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  'name': 'About ...',
-  'url': 'https://.../about',
-  'description': 'Learn about ... project, our mission and partners.',
+  'name': 'About Next Generation Internet Group',
+  'url': 'https://ging.github.io/about',
+  'description': 'Learn about GING Next Generation Internet Group, our mission and partners.',
   'mainEntity': baseOrganizationSchema
 };
 
 export const teamPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'TeamPage',
-  'name': 'Team',
-  'url': 'https://.../team',
-  'description': 'Meet our team, working currently in .....',
+  'name': 'Team - Next Generation Internet Group',
+  'url': 'https://ging.github.io/team',
+  'description': 'Meet our team, working currently in the following research lines: educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence. The group is made up of professors, associate and assistant professors, PhD candidates, designers, interns and other researchers. Next Generation Internet Group',
   'mainEntity': baseOrganizationSchema
 };
 
 export const researchPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  'name': 'Research Publications - ....',
-  'url': 'https://.../research',
-  'description': 'Explore ... research publications and scientific contributions',
+  'name': 'Research Publications - Next Generation Internet Group',
+  'url': 'https://ging.github.io/research',
+  'description': 'Explore our compilation of research publications and scientific contributions. You can filter the publications by text, date, research line, or type of publication.',
   'publisher': baseOrganizationSchema,
   'author': baseOrganizationSchema
 };
 export const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  'name': 'Contact us - ....',
-  'url': 'https://.../contact',
-  'description': 'Contact us ...',
+  'name': 'Contact us - Next Generation Internet Group',
+  'url': 'https://ging.github.io/contact',
+  'description': 'Get in touch with us for any questions or inquiries related to our research lines, projects and publications.',
   'publisher': baseOrganizationSchema,
   'author': baseOrganizationSchema
 };
 
+export const projectsPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProjectsPage',
+  'name': 'Projects - Next Generation Internet Group',
+  'url': 'https://ging.github.io/events',
+'description': "Explore our current and past projects in the fields of educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence. We lead European, national, and private projects, driving advanced and collaborative technological solutions.",
+  'organizer': baseOrganizationSchema
+};
 
 export const eventsPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'EventSeries',
-  'name': '... Events and Workshops',
-  'url': 'https://.../events',
-  'description': 'Discover ... workshops and participatory design activities across Europe',
+  'name': 'Events and Workshops - Next Generation Internet Group',
+  'url': 'https://ging.github.io/events',
+  'description': 'Discover our current and past events, workshops and news.',
   'organizer': baseOrganizationSchema
 };
 

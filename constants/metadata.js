@@ -1,74 +1,75 @@
 export const metadataByPage = {
   home: {
     en: {
-      title: "Boiler EN",
-      description: "Boiler description EN",
-      keywords: "Boiler keywords EN",
+      title: "GING - Next Generation Internet Group",
+      description: "New Generation Internet Research Group, focused on educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence.",
+      keywords: "Research Group, Research Team, UPM, ETSIT, Artificial Intelligence, Networks, Videoconferencing, Data Spaces, Educational Innovation, publications, projects, collaboration",
     },
     es: {
-      title: "Boiler ES",
-      description: "Descripción Boiler ES",
-      keywords: "Palabras clave Boiler ES",
+      title: "GING - Grupo de Internet de Nueva Generación",
+      description: "Grupo de Investigación de Internet de Nueva Generación, centrado en innovación educativa, espacios de datos, redes, videoconferencia e Inteligencia Artificial.",
+      keywords: "Grupo Investigación, Grupo de investigación, UPM, ETSIT, Inteligencia Artificial, Redes, Videoconferencia, Espacios de Datos, Innovación Educativa, publicaciones, proyectos, colaboración",
     },
   },
-  about: {
-    en: {
-      title: "About Boiler",
-      description: "Learn about ... project, our mission and partners.",
-      keywords: "about",
-    },
-    es: {
-      title: "Sobre el Boiler",
-      description: "Conoce el proyecto ... nuestra misión y nuestros partners",
-      keywords: "Sobre nosotros",
-    },
-  },
+ 
   team: {
     en: {
-      title: "Team - Boiler",
-      description: "Meet our team ... currently working on the ...",
-      keywords: "team"
+      title: "Team - Next Generation Internet Group",
+      description: "Meet our team, working currently in the following research lines: educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence. The group is made up of professors, associate and assistant professors, PhD candidates, designers, interns and other researchers.",
+      keywords: "team, professors, associate professors, assistant professor, PhD Candidate, researchers"
     },
     es: {
-      title: "Equipo - Boiler",
-      description: "Conoce a nuestro equipo, que trabaja actualmente en el proyecto...",
-      keywords: "equipo",
+      title: "Equipo - Grupo de Internet de Nueva Generación",
+      description: "Conoce a nuestro equipo, que actualmente trabaja en las siguientes líneas de investigación: innovación educativa, espacios de datos, redes, videoconferencias e inteligencia artificial. El grupo está formado por profesores, profesores asociados y adjuntos, doctorandos, diseñadores, becarios y otros investigadores. ",
+      keywords: "equipo, profesores, profesores ayudantes, profesor titular, candidato a doctorado, investigadores",
     },
   },
   research: {
     en: {
-      title: "Research - Boiler",
-      description: "Explore ... research publications and scientific contributions",
-      keywords: "research, publications"
+      title: "Research - Next Generation Internet Group",
+      description: "Explore our compilation of research publications and scientific contributions. You can filter the publications by text, date, research line, or type of publication.",
+      keywords: "research, papers, publications, educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence"
     },
     es: {
-      title: "Investigación - Boiler",
-      description: "Explora ... nuestras publicaciones y contribuciones científicas",
-      keywords: "publicaciones ,investigación",
+      title: "Investigación - Grupo de Internet de Nueva Generación",
+      description: "Explora nuestra recopilación de publicaciones de investigación y contribuciones científicas. Puedes filtrar las publicaciones por texto, fecha, línea de investigación o tipo de publicación.",
+      keywords: "publicaciones, papers, investigación, innovación educativa, los espacios de datos, las redes, las videoconferencias y la inteligencia artificial",
     },
   },
   events: {
     en: {
-      title: "Events and news - Boiler",
-      description: "Discover ... workshops and participatory design activities across Europe",
-      keywords: "events,news",
+      title: "Events and news - Next Generation Internet Group",
+      description: "Discover our current and past events, workshops and news.",
+      keywords: "events, news, workshops, presentations",
     },
     es: {
-      title: "Eventos y noticias - Boiler",
-      description: "Descubre ... talleres, eventos y noticias ....",
-			keywords: "eventos, noticias",
+      title: "Eventos y noticias - Grupo de Internet de Nueva Generación",
+      description: "Descubre nuestros eventos, talleres y novedades actuales y pasados.",
+			keywords: "eventos, noticias, workshop, presentaciones",
     },
   },
   contact: {
     en: {
-      title: "Contact us - Boiler",
-      description: "Contact us ...",
-      keywords: "contact",
+      title: "Contact us - Next Generation Internet Group",
+      description: "If you have any questions or inquiries related to our research lines, projects and publications, get in touch!",
+      keywords: "contact, inquiries, possible collaboration, institutional collaboration",
     },
     es: {
-      title: "Contacto - Boiler",
-      description: "Contacta con nosotros ...",
-      keywords: "contacto",
+      title: "Contacto - Grupo de Internet de Nueva Generación",
+      description: "Contacta con nosotros para cualquier duda o consulta relacionada con nuestras líneas de investigación, proyectos y publicaciones",
+      keywords: "contacto, consultas, posible colaborción, colaboración institucional",
+    },
+  },
+  projects: {
+    en: {
+      title: "Projects - Next Generation Internet Group",
+      description: "Explore our current and past projects in the fields of educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence. We lead European, national, and private projects, driving advanced and collaborative technological solutions.",
+      keywords: "Networks, Videoconferencing, Data Spaces, Educational Innovation, institutional collaboration, national projects, european projects, technology projects, technology research projects, telematics research projects, education research projects ",
+    },
+    es: {
+      title: "Proyectos - Grupo de Internet de Nueva Generación",
+      description: "Explora nuestros proyectos actuales y anteriores en los ámbitos de la innovación educativa, los espacios de datos, las redes, la videoconferencia y la Inteligencia Artificial. Lideramos proyectos europeos, nacionales y privados, impulsando soluciones tecnológicas avanzadas y colaborativas.",
+      keywords: "Redes, videoconferencias, espacios de datos, innovación educativa, colaboración institucional, proyectos nacionales, proyectos europeos, proyectos tecnológicos, proyectos de investigación tecnológica, proyectos de investigación telemática, proyectos de investigación educativa",
     },
   },
 };
@@ -78,9 +79,9 @@ export function getPageMetadata(page, lang = "en") {
   return (
     metadataByPage[page]?.[lang] ||
     metadataByPage[page]?.en || {
-     title: "Boiler EN",
-      description: "Boiler description EN",
-      keywords: "Boiler keywords EN",
+      title: "GING - Next Generation Internet Group",
+      description: "New Generation Internet Research Group, focused on educational innovation, data spaces, networks, videoconferencing, and Artificial Intelligence.",
+      keywords: "Research Group, Research Team, UPM, ETSIT, Artificial Intelligence, Networks, Videoconferencing, Data Spaces, Educational Innovation, publications, projects, collaboration",
     }
   );
 }
