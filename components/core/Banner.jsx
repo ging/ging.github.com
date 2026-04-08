@@ -29,7 +29,7 @@ Banner.displayName = "Banner";
 const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("h-fit py-12 px-8 xs:px-10 md:pl-20 xl:pl-40 w-full md:w-2/3 2xl:w-1/2 z-10 ", className)}
+    className={cn("h-fit pt-4 pb-12 md:pt-12 px-8 xs:px-10 md:pl-20 xl:pl-40 w-full md:w-2/3 2xl:w-1/2 z-10 ", className)}
     {...props}
   />
 ));
@@ -48,8 +48,8 @@ BannerLogo.displayName = "BannerLogo";
 
 const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
   // NO CAMBIAR H1 por Heading, está puesto así para SEO
-  <Heading level="h2"
-    className={cn("text-snow  mb-6 font-medium", className)}
+  <Heading level="h3"
+    className={cn("text-snow !mb-2 md:mb-6 font-medium", className)}
     {...props}
   />
 ));
