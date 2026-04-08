@@ -5,11 +5,29 @@ import { useTranslation } from "react-i18next";
 import NewsEventsCard from "@/components/cards/NewsEventsCard";
 import { newsEvents } from "@/constants/newsEvents";
 
+
+//SEO
+import SEO from "@/components/SEOWrapper";
+import { getPageMetadata } from "@/constants/metadata";
+
+//Schema
+import StructuredData from "@/components/StructuredData";
+import { eventsPageSchema } from "@/constants/schemas";
+
+
 const NewsEvents = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata("events", currentLang);
+
   return (
     <div className="standard_margin">
+       <SEO
+              title={metadata.title}
+              description={metadata.description}
+              keywords={metadata.keywords}
+            />
+            <StructuredData data={eventsPageSchema} />
       <Heading level="h3" className="mt-3">
         {t("newsEvents.titleArchive")}
       </Heading>

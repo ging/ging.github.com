@@ -66,11 +66,7 @@ export default function Header(props) {
       {" "}
       {/* route={routes.route} ?????*/}
       <a href="/" className="h-7 py-1 sm:h-6 sm:py-0.5 flex gap-2">
-        <img
-            className="object-contain"
-            src="logo_sm_boiler_light.svg"
-            alt="logo"
-          />
+     
           <img
             className="object-contain"
             src="ging_logo.png"

@@ -13,6 +13,14 @@ import { useState, useEffect } from "react";
 import { Suspense } from "react";
 import { Divider } from "@/components/ui/divider";
 
+//SEO
+import SEO from "@/components/SEOWrapper";
+import { getPageMetadata } from "@/constants/metadata";
+
+//Schema
+import StructuredData from "@/components/StructuredData";
+import { projectsPageSchema } from "@/constants/schemas";
+
 export default function Projects() {
   return (
     <Suspense>
@@ -24,6 +32,7 @@ export default function Projects() {
 function ProjectsPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+  const metadata = getPageMetadata("projects", currentLang);
 
   const router = useRouter(); // Hook para manipular la URL
   let searchParams = useSearchParams();
@@ -115,6 +124,12 @@ function ProjectsPage() {
   /* console.log(filteredItems.map(filteredItem => filteredItem ));*/
   return (
     <main className="standard_margin">
+       <SEO
+              title={metadata.title}
+              description={metadata.description}
+              keywords={metadata.keywords}
+            />
+            <StructuredData data={projectsPageSchema} />
       <div className="" id="banner-publications">
         <Heading level="h2">{t("projects.title")}</Heading>
         <Text type="p">{t("projects.description")}</Text>

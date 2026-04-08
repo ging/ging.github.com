@@ -82,7 +82,7 @@ const Heading = ({ level = "h1", children, className = "" }) => {
     h5: "text-20 sm:text-20 mb-2 font-medium",
     h6: "text-base font-medium uppercase mb-2",
     "title-sm": "text-base sm:text-20 font-normal mb-2 leading-snug",
-    subtitle: "text-20 md:text-24 mb-2 font-light max-w-[50ch] md:max-w-[70ch] 2xl:max-w-[75ch]",
+    subtitle: "text-20 xl:text-24 mb-2 font-light max-w-[50ch] md:max-w-[70ch] 2xl:max-w-[75ch]",
   }[level] || "";
 
   return (

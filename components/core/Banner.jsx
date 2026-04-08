@@ -29,8 +29,7 @@ Banner.displayName = "Banner";
 const BannerContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    level="h1"
-    className={cn("h-fit py-12 px-8 xs:px-10 md:px-20 xl:px-40 w-full md:w-2/3 z-10 ", className)}
+    className={cn("h-fit py-12 px-8 xs:px-10 md:pl-20 xl:pl-40 w-full md:w-2/3 2xl:w-1/2 z-10 ", className)}
     {...props}
   />
 ));
@@ -39,7 +38,7 @@ BannerContent.displayName = "BannerContent";
 
 const BannerLogo = React.forwardRef(({ className, ...props }, ref) => (
   <Image
-      className="w-36 md:w-48 mb-6 md:mb-6 max-w-60"
+      className="w-36 md:w-48 mb-6 md:mb-6 max-w-40"
       src="ging_logo.png"
       alt="Ging logo"
       fit="contain"
@@ -49,8 +48,8 @@ BannerLogo.displayName = "BannerLogo";
 
 const BannerTitle = React.forwardRef(({ className, ...props }, ref) => (
   // NO CAMBIAR H1 por Heading, está puesto así para SEO
-  <h1
-    className={cn("text-snow text-36 sm:text-40 mb-6 font-medium", className)}
+  <Heading level="h2"
+    className={cn("text-snow  mb-6 font-medium", className)}
     {...props}
   />
 ));
