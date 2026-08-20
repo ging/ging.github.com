@@ -1,5 +1,16 @@
 export const projects = [
   {
+    logo: "/assets/img/logos/bridge-ai.png",
+    route: "https://bridge-project.ai/",
+    title: "BRIDGE-AI",
+    description_en:
+      "BRIDGE-AI is a European project of the GenAI4Africa call that aims to help farmers in Africa make better decisions by using advanced digital tools based on artificial intelligence (AI). The project deploys a precision agriculture platform based on European technology in Nigeria, Kenya, and Tunisia. This platform combines artificial intelligence and machine learning models with the massive ingestion of data from satellite remote sensing, weather stations, and field sensors to generate prescriptive analytics that allow farmers to mitigate the impact of climate change in real time. All of this is managed through efficient, resilient, and traceable agents that enable the adoption of generative AI in resource-constrained environments, ensuring a responsible and safe inclusion of agentic AI.",
+    description_es:
+      "BRIDGE-AI es un proyecto europeo de la convocatoria GenAI4Africa cuyo objetivo es ayudar a los agricultores de África a tomar mejores decisiones mediante el uso de herramientas digitales avanzadas basadas en inteligencia artificial (IA). El proyecto despliega una plataforma de agricultura de precisión basada en tecnología europea en Nigeria, Kenia y Túnez. Esta plataforma combina modelos de inteligencia artificial y machine learning con la ingesta masiva de datos procedentes de teledetección satelital, estaciones meteorológicas y sensores de campo para generar analítica prescriptiva que permite a los agricultores mitigar el impacto del cambio climático en tiempo real. Todo ello se gestiona a través de agentes eficientes, resilientes y trazables que facilitan la adopción de la IA generativa en entornos con recursos limitados, garantizando una inclusión responsable y segura de la IA agéntica.",
+    researchLine: ["ai"],
+    projectType: "european-project",
+  },
+  {
     logo: "/assets/img/logos/eunomia_logo_light.svg",
     route: "https://eunomia.dit.upm.es/",
     title: "EUNOMIA",
