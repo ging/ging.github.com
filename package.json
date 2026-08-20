@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "publications": "node transformPublications.js",
-    "deploy": "gh-pages -d docs"
+    "publications": "node transformPublications.js"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

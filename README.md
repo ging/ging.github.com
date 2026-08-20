@@ -63,11 +63,8 @@ npm run build
 
 ## Deployment
 
-This project includes a deployment script that publishes the generated site output to GitHub Pages:
+This project is published to github pages when you push to master in github (remember to do before the ``npm run build``)
 
-```bash
-npm run deploy
-```
 
 ## Notes
 
