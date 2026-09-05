@@ -149,6 +149,7 @@ export const es = {
     "roles":{
                 "professor":"Profesor Titular de Universidad",
                 "associate":"Profesor Contratado Doctor",
+                "permanentassociate":"Profesor Permanente Laboral",
                 "phd":"Candidato de Doctorado",
                 "fulltec":"Técnico a Tiempo Completo",
                 "fullprofessor":"Catedrático de Universidad", // Full Professor

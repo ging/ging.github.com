@@ -155,6 +155,7 @@ export const en = {
       "roles":{
         "professor":"Professor", // Profesor Titular de Universidad
         "associate":"Associate Professor", // Profesor Titular / Profesor contratado doctor
+        "permanentassociate":"Associate Professor", // Profesor Permanente Laboral
         "phd":"PhD candidate", // Estudiante de doctorado
         "fulltec":"Full-Time Technician",
         "fullprofessor":"Professor", // Profesor Titular de Universidad

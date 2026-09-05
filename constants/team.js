@@ -161,7 +161,7 @@ export const myteam = [
   {
     name: "Jose Andres Muñoz",
     position: "",
-    role: "associate",
+    role: "permanentassociate",
     description_en:
       "Andrés received the B.S. in Telematic Engineering from Escuela Superior Politécnica del Litoral (ESPOL) in 2013 He received the M.Sc. in Telematic Services and Network Engineering from Universidad Politécnica de Madrid (UPM). Andrés is currently a Ph.D. student in Telecommunications Engineering and a Researcher with the Next Generation Internet Research Group. His previous experience includes Telematic Laboratories Coordination or Servers and Communications Assistant, both in ESPOL.Andres has carried out different research projects, such as Web Platform Development for Control and Monitoring of Environmental Parameters in Agriculture or Kiswar Proyect Reactive Evacuation Management Systemsfor Emergency Situations.",
     description_es:
@@ -182,7 +182,7 @@ export const myteam = [
   {
     name: "Alejandro Pozo",
     position: "",
-    role: "associate",
+    role: "permanentassociate",
     description_en:
       "Alejandro Pozo Huertas is a permanent lecturer in the Department of Telematics Engineering at the School of Telecommunications Engineering. He obtained his PhD in Telematic Systems Engineering in 2022. He has published several articles and participated in various research projects at both national and European levels. His research interests include identity management systems, access control, IoT, and remote language interpretation systems.",
     description_es:
@@ -222,11 +222,11 @@ export const myteam = [
   {
     name: "Javier Conde",
     position: "",
-    role: "assistant",
+    role: "permanentassociate",
     description_en:
-      "Javier Conde, received a Ph.D. in Telematics Engineering at UPM where he is now an assistant professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. Javier is coordinating the IEEE Spanish Local Group on AI. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
+      "Javier Conde, received a Ph.D. in Telematics Engineering at UPM where he is now an associate professor in the Department of Telematics Engineering. Since 2024 Javier became a Young Scholar member of the Marconi Society, being the first Spanish researcher to receive this recognition. Javier is coordinating the IEEE Spanish Local Group on AI. His research interests lie in the fields of Digital Twins, Big Data and Artificial Intelligence.",
     description_es:
-      "Javier Conde obtuvo un doctorado en Ingeniería Telemática en la UPM, donde actualmente es Profesor Ayudante Doctor en el Departamento de Ingeniería de Sistemas Telemáticos. Desde 2024, Javier se convirtió en Young Scholar de la Marconi Society, siendo el primer investigador español en recibir este reconocimiento. Actualmente también coordina el Grupo Local de España de IA del IEEE. Sus áreas de interés en investigación incluyen Gemelos Digitales, Big Data e Inteligencia Artificial.",
+      "Javier Conde obtuvo un doctorado en Ingeniería Telemática en la UPM, donde actualmente es Profesor Permanente Laboral en el Departamento de Ingeniería de Sistemas Telemáticos. Desde 2024, Javier se convirtió en Young Scholar de la Marconi Society, siendo el primer investigador español en recibir este reconocimiento. Actualmente también coordina el Grupo Local de España de IA del IEEE. Sus áreas de interés en investigación incluyen Gemelos Digitales, Big Data e Inteligencia Artificial.",
     img: "assets/img/team/javier-conde.jpg",
     github: "https://github.com/javicond3",
     email: "javier.conde.diaz@upm.es",
